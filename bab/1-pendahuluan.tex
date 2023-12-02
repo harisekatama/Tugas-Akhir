@@ -1,0 +1,47 @@
+\chapter{PENDAHULUAN}
+\label{chap:pendahuluan}
+
+% Ubah bagian-bagian berikut dengan isi dari pendahuluan
+
+\section{Latar Belakang}
+\label{sec:latarbelakang}
+
+Menurut Kamus Besar Bahasa Indonesia, lumpuh merupakan melemahnya fungsi anggota badan sehingga tidak bertenaga atau tidak dapat digerakkan lagi sebagaimana mestinya \parencite{Daring_2016}. Otot beserta tulang, saraf, serta jaringan penghubung antara otot, tulang dan saraf memiliki peran yang penting dalam mengendalikan gerak tubuh manusia. Apabila salah satu jaringan mengalami gangguan makan akan terjadi kelumpulan, baik kelumpuhan sementara maupun kelumpuhan permanen.
+
+Terdapat beberapa kondisi yang dapat mengakibatkan kelumpuhan, seperti penyakit stroke yang dapat menyebabkan kelumpuhan pada salah satu sisi wajah, lengan serta tungkai, \emph{Bell's Palsy} yang dapat menyebabkan kelumpuhan pada salah satu sisi wajah tanpa disertai kelumpuhan pada anggota tubuh yang lain, cedera otak yang dapat memicu kelumpuhan pada setiap bagian tubuh sesuai bagian otak yang rusak, polio yang menyebabkan kelumpuhan pada lengan, tungkai, serta otot pernapasan, dan masih banyak kondisi yang menyebabkan kelumpuhan \parencite{Pansawira_2022}.
+
+Seseorang yang mengalami kelumpuhan sering kali mengalami permasalahan dalam hal mobilitas sehari-hari. Mereka memerlukan alat tambahan untuk dapat beraktivitas sehari-hari, salah satunya adalah kursi roda. Hingga saat ini sudah terdapat kursi roda elektrik yang dikendalikan dengan menggunakan \emph{joystick} \parencite{choi2019motion}. Akan tetapi penggunaan \emph{joystick} belum dapat menjawab permasalahan dari seseorang yang mengalami kelumpuhan. Karena bagi orang yang mengalami kelumpuhan pada bagian lengan akan kekusahan dalam mengendalikan kursi roda elektrik berjenis ini.
+
+Dalam menghadapi permasalahan kelumpuhan, sangat penting untuk mencari solusi yang dapat meningkatkan kemandirian para penderita. Salah satu pendekatan yang menjanjikan adalah memanfaatkan teknologi canggih, seperti visi komputer yang dapat diintegrasikan dengan sistem tertanam. Dengan menggabungkan kedua teknologi ini, diharapkan dapat diciptakan solusi inovatif yang memungkinkan para penderita kelumpuhan untuk tetap dapat bermobilitas secara mandiri.
+
+Visi komputer merupakan bidang keilmuan yang memungkinkan komputer dapat "melihat" \parencite{TIAN20201}. Teknologi ini menggunakan kamera untuk mengidentifikasi, melacak, hingga mengukur target untuk pemrosesan citra lebih lanjut. Visi komputer memberikan kemampuan untuk mengenali dan memahami lingkungan sekitar. Sedangkan sistem tertanam dapat diatur secara personal untuk memenuhi kebutuhan spesifik sesuai dengan permasalahan yang dihadapi. 
+
+Integrasi teknologi ini dapat menjadi solusi inovatif terhadap permasalahan yang dihadapi. Dalam rangka mengatasi tantangan ini, penelitian akan difokuskan pada pengembangan kontroler motor yang dapat secara optimal berinteraksi dengan teknologi visi komputer. Pemilihan ESP32 sebagai mikrokontroler utama menjadi langkah strategis, karena kemampuannya dalam mengatur dengan presisi kerja motor. Tidak hanya berfungsi sebagai kontroler motor, ESP32 juga akan berperan sebagai perangkat penerima data dari komputer yang dilengkapi dengan teknologi visi komputer. Melalui integrasi ini, diharapkan bahwa kontroler motor dapat beroperasi secara sinergis dengan informasi yang diterima dari komputer dan menciptakan sebuah sistem yang efisien dan responsif. 
+\section{Permasalahan}
+\label{sec:permasalahan}
+
+Berdasarkan hal yang telah dipaparkan pada latar belakang, untuk dapat mengatur kerja motor dari kursi roda yang terintegrasi dengan teknologi visi komputer maka diperlukan kontroler yang dapat digunakan sebagai perantara antara keduanya.
+
+\section{Tujuan}
+\label{sec:Tujuan}
+Tujuan dari tugas akhir ini adalah untuk mengembangkan kontroler motor kursi roda yang dapat terintegrasi dengan teknologi visi komputer.
+
+\section{Batasan Masalah}
+\label{sec:batasanmasalah}
+
+Untuk memfokuskan permasalahan yang diangkat maka dilakukan pembatasan masalah. Batasan-batasan masalah tersebut diantaranya:
+
+\begin{enumerate}[nolistsep]
+
+  \item Mikrokontroler yang digunakan adalah ESP32 Devkit V1.
+
+  \item Laptop atau Jetson Nano digunakan sebagai pengolah data visi komputer.
+
+  \item Pengiriman data visi komputer ke ESP32 menggunakan WiFi maupun Bluetooth.
+
+  \item Pengujian yang dilakukan adalah membandingkan tingkat delay pengiriman data dari laptop atau Jetson Nano ke ESP32 yang menggunakan WiFi dengan yang menggunakan Bluetooth, serta membandingkan performa FPS dari laptop maupun Jetson Nano dalam menjalankan sistem visi komputer.
+
+\end{enumerate}
+
+\section{Manfaat}
+Manfaat dari penelitian ini adalah untuk memungkinkan teknologi visi komputer agar dapat mengontrol gerak dari kursi roda. Sehingga para pengembang dapat mengembangkan model dari \emph{machine learning} mereka untuk diaplikasikan sebagai kontrol kursi roda.

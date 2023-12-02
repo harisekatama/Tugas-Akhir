@@ -1,0 +1,923 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{8308186}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a92a8d7d47ce475bde1f4d0c575e3415}{%
+           family={Albawi},
+           familyi={A\bibinitperiod},
+           given={Saad},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b0c7df6171cf87ebe4270071829a7d26}{%
+           family={Mohammed},
+           familyi={M\bibinitperiod},
+           given={Tareq\bibnamedelima Abed},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c2f9de2eb7b3ac9408b9e418ef2a1e39}{%
+           family={Al-Zawi},
+           familyi={A\bibinithyphendelim Z\bibinitperiod},
+           given={Saad},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a8f90775da450f48ca2cc0c936f55cce}
+      \strng{fullhash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
+      \strng{bibnamehash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
+      \strng{authorbibnamehash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
+      \strng{authornamehash}{a8f90775da450f48ca2cc0c936f55cce}
+      \strng{authorfullhash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2017 International Conference on Engineering and Technology (ICET)}
+      \field{title}{Understanding of a convolutional neural network}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICEngTechnol.2017.8308186
+      \endverb
+    \endentry
+    \entry{choi2019motion}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=abf3067e2e656c403730ac5e5053256d}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Jung\bibnamedelima Hyun},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=62878ff91aa5c9b0d7e9c4f47a199e31}{%
+           family={Chung},
+           familyi={C\bibinitperiod},
+           given={Younghun},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a469c8dc4349a2bfaec4860f955746cc}{%
+           family={Oh},
+           familyi={O\bibinitperiod},
+           given={Sehoon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{43ad0fb7094d5f2d1d49f3ee88bda7ea}
+      \strng{fullhash}{78692be958294c79607f7b76c4721d33}
+      \strng{bibnamehash}{78692be958294c79607f7b76c4721d33}
+      \strng{authorbibnamehash}{78692be958294c79607f7b76c4721d33}
+      \strng{authornamehash}{43ad0fb7094d5f2d1d49f3ee88bda7ea}
+      \strng{authorfullhash}{78692be958294c79607f7b76c4721d33}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mechatronics}
+      \field{title}{Motion control of joystick interfaced electric wheelchair for improvement of safety and riding comfort}
+      \field{volume}{59}
+      \field{year}{2019}
+      \field{pages}{104\bibrangedash 114}
+      \range{pages}{11}
+    \endentry
+    \entry{Daring_2016}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=016221332d66cc638eeec246f3225359}{%
+           family={Daring},
+           familyi={D\bibinitperiod},
+           given={KBBI},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Badan Pengembangan Dan Pembinaan Bahasa}%
+      }
+      \strng{namehash}{016221332d66cc638eeec246f3225359}
+      \strng{fullhash}{016221332d66cc638eeec246f3225359}
+      \strng{bibnamehash}{016221332d66cc638eeec246f3225359}
+      \strng{authorbibnamehash}{016221332d66cc638eeec246f3225359}
+      \strng{authornamehash}{016221332d66cc638eeec246f3225359}
+      \strng{authorfullhash}{016221332d66cc638eeec246f3225359}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Hasil Pencarian - KBBI VI Daring}
+      \field{title}{KBBI VI Daring}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://kbbi.kemdikbud.go.id/entri/lumpuh
+      \endverb
+      \verb{url}
+      \verb https://kbbi.kemdikbud.go.id/entri/lumpuh
+      \endverb
+    \endentry
+    \entry{Developer_2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1ca4f9c151cdae7523e5c8879bb551a3}{%
+           family={Developer},
+           familyi={D\bibinitperiod},
+           given={NVIDIA},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {NVIDIA Developer}%
+      }
+      \strng{namehash}{1ca4f9c151cdae7523e5c8879bb551a3}
+      \strng{fullhash}{1ca4f9c151cdae7523e5c8879bb551a3}
+      \strng{bibnamehash}{1ca4f9c151cdae7523e5c8879bb551a3}
+      \strng{authorbibnamehash}{1ca4f9c151cdae7523e5c8879bb551a3}
+      \strng{authornamehash}{1ca4f9c151cdae7523e5c8879bb551a3}
+      \strng{authorfullhash}{1ca4f9c151cdae7523e5c8879bb551a3}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{Jetson Nano Developer Kit}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://developer.nvidia.com/embedded/jetson-nano-developer-kit
+      \endverb
+      \verb{url}
+      \verb https://developer.nvidia.com/embedded/jetson-nano-developer-kit
+      \endverb
+    \endentry
+    \entry{dwitama2019klasifikasi}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d8f49cf9a63b7233c9fd242c60085ebf}{%
+           family={Dwitama},
+           familyi={D\bibinitperiod},
+           given={Aditya\bibnamedelimb Perwira\bibnamedelima Joan},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universitas Mataram}%
+      }
+      \strng{namehash}{d8f49cf9a63b7233c9fd242c60085ebf}
+      \strng{fullhash}{d8f49cf9a63b7233c9fd242c60085ebf}
+      \strng{bibnamehash}{d8f49cf9a63b7233c9fd242c60085ebf}
+      \strng{authorbibnamehash}{d8f49cf9a63b7233c9fd242c60085ebf}
+      \strng{authornamehash}{d8f49cf9a63b7233c9fd242c60085ebf}
+      \strng{authorfullhash}{d8f49cf9a63b7233c9fd242c60085ebf}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Klasifikasi Tingkat Retakan Pada Bangunan Berbasis Citra Menggunakan Metode Convolution Neural Network}
+      \field{type}{phdthesis}
+      \field{year}{2019}
+    \endentry
+    \entry{hakim2018penerapan}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d9c0fe883af5baaeed0d4e7432647b25}{%
+           family={Hakim},
+           familyi={H\bibinitperiod},
+           given={RB\bibnamedelima Fajiya},
+           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {UNIVERSITAS ISLAM INDONESIA}%
+      }
+      \strng{namehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
+      \strng{fullhash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
+      \strng{bibnamehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
+      \strng{authorbibnamehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
+      \strng{authornamehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
+      \strng{authorfullhash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{PENERAPAN DEEP LEARNING MENGGUNAKAN CONVOLUTIONAL NEURAL NETWORK UNTUK KLASIFIKASI CITRA WAYANG PUNAKAWAN}
+      \field{year}{2018}
+    \endentry
+    \entry{junior2019prototipe}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=299d11d8eb37a6ce058f56f6d4d4095b}{%
+           family={Junior},
+           familyi={J\bibinitperiod},
+           given={Andy\bibnamedelima Sadewa},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c53eadaa608162e52205c3439370807}{%
+           family={Arifin},
+           familyi={A\bibinitperiod},
+           given={Fatchul},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ddf5e1ae908535051e8347d08942039c}
+      \strng{fullhash}{ddf5e1ae908535051e8347d08942039c}
+      \strng{bibnamehash}{ddf5e1ae908535051e8347d08942039c}
+      \strng{authorbibnamehash}{ddf5e1ae908535051e8347d08942039c}
+      \strng{authornamehash}{ddf5e1ae908535051e8347d08942039c}
+      \strng{authorfullhash}{ddf5e1ae908535051e8347d08942039c}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Elinvo (Electronics, Informatics, and Vocational Education)}
+      \field{number}{1}
+      \field{title}{Prototipe Kursi Roda Elektrik Dengan Kendali Joystick Dan Smartphone}
+      \field{volume}{4}
+      \field{year}{2019}
+      \field{pages}{62\bibrangedash 68}
+      \range{pages}{7}
+    \endentry
+    \entry{Pansawira_2022}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b51ba517f9281c6ad2b72826a56fdb5f}{%
+           family={Pansawira},
+           familyi={P\bibinitperiod},
+           given={Pittara},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Alodokter}%
+      }
+      \strng{namehash}{b51ba517f9281c6ad2b72826a56fdb5f}
+      \strng{fullhash}{b51ba517f9281c6ad2b72826a56fdb5f}
+      \strng{bibnamehash}{b51ba517f9281c6ad2b72826a56fdb5f}
+      \strng{authorbibnamehash}{b51ba517f9281c6ad2b72826a56fdb5f}
+      \strng{authornamehash}{b51ba517f9281c6ad2b72826a56fdb5f}
+      \strng{authorfullhash}{b51ba517f9281c6ad2b72826a56fdb5f}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Alodokter}
+      \field{month}{4}
+      \field{title}{Kelumpuhan - Gejala, penyebab, dan mengobati - Alodokter}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.alodokter.com/kelumpuhan#:~:text=Kondisi%20ini%20dapat%20disebabkan%20oleh,Penanganan%20kelumpuhan%20tergantung%20pada%20penyebabnya.
+      \endverb
+      \verb{url}
+      \verb https://www.alodokter.com/kelumpuhan#:~:text=Kondisi%20ini%20dapat%20disebabkan%20oleh,Penanganan%20kelumpuhan%20tergantung%20pada%20penyebabnya.
+      \endverb
+    \endentry
+    \entry{prasetyowheelchair}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d1fa7969595eff57b2c1548617b6d65e}{%
+           family={Prasetyo},
+           familyi={P\bibinitperiod},
+           given={Yoga\bibnamedelima Eko},
+           giveni={Y\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f1ae07f4816403b7498d4f1842248706}{%
+           family={Hindarto},
+           familyi={H\bibinitperiod},
+           given={Hindarto},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8a842d59d5ded83f8dd809870b1f49d4}
+      \strng{fullhash}{8a842d59d5ded83f8dd809870b1f49d4}
+      \strng{bibnamehash}{8a842d59d5ded83f8dd809870b1f49d4}
+      \strng{authorbibnamehash}{8a842d59d5ded83f8dd809870b1f49d4}
+      \strng{authornamehash}{8a842d59d5ded83f8dd809870b1f49d4}
+      \strng{authorfullhash}{8a842d59d5ded83f8dd809870b1f49d4}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Wheelchair Control Using Bluetooth-Based Electromyography Signals [Kontrol Kursi Roda Menggunakan Sinyal Elektromiografi Berbasis Bluetooth]}
+    \endentry
+    \entry{TIAN20201}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=f3792f35bbfdce3bcc80a2b4660f34ca}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Hongkun},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50b1ffa4c042b7f100e68559a26bb9fb}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Tianhai},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81cab2e7b41d6267c719aa81e06c134a}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yadong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b4320c4c103c77d23393c40bd2db36d8}{%
+           family={Qiao},
+           familyi={Q\bibinitperiod},
+           given={Xi},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=871145a390a66221e98b59d878a47967}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yanzhou},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4eb7926a0035ca0a637717e91e40fdc0}
+      \strng{fullhash}{5e56201bc7620ef3340e4a1a81f0de74}
+      \strng{bibnamehash}{5e56201bc7620ef3340e4a1a81f0de74}
+      \strng{authorbibnamehash}{5e56201bc7620ef3340e4a1a81f0de74}
+      \strng{authornamehash}{4eb7926a0035ca0a637717e91e40fdc0}
+      \strng{authorfullhash}{5e56201bc7620ef3340e4a1a81f0de74}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Computer vision is a field that involves making a machine “see”. This technology uses a camera and computer instead of the human eye to identify, track and measure targets for further image processing. With the development of computer vision, such technology has been widely used in the field of agricultural automation and plays a key role in its development. This review systematically summarizes and analyzes the technologies and challenges over the past three years and explores future opportunities and prospects to form the latest reference for researchers. Through the analyses, it is found that the existing technology can help the development of agricultural automation for small field farming to achieve the advantages of low cost, high efficiency and high precision. However, there are still major challenges. First, the technology will continue to expand into new application areas in the future, and there will be more technological issues that need to be overcome. It is essential to build large-scale data sets. Second, with the rapid development of agricultural automation, the demand for professionals will continue to grow. Finally, the robust performance of related technologies in various complex environments will also face challenges. Through analysis and discussion, we believe that in the future, computer vision technology will be combined with intelligent technology such as deep learning technology, be applied to every aspect of agricultural production management based on large-scale datasets, be more widely used to solve the current agricultural problems, and better improve the economic, general and robust performance of agricultural automation systems, thus promoting the development of agricultural automation equipment and systems in a more intelligent direction.}
+      \field{issn}{2214-3173}
+      \field{journaltitle}{Information Processing in Agriculture}
+      \field{number}{1}
+      \field{title}{Computer vision technology in agricultural automation —A review}
+      \field{volume}{7}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 19}
+      \range{pages}{19}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.inpa.2019.09.006
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2214317319301751
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2214317319301751
+      \endverb
+      \keyw{Computer vision,Image processing,Agricultural automation,Intelligent detection}
+    \endentry
+    \entry{wicaksono2023rancang}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9f0fb3e92caedf00acdfaae7f81215ab}{%
+           family={Wicaksono},
+           familyi={W\bibinitperiod},
+           given={Bayu\bibnamedelima Adhityanto},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universitas Diponegoro}%
+      }
+      \strng{namehash}{9f0fb3e92caedf00acdfaae7f81215ab}
+      \strng{fullhash}{9f0fb3e92caedf00acdfaae7f81215ab}
+      \strng{bibnamehash}{9f0fb3e92caedf00acdfaae7f81215ab}
+      \strng{authorbibnamehash}{9f0fb3e92caedf00acdfaae7f81215ab}
+      \strng{authornamehash}{9f0fb3e92caedf00acdfaae7f81215ab}
+      \strng{authorfullhash}{9f0fb3e92caedf00acdfaae7f81215ab}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Rancang Bangun Kursi Roda Elektrik Dengan Sistem Kontrol Joystick dan Smartphone Android}
+      \field{type}{phdthesis}
+      \field{year}{2023}
+    \endentry
+    \entry{wisaksono2023kontrol}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=7f53f65b2a04da414a797c77aa6855d1}{%
+           family={Wisaksono},
+           familyi={W\bibinitperiod},
+           given={Arief},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=478d81b7a35ac966db484efbf325c565}{%
+           family={Pratama},
+           familyi={P\bibinitperiod},
+           given={Rachmad\bibnamedelima Aditya},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0ca0a5fb35227aeda8de38c0e03aace2}
+      \strng{fullhash}{0ca0a5fb35227aeda8de38c0e03aace2}
+      \strng{bibnamehash}{0ca0a5fb35227aeda8de38c0e03aace2}
+      \strng{authorbibnamehash}{0ca0a5fb35227aeda8de38c0e03aace2}
+      \strng{authornamehash}{0ca0a5fb35227aeda8de38c0e03aace2}
+      \strng{authorfullhash}{0ca0a5fb35227aeda8de38c0e03aace2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Prosiding Seminar Nasional Penelitian dan Pengabdian Kepada Masyarakat}
+      \field{number}{1}
+      \field{title}{Kontrol Kursi Roda menggunakan Sinyal Suara melelui Bluetooth}
+      \field{volume}{1}
+      \field{year}{2023}
+      \field{pages}{26\bibrangedash 30}
+      \range{pages}{5}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{8308186}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a92a8d7d47ce475bde1f4d0c575e3415}{%
+           family={Albawi},
+           familyi={A\bibinitperiod},
+           given={Saad},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b0c7df6171cf87ebe4270071829a7d26}{%
+           family={Mohammed},
+           familyi={M\bibinitperiod},
+           given={Tareq\bibnamedelima Abed},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c2f9de2eb7b3ac9408b9e418ef2a1e39}{%
+           family={Al-Zawi},
+           familyi={A\bibinithyphendelim Z\bibinitperiod},
+           given={Saad},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a8f90775da450f48ca2cc0c936f55cce}
+      \strng{fullhash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
+      \strng{bibnamehash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
+      \strng{authorbibnamehash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
+      \strng{authornamehash}{a8f90775da450f48ca2cc0c936f55cce}
+      \strng{authorfullhash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2017 International Conference on Engineering and Technology (ICET)}
+      \field{title}{Understanding of a convolutional neural network}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICEngTechnol.2017.8308186
+      \endverb
+    \endentry
+    \entry{choi2019motion}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=abf3067e2e656c403730ac5e5053256d}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Jung\bibnamedelima Hyun},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=62878ff91aa5c9b0d7e9c4f47a199e31}{%
+           family={Chung},
+           familyi={C\bibinitperiod},
+           given={Younghun},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a469c8dc4349a2bfaec4860f955746cc}{%
+           family={Oh},
+           familyi={O\bibinitperiod},
+           given={Sehoon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{43ad0fb7094d5f2d1d49f3ee88bda7ea}
+      \strng{fullhash}{78692be958294c79607f7b76c4721d33}
+      \strng{bibnamehash}{78692be958294c79607f7b76c4721d33}
+      \strng{authorbibnamehash}{78692be958294c79607f7b76c4721d33}
+      \strng{authornamehash}{43ad0fb7094d5f2d1d49f3ee88bda7ea}
+      \strng{authorfullhash}{78692be958294c79607f7b76c4721d33}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mechatronics}
+      \field{title}{Motion control of joystick interfaced electric wheelchair for improvement of safety and riding comfort}
+      \field{volume}{59}
+      \field{year}{2019}
+      \field{pages}{104\bibrangedash 114}
+      \range{pages}{11}
+    \endentry
+    \entry{Daring_2016}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=016221332d66cc638eeec246f3225359}{%
+           family={Daring},
+           familyi={D\bibinitperiod},
+           given={KBBI},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Badan Pengembangan Dan Pembinaan Bahasa}%
+      }
+      \strng{namehash}{016221332d66cc638eeec246f3225359}
+      \strng{fullhash}{016221332d66cc638eeec246f3225359}
+      \strng{bibnamehash}{016221332d66cc638eeec246f3225359}
+      \strng{authorbibnamehash}{016221332d66cc638eeec246f3225359}
+      \strng{authornamehash}{016221332d66cc638eeec246f3225359}
+      \strng{authorfullhash}{016221332d66cc638eeec246f3225359}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Hasil Pencarian - KBBI VI Daring}
+      \field{title}{KBBI VI Daring}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://kbbi.kemdikbud.go.id/entri/lumpuh
+      \endverb
+      \verb{url}
+      \verb https://kbbi.kemdikbud.go.id/entri/lumpuh
+      \endverb
+    \endentry
+    \entry{Developer_2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1ca4f9c151cdae7523e5c8879bb551a3}{%
+           family={Developer},
+           familyi={D\bibinitperiod},
+           given={NVIDIA},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {NVIDIA Developer}%
+      }
+      \strng{namehash}{1ca4f9c151cdae7523e5c8879bb551a3}
+      \strng{fullhash}{1ca4f9c151cdae7523e5c8879bb551a3}
+      \strng{bibnamehash}{1ca4f9c151cdae7523e5c8879bb551a3}
+      \strng{authorbibnamehash}{1ca4f9c151cdae7523e5c8879bb551a3}
+      \strng{authornamehash}{1ca4f9c151cdae7523e5c8879bb551a3}
+      \strng{authorfullhash}{1ca4f9c151cdae7523e5c8879bb551a3}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{Jetson Nano Developer Kit}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://developer.nvidia.com/embedded/jetson-nano-developer-kit
+      \endverb
+      \verb{url}
+      \verb https://developer.nvidia.com/embedded/jetson-nano-developer-kit
+      \endverb
+    \endentry
+    \entry{dwitama2019klasifikasi}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d8f49cf9a63b7233c9fd242c60085ebf}{%
+           family={Dwitama},
+           familyi={D\bibinitperiod},
+           given={Aditya\bibnamedelimb Perwira\bibnamedelima Joan},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universitas Mataram}%
+      }
+      \strng{namehash}{d8f49cf9a63b7233c9fd242c60085ebf}
+      \strng{fullhash}{d8f49cf9a63b7233c9fd242c60085ebf}
+      \strng{bibnamehash}{d8f49cf9a63b7233c9fd242c60085ebf}
+      \strng{authorbibnamehash}{d8f49cf9a63b7233c9fd242c60085ebf}
+      \strng{authornamehash}{d8f49cf9a63b7233c9fd242c60085ebf}
+      \strng{authorfullhash}{d8f49cf9a63b7233c9fd242c60085ebf}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Klasifikasi Tingkat Retakan Pada Bangunan Berbasis Citra Menggunakan Metode Convolution Neural Network}
+      \field{type}{phdthesis}
+      \field{year}{2019}
+    \endentry
+    \entry{hakim2018penerapan}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d9c0fe883af5baaeed0d4e7432647b25}{%
+           family={Hakim},
+           familyi={H\bibinitperiod},
+           given={RB\bibnamedelima Fajiya},
+           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {UNIVERSITAS ISLAM INDONESIA}%
+      }
+      \strng{namehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
+      \strng{fullhash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
+      \strng{bibnamehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
+      \strng{authorbibnamehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
+      \strng{authornamehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
+      \strng{authorfullhash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{PENERAPAN DEEP LEARNING MENGGUNAKAN CONVOLUTIONAL NEURAL NETWORK UNTUK KLASIFIKASI CITRA WAYANG PUNAKAWAN}
+      \field{year}{2018}
+    \endentry
+    \entry{junior2019prototipe}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=299d11d8eb37a6ce058f56f6d4d4095b}{%
+           family={Junior},
+           familyi={J\bibinitperiod},
+           given={Andy\bibnamedelima Sadewa},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c53eadaa608162e52205c3439370807}{%
+           family={Arifin},
+           familyi={A\bibinitperiod},
+           given={Fatchul},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ddf5e1ae908535051e8347d08942039c}
+      \strng{fullhash}{ddf5e1ae908535051e8347d08942039c}
+      \strng{bibnamehash}{ddf5e1ae908535051e8347d08942039c}
+      \strng{authorbibnamehash}{ddf5e1ae908535051e8347d08942039c}
+      \strng{authornamehash}{ddf5e1ae908535051e8347d08942039c}
+      \strng{authorfullhash}{ddf5e1ae908535051e8347d08942039c}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Elinvo (Electronics, Informatics, and Vocational Education)}
+      \field{number}{1}
+      \field{title}{Prototipe Kursi Roda Elektrik Dengan Kendali Joystick Dan Smartphone}
+      \field{volume}{4}
+      \field{year}{2019}
+      \field{pages}{62\bibrangedash 68}
+      \range{pages}{7}
+    \endentry
+    \entry{Pansawira_2022}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b51ba517f9281c6ad2b72826a56fdb5f}{%
+           family={Pansawira},
+           familyi={P\bibinitperiod},
+           given={Pittara},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Alodokter}%
+      }
+      \strng{namehash}{b51ba517f9281c6ad2b72826a56fdb5f}
+      \strng{fullhash}{b51ba517f9281c6ad2b72826a56fdb5f}
+      \strng{bibnamehash}{b51ba517f9281c6ad2b72826a56fdb5f}
+      \strng{authorbibnamehash}{b51ba517f9281c6ad2b72826a56fdb5f}
+      \strng{authornamehash}{b51ba517f9281c6ad2b72826a56fdb5f}
+      \strng{authorfullhash}{b51ba517f9281c6ad2b72826a56fdb5f}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Alodokter}
+      \field{month}{4}
+      \field{title}{Kelumpuhan - Gejala, penyebab, dan mengobati - Alodokter}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.alodokter.com/kelumpuhan#:~:text=Kondisi%20ini%20dapat%20disebabkan%20oleh,Penanganan%20kelumpuhan%20tergantung%20pada%20penyebabnya.
+      \endverb
+      \verb{url}
+      \verb https://www.alodokter.com/kelumpuhan#:~:text=Kondisi%20ini%20dapat%20disebabkan%20oleh,Penanganan%20kelumpuhan%20tergantung%20pada%20penyebabnya.
+      \endverb
+    \endentry
+    \entry{prasetyowheelchair}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d1fa7969595eff57b2c1548617b6d65e}{%
+           family={Prasetyo},
+           familyi={P\bibinitperiod},
+           given={Yoga\bibnamedelima Eko},
+           giveni={Y\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f1ae07f4816403b7498d4f1842248706}{%
+           family={Hindarto},
+           familyi={H\bibinitperiod},
+           given={Hindarto},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8a842d59d5ded83f8dd809870b1f49d4}
+      \strng{fullhash}{8a842d59d5ded83f8dd809870b1f49d4}
+      \strng{bibnamehash}{8a842d59d5ded83f8dd809870b1f49d4}
+      \strng{authorbibnamehash}{8a842d59d5ded83f8dd809870b1f49d4}
+      \strng{authornamehash}{8a842d59d5ded83f8dd809870b1f49d4}
+      \strng{authorfullhash}{8a842d59d5ded83f8dd809870b1f49d4}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Wheelchair Control Using Bluetooth-Based Electromyography Signals [Kontrol Kursi Roda Menggunakan Sinyal Elektromiografi Berbasis Bluetooth]}
+    \endentry
+    \entry{TIAN20201}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=f3792f35bbfdce3bcc80a2b4660f34ca}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Hongkun},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50b1ffa4c042b7f100e68559a26bb9fb}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Tianhai},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81cab2e7b41d6267c719aa81e06c134a}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yadong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b4320c4c103c77d23393c40bd2db36d8}{%
+           family={Qiao},
+           familyi={Q\bibinitperiod},
+           given={Xi},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=871145a390a66221e98b59d878a47967}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yanzhou},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4eb7926a0035ca0a637717e91e40fdc0}
+      \strng{fullhash}{5e56201bc7620ef3340e4a1a81f0de74}
+      \strng{bibnamehash}{5e56201bc7620ef3340e4a1a81f0de74}
+      \strng{authorbibnamehash}{5e56201bc7620ef3340e4a1a81f0de74}
+      \strng{authornamehash}{4eb7926a0035ca0a637717e91e40fdc0}
+      \strng{authorfullhash}{5e56201bc7620ef3340e4a1a81f0de74}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Computer vision is a field that involves making a machine “see”. This technology uses a camera and computer instead of the human eye to identify, track and measure targets for further image processing. With the development of computer vision, such technology has been widely used in the field of agricultural automation and plays a key role in its development. This review systematically summarizes and analyzes the technologies and challenges over the past three years and explores future opportunities and prospects to form the latest reference for researchers. Through the analyses, it is found that the existing technology can help the development of agricultural automation for small field farming to achieve the advantages of low cost, high efficiency and high precision. However, there are still major challenges. First, the technology will continue to expand into new application areas in the future, and there will be more technological issues that need to be overcome. It is essential to build large-scale data sets. Second, with the rapid development of agricultural automation, the demand for professionals will continue to grow. Finally, the robust performance of related technologies in various complex environments will also face challenges. Through analysis and discussion, we believe that in the future, computer vision technology will be combined with intelligent technology such as deep learning technology, be applied to every aspect of agricultural production management based on large-scale datasets, be more widely used to solve the current agricultural problems, and better improve the economic, general and robust performance of agricultural automation systems, thus promoting the development of agricultural automation equipment and systems in a more intelligent direction.}
+      \field{issn}{2214-3173}
+      \field{journaltitle}{Information Processing in Agriculture}
+      \field{number}{1}
+      \field{title}{Computer vision technology in agricultural automation —A review}
+      \field{volume}{7}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 19}
+      \range{pages}{19}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.inpa.2019.09.006
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2214317319301751
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2214317319301751
+      \endverb
+      \keyw{Computer vision,Image processing,Agricultural automation,Intelligent detection}
+    \endentry
+    \entry{wicaksono2023rancang}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9f0fb3e92caedf00acdfaae7f81215ab}{%
+           family={Wicaksono},
+           familyi={W\bibinitperiod},
+           given={Bayu\bibnamedelima Adhityanto},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universitas Diponegoro}%
+      }
+      \strng{namehash}{9f0fb3e92caedf00acdfaae7f81215ab}
+      \strng{fullhash}{9f0fb3e92caedf00acdfaae7f81215ab}
+      \strng{bibnamehash}{9f0fb3e92caedf00acdfaae7f81215ab}
+      \strng{authorbibnamehash}{9f0fb3e92caedf00acdfaae7f81215ab}
+      \strng{authornamehash}{9f0fb3e92caedf00acdfaae7f81215ab}
+      \strng{authorfullhash}{9f0fb3e92caedf00acdfaae7f81215ab}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Rancang Bangun Kursi Roda Elektrik Dengan Sistem Kontrol Joystick dan Smartphone Android}
+      \field{type}{phdthesis}
+      \field{year}{2023}
+    \endentry
+    \entry{wisaksono2023kontrol}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=7f53f65b2a04da414a797c77aa6855d1}{%
+           family={Wisaksono},
+           familyi={W\bibinitperiod},
+           given={Arief},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=478d81b7a35ac966db484efbf325c565}{%
+           family={Pratama},
+           familyi={P\bibinitperiod},
+           given={Rachmad\bibnamedelima Aditya},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0ca0a5fb35227aeda8de38c0e03aace2}
+      \strng{fullhash}{0ca0a5fb35227aeda8de38c0e03aace2}
+      \strng{bibnamehash}{0ca0a5fb35227aeda8de38c0e03aace2}
+      \strng{authorbibnamehash}{0ca0a5fb35227aeda8de38c0e03aace2}
+      \strng{authornamehash}{0ca0a5fb35227aeda8de38c0e03aace2}
+      \strng{authorfullhash}{0ca0a5fb35227aeda8de38c0e03aace2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Prosiding Seminar Nasional Penelitian dan Pengabdian Kepada Masyarakat}
+      \field{number}{1}
+      \field{title}{Kontrol Kursi Roda menggunakan Sinyal Suara melelui Bluetooth}
+      \field{volume}{1}
+      \field{year}{2023}
+      \field{pages}{26\bibrangedash 30}
+      \range{pages}{5}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
