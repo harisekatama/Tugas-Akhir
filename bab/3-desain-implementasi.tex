@@ -69,7 +69,7 @@ Setiap titik \emph{landmark} yang terdapat pada peraga akan diwarnai dengan warn
 \end{figure}
 
 \subsection{Klasifikasi Pose}
-Setelah proses estimasi pose tangan selsai, maka langkah selanjutnya ada mengelompokkan citra-citra hasil estimasi menjadi suatu dataset. Dataset ini akan memiliki 5 kelas berbeda yang masing-masing merepresentasikan perintah untuk maju, mundur, bergerak ke kanan, bergerak ke kiri, dan berhenti. Kelas ini mewakili perintah dasar untuk menggerakkan kursi roda. 
+Setelah proses estimasi pose tangan selesai, maka langkah selanjutnya ada mengelompokkan citra-citra hasil estimasi menjadi suatu dataset. Dataset ini akan memiliki 5 kelas berbeda yang masing-masing merepresentasikan perintah untuk maju, mundur, bergerak ke kanan, bergerak ke kiri, dan berhenti. Kelas ini mewakili perintah dasar untuk menggerakkan kursi roda. 
 
 Untuk meningkatkan kinerja dan akurasi maka dataset ini kemudian akan melewati proses \emph{training} menggunakan algoritma \emph{Convolutional Neural Network} (CNN). Penggunaan CNN dalam \emph{training} dataset diharapkan dapat menghasilkan model yang mampu mengenali pola dan fitur yang kompleks, sehingga memungkinkan sistem untuk merespon dengan tepat terhadap variasi perintah yang mungkin diberikan oleh peraga. Hasil dari model prediksi yang telah dibuat dapat dilihat pada Tabel 3.2.
 
@@ -147,18 +147,412 @@ Berikut ini dijabarkan beberapa \emph{Hardware} dan juga \emph{Software} yang di
 \end{enumerate}
 
 \subsection{Skematik Alat}
+Skematik pada alat ini diilustrasikan secara rinci pada Gambar 3.3. Sistem ini menggunakan kamera yang dihubungkan dengan Laptop atau Jetson Nano sebagai perangkat utama dalam menangkap citra. Proses kerja dimulai saat kamera menangkap citra objek. Citra yang telah ditangkap ini lantas diproses oleh Laptop atau Jetson Nano. Di dalam sistem ini, model klasifikasi yang telah diprogram sebelumnya memainkan peran penting dalam menginterpretasikan data citra tersebut. Hasil dari proses klasifikasi ini sangat krusial karena menjadi dasar dalam penentuan kode instruksi yang akan diimplementasikan.
+
+Kode instruksi tersebut kemudian akan dikombinasikan dengan parameter kecepatam maksimal yang sebelumnya telah ditetapkan oleh pemngguna. Gabungan dari kode instruksi dan parameter kecepatan ini akan menjadi satu paket data sebagai kontrol gerak kursi roda. Paket data ini kemudian akan ditransmisikan secara nirkabel, baik dengan Bluetooth maupun WiFi, ke modul ESP32 Devkit V1. 
+
+ESP32 memiliki peranan penting dalam kontrol motor kursi roda. ESP32 akan digunakan sebagai pusat pengendalian yang menerima paket data yang telah dikirimkan oleh pengguna secara nirkabel. Kemudian ESP32 akan melakukan pemecahan paket data dan menyesuaikan data tersebut kedalam variabel-variabel yang telah ditentukan. Proses pemecahan paket data ini akan menghasilkan dua data utama yang kemudian akan diproses lebih lanjut oleh ESP32.
+
+Variabel pertama merupakan variabel arah yang memiliki fungsi krusial untuk menentukan arah gerak kedua motor pada kursi roda. Variabel ini akan memastikan bahwa motor bergerak sesuai dengan arah yang diinginkan sesuai dengan data yang diterima. Selain itu terdapat variabel kecepatan yang digunakan untuk menetapkan kecepatan maksimal pergerakan motor.
+
+Dalam implementasinya terdapat serangkaian logika \emph{if} berantai yang akan dijelaskan secara terperinci pada sub bab program. Sederhananya logika \emph{if} berantai ini memiliki peran yang penting dalam pengambilan keputusan baik arah dan kecepatan motor sesuai dengan data yang telah diterima. Hasil dari logika ini akan memberikan \emph{trigger} berupa tegangan 5V ataupun 0V. Tegangan ini kemudian akan mempengaruhi arah putar motor.
+
+Selanjutnya variabel kecepatan akan digunakan untuk mengatur tingkat \emph{Pulse Width Modulation} pada kontroler motor. Pengaturan PWM ini sangatlah penting guna mengatur kecepatan putar motor. Dengan mengatur tingkat PWM maka kecepatan motor maksimal dapat disesuaikan sesuai dengan kebutuhan.
 
 
-Alat diimplementasikan dengan \lipsum[1]
+\section{Kode Program}
+Pada sub bab ini akan dijabarkan kode program yang digunakan pada penelitian ini.
+
+\subsection{Program Untuk Memeriksa MAC Address Pada ESP32}
 
 
-\lipsum[2-3]
+% Program 3.1 
+\begin{lstlisting}[
+    language=Arduino,
+    caption={Program Untuk Memeriksa MAC Address Pada ESP32},
+    label={lst:CekMAC}
+]
+#include <BluetoothSerial.h>
 
-% Contoh input potongan kode dari file
-\lstinputlisting[
-  language=Python,
-  caption={Program perhitungan bilangan prima.},
-  label={lst:bilanganprima}
-]{program/bilangan-prima.py}
+BluetoothSerial SerialBT;
 
-\lipsum[4]
+void setup() {
+  Serial.begin(115200);
+  SerialBT.begin("ESP32_Haris"); // Bluetooth device name
+  delay(1000);  // Give some time for the Bluetooth module to initialize
+}
+
+void loop() {
+  // Get the ESP32 Bluetooth address
+  uint8_t esp32Address[6];
+  esp_efuse_mac_get_default(esp32Address);
+
+  // Print the address in a readable format
+  Serial.printf("ESP32 Bluetooth Address: %02X:%02X:%02X:%02X:%02X:%02X\n",
+                esp32Address[0], esp32Address[1], esp32Address[2],
+                esp32Address[3], esp32Address[4], esp32Address[5]);
+}
+    
+\end{lstlisting}
+
+\subsection{Program Untuk Menerima Data String Melalui Bluetooth Pada ESP32}
+
+% Program 3.2
+\begin{lstlisting}[
+    language=Arduino,
+    caption={Program Untuk Menerima Data String Melalui Bluetooth Pada ESP32},
+    label={lst:ReceivedBluetooth}
+]
+#include <BluetoothSerial.h>
+BluetoothSerial SerialBT;
+
+int maxspeed;
+
+void setup(){
+  Serial.begin(115200);
+  SerialBT.begin("ESP32_Haris");
+}
+
+void loop(){
+  if (SerialBT.available()){
+    String receivedData = SerialBT.readStringUntil('\n');
+
+    String data1 = receivedData.substring(0, receivedData.indexOf(','));
+    String data2 = receivedData.substring(receivedData.indexOf(',') + 1);
+
+    maxspeed = data2.toInt();
+
+    Serial.print("Data 1 : ");
+    Serial.println(data1);
+    Serial.print("Data 2 : ");
+    Serial.println(data2);
+
+    if(maxspeed < 20){
+      Serial.println("TRUE");
+    }
+    else{
+      Serial.println("FALSE");
+    }
+
+  }
+}
+    
+\end{lstlisting}
+
+\subsection{Program Untuk Menerima Data JSON Melalui Bluetooth Pada ESP32}
+
+% Program 3.3
+\begin{lstlisting}[
+    language=Arduino,
+    caption={Program Untuk Menerima Data JSON Melalui Bluetooth Pada ESP32},
+    label={lst:ReceivedBluetoothJSON}
+]
+#include <BluetoothSerial.h>
+#include <ArduinoJson.h>
+
+BluetoothSerial SerialBT;
+
+void setup() {
+  Serial.begin(115200);
+  SerialBT.begin("ESP32_Haris");
+}
+
+void loop() {
+  if (SerialBT.available()) {
+    // Read the incoming data
+    String json_data = SerialBT.readStringUntil('\n');
+
+    // Deserialize the JSON
+    DynamicJsonDocument doc(1024);
+    DeserializationError error = deserializeJson(doc, json_data);
+
+    if (error) {
+      Serial.println("Failed to parse JSON");
+    } else {
+      // Extract values from JSON
+      const char* arah = doc["arah"];
+      const char* kecepatan = doc["kecepatan"];
+
+      // Perform actions based on the received data
+      Serial.print("Received Arah: ");
+      Serial.println(arah);
+      Serial.print("Received Kecepatan: ");
+      Serial.println(kecepatan);
+    }
+  }
+}
+    
+\end{lstlisting}
+
+\subsection{Program Untuk Menerima Data String Melalui Access Point WiFi Pada ESP32}
+
+% Program 3.4
+\begin{lstlisting}[
+    language=Arduino,
+    caption={Program Untuk Menerima Data String Melalui Access Point WiFi Pada ESP32},
+    label={lst:ReceivedWiFi}
+]
+#include <WiFi.h>
+#include <Arduino.h>
+
+int maxspeed;
+
+const char* ssid = "Haris-Access-Point";
+const char* password = "123456789";
+
+WiFiServer server(80);
+
+void setup(){
+  Serial.begin(115200);
+
+
+  // Connect to Wi-Fi network with SSID and password
+  Serial.print("Setting AP Access Point");
+  // Remove the password parameter, if you want the AP (Access Point) to be open
+  WiFi.softAP(ssid, password);
+ 
+  IPAddress IP = WiFi.softAPIP();
+  Serial.print("ESP32 AP IP Address : ");
+  Serial.println(IP);
+
+  // Start the server
+  server.begin();
+}
+
+void loop(){
+    // Check if a client has connected
+  WiFiClient client = server.available();
+
+  if (client) {
+    //Serial.println("New client connected");
+    
+    // Read the data from the client
+    while (client.connected()) {
+      if (client.available()) {
+    
+        String receivedData = client.readStringUntil('\n');
+
+        String data1 = receivedData.substring(0, receivedData.indexOf(','));
+        String data2 = receivedData.substring(receivedData.indexOf(',') + 1);
+
+        maxspeed = data2.toInt();
+
+        Serial.print("Data 1 : ");
+        Serial.println(data1);
+        Serial.print("Data 2 : ");
+        Serial.println(data2);
+
+        if(maxspeed < 20){
+          Serial.println("TRUE");
+        }
+        else{
+          Serial.println("FALSE");
+        }
+
+      }
+    }
+
+    client.stop();
+
+  }
+}
+\end{lstlisting}
+
+\subsection{Program Untuk Menerima Data JSON Melalui Access Point WiFi Pada ESP32}
+
+% Program 3.5
+\begin{lstlisting}[
+    language=Arduino,
+    caption={Program Untuk Menerima Data JSON Melalui Access Point WiFi Pada ESP32},
+    label={lst:ReceivedWiFiJSON}
+]
+
+\end{lstlisting}
+
+\subsection{Program Untuk Menguji Rangkaian Kontrol ESP32}
+
+% Program 3.6
+\begin{lstlisting}[
+    language=Arduino,
+    caption={Program Untuk Menguji Rangkaian Kontrol Pada ESP32},
+    label={lst:MotorTest}
+]
+#include <Arduino.h>
+
+//Motor Kiri
+#define pwmpin1 5
+#define dir1  18
+#define dir2  19
+
+//Motor kanan
+#define pwmpin2 25
+#define dir3 32
+#define dir4 33
+
+#define pwmChannel1  0
+#define pwmChannel2  1
+#define freq  15000
+#define res  8
+
+int PWM1_DutyCycle = 0;
+int maxspeed = 127;
+
+
+void setup() {
+  // put your setup code here, to run once:
+  
+  pinMode(dir1,OUTPUT);
+  pinMode(dir2,OUTPUT);
+  pinMode(dir3,OUTPUT);
+  pinMode(dir4,OUTPUT);
+  //pinMode(pwmpin,OUTPUT);
+
+  ledcSetup(pwmChannel1, freq, res);
+  ledcSetup(pwmChannel2, freq, res);
+
+  ledcAttachPin(pwmpin1, pwmChannel1);
+  ledcAttachPin(pwmpin2, pwmChannel2);
+
+  //ledcWrite(pwmChannel, 127);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+//MAJU
+  //SOFTSTART
+  while(PWM1_DutyCycle < maxspeed)
+  {
+    digitalWrite(dir1, HIGH);
+    digitalWrite(dir2, LOW);
+    digitalWrite(dir3, HIGH);
+    digitalWrite(dir4, LOW);
+    ledcWrite(pwmChannel1, PWM1_DutyCycle++);
+    ledcWrite(pwmChannel2, PWM1_DutyCycle++);
+    delay(10);
+  }
+  delay(5000);
+  
+  //SOFTSTOP
+  while(PWM1_DutyCycle > 0)
+  {
+    digitalWrite(dir1, HIGH);
+    digitalWrite(dir2, LOW);
+    digitalWrite(dir3, HIGH);
+    digitalWrite(dir4, LOW);
+    ledcWrite(pwmChannel1, PWM1_DutyCycle--);
+    ledcWrite(pwmChannel2, PWM1_DutyCycle--);
+    delay(10);
+
+  }
+  delay(1000);
+
+//MUNDUR
+  while(PWM1_DutyCycle < maxspeed)
+  {
+    digitalWrite(dir1, LOW);
+    digitalWrite(dir2, HIGH);
+    digitalWrite(dir3, LOW);
+    digitalWrite(dir4, HIGH);
+    ledcWrite(pwmChannel1, PWM1_DutyCycle++);
+    ledcWrite(pwmChannel2, PWM1_DutyCycle++);
+    delay(10);
+  }
+  delay(5000);
+  
+  //SOFTSTOP
+  while(PWM1_DutyCycle > 0)
+  {
+    digitalWrite(dir1, LOW);
+    digitalWrite(dir2, HIGH);
+    digitalWrite(dir3, LOW);
+    digitalWrite(dir4, HIGH);
+    ledcWrite(pwmChannel1, PWM1_DutyCycle--);
+    ledcWrite(pwmChannel2, PWM1_DutyCycle--);
+    delay(10);
+
+  }
+  delay(1000);
+
+//BELOK KANAN
+ while(PWM1_DutyCycle < maxspeed)
+  {
+    digitalWrite(dir1, HIGH);
+    digitalWrite(dir2, LOW);
+    digitalWrite(dir3, LOW);
+    digitalWrite(dir4, LOW);
+    ledcWrite(pwmChannel1, PWM1_DutyCycle++);
+    ledcWrite(pwmChannel2, PWM1_DutyCycle++);
+    delay(10);
+  }
+  delay(5000);
+  
+  //SOFTSTOP
+  while(PWM1_DutyCycle > 0)
+  {
+    digitalWrite(dir1, HIGH);
+    digitalWrite(dir2, LOW);
+    digitalWrite(dir3, LOW);
+    digitalWrite(dir4, LOW);
+    ledcWrite(pwmChannel1, PWM1_DutyCycle--);
+    ledcWrite(pwmChannel2, PWM1_DutyCycle--);
+    delay(10);
+
+  }
+  delay(1000);
+
+//BELOK KIRI
+ while(PWM1_DutyCycle < maxspeed)
+  {
+    digitalWrite(dir1, LOW);
+    digitalWrite(dir2, LOW);
+    digitalWrite(dir3, HIGH);
+    digitalWrite(dir4, LOW);
+    ledcWrite(pwmChannel1, PWM1_DutyCycle++);
+    ledcWrite(pwmChannel2, PWM1_DutyCycle++);
+    delay(10);
+  }
+  delay(5000);
+  
+  //SOFTSTOP
+  while(PWM1_DutyCycle > 0)
+  {
+    digitalWrite(dir1, LOW);
+    digitalWrite(dir2, LOW);
+    digitalWrite(dir3, HIGH);
+    digitalWrite(dir4, LOW);
+    ledcWrite(pwmChannel1, PWM1_DutyCycle--);
+    ledcWrite(pwmChannel2, PWM1_DutyCycle--);
+    delay(10);
+
+  }
+  delay(1000);
+
+//STOP
+ while(PWM1_DutyCycle < maxspeed)
+  {
+    digitalWrite(dir1, LOW);
+    digitalWrite(dir2, LOW);
+    digitalWrite(dir3, LOW);
+    digitalWrite(dir4, LOW);
+    ledcWrite(pwmChannel1, PWM1_DutyCycle++);
+    ledcWrite(pwmChannel2, PWM1_DutyCycle++);
+    delay(10);
+  }
+  delay(5000);
+  
+  //SOFTSTOP
+  while(PWM1_DutyCycle > 0)
+  {
+    digitalWrite(dir1, LOW);
+    digitalWrite(dir2, LOW);
+    digitalWrite(dir3, LOW);
+    digitalWrite(dir4, LOW);
+    ledcWrite(pwmChannel1, PWM1_DutyCycle--);
+    ledcWrite(pwmChannel2, PWM1_DutyCycle--);
+    delay(10);
+
+  }
+  delay(1000);
+}
+\end{lstlisting}

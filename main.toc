@@ -30,11 +30,18 @@
 \contentsline {section}{\numberline {3.2}Implementasi Alat}{12}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}\emph {Hardware} dan \emph {Software} yang digunakan}{12}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Skematik Alat}{12}{subsection.3.2.2}%
-\contentsline {chapter}{\numberline {4}PENGUJIAN DAN ANALISIS}{15}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Skenario Pengujian}{15}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Evaluasi Pengujian}{15}{section.4.2}%
-\contentsline {chapter}{\numberline {5}PENUTUP}{17}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Kesimpulan}{17}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Saran}{17}{section.5.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{19}{chapter*.4}%
-\contentsline {chapter}{BIOGRAFI PENULIS}{21}{chapter*.4}%
+\contentsline {section}{\numberline {3.3}Kode Program}{13}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Program Untuk Memeriksa MAC Address Pada ESP32}{13}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Program Untuk Menerima Data String Melalui Bluetooth Pada ESP32}{14}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Program Untuk Menerima Data JSON Melalui Bluetooth Pada ESP32}{14}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Program Untuk Menerima Data String Melalui Access Point WiFi Pada ESP32}{15}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Program Untuk Menerima Data JSON Melalui Access Point WiFi Pada ESP32}{17}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Program Untuk Menguji Rangkaian Kontrol ESP32}{17}{subsection.3.3.6}%
+\contentsline {chapter}{\numberline {4}PENGUJIAN DAN ANALISIS}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Skenario Pengujian}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Evaluasi Pengujian}{23}{section.4.2}%
+\contentsline {chapter}{\numberline {5}PENUTUP}{25}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{25}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Saran}{25}{section.5.2}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{27}{chapter*.4}%
+\contentsline {chapter}{BIOGRAFI PENULIS}{29}{chapter*.4}%
