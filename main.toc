@@ -37,6 +37,10 @@
 \contentsline {subsection}{\numberline {3.3.4}Program Untuk Menerima Data String Melalui Access Point WiFi Pada ESP32}{15}{subsection.3.3.4}%
 \contentsline {subsection}{\numberline {3.3.5}Program Untuk Menerima Data JSON Melalui Access Point WiFi Pada ESP32}{17}{subsection.3.3.5}%
 \contentsline {subsection}{\numberline {3.3.6}Program Untuk Menguji Rangkaian Kontrol ESP32}{17}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.7}Program Untuk Mengirim Data String Melalui Bluetooth}{21}{subsection.3.3.7}%
+\contentsline {subsection}{\numberline {3.3.8}Program Untuk Mengirim Data String Melalui WiFi}{21}{subsection.3.3.8}%
+\contentsline {subsection}{\numberline {3.3.9}Program Untuk Mengirim Data JSON Melalui Bluetooth}{21}{subsection.3.3.9}%
+\contentsline {subsection}{\numberline {3.3.10}Program Untuk Mengirim Data JSON Melalui WiFi}{21}{subsection.3.3.10}%
 \contentsline {chapter}{\numberline {4}PENGUJIAN DAN ANALISIS}{23}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Skenario Pengujian}{23}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Evaluasi Pengujian}{23}{section.4.2}%
