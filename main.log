@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.2)  2 DEC 2023 17:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.2)  2 DEC 2023 19:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -842,7 +842,7 @@ LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 (Font)              scaled to size 13.67995pt on input line 17.
 )
-<sampul/gambar/sampul-luar.png, id=157, 2107.875pt x 2981.1375pt>
+<sampul/gambar/sampul-luar.png, id=161, 2107.875pt x 2981.1375pt>
 File: sampul/gambar/sampul-luar.png Graphic file (type png)
 <use sampul/gambar/sampul-luar.png>
 Package pdftex.def Info: sampul/gambar/sampul-luar.png  used on input line 41.
@@ -889,7 +889,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.38 \restoregeometry
                      
-<sampul/gambar/sampul-luar-tipis.png, id=164, 2107.875pt x 2981.1375pt>
+<sampul/gambar/sampul-luar-tipis.png, id=168, 2107.875pt x 2981.1375pt>
 File: sampul/gambar/sampul-luar-tipis.png Graphic file (type png)
 <use sampul/gambar/sampul-luar-tipis.png>
 Package pdftex.def Info: sampul/gambar/sampul-luar-tipis.png  used on input line 38.
@@ -1046,7 +1046,7 @@ l.26
 
 
 ]
-<gambar/arsitekturcnn.png, id=373, 3517.14pt x 1261.71375pt>
+<gambar/arsitekturcnn.png, id=378, 3517.14pt x 1261.71375pt>
 File: gambar/arsitekturcnn.png Graphic file (type png)
 <use gambar/arsitekturcnn.png>
 Package pdftex.def Info: gambar/arsitekturcnn.png  used on input line 42.
@@ -1062,17 +1062,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) h
                                                   \__shipout_drop_firstpage_...
 l.54 \end{equation}
                     <./gambar/arsitekturcnn.png>]
-<gambar/aktivasiReLU.png, id=383, 251.94125pt x 98.3675pt>
+<gambar/aktivasiReLU.png, id=388, 251.94125pt x 98.3675pt>
 File: gambar/aktivasiReLU.png Graphic file (type png)
 <use gambar/aktivasiReLU.png>
 Package pdftex.def Info: gambar/aktivasiReLU.png  used on input line 61.
 (pdftex.def)             Requested size: 251.94063pt x 98.36723pt.
-<gambar/maxPooling.png, id=385, 164.25pt x 68.547pt>
+<gambar/maxPooling.png, id=390, 164.25pt x 68.547pt>
 File: gambar/maxPooling.png Graphic file (type png)
 <use gambar/maxPooling.png>
 Package pdftex.def Info: gambar/maxPooling.png  used on input line 73.
 (pdftex.def)             Requested size: 246.37437pt x 102.82022pt.
-<gambar/flattening.png, id=386, 420.57124pt x 256.96pt>
+<gambar/flattening.png, id=391, 420.57124pt x 256.96pt>
 File: gambar/flattening.png Graphic file (type png)
 <use gambar/flattening.png>
 Package pdftex.def Info: gambar/flattening.png  used on input line 85.
@@ -1095,7 +1095,7 @@ l.92 \newpage
               <./gambar/aktivasiReLU.png> <./gambar/maxPooling.png>]
 LaTeX Font Info:    Font shape `TS1/txr/b/n' in size <14.4> not available
 (Font)              Font shape `TS1/txr/bx/n' tried instead on input line 94.
-<gambar/JetsonNano.jpg, id=395, 903.375pt x 737.00343pt>
+<gambar/JetsonNano.jpg, id=400, 903.375pt x 737.00343pt>
 File: gambar/JetsonNano.jpg Graphic file (type jpg)
 <use gambar/JetsonNano.jpg>
 Package pdftex.def Info: gambar/JetsonNano.jpg  used on input line 99.
@@ -1117,7 +1117,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5}) h
 l.213 \cleardoublepage
                        <./gambar/flattening.png> <./gambar/JetsonNano.jpg>] (./bab/3-desain-implementasi.tex
 Chapter 3.
-<gambar/blokDiagram.png, id=404, 201.75375pt x 603.25375pt>
+<gambar/blokDiagram.png, id=409, 201.75375pt x 603.25375pt>
 File: gambar/blokDiagram.png Graphic file (type png)
 <use gambar/blokDiagram.png>
 Package pdftex.def Info: gambar/blokDiagram.png  used on input line 16.
@@ -1136,80 +1136,104 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) h
                                                   \__shipout_drop_firstpage_...
 l.25 
       <./gambar/blokDiagram.png>]
-<gambar/EstimasiPose.png, id=409, 484.209pt x 387.849pt>
-File: gambar/EstimasiPose.png Graphic file (type png)
-<use gambar/EstimasiPose.png>
-Package pdftex.def Info: gambar/EstimasiPose.png  used on input line 64.
-(pdftex.def)             Requested size: 256.62955pt x 205.55898pt.
+<gambar/bab3/EstimasiPose.png, id=414, 484.209pt x 386.6445pt>
+File: gambar/bab3/EstimasiPose.png Graphic file (type png)
+<use gambar/bab3/EstimasiPose.png>
+Package pdftex.def Info: gambar/bab3/EstimasiPose.png  used on input line 64.
+(pdftex.def)             Requested size: 435.78407pt x 347.97684pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.71 \newpage
-              [8
+l.73 
+      [8
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.71 \newpage
-             ]
-<gambar/KlasifikasiPose.png, id=413, 483.0045pt x 386.6445pt>
-File: gambar/KlasifikasiPose.png Graphic file (type png)
-<use gambar/KlasifikasiPose.png>
-Package pdftex.def Info: gambar/KlasifikasiPose.png  used on input line 81.
-(pdftex.def)             Requested size: 260.81854pt x 208.78491pt.
-
+l.73 
+     ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.88 \newpage
+l.76 \newpage
               [9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.88 \newpage
-             
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.88 \newpage
-              <./gambar/EstimasiPose.png> <./gambar/KlasifikasiPose.png>]
+l.76 \newpage
+              <./gambar/bab3/EstimasiPose.png>]
+<gambar/bab3/Kiri.png, id=422, 483.60675pt x 385.44pt>
+File: gambar/bab3/Kiri.png Graphic file (type png)
+<use gambar/bab3/Kiri.png>
+Package pdftex.def Info: gambar/bab3/Kiri.png  used on input line 86.
+(pdftex.def)             Requested size: 159.59071pt x 127.19559pt.
+<gambar/bab3/Maju.png, id=423, 484.81125pt x 387.849pt>
+File: gambar/bab3/Maju.png Graphic file (type png)
+<use gambar/bab3/Maju.png>
+Package pdftex.def Info: gambar/bab3/Maju.png  used on input line 87.
+(pdftex.def)             Requested size: 159.9882pt x 127.99055pt.
+<gambar/bab3/Stop.png, id=424, 484.81125pt x 387.849pt>
+File: gambar/bab3/Stop.png Graphic file (type png)
+<use gambar/bab3/Stop.png>
+Package pdftex.def Info: gambar/bab3/Stop.png  used on input line 88.
+(pdftex.def)             Requested size: 159.9882pt x 127.99055pt.
+<gambar/bab3/Mundur.png, id=425, 485.4135pt x 387.849pt>
+File: gambar/bab3/Mundur.png Graphic file (type png)
+<use gambar/bab3/Mundur.png>
+Package pdftex.def Info: gambar/bab3/Mundur.png  used on input line 89.
+(pdftex.def)             Requested size: 160.18694pt x 127.99055pt.
+<gambar/bab3/Kanan.png, id=426, 483.0045pt x 387.849pt>
+File: gambar/bab3/Kanan.png Graphic file (type png)
+<use gambar/bab3/Kanan.png>
+Package pdftex.def Info: gambar/bab3/Kanan.png  used on input line 90.
+(pdftex.def)             Requested size: 159.39197pt x 127.99055pt.
+
+Overfull \vbox (9.0032pt too high) has occurred while \output is active []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.125 \section{Implementasi Alat}
-                                  [10
+l.93 
+      [10
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.125 \section{Implementasi Alat}
-                                 ] (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 143.
-LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 143.
- (c:/texlive/2023/texmf-dist/tex/latex/txfonts/ot1txtt.fd
-File: ot1txtt.fd 2000/12/15 v3.1
-) (./program/bilangan-prima.py))
+l.93 
+      <./gambar/bab3/Kiri.png> <./gambar/bab3/Maju.png> <./gambar/bab3/Stop.png> <./gambar/bab3/Mundur.png> <./gambar/bab3/Kanan.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.217 \cleardoublepage
-                       [11]
+l.129 \section{Implementasi Alat}
+                                  [11
+pdfTeX warning (ext4): destination with the same identifier (name{table.3.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.129 \section{Implementasi Alat}
+                                 ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.217 \cleardoublepage
-                       [12] (./bab/4-pengujian-analisis.tex
+l.156 
+       [12] (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 162.
+LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 162.
+ (c:/texlive/2023/texmf-dist/tex/latex/txfonts/ot1txtt.fd
+File: ot1txtt.fd 2000/12/15 v3.1
+) (./program/bilangan-prima.py)) [13] [14
+
+] (./bab/4-pengujian-analisis.tex
 Chapter 4.
-[13
+[15
 
-
-]) [14] (./bab/5-penutup.tex
+]) [16] (./bab/5-penutup.tex
 Chapter 5.
-) [15
+) [17
 
 
-] [16
+] [18
 
 ]
 Overfull \hbox (0.46477pt too wide) in paragraph at lines 235--235
@@ -1221,17 +1245,17 @@ Overfull \hbox (36.35515pt too wide) in paragraph at lines 235--235
 \OT1/txr/m/n/12 melelui blue-tooth. \OT1/txr/m/it/12 Pro-sid-ing Sem-i-nar Na-sional Peneli-tian dan Pengab-dian Kepada Masyarakat\OT1/txr/m/n/12 ,
  []
 
-[17
+[19
 
-] [18
+] [20
 
 ] (./lainnya/biografi-penulis.tex
-<gambar/elon.jpg, id=482, 578.16pt x 867.24pt>
+<gambar/elon.jpg, id=513, 578.16pt x 867.24pt>
 File: gambar/elon.jpg Graphic file (type jpg)
 <use gambar/elon.jpg>
 Package pdftex.def Info: gambar/elon.jpg  used on input line 14.
 (pdftex.def)             Requested size: 136.57462pt x 204.86006pt.
-) [19 <./gambar/elon.jpg>] [20
+) [21 <./gambar/elon.jpg>] [22
 
 ] (./main.aux)
  ***********
@@ -1239,24 +1263,24 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B8FF2932352E333787EDAAC1C94AE221;7115.
+(rerunfilecheck)             Checksum: CE06F981C3A1762CB4E9FAF0A23CF71F;7278.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22940 strings out of 474267
- 390131 string characters out of 5751465
- 1967558 words of memory out of 5000000
- 44631 multiletter control sequences out of 15000+600000
+ 22982 strings out of 474267
+ 391007 string characters out of 5751465
+ 1962558 words of memory out of 5000000
+ 44660 multiletter control sequences out of 15000+600000
  613490 words of font info for 159 fonts, out of 8000000 for 9000
  1148 hyphenation exceptions out of 8191
- 75i,12n,81p,1956b,5052s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,14n,81p,1956b,5052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (45 pages, 3578409 bytes).
+Output written on main.pdf (47 pages, 7893246 bytes).
 PDF statistics:
- 581 PDF objects out of 1000 (max. 8388607)
- 483 compressed objects within 5 object streams
- 120 named destinations out of 1000 (max. 500000)
- 368 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 616 PDF objects out of 1000 (max. 8388607)
+ 507 compressed objects within 6 object streams
+ 133 named destinations out of 1000 (max. 500000)
+ 396 words of extra memory for PDF output out of 10000 (max. 10000000)
 

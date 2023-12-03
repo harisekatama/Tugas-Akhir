@@ -24,16 +24,17 @@
 \contentsline {section}{\numberline {3.1}Deskripsi Sistem}{7}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Estimasi Pose}{8}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Klasifikasi Pose}{9}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Paket Data}{10}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Memecahkan Paket Data}{10}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Kontrol Navigasi}{10}{subsection.3.1.5}%
-\contentsline {section}{\numberline {3.2}Implementasi Alat}{11}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}\emph {Hardware} dan \emph {Software} yang digunakan}{11}{subsection.3.2.1}%
-\contentsline {chapter}{\numberline {4}PENGUJIAN DAN ANALISIS}{13}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Skenario Pengujian}{13}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Evaluasi Pengujian}{13}{section.4.2}%
-\contentsline {chapter}{\numberline {5}PENUTUP}{15}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Kesimpulan}{15}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Saran}{15}{section.5.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{17}{chapter*.4}%
-\contentsline {chapter}{BIOGRAFI PENULIS}{19}{chapter*.4}%
+\contentsline {subsection}{\numberline {3.1.3}Paket Data}{11}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Memecahkan Paket Data}{11}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Kontrol Navigasi}{11}{subsection.3.1.5}%
+\contentsline {section}{\numberline {3.2}Implementasi Alat}{12}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}\emph {Hardware} dan \emph {Software} yang digunakan}{12}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Skematik Alat}{12}{subsection.3.2.2}%
+\contentsline {chapter}{\numberline {4}PENGUJIAN DAN ANALISIS}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Skenario Pengujian}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Evaluasi Pengujian}{15}{section.4.2}%
+\contentsline {chapter}{\numberline {5}PENUTUP}{17}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{17}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Saran}{17}{section.5.2}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{19}{chapter*.4}%
+\contentsline {chapter}{BIOGRAFI PENULIS}{21}{chapter*.4}%

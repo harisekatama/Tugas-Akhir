@@ -61,31 +61,35 @@ Setiap titik \emph{landmark} yang terdapat pada peraga akan diwarnai dengan warn
 % Gambar 3.2
 \begin{figure} [ht] \centering
     % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=0.53]{gambar/EstimasiPose.png}
+    \includegraphics[scale=0.9]{gambar/bab3/EstimasiPose.png}
     % Keterangan gambar yang diinputkan
     \caption{Contoh citra yang telah diestimasi pose}
     % Label referensi dari gambar yang diinputkan
     \label{fig:contoh citra yang telah diestimasi pose}
 \end{figure}
 
-\newpage
-
 \subsection{Klasifikasi Pose}
 Setelah proses estimasi pose tangan selsai, maka langkah selanjutnya ada mengelompokkan citra-citra hasil estimasi menjadi suatu dataset. Dataset ini akan memiliki 5 kelas berbeda yang masing-masing merepresentasikan perintah untuk maju, mundur, bergerak ke kanan, bergerak ke kiri, dan berhenti. Kelas ini mewakili perintah dasar untuk menggerakkan kursi roda. 
 
-Untuk meningkatkan kinerja dan akurasi maka dataset ini kemudian akan melewati proses \emph{training} menggunakan algoritma \emph{Convolutional Neural Network} (CNN). Penggunaan CNN dalam \emph{training} dataset diharapkan dapat menghasilkan model yang mampu mengenali pola dan fitur yang kompleks, sehingga memungkinkan sistem untuk merespon dengan tepat terhadap variasi perintah yang mungkin diberikan oleh peraga. Hasil dari model prediksi yang telah dibuat dapat dilihat pada Gambar 3.3.
-
-% Gambar 3.3
-\begin{figure} [ht] \centering
-    % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=0.54]{gambar/KlasifikasiPose.png}
-    % Keterangan gambar yang diinputkan
-    \caption{Klasifikasi untuk perintah maju}
-    % Label referensi dari gambar yang diinputkan
-    \label{fig:klasifikasi untuk perintah maju}
-\end{figure}
+Untuk meningkatkan kinerja dan akurasi maka dataset ini kemudian akan melewati proses \emph{training} menggunakan algoritma \emph{Convolutional Neural Network} (CNN). Penggunaan CNN dalam \emph{training} dataset diharapkan dapat menghasilkan model yang mampu mengenali pola dan fitur yang kompleks, sehingga memungkinkan sistem untuk merespon dengan tepat terhadap variasi perintah yang mungkin diberikan oleh peraga. Hasil dari model prediksi yang telah dibuat dapat dilihat pada Tabel 3.2.
 
 \newpage
+
+% Tabel 3.2
+\begin{table}[H]
+\centering
+    \caption{Tabel contoh klasifikasi citra}
+    \label{tbl:contoh klasifikasi citra}
+    \begin{tabular}{|c|c|}
+        \hline
+        Pose                & Citra              \\ \hline
+        Kiri                & \includegraphics[scale=0.33]{gambar/bab3/Kiri.png}   \\ \hline
+        Maju                & \includegraphics[scale=0.33]{gambar/bab3/Maju.png}   \\ \hline
+        Stop                & \includegraphics[scale=0.33]{gambar/bab3/Stop.png}   \\ \hline
+        Mundur              & \includegraphics[scale=0.33]{gambar/bab3/Mundur.png} \\ \hline
+        Kanan               & \includegraphics[scale=0.33]{gambar/bab3/Kanan.png}  \\ \hline
+    \end{tabular}
+\end{table}
 
 \subsection{Paket Data}
 Untuk dapat menggerakkan kursi roda maka perlu mengirimkan perintah ke kontroler kursi roda. Pada tahap klasifikasi pose telah didapatkan perintah dasar untuk menggerakkan kursi roda, seperti maju, mundur, kanan, kiri, maupun stop. Perintah ini kemudian akan digabungkan dengan kecepatan maksimal menjadi satu \emph{command} atau paket data seperti yang dilihat pada Persamaan 3.1.
@@ -128,6 +132,21 @@ Kedua variabel yang didapatkan dari pemecahan paket data akan diproses pada ESP3
 Pada penelitian ini dikembangkan suatu alat kontrol yang dapat menerima perintah melalui perangkat lain seperti laptop maupun Jetson Nano secara nirkabel. Pada sub bab ini akan dijabarkan implementasi dari alat yang dikembangkan pada penelitian ini.
 
 \subsection{\emph{Hardware} dan \emph{Software} yang digunakan}
+Berikut ini dijabarkan beberapa \emph{Hardware} dan juga \emph{Software} yang digunakan pada penelitian ini seperti berikut:
+\begin{enumerate}
+    \item Anaconda Navigator
+    \item Arduino IDE 
+    \item Laptop 
+    \item Jetson Nano
+    \item Kamera
+    \item ESP32 Devkit V1
+    \item 2 Kontroller Motor
+    \item 2 DC-DC Voltage Regulator
+    \item 2 DC Motor
+    \item Baterai 24V
+\end{enumerate}
+
+\subsection{Skematik Alat}
 
 
 Alat diimplementasikan dengan \lipsum[1]
