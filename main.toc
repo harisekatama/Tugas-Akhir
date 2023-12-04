@@ -4,6 +4,7 @@
 \contentsline {chapter}{DAFTAR ISI}{vii}{Item.7}%
 \contentsline {chapter}{DAFTAR GAMBAR}{ix}{chapter*.1}%
 \contentsline {chapter}{DAFTAR TABEL}{xi}{chapter*.2}%
+\contentsline {chapter}{Program}{xiii}{chapter*.3}%
 \contentsline {chapter}{\numberline {1}PENDAHULUAN}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Permasalahan}{2}{section.1.2}%
@@ -39,13 +40,13 @@
 \contentsline {subsection}{\numberline {3.3.6}Program Untuk Menguji Rangkaian Kontrol ESP32}{17}{subsection.3.3.6}%
 \contentsline {subsection}{\numberline {3.3.7}Program Untuk Mengirim Data String Melalui Bluetooth}{21}{subsection.3.3.7}%
 \contentsline {subsection}{\numberline {3.3.8}Program Untuk Mengirim Data String Melalui WiFi}{21}{subsection.3.3.8}%
-\contentsline {subsection}{\numberline {3.3.9}Program Untuk Mengirim Data JSON Melalui Bluetooth}{21}{subsection.3.3.9}%
-\contentsline {subsection}{\numberline {3.3.10}Program Untuk Mengirim Data JSON Melalui WiFi}{21}{subsection.3.3.10}%
-\contentsline {chapter}{\numberline {4}PENGUJIAN DAN ANALISIS}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Skenario Pengujian}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Evaluasi Pengujian}{23}{section.4.2}%
-\contentsline {chapter}{\numberline {5}PENUTUP}{25}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Kesimpulan}{25}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Saran}{25}{section.5.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{27}{chapter*.4}%
-\contentsline {chapter}{BIOGRAFI PENULIS}{29}{chapter*.4}%
+\contentsline {subsection}{\numberline {3.3.9}Program Untuk Mengirim Data JSON Melalui Bluetooth}{22}{subsection.3.3.9}%
+\contentsline {subsection}{\numberline {3.3.10}Program Untuk Mengirim Data JSON Melalui WiFi}{22}{subsection.3.3.10}%
+\contentsline {chapter}{\numberline {4}PENGUJIAN DAN ANALISIS}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Skenario Pengujian}{25}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Evaluasi Pengujian}{25}{section.4.2}%
+\contentsline {chapter}{\numberline {5}PENUTUP}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{27}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Saran}{27}{section.5.2}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{29}{chapter*.5}%
+\contentsline {chapter}{BIOGRAFI PENULIS}{31}{chapter*.5}%

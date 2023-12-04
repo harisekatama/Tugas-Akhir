@@ -8,7 +8,7 @@ Penelitian ini dilaksanakan sesuai dengan desain sistem berikut ini beserta impl
 \section{Deskripsi Sistem}
 \label{sec:deskripsisistem}
 
-Tugas akhir ini merupakan penelitian yang mengintegrasikan teknologi visi komputer agar dapat mengontrol gerak kursi roda. Secara umum penelitian kali ini akan menggunakan desain sistem sesuai dengan Gambar 3.1.
+Tugas akhir ini merupakan penelitian yang mengintegrasikan teknologi visi komputer agar dapat mengontrol gerak kursi roda. Secara umum penelitian kali ini akan menggunakan desain sistem sesuai dengan Gambar \ref{fig:Metodologi Penelitian}.
 
 % Gambar 3.1
 \begin{figure} [ht] \centering
@@ -23,7 +23,7 @@ Tugas akhir ini merupakan penelitian yang mengintegrasikan teknologi visi komput
 \subsection{Estimasi Pose}
 Deteksi pose merupakan suatu proses yang melibatkan penggunaan bahasa pemrograman Python bersama dengan \emph{library} OpenCV dan \emph{framework} Mediapipe. Dalam konteks ini, Mediapipe berperan penting dalam mendapatkan informasi titik-titik \emph{landmark} yang signifikan pada objek yang diidentifikasi. \emph{Landmark} ini kemudian menjadi dasar untuk membentuk suatu representasi visual yang memvisualisasikan pose tersebut. Proses selanjutnya melibatkan penghubungan titik-titik \emph{landmark} yang telah ditentukan, di mana garis-garis dibuat untuk menggambarkan relasi spasial antar titik-titik tersebut. Dengan demikian, prosedur ini tidak hanya mengandalkan Mediapipe sebagai \emph{framework} utama, tetapi juga memanfaatkan OpenCV sebagai alat bantu untuk analisis citra dan manipulasi visual yang diperlukan dalam deteksi pose.
 
-Pada penelitian kali ini akan memanfaatkan teknologi \emph{hand pose} dari Mediapipe untuk mengontrol gerak kursi roda. Terdapat beberapa titik \emph{keypoints} yang akan digunakan pada estimasi pose ini. Titik \emph{keypoints} yang akan digunakan pada estimasi  pose ini dapat dilihat pada Tabel 3.1.
+Pada penelitian kali ini akan memanfaatkan teknologi \emph{hand pose} dari Mediapipe untuk mengontrol gerak kursi roda. Terdapat beberapa titik \emph{keypoints} yang akan digunakan pada estimasi pose ini. Titik \emph{keypoints} yang akan digunakan pada estimasi  pose ini dapat dilihat pada Tabel \ref{tbl:titik keypoints}.
 
 \begin{table}[H]
 \centering
@@ -56,7 +56,7 @@ Pada penelitian kali ini akan memanfaatkan teknologi \emph{hand pose} dari Media
     \end{tabular}
 \end{table}
 
-Setiap titik \emph{landmark} yang terdapat pada peraga akan diwarnai dengan warna yang unik untuk membedakan setiap jarinya. Secara spesifik, warna yang diberikan pada setiap titik \emph{landmark} mencerminkan asosiasi dengan jari tertentu, sehingga menciptakan representasi visual yang lebih terperinci dan informatif. Untuk memberikan gambaran yang lebih konkret maka berikut ini contoh citra yang telah diestimasi pose yang dapat dilihat pada Gambar 3.2.
+Setiap titik \emph{landmark} yang terdapat pada peraga akan diwarnai dengan warna yang unik untuk membedakan setiap jarinya. Secara spesifik, warna yang diberikan pada setiap titik \emph{landmark} mencerminkan asosiasi dengan jari tertentu, sehingga menciptakan representasi visual yang lebih terperinci dan informatif. Untuk memberikan gambaran yang lebih konkret maka berikut ini contoh citra yang telah diestimasi pose yang dapat dilihat pada Gambar \ref{fig:contoh citra yang telah diestimasi pose}.
 
 % Gambar 3.2
 \begin{figure} [ht] \centering
@@ -71,7 +71,7 @@ Setiap titik \emph{landmark} yang terdapat pada peraga akan diwarnai dengan warn
 \subsection{Klasifikasi Pose}
 Setelah proses estimasi pose tangan selesai, maka langkah selanjutnya ada mengelompokkan citra-citra hasil estimasi menjadi suatu dataset. Dataset ini akan memiliki 5 kelas berbeda yang masing-masing merepresentasikan perintah untuk maju, mundur, bergerak ke kanan, bergerak ke kiri, dan berhenti. Kelas ini mewakili perintah dasar untuk menggerakkan kursi roda. 
 
-Untuk meningkatkan kinerja dan akurasi maka dataset ini kemudian akan melewati proses \emph{training} menggunakan algoritma \emph{Convolutional Neural Network} (CNN). Penggunaan CNN dalam \emph{training} dataset diharapkan dapat menghasilkan model yang mampu mengenali pola dan fitur yang kompleks, sehingga memungkinkan sistem untuk merespon dengan tepat terhadap variasi perintah yang mungkin diberikan oleh peraga. Hasil dari model prediksi yang telah dibuat dapat dilihat pada Tabel 3.2.
+Untuk meningkatkan kinerja dan akurasi maka dataset ini kemudian akan melewati proses \emph{training} menggunakan algoritma \emph{Convolutional Neural Network} (CNN). Penggunaan CNN dalam \emph{training} dataset diharapkan dapat menghasilkan model yang mampu mengenali pola dan fitur yang kompleks, sehingga memungkinkan sistem untuk merespon dengan tepat terhadap variasi perintah yang mungkin diberikan oleh peraga. Hasil dari model prediksi yang telah dibuat dapat dilihat pada Tabel \ref{tbl:contoh-klasifikasi}.
 
 \newpage
 
@@ -79,7 +79,7 @@ Untuk meningkatkan kinerja dan akurasi maka dataset ini kemudian akan melewati p
 \begin{table}[H]
 \centering
     \caption{Tabel contoh klasifikasi citra}
-    \label{tbl:contoh klasifikasi citra}
+    \label{tbl:contoh-klasifikasi}
     \begin{tabular}{|c|c|}
         \hline
         Pose                & Citra              \\ \hline
@@ -92,20 +92,21 @@ Untuk meningkatkan kinerja dan akurasi maka dataset ini kemudian akan melewati p
 \end{table}
 
 \subsection{Paket Data}
-Untuk dapat menggerakkan kursi roda maka perlu mengirimkan perintah ke kontroler kursi roda. Pada tahap klasifikasi pose telah didapatkan perintah dasar untuk menggerakkan kursi roda, seperti maju, mundur, kanan, kiri, maupun stop. Perintah ini kemudian akan digabungkan dengan kecepatan maksimal menjadi satu \emph{command} atau paket data seperti yang dilihat pada Persamaan 3.1.
+Untuk dapat menggerakkan kursi roda maka perlu mengirimkan perintah ke kontroler kursi roda. Pada tahap klasifikasi pose telah didapatkan perintah dasar untuk menggerakkan kursi roda, seperti maju, mundur, kanan, kiri, maupun stop. Perintah ini kemudian akan digabungkan dengan kecepatan maksimal menjadi satu \emph{command} atau paket data seperti yang dilihat pada Persamaan \ref{eq:paket-data}.
 
 % Persamaan 3.1
 \begin{equation}
+  \label{eq:paket-data}
     Arah(char),Kecepatan(integer)
 \end{equation}
 
-Variabel arah memiliki tipe data \emph{char} yang akan menentukan gerak dari motor kursi roda, serta variabel kecepatan memiliki tipe data integer yang akan menentukan kecepatan maksimal dari kursi roda. Untuk memperkecil ukuran data maka kode instruksi untuk menentukan arah gerak menggunakan satu huruf untuk mewakili setiap gerakan. Kode instruksi dapat dilihat pada Tabel 3.2. 
+Variabel arah memiliki tipe data \emph{char} yang akan menentukan gerak dari motor kursi roda, serta variabel kecepatan memiliki tipe data integer yang akan menentukan kecepatan maksimal dari kursi roda. Untuk memperkecil ukuran data maka kode instruksi untuk menentukan arah gerak menggunakan satu huruf untuk mewakili setiap gerakan. Kode instruksi dapat dilihat pada Tabel \ref{tbl:kode-instruksi}. 
 
 % Tabel 3.2
 \begin{table}[H]
 \centering
     \caption{Kode instruksi dari hasil klasifikasi}
-    \label{tbl:kode instruksi dari hasil klasifikasi}
+    \label{tbl:kode-instruksi}
     \begin{tabular}{|c|c|}
         \hline
         Klasifikasi Pose & Kode Instruksi \\ \hline
@@ -559,8 +560,129 @@ void loop() {
 
 \subsection{Program Untuk Mengirim Data String Melalui Bluetooth}
 
+% Program 3.7
+\begin{lstlisting}[
+    language=Python,
+    caption={Program Untuk Mengirim Data String Melalui Bluetooth},
+    label={lst:SendBluetooth}
+]
+import bluetooth
+import datetime
+
+# ESP32's Bluetooth MAC address
+esp32_mac_address = "30:C6:F7:2F:31:86"  # Replace with your ESP32's MAC addres
+
+# Establish a Bluetooth connection
+sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
+sock.connect((esp32_mac_address, 1))  # Channel 1 is commonly used for SPP (Serial Port Profile)
+
+while True:
+    # Send two data values
+    arah = input("Enter arah : ")
+    kecepatan = input("Enter kecepatan : ")
+    message = f"{arah},{kecepatan}"
+    date = datetime.datetime.now()
+    print(date)
+    
+    if arah == "q" or kecepatan == "q":
+        break
+    
+    sock.send(message)
+
+# Close the Bluetooth connection
+sock.close()
+
+\end{lstlisting}
+
 \subsection{Program Untuk Mengirim Data String Melalui WiFi}
+
+% Program 3.8
+\begin{lstlisting}[
+  language=Python,
+  caption={Program Untuk Mengirim Data String Melalui WiFi},
+  label={lst:SendWiFiAP}
+]
+import socket
+import time
+
+import datetime
+
+host = "192.168.4.1" # Set to ESP32 Access Point IP Address
+port = 80
+
+# Create a socket connection
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    # Connect to the ESP32 server
+    s.connect((host, port))
+    
+    while True:
+        # Send two data values
+        arah = input("Enter arah : ")
+        kecepatan = input("Enter kecepatan : ")
+        message = f"{arah},{kecepatan}"
+        date = datetime.datetime.now()
+        print(date)
+    
+        if arah == "q" or kecepatan == "q":
+            break
+    
+        s.send(message.encode('utf-8'))
+        
+s.close()
+
+\end{lstlisting}
 
 \subsection{Program Untuk Mengirim Data JSON Melalui Bluetooth}
 
+% Program 3.9
+\begin{lstlisting}[
+    language=Python,
+    caption={Program Untuk Mengirim Data JSON Melalui Bluetooth},
+    label={lst:SendBluetoothJSON}
+]
+import bluetooth
+import json
+
+# ESP32 Bluetooth address
+esp32_address = "EC:62:60:9B:E4:92"  # Replace with your ESP32's Bluetooth address
+
+# esp32_address = "30:C6:F7:2F:31:86" # Iqbal's ESP32
+
+# Create a Bluetooth socket
+sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
+
+# Connect to the ESP32
+sock.connect((esp32_address, 1))
+
+while True:
+    # Get keyboard input for two values
+    arah = input("Masukkan Arah: ")
+    kecepatan = input("Masukkan Kecepatan: ")
+    
+    # Create a JSON object
+    json_data = {"arah": arah, "kecepatan": kecepatan}
+
+    # Serialize the JSON data
+    json_string = json.dumps(json_data)
+    
+    if arah == "q" or kecepatan == "q":
+        break
+
+    # Send the serialized JSON over Bluetooth
+    sock.send(json_string)
+
+# Close the Bluetooth socket
+sock.close()
+
+\end{lstlisting}
+
 \subsection{Program Untuk Mengirim Data JSON Melalui WiFi}
+
+% Program 3.9
+\begin{lstlisting}[
+  language=Python,
+  caption={Program Untuk Mengirim Data JSON Melalui WiFi},
+  label={lst:SendWiFiJSON}
+]
+
+\end{lstlisting}
