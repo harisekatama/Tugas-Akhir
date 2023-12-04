@@ -165,7 +165,7 @@ Selanjutnya variabel kecepatan akan digunakan untuk mengatur tingkat \emph{Pulse
 Pada sub bab ini akan dijabarkan kode program yang digunakan pada penelitian ini.
 
 \subsection{Program Untuk Memeriksa MAC Address Pada ESP32}
-
+Agar dapat terhubung dengan Bluetooth pada ESP32 maka kita harus mengetahui MAC Address dari ESP32. Berikut merupakan program untuk memeriksa MAC Address Pada ESP32 dapat dilihat pada Program \ref{lst:CekMAC}.
 
 % Program 3.1 
 \begin{lstlisting}[
@@ -174,7 +174,6 @@ Pada sub bab ini akan dijabarkan kode program yang digunakan pada penelitian ini
     label={lst:CekMAC}
 ]
 #include <BluetoothSerial.h>
-
 BluetoothSerial SerialBT;
 
 void setup() {
@@ -196,7 +195,15 @@ void loop() {
     
 \end{lstlisting}
 
+Program ini menggunakan \emph{library} BluetoothSerial dari Henry Abrahamsen. \emph{Library} ini menyediakan fungsionalitas untuk mengontrol modul Bluetooth pada ESP32 \parencite{Abrahamsen_2023}. Selanjutnya akan dibuat objek SerialBT dari kelas BluetoothSerial. Objek ini digunakan untuk berkomunikasi melalui Bluetooth. 
+
+Pada void setup() terdapat Serial.begin() yang digunakan untuk menginisialisasi komunikasi serial dengan kecepatan 115200 bps. Selanjutnya modul Bluetooth diinisialisasikan dengan nama perangkat ESP32\_Haris. Berikan delay selama 1 detik agar Bluetooth dapat diinisialisasikan dengan baik.
+
+Array esp32Address dideklarasi pada awal fungsi void loop(). Array ini akan digunakan untuk menyimpan alamat dari Bluetooth ESP32. fungsi esp\_efuse\_mac\_get\_default() digunakan untuk mendapatkan alamat Bluetooth dan menyimpannya dalam array esp32Address \parencite{Systems_2023}. Alamat Bluetooth kemudian akan dicetak ke Serial Monitor menjadi bentuk yang dapat dibaca dengan menggunakan kode Serial.printf(). 
+
 \subsection{Program Untuk Menerima Data String Melalui Bluetooth Pada ESP32}
+
+Program ini dirancang untuk menerima data string melalui Bluetooth dan memisahkannya menjadi 2 bagian. Kemudian terdapat data yang dievaluasi untuk mengetahui apakah data tersebut sudah berubah menjadi integer. Berikut ini merupakan Program \ref{lst:ReceivedBluetooth} yang digunakan untuk menguji kemampuan ESP32 dalam menerima data string melalui bluetooth.
 
 % Program 3.2
 \begin{lstlisting}[
@@ -218,15 +225,15 @@ void loop(){
   if (SerialBT.available()){
     String receivedData = SerialBT.readStringUntil('\n');
 
-    String data1 = receivedData.substring(0, receivedData.indexOf(','));
-    String data2 = receivedData.substring(receivedData.indexOf(',') + 1);
+    String arah = receivedData.substring(0, receivedData.indexOf(','));
+    String kecepatan = receivedData.substring(receivedData.indexOf(',') + 1);
 
-    maxspeed = data2.toInt();
+    maxspeed = kecepatan.toInt();
 
-    Serial.print("Data 1 : ");
-    Serial.println(data1);
-    Serial.print("Data 2 : ");
-    Serial.println(data2);
+    Serial.print("Arah : ");
+    Serial.println(arah);
+    Serial.print("Kecepatan : ");
+    Serial.println(kecepatan);
 
     if(maxspeed < 20){
       Serial.println("TRUE");
@@ -240,7 +247,15 @@ void loop(){
     
 \end{lstlisting}
 
+Program ini menggunakan \emph{library} BluetoothSerial dari Henry Abrahamsen. \emph{Library} ini menyediakan fungsionalitas untuk menerima data melalui koneksi Bluetooth dan mengolahnya \parencite{Abrahamsen_2023}. Selanjutnya akan dibuat objek SerialBT dari kelas BluetoothSerial. Objek ini selanjutnya digunakan untuk berkomunikasi melalui Bluetooth. Terdapat juga variabel maxspeed yang dideklarasikan sebagai suatu variabel yang menyimpan nilai kecepatan maksimum bertipe data integer.
+
+Pada void setup() terdapat Serial.begin() yang digunakan untuk menginisialisasi komunikasi serial dengan kecepatan 115200 bps. Selanjutnya modul Bluetooth diinisialisasikan dengan nama perangkat ESP32\_Haris.
+
+Pada fungsi void loop() akan berjalan terus-menerus setelah fungsi void setup(). Pertama-tama akan diperiksa apakah terdapat data yang tersedia untuk dibaca dari koneksi Bluetooth dengan menggunakan SerialBT.available(). Apabila terdapat data yang diterima maka data tersebut akan dimasukkan kedalam variabel receivedData yang bertipe string dengan menggunakan fungsi SerialBT.readStringUntil(). Data tersebut akan dibaca hingga menemukan karakter \emph{newline} ('\textbackslash n'). Data kemudian akan dipisahkan menjadi arah dan kecepatan. arah akan memisahkan data sebelum koma (',') dari receivedData. kecepatan akan memisahkan data setelah (',') hingga akhir receivedData. Tipe data dari variabel kecepatan ini kemudian akan diubah menjadi integer dan nilai tersebut dimasukkan ke dalam variabel maxspeed. Kemudian nilai pada variabel arah dan kecepatan akan ditampilkan ke \emph{Serial Monitor}. fungsi \emph{if} ditambahkan untuk menguji apakah variabel maxspeed sudah bertipe integer. Apabila nilai maxspeed kurang dari 20 maka akan ditampilkan \emph{boolean} \emph{True}, apabila lebih dari atau sama dengan 20 maka akan menampilkan \emph{boolean} \emph{False}.
+
 \subsection{Program Untuk Menerima Data JSON Melalui Bluetooth Pada ESP32}
+
+Program ini dirancang untuk menerima data JSON melalui Bluetooth dan memisahkannya menjadi 2 bagian. Berikut merupakan program untuk menguji kemampuan ESP32 dalam menerima data JSON melalui Bluetooth yang dapat dilihat pada Program \ref{lst:ReceivedBluetoothJSON}. 
 
 % Program 3.3
 \begin{lstlisting}[

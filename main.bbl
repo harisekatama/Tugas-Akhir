@@ -19,6 +19,39 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global}
+    \entry{Abrahamsen_2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4a64c0a1707ecbb86f2fde5fdabf907a}{%
+           family={Abrahamsen},
+           familyi={A\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4a64c0a1707ecbb86f2fde5fdabf907a}
+      \strng{fullhash}{4a64c0a1707ecbb86f2fde5fdabf907a}
+      \strng{bibnamehash}{4a64c0a1707ecbb86f2fde5fdabf907a}
+      \strng{authorbibnamehash}{4a64c0a1707ecbb86f2fde5fdabf907a}
+      \strng{authornamehash}{4a64c0a1707ecbb86f2fde5fdabf907a}
+      \strng{authorfullhash}{4a64c0a1707ecbb86f2fde5fdabf907a}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BluetoothSerial - Arduino Reference}
+      \field{month}{10}
+      \field{title}{BluetoothSerial}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.arduino.cc/reference/en/libraries/bluetoothserial/
+      \endverb
+      \verb{url}
+      \verb https://www.arduino.cc/reference/en/libraries/bluetoothserial/
+      \endverb
+    \endentry
     \entry{8308186}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=a92a8d7d47ce475bde1f4d0c575e3415}{%
@@ -333,6 +366,40 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Wheelchair Control Using Bluetooth-Based Electromyography Signals [Kontrol Kursi Roda Menggunakan Sinyal Elektromiografi Berbasis Bluetooth]}
+    \endentry
+    \entry{Systems_2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b1d5d0040be4721ebd66cd10ec68502c}{%
+           family={Systems},
+           familyi={S\bibinitperiod},
+           given={Espressif},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Espressif Systems}%
+      }
+      \strng{namehash}{b1d5d0040be4721ebd66cd10ec68502c}
+      \strng{fullhash}{b1d5d0040be4721ebd66cd10ec68502c}
+      \strng{bibnamehash}{b1d5d0040be4721ebd66cd10ec68502c}
+      \strng{authorbibnamehash}{b1d5d0040be4721ebd66cd10ec68502c}
+      \strng{authornamehash}{b1d5d0040be4721ebd66cd10ec68502c}
+      \strng{authorfullhash}{b1d5d0040be4721ebd66cd10ec68502c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{Miscellaneous System APIs}
+      \field{month}{12}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.espressif.com/projects/esp-idf/en/latest/esp32/esp-idf-en-master-esp32.pdf
+      \endverb
+      \verb{url}
+      \verb https://docs.espressif.com/projects/esp-idf/en/latest/esp32/esp-idf-en-master-esp32.pdf
+      \endverb
     \endentry
     \entry{TIAN20201}{article}{}
       \name{author}{5}{}{%
@@ -469,6 +536,39 @@
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
+    \entry{Abrahamsen_2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4a64c0a1707ecbb86f2fde5fdabf907a}{%
+           family={Abrahamsen},
+           familyi={A\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4a64c0a1707ecbb86f2fde5fdabf907a}
+      \strng{fullhash}{4a64c0a1707ecbb86f2fde5fdabf907a}
+      \strng{bibnamehash}{4a64c0a1707ecbb86f2fde5fdabf907a}
+      \strng{authorbibnamehash}{4a64c0a1707ecbb86f2fde5fdabf907a}
+      \strng{authornamehash}{4a64c0a1707ecbb86f2fde5fdabf907a}
+      \strng{authorfullhash}{4a64c0a1707ecbb86f2fde5fdabf907a}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BluetoothSerial - Arduino Reference}
+      \field{month}{10}
+      \field{title}{BluetoothSerial}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.arduino.cc/reference/en/libraries/bluetoothserial/
+      \endverb
+      \verb{url}
+      \verb https://www.arduino.cc/reference/en/libraries/bluetoothserial/
+      \endverb
+    \endentry
     \entry{8308186}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=a92a8d7d47ce475bde1f4d0c575e3415}{%
@@ -783,6 +883,40 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Wheelchair Control Using Bluetooth-Based Electromyography Signals [Kontrol Kursi Roda Menggunakan Sinyal Elektromiografi Berbasis Bluetooth]}
+    \endentry
+    \entry{Systems_2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b1d5d0040be4721ebd66cd10ec68502c}{%
+           family={Systems},
+           familyi={S\bibinitperiod},
+           given={Espressif},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Espressif Systems}%
+      }
+      \strng{namehash}{b1d5d0040be4721ebd66cd10ec68502c}
+      \strng{fullhash}{b1d5d0040be4721ebd66cd10ec68502c}
+      \strng{bibnamehash}{b1d5d0040be4721ebd66cd10ec68502c}
+      \strng{authorbibnamehash}{b1d5d0040be4721ebd66cd10ec68502c}
+      \strng{authornamehash}{b1d5d0040be4721ebd66cd10ec68502c}
+      \strng{authorfullhash}{b1d5d0040be4721ebd66cd10ec68502c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{Miscellaneous System APIs}
+      \field{month}{12}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.espressif.com/projects/esp-idf/en/latest/esp32/esp-idf-en-master-esp32.pdf
+      \endverb
+      \verb{url}
+      \verb https://docs.espressif.com/projects/esp-idf/en/latest/esp32/esp-idf-en-master-esp32.pdf
+      \endverb
     \endentry
     \entry{TIAN20201}{article}{}
       \name{author}{5}{}{%
