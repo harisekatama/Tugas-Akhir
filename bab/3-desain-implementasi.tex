@@ -300,6 +300,13 @@ void loop() {
     
 \end{lstlisting}
 
+Program ini menggunakan \emph{library} BluetoothSerial dari Henry Abrahamsen dan ArduinoJson dari Beno\^{\i}t Blanchon. \emph{Library} BluetoothSerial menyediakan fungsionalitas untuk menerima data melalui koneksi Bluetooth \parencite{Abrahamsen_2023}. Sedangkan \emph{library} ArduinoJson digunakan untuk menguraikan \emph{deserialize} data JSON yang diterima \parencite{blanchon2021mastering}. Selanjutnya akan dibuat objek SerialBT dari kelas BluetoothSerial. Objek ini akan digunakan untuk berkomunikasi melalui Bluetooth.
+
+Pada void setup() terdapat Serial.begin() untuk menginisialisasi komunikasi serial dengan kecepatan 115200 bps. Selanjutnya modul Bluetooth diinisialisasi dengan nama perangkat ESP\_Haris.
+
+Pada fungsi void loop() akan berjalan terus-menerus setelah fungsi void setup(). Pertama-tama akan diperiksa apakah terdapat data yang tersedia untuk dibaca dari koneksi Bluetooth dengan menggunakan SerialBT.available(). Kemudian data akan dibaca dari koneksi Bluetooth hingga terdapat karakter newline ('\textbackslash n') dan menyimpannya dalam string json\_data. Objek DynamicJsonDocument selanjutnya akan dibuat dengan kapasitas 1024 byte yang berguna untuk menampung dokumen JSON yang akan diuraikan. Data JSON yang telah ditampung kemudian hasilnya disimpan dalam objek doc. Jika terdapat kesalahan dalam proses deserialisasi maka pesan kesalahan akan ditampilkan. Lalu terdapat fungsi \emph{if} yang digunakan untuk memberikan pesan \emph{"Failed to parse JSON"} apabila terdapat kesalahan pada proses deserialisasi. Apabila tidak terdapat kesalahan maka setiap nilai dari atribut JSON akan diekstrak dengan nama arah dan kecepatan serta menyimpannya dalam variabel bertipe string. Nilai yang diterima dari atribut JSON akan dicetak ke \emph{Serial Monitor}.
+
+
 \subsection{Program Untuk Menerima Data String Melalui Access Point WiFi Pada ESP32}
 
 % Program 3.4

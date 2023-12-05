@@ -95,6 +95,41 @@
       \verb 10.1109/ICEngTechnol.2017.8308186
       \endverb
     \endentry
+    \entry{blanchon2021mastering}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fba67d794259a6e8c046775b644beb46}{%
+           family={Blanchon},
+           familyi={B\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Benoit Blanchon}%
+      }
+      \strng{namehash}{fba67d794259a6e8c046775b644beb46}
+      \strng{fullhash}{fba67d794259a6e8c046775b644beb46}
+      \strng{bibnamehash}{fba67d794259a6e8c046775b644beb46}
+      \strng{authorbibnamehash}{fba67d794259a6e8c046775b644beb46}
+      \strng{authornamehash}{fba67d794259a6e8c046775b644beb46}
+      \strng{authorfullhash}{fba67d794259a6e8c046775b644beb46}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9782956430933}
+      \field{title}{Mastering ArduinoJson 6: Efficient JSON Serialization for Embedded C++}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://books.google.co.id/books?id=zuCgzwEACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.co.id/books?id=zuCgzwEACAAJ
+      \endverb
+    \endentry
     \entry{choi2019motion}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=abf3067e2e656c403730ac5e5053256d}{%
@@ -610,6 +645,41 @@
       \range{pages}{6}
       \verb{doi}
       \verb 10.1109/ICEngTechnol.2017.8308186
+      \endverb
+    \endentry
+    \entry{blanchon2021mastering}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fba67d794259a6e8c046775b644beb46}{%
+           family={Blanchon},
+           familyi={B\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Benoit Blanchon}%
+      }
+      \strng{namehash}{fba67d794259a6e8c046775b644beb46}
+      \strng{fullhash}{fba67d794259a6e8c046775b644beb46}
+      \strng{bibnamehash}{fba67d794259a6e8c046775b644beb46}
+      \strng{authorbibnamehash}{fba67d794259a6e8c046775b644beb46}
+      \strng{authornamehash}{fba67d794259a6e8c046775b644beb46}
+      \strng{authorfullhash}{fba67d794259a6e8c046775b644beb46}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9782956430933}
+      \field{title}{Mastering ArduinoJson 6: Efficient JSON Serialization for Embedded C++}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://books.google.co.id/books?id=zuCgzwEACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.co.id/books?id=zuCgzwEACAAJ
       \endverb
     \endentry
     \entry{choi2019motion}{article}{}

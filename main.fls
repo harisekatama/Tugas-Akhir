@@ -602,6 +602,7 @@ OUTPUT main.run.xml
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxb.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb
+INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txsy.pfb
