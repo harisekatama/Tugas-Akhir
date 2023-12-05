@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.2)  5 DEC 2023 15:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.2)  5 DEC 2023 20:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1260,28 +1260,29 @@ Overfull \hbox (5.65526pt too wide) in paragraph at lines 256--256
 [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16] [17] [18]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19]
+ [16] [17] [18] [19]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21] (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+ [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22] (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [22] [23]) [24] (./bab/4-pengujian-analisis.tex
+) [23] [24]) [25] [26
+
+] (./bab/4-pengujian-analisis.tex
 Chapter 4.
-[25
+[27
 
-
-]) [26] (./bab/5-penutup.tex
+]) [28] (./bab/5-penutup.tex
 Chapter 5.
-) [27
+) [29
 
 
-] [28
+] [30
 
 ]
 Overfull \hbox (0.46477pt too wide) in paragraph at lines 244--244
@@ -1293,17 +1294,17 @@ Overfull \hbox (36.35515pt too wide) in paragraph at lines 244--244
 \OT1/txr/m/n/12 melelui blue-tooth. \OT1/txr/m/it/12 Pro-sid-ing Sem-i-nar Na-sional Peneli-tian dan Pengab-dian Kepada Masyarakat\OT1/txr/m/n/12 ,
  []
 
-[29
+[31
 
-] [30
+] [32
 
 ] (./lainnya/biografi-penulis.tex
-<gambar/elon.jpg, id=1078, 578.16pt x 867.24pt>
+<gambar/elon.jpg, id=1088, 578.16pt x 867.24pt>
 File: gambar/elon.jpg Graphic file (type jpg)
 <use gambar/elon.jpg>
 Package pdftex.def Info: gambar/elon.jpg  used on input line 14.
 (pdftex.def)             Requested size: 136.57462pt x 204.86006pt.
-) [31 <./gambar/elon.jpg>] [32
+) [33 <./gambar/elon.jpg>] [34
 
 ] (./main.aux)
  ***********
@@ -1317,18 +1318,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24046 strings out of 474267
- 407199 string characters out of 5751465
- 2132558 words of memory out of 5000000
- 45259 multiletter control sequences out of 15000+600000
+ 24044 strings out of 474267
+ 407173 string characters out of 5751465
+ 2144558 words of memory out of 5000000
+ 45255 multiletter control sequences out of 15000+600000
  616721 words of font info for 168 fonts, out of 8000000 for 9000
  1148 hyphenation exceptions out of 8191
  75i,14n,81p,1956b,5052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (59 pages, 7950951 bytes).
+Output written on main.pdf (61 pages, 7955645 bytes).
 PDF statistics:
- 1277 PDF objects out of 1440 (max. 8388607)
- 1146 compressed objects within 12 object streams
- 573 named destinations out of 1000 (max. 500000)
+ 1288 PDF objects out of 1440 (max. 8388607)
+ 1155 compressed objects within 12 object streams
+ 575 named destinations out of 1000 (max. 500000)
  492 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -304,15 +304,17 @@ Program ini menggunakan \emph{library} BluetoothSerial dari Henry Abrahamsen dan
 
 Pada void setup() terdapat Serial.begin() untuk menginisialisasi komunikasi serial dengan kecepatan 115200 bps. Selanjutnya modul Bluetooth diinisialisasi dengan nama perangkat ESP\_Haris.
 
-Pada fungsi void loop() akan berjalan terus-menerus setelah fungsi void setup(). Pertama-tama akan diperiksa apakah terdapat data yang tersedia untuk dibaca dari koneksi Bluetooth dengan menggunakan SerialBT.available(). Kemudian data akan dibaca dari koneksi Bluetooth hingga terdapat karakter newline ('\textbackslash n') dan menyimpannya dalam string json\_data. Objek DynamicJsonDocument selanjutnya akan dibuat dengan kapasitas 1024 byte yang berguna untuk menampung dokumen JSON yang akan diuraikan. Data JSON yang telah ditampung kemudian hasilnya disimpan dalam objek doc. Jika terdapat kesalahan dalam proses deserialisasi maka pesan kesalahan akan ditampilkan. Lalu terdapat fungsi \emph{if} yang digunakan untuk memberikan pesan \emph{"Failed to parse JSON"} apabila terdapat kesalahan pada proses deserialisasi. Apabila tidak terdapat kesalahan maka setiap nilai dari atribut JSON akan diekstrak dengan nama arah dan kecepatan serta menyimpannya dalam variabel bertipe string. Nilai yang diterima dari atribut JSON akan dicetak ke \emph{Serial Monitor}.
+Pada fungsi void loop() akan berjalan terus-menerus setelah fungsi void setup(). Pertama-tama akan diperiksa apakah terdapat data yang tersedia untuk dibaca dari koneksi Bluetooth dengan menggunakan SerialBT.available(). Kemudian data akan dibaca dari koneksi Bluetooth hingga terdapat karakter \emph{newline} ('\textbackslash n') dan menyimpannya dalam string json\_data. Objek DynamicJsonDocument selanjutnya akan dibuat dengan kapasitas 1024 byte yang berguna untuk menampung dokumen JSON yang akan diuraikan. Data JSON yang telah ditampung kemudian hasilnya disimpan dalam objek doc. Jika terdapat kesalahan dalam proses deserialisasi maka pesan kesalahan akan ditampilkan. Lalu terdapat fungsi \emph{if} yang digunakan untuk memberikan pesan \emph{"Failed to parse JSON"} apabila terdapat kesalahan pada proses deserialisasi. Apabila tidak terdapat kesalahan maka setiap nilai dari atribut JSON akan diekstrak dengan nama arah dan kecepatan serta menyimpannya dalam variabel bertipe string. Nilai yang diterima dari atribut JSON akan dicetak ke \emph{Serial Monitor}.
 
 
-\subsection{Program Untuk Menerima Data String Melalui Access Point WiFi Pada ESP32}
+\subsection{Program Untuk Menerima Data String Melalui \emph{Access Point} WiFi Pada ESP32}
+
+Program ini dirancang sebagai server WiFi yang dapat menerima data dari \emph{client} yang terhubung dan mengolahnya. Data yang diterima akan diproses dan dipisahkan menjadi 2 variabel, yaitu variabel arah dan kecepatan. Kemudian nilai dari variabel kecepatan akan dimasukkan ke variabel maxspeed dan tipe datanya dievaluasi. Berikut merupakan Program \ref{lst:ReceivedWiFi} yang digunakan untuk menerima data string melalui \emph{Access Point} WiFi pada ESP32.
 
 % Program 3.4
 \begin{lstlisting}[
     language=Arduino,
-    caption={Program Untuk Menerima Data String Melalui Access Point WiFi Pada ESP32},
+    caption={Program Untuk Menerima Data String Melalui \emph{Access Point} WiFi Pada ESP32},
     label={lst:ReceivedWiFi}
 ]
 #include <WiFi.h>
@@ -355,15 +357,15 @@ void loop(){
     
         String receivedData = client.readStringUntil('\n');
 
-        String data1 = receivedData.substring(0, receivedData.indexOf(','));
-        String data2 = receivedData.substring(receivedData.indexOf(',') + 1);
+        String arah = receivedData.substring(0, receivedData.indexOf(','));
+        String kecepatan = receivedData.substring(receivedData.indexOf(',') + 1);
 
-        maxspeed = data2.toInt();
+        maxspeed = kecepatan.toInt();
 
-        Serial.print("Data 1 : ");
-        Serial.println(data1);
-        Serial.print("Data 2 : ");
-        Serial.println(data2);
+        Serial.print("Arah : ");
+        Serial.println(arah);
+        Serial.print("Kecepatan : ");
+        Serial.println(kecepatan);
 
         if(maxspeed < 20){
           Serial.println("TRUE");
@@ -381,7 +383,13 @@ void loop(){
 }
 \end{lstlisting}
 
-\subsection{Program Untuk Menerima Data JSON Melalui Access Point WiFi Pada ESP32}
+Program ini menggunakan \emph{library} WiFi yang menyediakan fungsionalitas untuk mengonfigurasi dan mengelola koneksi WiFi pada ESP32. Selain itu \emph{library} Arduino juga digunakan pada program ini yang menyediakan fungsi-fungsi dasar untuk pemrograman mikrokontroler. Variabel maxspeed dideklarasikan sebagai variabel yang menyimpan nilai integer yang kemudian digunakan untuk menyimpan nilai kecepatan maksimum. Variabel ssid akan digunakan untuk menyimpan nama jaringan WiFi yang akan dibuat dan variabel \emph{password} akan menyimpan nilai \emph{password} dari WiFi Server yang dibuat. Kedua variabel ini sangat penting agar ESP32 dapat dikonfigurasikan sebagai \emph{Access Point}. Selanjutnya objek server dibuat dari kelas WiFiServer untuk menangani koneksi pada port 80.
+
+Pada void setup() terdapat Serial.begin() untuk menginisialisasi komunikasi serial dengan kecepatan 115200 bps. Lalu mengonfigurasi ESP32 sebagai \emph{Access Point} sesuai dengan SSID dan \emph{password} yang telah ditentukan. Apabila \emph{Access Point} telah dikonfigurasi maka IP \emph{Address} dari ESP32 akan disimpan pada variabel IP dan dicetak ke \emph{Serial Monitor}. server.begin() digunakan untuk memulai server pada port 80.
+
+Fungsi void loop() akan berjalan terus-menerus setelah fungsi void setup() dijalankan. Pada fungsi ini terdapat WiFiClient yang digunakan untuk menguji apakah terdapat \emph{client} yang terhubung ke server. Jika terdapat \emph{client} yang terhubung maka akan masuk ke fungsi \emph{if}. Data yang dikirimkan akan dibaca secara terus-menerus melalui fungsi \emph{while}. Data yang diterima akan dimasukkan ke variabel receivedData hingga \emph{client} mengirimkan karakter \emph{newline} ('\textbackslash n'). Data kemudian akan dipisahkan menjadi arah dan kecepatan. arah akan memisahkan data sebelum koma (',') dari receivedData. kecepatan akan memisahkan data setelah (',') hingga akhir receivedData. Tipe data dari variabel kecepatan ini kemudian akan diubah menjadi integer dan nilai tersebut dimasukkan ke dalam variabel maxspeed. Kemudian nilai pada variabel arah dan kecepatan akan ditampilkan ke \emph{Serial Monitor}. fungsi \emph{if} ditambahkan untuk menguji apakah variabel maxspeed sudah bertipe integer. Apabila nilai maxspeed kurang dari 20 maka akan ditampilkan \emph{boolean} \emph{True}, apabila lebih dari atau sama dengan 20 maka akan menampilkan \emph{boolean} \emph{False}. Lalu koneksi akan ditutup setelah selesai membaca data dari \emph{client}.
+
+\subsection{Program Untuk Menerima Data JSON Melalui \emph{Access Point} WiFi Pada ESP32}
 
 % Program 3.5
 \begin{lstlisting}[
@@ -393,6 +401,8 @@ void loop(){
 \end{lstlisting}
 
 \subsection{Program Untuk Menguji Rangkaian Kontrol ESP32}
+
+Program ini dirancang untuk menguji rangkaian kontrol ESP32. Kedua motor akan diuji dan dikendalikan melalui modul ESP32 dan driver motor H-Bridge. Berikut program \ref{lst:MotorTest} yang digunakan untuk menguji rangkaian kontrol ESP32.
 
 % Program 3.6
 \begin{lstlisting}[
@@ -580,6 +590,11 @@ void loop() {
 }
 \end{lstlisting}
 
+\emph{Library} Arduino digunakan pada program ini. \emph{Library} ini menyediakan berbagai fungsi-fungsi dasar untuk pemrograman mikrokontroler. pwmPin1, dir1, dan dir2 merupakan variabel untuk mengatur kerja dari motor kiri. pwmPin1 didefinisikan dengan nilai 5 yang kemudian akan terhubung dengan GPIO5 pada ESP32, dir1 didefinisikan dengan nilai 18 yang kemudian akan terhubung dengan GPIO18 pada ESP32, dan dir2 yang didefinisikan dengan nilai 19 yang kemudian akan terhubung dengan GPIO19 pada ESP32. Selanjutnya terdapat pwmPin2, dir3, dan dir4 yang merupakan variabel yang digunakan untuk mengatur kerja dari motor kanan. pwmPin2 didefinisikan dengan nilai 25 yang kemudian akan terhubung dengan GPIO25 pada ESP32, dir3 didefinisikan dengan nilai 32 yang kemudian akan terhubung dengan GPIO32 pada ESP32, dan dir4 yang didefinisikan dengan nilai 33 yang kemudian akan terhubung dengan GPIO33 pada ESP32. Lalu variabel pwmChannel1, pwmChannel2, freq, dan res dideklarasikan. pwmChannel1 dan pwmChannel2 merupakan nomor saluran PWM yang digunakan. Variabel freq merupakan frekuensi PWM yang diatur menjadi 15kHz untuk meminimalisir \emph{noise} pada motor ketika bekerja. Variabel res digunakan untuk mengatur resolusi dari PWM yang diatur menjadi 8-bit. Variabel PWM1\_DutyCycle akan menyimpan siklus tugas yang kemudian akan digunakan untuk mengendalikan kecepatan motor dan variabel maxspeed merupakan nilai dari kecepatan motor maksimal.
+
+Terdapat fungsi void setup() yang dieksekusi satu kali pada saat program pertama kali dijalankan. Pada 
+
+
 \subsection{Program Untuk Mengirim Data String Melalui Bluetooth}
 
 % Program 3.7
@@ -708,3 +723,4 @@ sock.close()
 ]
 
 \end{lstlisting}
+
