@@ -397,7 +397,69 @@ Fungsi void loop() akan berjalan terus-menerus setelah fungsi void setup() dijal
     caption={Program Untuk Menerima Data JSON Melalui Access Point WiFi Pada ESP32},
     label={lst:ReceivedWiFiJSON}
 ]
+#include <WiFi.h>
+#include <Arduino.h>
+#include <ArduinoJson.h>
 
+int maxspeed;
+
+const char* ssid = "B300-Access-Point";
+const char* password = "123456789";
+
+WiFiServer server(80);
+
+void setup(){
+  Serial.begin(115200);
+
+
+  // Connect to Wi-Fi network with SSID and password
+  Serial.print("Setting AP (Access Point)");
+  // Remove the password parameter, if you want the AP (Access Point) to be open
+  WiFi.softAP(ssid, password);
+ 
+  IPAddress IP = WiFi.softAPIP();
+  Serial.print("ESP32 AP IP Address : ");
+  Serial.println(IP);
+
+  // Start the server
+  server.begin();
+}
+
+void loop(){
+    // Check if a client has connected
+  WiFiClient client = server.available();
+
+  if (client) {
+    //Serial.println("New client connected");
+    
+    // Read the data from the client
+    while (client.connected()) {
+      if (client.available()) {
+    
+        String json_data = client.readStringUntil('\n');
+
+        DynamicJsonDocument doc(1024);
+        DeserializationError error = deserializeJson(doc, json_data);
+
+        if(error){
+          Serial.println("Failed to parse JSON");
+        }
+        else{
+          const char* arah = doc["arah"];
+          int kecepatan = doc["kecepatan"];
+
+          Serial.print("Received Arah : ");
+          Serial.print(arah);
+          Serial.print("   Received Kecepatan : ");
+          Serial.println(kecepatan);
+        }
+      }
+    }
+
+    client.stop();
+
+  }
+}
 \end{lstlisting}
 
 \subsection{Program Untuk Menguji Rangkaian Kontrol ESP32}
@@ -597,6 +659,309 @@ Terdapat fungsi void setup() yang dieksekusi satu kali pada saat program pertama
 Pada fungsi void loop() terdapat serangkaian perintah yang mengatur gerakan kursi roda dengan menggunakan motor DC. Gerakan ini akan diulang secara terus-menerus. Hal ini berguna untuk menguji rangkaian kontrol pada ESP32. Setiap gerakan diawali dengan \emph{softstart} dan diakhiri dengan \emph{softstop}. Pada gerakan maju, kedua motor akan bergerak maju. Selama nilai PWM1\_DutyCycle kurang dari maxspeed, maka nilai PWM1\_DutyCycle akan ditambahkan secara bertahap hingga mencapai nilai maxspeed yang telah ditentukan. Selama itu juga kecepatan putar motor akan bertambah secara bertahap. Penambahan nilai PWM1\_DutyCycle akan ditunda selama 10 milidetik. Setelah PWM1\_DutyCycle mencapai nilai maxspeed maka kode selanjutnya akan ditunda selama 5 detik yang mengakibatkan motor akan berputar maju dengan kecepatan maksimum selama 5 detik. Setelah 5 detik, apabila nilai dari PWM1\_DutyCycle lebih dari 0 maka akan dilakukan \emph{softstop}. Arah putar kedua motor tetap diatur maju. Nilai PWM1\_DutyCycle akan diturunkan secara bertahap. Pengurangan nilai PWM1\_DutyCycle akan ditunda selama 10 milidetik. Apabila nilai PWM1\_DutyCycle sudah mencapai nilai 0 maka kode selanjutnya akan ditunda selama 1 detik. Langkah yang serupa akan dilakukan untuk setiap gerakan. Setiap gerakan memiliki fase \emph{softstart} dan \emph{softstop} yang bertujuan untuk memberikan perubahan kecepatan yang halus dan menghindari perubahan secara tiba-tiba. Penggunaan variabel PWM1\_DutyCycle digunakan untuk mengatur siklus kerja PWM untuk sebagai kontrol kecepatan yang fleksibel. fungsi \emph{delay} digunakan untuk memberikan jeda waktu antara setiap gerakan untuk mengatur durasi gerakan dan memberikan waktu bagi motor kursi roda untuk menyelesaikan setiap gerakan sebelum beralih ke gerakan berikutnya. Pada fungsi mundur, kedua roda akan berputar mundur. Pada fungsi belok kanan, roda kiri akan berputar maju sedangkan roda kanan tidak berputar sehingga kursi roda dapat berbelok ke arah kanan. Pada fungsi belok kiri, motor kiri tidak berputar namun roda kanan akan berputar maju sehingga kursi roda dapat berbelok ke arah kiri. Pada fungsi stop, kedua roda tidak akan berputar. Proses ini terus berulang didalam \emph{loop}, sehingga kursi roda akan melakukan gerakan berulang sesuai dengan logika yang telah diatur.
 
 
+\subsection{Program Kontrol Motor Kursi Roda Melalui Bluetooth}
+\begin{lstlisting}[
+  language=Arduino,
+  caption={Program Kontrol Motor Kursi Roda Melalui Bluetooth},
+  label={lst:MotorBluetooth}
+]
+#include <BluetoothSerial.h>
+
+#include <Arduino.h>
+
+//Motor Kiri
+#define pwmpin1 5
+#define dir1 18
+#define dir2 19
+
+//Motor kanan
+#define pwmpin2 25
+#define dir3 32
+#define dir4 33
+
+//STATE Motor
+int stdir[4];
+
+#define pwmChannel1 0
+#define pwmChannel2 1
+#define freq 15000
+#define res 8
+
+int PWM1_DutyCycle = 0;
+int maxspeed = 0;
+int turnspeed = 0;
+
+BluetoothSerial SerialBT;
+
+void setup() {
+  Serial.begin(115200);
+  SerialBT.begin("ESP32_B300");
+
+  pinMode(dir1, OUTPUT);
+  pinMode(dir2, OUTPUT);
+  pinMode(dir3, OUTPUT);
+  pinMode(dir4, OUTPUT);
+
+  ledcSetup(pwmChannel1, freq, res);
+  ledcSetup(pwmChannel2, freq, res);
+
+  ledcAttachPin(pwmpin1, pwmChannel1);
+  ledcAttachPin(pwmpin2, pwmChannel2);
+
+  Serial.begin(115200);
+
+}
+
+void loop() {
+  if (SerialBT.available()) {
+    String receivedData = SerialBT.readStringUntil('\n');
+
+    String arah = receivedData.substring(0, receivedData.indexOf(','));
+    String kecepatan = receivedData.substring(receivedData.indexOf(',') + 1);
+
+    maxspeed = kecepatan.toInt();
+    turnspeed = maxspeed / 2;
+
+    Serial.print("Arah : ");
+    Serial.println(arah);
+    Serial.print("Kecepatan : ");
+    Serial.println(kecepatan);
+
+    if (arah == "A") {
+      while (PWM1_DutyCycle <= turnspeed) {
+        stdir[0] = LOW;
+        stdir[1] = LOW;
+        stdir[2] = HIGH;
+        stdir[3] = LOW;
+
+        digitalWrite(dir1, stdir[0]);
+        digitalWrite(dir2, stdir[1]);
+        digitalWrite(dir3, stdir[2]);
+        digitalWrite(dir4, stdir[3]);
+        ledcWrite(pwmChannel1, PWM1_DutyCycle++);
+        ledcWrite(pwmChannel2, PWM1_DutyCycle++);
+        delay(10);
+      }
+
+    } else if (arah == "B") {
+      while (PWM1_DutyCycle <= maxspeed) {
+        stdir[0] = HIGH;
+        stdir[1] = LOW;
+        stdir[2] = HIGH;
+        stdir[3] = LOW;
+
+        digitalWrite(dir1, stdir[0]);
+        digitalWrite(dir2, stdir[1]);
+        digitalWrite(dir3, stdir[2]);
+        digitalWrite(dir4, stdir[3]);
+        ledcWrite(pwmChannel1, PWM1_DutyCycle++);
+        ledcWrite(pwmChannel2, PWM1_DutyCycle++);
+        delay(10);
+      }
+
+    } else if (arah == "C") {
+      while (PWM1_DutyCycle >= 0) {
+
+        digitalWrite(dir1, stdir[0]);
+        digitalWrite(dir2, stdir[1]);
+        digitalWrite(dir3, stdir[2]);
+        digitalWrite(dir4, stdir[3]);
+        ledcWrite(pwmChannel1, PWM1_DutyCycle--);
+        ledcWrite(pwmChannel2, PWM1_DutyCycle--);
+        delay(10);
+      }
+    } else if (arah == "D") {
+      while (PWM1_DutyCycle <= turnspeed) {
+        stdir[0] = LOW;
+        stdir[1] = HIGH;
+        stdir[2] = LOW;
+        stdir[3] = HIGH;
+
+        digitalWrite(dir1, stdir[0]);
+        digitalWrite(dir2, stdir[1]);
+        digitalWrite(dir3, stdir[2]);
+        digitalWrite(dir4, stdir[3]);
+        ledcWrite(pwmChannel1, PWM1_DutyCycle++);
+        ledcWrite(pwmChannel2, PWM1_DutyCycle++);
+        delay(10);
+      }
+
+    } else if (arah == "E") {
+      while (PWM1_DutyCycle <= turnspeed) {
+        stdir[0] = HIGH;
+        stdir[1] = LOW;
+        stdir[2] = LOW;
+        stdir[3] = LOW;
+
+        digitalWrite(dir1, stdir[0]);
+        digitalWrite(dir2, stdir[1]);
+        digitalWrite(dir3, stdir[2]);
+        digitalWrite(dir4, stdir[3]);
+        ledcWrite(pwmChannel1, PWM1_DutyCycle++);
+        ledcWrite(pwmChannel2, PWM1_DutyCycle++);
+        delay(10);
+      }
+
+    }
+  }
+}  
+\end{lstlisting}
+
+\subsection{Program Kontrol Motor Kursi Roda Melalui \emph{Access Point} WiFi}
+\begin{lstlisting}[
+  language=Arduino,
+  caption={Program Kontrol Motor Kursi Roda Melalui \emph{Access Point} WiFi},
+  label={lst:MotorWiFiAP}
+]
+#include <WiFi.h>
+#include <Arduino.h>
+
+//WiFi Configuration
+const char* ssid = "Haris-Access-Point";
+const char* password = "123456789";
+
+WiFiServer server(80);
+
+//Motor Kiri
+#define pwmpin1 5
+#define dir1 18
+#define dir2 19
+
+//Motor kanan
+#define pwmpin2 25
+#define dir3 32
+#define dir4 33
+
+//STATE Motor
+int stdir[4];
+
+#define pwmChannel1 0
+#define pwmChannel2 1
+#define freq 15000
+#define res 8
+
+int PWM1_DutyCycle = 0;
+int maxspeed = 70;
+int turnspeed = 35;
+int kecepatan = 0;
+
+void setup() {
+  Serial.begin(115200);
+  Serial.print("Setting AP (Access Point) ...");
+  WiFi.softAP(ssid, password);
+
+  IPAddress IP = WiFi.softAPIP();
+  Serial.print("ESP32 AP IP Address : ");
+  Serial.println(IP);
+
+  server.begin();
+
+  pinMode(dir1, OUTPUT);
+  pinMode(dir2, OUTPUT);
+  pinMode(dir3, OUTPUT);
+  pinMode(dir4, OUTPUT);
+
+  ledcSetup(pwmChannel1, freq, res);
+  ledcSetup(pwmChannel2, freq, res);
+
+  ledcAttachPin(pwmpin1, pwmChannel1);
+  ledcAttachPin(pwmpin2, pwmChannel2);
+
+  Serial.begin(115200);
+
+}
+
+void loop() {
+  WiFiClient client = server.available();
+  if(client){
+    while(client.connected()){
+      if(client.available()){
+
+        String arah = client.readStringUntil('\n');
+        Serial.print("Arah : ");
+        Serial.println(arah);
+
+        if(arah == "A"){
+          while(PWM1_DutyCycle <= turnspeed){
+            stdir[0] = LOW;
+            stdir[1] = LOW;
+            stdir[2] = HIGH;
+            stdir[3] = LOW;
+
+            digitalWrite(dir1, stdir[0]);
+            digitalWrite(dir2, stdir[1]);
+            digitalWrite(dir3, stdir[2]);
+            digitalWrite(dir4, stdir[3]);
+            ledcWrite(pwmChannel1, PWM1_DutyCycle++);
+            ledcWrite(pwmChannel2, PWM1_DutyCycle++);
+            delay(10);
+          }
+        }
+        else if(arah == "B"){
+          while(PWM1_DutyCycle <= maxspeed){
+            stdir[0] = HIGH;
+            stdir[1] = LOW;
+            stdir[2] = HIGH;
+            stdir[3] = LOW;
+
+            digitalWrite(dir1, stdir[0]);
+            digitalWrite(dir2, stdir[1]);
+            digitalWrite(dir3, stdir[2]);
+            digitalWrite(dir4, stdir[3]);
+            ledcWrite(pwmChannel1, PWM1_DutyCycle++);
+            ledcWrite(pwmChannel2, PWM1_DutyCycle++);
+            delay(10);
+          }
+        }
+        else if(arah == "C"){
+          while(PWM1_DutyCycle >= 0){
+            digitalWrite(dir1, stdir[0]);
+            digitalWrite(dir2, stdir[1]);
+            digitalWrite(dir3, stdir[2]);
+            digitalWrite(dir4, stdir[3]);
+            ledcWrite(pwmChannel1, PWM1_DutyCycle--);
+            ledcWrite(pwmChannel2, PWM1_DutyCycle--);
+            delay(10);
+          }
+        }
+        else if(arah == "D"){
+          while(PWM1_DutyCycle <= turnspeed){
+            stdir[0] = LOW;
+            stdir[1] = HIGH;
+            stdir[2] = LOW;
+            stdir[3] = HIGH;
+
+            digitalWrite(dir1, stdir[0]);
+            digitalWrite(dir2, stdir[1]);
+            digitalWrite(dir3, stdir[2]);
+            digitalWrite(dir4, stdir[3]);
+            ledcWrite(pwmChannel1, PWM1_DutyCycle++);
+            ledcWrite(pwmChannel2, PWM1_DutyCycle++);
+            delay(10);
+          }
+        }
+        else if(arah == "E"){
+          while(PWM1_DutyCycle <= turnspeed){
+            stdir[0] = HIGH;
+            stdir[1] = LOW;
+            stdir[2] = LOW;
+            stdir[3] = LOW;
+
+            digitalWrite(dir1, stdir[0]);
+            digitalWrite(dir2, stdir[1]);
+            digitalWrite(dir3, stdir[2]);
+            digitalWrite(dir4, stdir[3]);
+            ledcWrite(pwmChannel1, PWM1_DutyCycle++);
+            ledcWrite(pwmChannel2, PWM1_DutyCycle++);
+            delay(10);
+          }
+        }
+      }
+    }
+  }
+}  
+\end{lstlisting}
+
 \subsection{Program Untuk Mengirim Data String Melalui Bluetooth}
 
 % Program 3.7
@@ -723,6 +1088,33 @@ sock.close()
   caption={Program Untuk Mengirim Data JSON Melalui WiFi},
   label={lst:SendWiFiJSON}
 ]
+import socket
+import time
+import json
 
+import datetime
+
+host = "192.168.4.1" # Set to ESP32 Access Point IP Address
+port = 80
+
+# Create a socket connection
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    # Connect to the ESP32 server
+    s.connect((host, port))
+    
+    while True:
+        arah = input("Masukkan Arah: ")
+        kecepatan = input("Masukkan Kecepatan: ")
+        
+        json_data = {"arah": arah, "kecepatan": kecepatan}
+        date = datetime.datetime.now()
+        
+        if arah == q or kecepatan == q:
+            break
+        else:
+            json_string = json.dumps(json_data)
+            s.send(json_string.encode('utf-8'))
+            print(f"{date} -> {json_data}")
+
+s.close()
 \end{lstlisting}
-

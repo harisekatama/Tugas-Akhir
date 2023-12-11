@@ -2,9 +2,9 @@
 \contentsline {chapter}{ABSTRACT}{iii}{Doc-Start}%
 \contentsline {chapter}{KATA PENGANTAR}{v}{Doc-Start}%
 \contentsline {chapter}{DAFTAR ISI}{vii}{Item.7}%
-\contentsline {chapter}{DAFTAR GAMBAR}{ix}{chapter*.1}%
-\contentsline {chapter}{DAFTAR TABEL}{xi}{chapter*.2}%
-\contentsline {chapter}{Program}{xiii}{chapter*.3}%
+\contentsline {chapter}{DAFTAR GAMBAR}{xi}{chapter*.1}%
+\contentsline {chapter}{DAFTAR TABEL}{xiii}{chapter*.2}%
+\contentsline {chapter}{Program}{xv}{chapter*.3}%
 \contentsline {chapter}{\numberline {1}PENDAHULUAN}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Permasalahan}{2}{section.1.2}%
@@ -37,18 +37,20 @@
 \contentsline {subsection}{\numberline {3.3.3}Program Untuk Menerima Data JSON Melalui Bluetooth Pada ESP32}{15}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Program Untuk Menerima Data String Melalui \emph {Access Point} WiFi Pada ESP32}{17}{subsection.3.3.4}%
 \contentsline {subsection}{\numberline {3.3.5}Program Untuk Menerima Data JSON Melalui \emph {Access Point} WiFi Pada ESP32}{19}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Program Untuk Menguji Rangkaian Kontrol ESP32}{19}{subsection.3.3.6}%
-\contentsline {subsection}{\numberline {3.3.7}Program Untuk Mengirim Data String Melalui Bluetooth}{24}{subsection.3.3.7}%
-\contentsline {subsection}{\numberline {3.3.8}Program Untuk Mengirim Data String Melalui WiFi}{25}{subsection.3.3.8}%
-\contentsline {subsection}{\numberline {3.3.9}Program Untuk Mengirim Data JSON Melalui Bluetooth}{25}{subsection.3.3.9}%
-\contentsline {subsection}{\numberline {3.3.10}Program Untuk Mengirim Data JSON Melalui WiFi}{26}{subsection.3.3.10}%
-\contentsline {chapter}{\numberline {4}PENGUJIAN DAN ANALISIS}{27}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Pengujian Waktu \emph {Delay} Pengiriman Data String Melalui Bluetooth}{28}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Pengujian Waktu \emph {Delay} Pengiriman Data JSON Melalui Bluetooth}{29}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Pengujian Waktu \emph {Delay} Pengiriman Data String Melalui \emph {Access Point} WiFi}{30}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Pengujian Waktu \emph {Delay} Pengiriman Data JSON Melalui \emph {Access Point} WiFi}{31}{section.4.4}%
-\contentsline {chapter}{\numberline {5}PENUTUP}{33}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Kesimpulan}{33}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Saran}{33}{section.5.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{35}{chapter*.5}%
-\contentsline {chapter}{BIOGRAFI PENULIS}{37}{chapter*.5}%
+\contentsline {subsection}{\numberline {3.3.6}Program Untuk Menguji Rangkaian Kontrol ESP32}{20}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.7}Program Kontrol Motor Kursi Roda Melalui Bluetooth}{25}{subsection.3.3.7}%
+\contentsline {subsection}{\numberline {3.3.8}Program Kontrol Motor Kursi Roda Melalui \emph {Access Point} WiFi}{29}{subsection.3.3.8}%
+\contentsline {subsection}{\numberline {3.3.9}Program Untuk Mengirim Data String Melalui Bluetooth}{32}{subsection.3.3.9}%
+\contentsline {subsection}{\numberline {3.3.10}Program Untuk Mengirim Data String Melalui WiFi}{32}{subsection.3.3.10}%
+\contentsline {subsection}{\numberline {3.3.11}Program Untuk Mengirim Data JSON Melalui Bluetooth}{33}{subsection.3.3.11}%
+\contentsline {subsection}{\numberline {3.3.12}Program Untuk Mengirim Data JSON Melalui WiFi}{34}{subsection.3.3.12}%
+\contentsline {chapter}{\numberline {4}PENGUJIAN DAN ANALISIS}{35}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Pengujian Waktu \emph {Delay} Pengiriman Data String Melalui Bluetooth}{36}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Pengujian Waktu \emph {Delay} Pengiriman Data JSON Melalui Bluetooth}{37}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Pengujian Waktu \emph {Delay} Pengiriman Data String Melalui \emph {Access Point} WiFi}{38}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Pengujian Waktu \emph {Delay} Pengiriman Data JSON Melalui \emph {Access Point} WiFi}{39}{section.4.4}%
+\contentsline {chapter}{\numberline {5}PENUTUP}{41}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{41}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Saran}{41}{section.5.2}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{43}{chapter*.5}%
+\contentsline {chapter}{BIOGRAFI PENULIS}{45}{chapter*.5}%
