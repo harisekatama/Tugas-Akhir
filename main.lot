@@ -5,5 +5,8 @@
 \contentsline {table}{\numberline {3.2}{\ignorespaces Tabel contoh klasifikasi citra}}{10}{table.3.2}%
 \contentsline {table}{\numberline {3.3}{\ignorespaces Kode instruksi dari hasil klasifikasi}}{11}{table.3.3}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{Hasil Pengukuran Energi dan Kecepatan}}{27}{table.4.1}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Pengujian waktu \emph {delay} pengiriman data string melalui Bluetooth}}{28}{table.4.1}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Pengujian waktu \emph {delay} pengiriman data JSON melalui Bluetooth}}{29}{table.4.2}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Pengujian waktu \emph {delay} pengiriman data string melalui \emph {Access Point} WiFi}}{30}{table.4.3}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Pengujian waktu \emph {delay} pengiriman data json melalui \emph {Access Point} WiFi}}{31}{table.4.4}%
 \addvspace {10\p@ }
