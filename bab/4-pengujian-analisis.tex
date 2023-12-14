@@ -353,6 +353,20 @@ Ditemukan perbedaan waktu \emph{delay} yang cukup signifikan antara proses pengi
 \section{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Melalui \emph{Access Point} WiFi}
 \label{sec:delayWiFiJSON}
 
+Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimkan data berupa JSON dari laptop menuju ESP32 melalui WiFi. Data yang dikirimkan adalah data arah dan kecepatan yang dirangkum menjadi JSON seperti yang dapat dilihat pada Persamaan \ref{eq:json-2Data} dan Persamaan \ref{eq:json-1Data}. 
+
+\begin{equation}
+  \label{eq:json-2Data}
+    \{'arah': arah(char), 'kecepatan': kecepatan(integer)\}
+\end{equation}
+
+\begin{equation}
+  \label{eq:json-1Data}
+    \{'arah': arah(char)\}
+\end{equation}
+
+Data JSON terdiri dari 2 bagian, yaitu \emph{key} dan \emph{value}. Terdapat 2 \emph{key}, yaitu arah dan kecepatan. \emph{Key} arah berisi \emph{value} dengan tipe data char yang digunakan untuk menentukan arah gerak dari motor kursi roda dan \emph{key} kecepatan berisi \emph{value} dengan tipe data integer yang digunakan untuk menentukan kecepatan maksimal dari rotasi motor kursi roda. Hasil dari pengujian waktu \emph{delay} pengiriman data JSON dapat dilihat pada Tabel \ref{tbl:delayWiFiJSON} dan Tabel \ref{tbl:delayWiFiJSON1}.
+
 % Tabel 4.7
 \begin{longtable}{|ccc|c|}
   \caption{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Berisi 2 Nilai Melalui \emph{Access Point} WiFi}
@@ -396,6 +410,8 @@ Ditemukan perbedaan waktu \emph{delay} yang cukup signifikan antara proses pengi
     \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 56\}}  & \multicolumn{1}{c|}{18:58:59.520195} & 18:59:00.557       & 1.036805    \\ \hline
     \multicolumn{3}{|c|}{Average Delay Time}                                                                            & 1.037564129 \\ \hline
 \end{longtable}
+
+Tabel \ref{tbl:delayWiFiJSON} menampilkan pengiriman JSON yang terdiri dari 2 \emph{key}-\emph{value}, yaitu arah dan kecepatan. Dalam pengujian kali ini, data dikirimkan sebanyak 31 kali secara berturut-turut dengan penambahan waktu \emph{delay} sebesar 1.5 detik setiap kali mengirimkan data. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan (\emph{deserialize}) serta memasukkan kedua nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth adalah sebesar 1,037564129 detik.
 
 
 % Tabel 4.8
@@ -445,3 +461,7 @@ Ditemukan perbedaan waktu \emph{delay} yang cukup signifikan antara proses pengi
     \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:28:07.635244} & 22:28:08.708       & 1.072756    \\ \hline
     \multicolumn{3}{|c|}{Average Delay Time}                                                          & 1.038824343 \\ \hline
 \end{longtable}
+
+Tabel \ref{tbl:delayWiFiJSON1} menampilkan pengiriman JSON yang terdiri dari 1 \emph{key}-\emph{value}, yaitu arah. Dalam pengujian kali ini, data dikirimkan sebanyak 35 kali secara berturut-turut dengan penambahan waktu \emph{delay} sebesar 1.5 detik setiap kali mengirimkan data. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan (\emph{deserialize}) serta memasukkan nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth sebesar 1.038824343 detik.
+
+Dari kedua cara pengujian tersebut, didapatkan bahwa waktu \emph{delay} antara proses pengiriman JSON yang mengandung 2 \emph{key}-\emph{value} dibandingkan dengan JSON yang hanya berisikan 1 \emph{key}-\emph{value} tidak terlalu signifikan. Saat mengirimkan JSON yang berisikan 2 \emph{key}-\emph{value}, pengujian menunjukkan adanya \emph{delay} sebesar 1,037564129 detik. Jika dibandingkan dengan pengujian yang mengirimkan JSON dengan 1 \emph{key}-\emph{value}, waktu \emph{delay} yang tercatat adalah sebesar 1.038824343 detik. Terdapat anomali pada pengujian ini, karena waktu delay pada saat mengirimkan data JSON yang berisikan 2 \emph{key}-\emph{value} lebih kecil jika dibandingkan dengan saat mengirimkan data JSON yang berisikan 1 \emph{key}-\emph{value} walaupun perbedaan waktu \emph{delay}-nya tidak terlalu signifikan.
