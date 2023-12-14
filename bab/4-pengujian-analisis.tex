@@ -18,182 +18,391 @@ Pelaksanaan metodologi serta skenario pengujian yang akan dipaparkan dalam bab i
 \section{Pengujian Waktu \emph{Delay} Pengiriman Data String Melalui Bluetooth}
 \label{sec:delayBluetooth}
 
-\begin{table}[H]
-\centering
-  \caption{Pengujian waktu \emph{delay} pengiriman data string melalui Bluetooth}
-  \label{tbl:delayBluetooth}
-  \begin{tabular}{|ccc|c|}
+Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimkan data berupa string dari laptop menuju ESP32 melalui Bluetooth. Data yang dikirimkan adalah data arah dan kecepatan yang dipisahkan dengan koma seperti yang dapat dilihat pada Persamaan \ref{eq:string-2data}.
+
+\begin{equation}
+  \label{eq:string-2data}
+    Arah(char),Kecepatan(integer)
+\end{equation}
+
+
+% Tabel 4.1
+\begin{longtable}{|ccc|c|}
+  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data String Berisi 2 Nilai Melalui Bluetooth}
+  \label{tbl:delayBluetooth}\\
     \hline
-    \multicolumn{1}{|c|}{Data}  & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time                       \\ \hline
-    \multicolumn{1}{|c|}{C,40}  & \multicolumn{1}{c|}{22:02:06.857715} & 22:02:07.892       & 1,034285                         \\ \hline
-    \multicolumn{1}{|c|}{A,226} & \multicolumn{1}{c|}{22:02:08.358496} & 22:02:09.390       & 1,031504                         \\ \hline
-    \multicolumn{1}{|c|}{E,21}  & \multicolumn{1}{c|}{22:02:09.859346} & 22:02:10.921       & 1,061654                         \\ \hline
-    \multicolumn{1}{|c|}{C,168} & \multicolumn{1}{c|}{22:02:11.360115} & 22:02:12.405       & 1,044885                         \\ \hline
-    \multicolumn{1}{|c|}{B,247} & \multicolumn{1}{c|}{22:02:12.860932} & 22:02:13.900       & 1,039068                         \\ \hline
-    \multicolumn{1}{|c|}{B,72}  & \multicolumn{1}{c|}{22:02:14.361692} & 22:02:15.400       & 1,038308                         \\ \hline
-    \multicolumn{1}{|c|}{E,129} & \multicolumn{1}{c|}{22:05:28.232092} & 22:05:29.283       & 1,050908                         \\ \hline
-    \multicolumn{1}{|c|}{D,117} & \multicolumn{1}{c|}{22:05:29.732554} & 22:05:30.765       & 1,032446                         \\ \hline
-    \multicolumn{1}{|c|}{C,31}  & \multicolumn{1}{c|}{22:05:31.233293} & 22:05:32.264       & 1,030707                         \\ \hline
-    \multicolumn{1}{|c|}{B,248} & \multicolumn{1}{c|}{22:05:32.734151} & 22:05:33.779       & 1,044849                         \\ \hline
-    \multicolumn{1}{|c|}{D,126} & \multicolumn{1}{c|}{22:05:34.235059} & 22:05:35.271       & 1,035941                         \\ \hline
-    \multicolumn{1}{|c|}{C,2}   & \multicolumn{1}{c|}{22:07:30.543505} & 22:07:31.599       & 1,055495                         \\ \hline
-    \multicolumn{1}{|c|}{B,29}  & \multicolumn{1}{c|}{22:07:32.044303} & 22:07:33.077       & 1,032697                         \\ \hline
-    \multicolumn{1}{|c|}{C,247} & \multicolumn{1}{c|}{22:07:33.545370} & 22:07:34.595       & 1,04963                          \\ \hline
-    \multicolumn{1}{|c|}{A,190} & \multicolumn{1}{c|}{22:07:35.046573} & 22:07:36.085       & 1,038427                         \\ \hline
-    \multicolumn{1}{|c|}{A,49}  & \multicolumn{1}{c|}{22:07:36.547315} & 22:07:37.575       & 1,027685                         \\ \hline
-    \multicolumn{1}{|c|}{B,25}  & \multicolumn{1}{c|}{22:09:44.370413} & 22:09:45.405       & 1,034587                         \\ \hline
-    \multicolumn{1}{|c|}{D,72}  & \multicolumn{1}{c|}{22:09:45.871428} & 22:09:46.921       & 1,049572                         \\ \hline
-    \multicolumn{1}{|c|}{C,63}  & \multicolumn{1}{c|}{22:09:47.372407} & 22:09:48.415       & 1,042593                         \\ \hline
-    \multicolumn{1}{|c|}{A,245} & \multicolumn{1}{c|}{22:09:48.873310} & 22:09:49.885       & 1,01169                          \\ \hline
-    \multicolumn{1}{|c|}{C,70}  & \multicolumn{1}{c|}{22:09:50.374135} & 22:09:51.406       & 1,031865                         \\ \hline
-    \multicolumn{1}{|c|}{D,240} & \multicolumn{1}{c|}{22:09:51.874944} & 22:09:52.929       & 1,054056                         \\ \hline
-    \multicolumn{1}{|c|}{A,46}  & \multicolumn{1}{c|}{22:11:46.717729} & 22:11:47.744       & 1,026271                         \\ \hline
-    \multicolumn{1}{|c|}{B,245} & \multicolumn{1}{c|}{22:11:48.218593} & 22:11:49.263       & 1,044407                         \\ \hline
-    \multicolumn{1}{|c|}{B,68}  & \multicolumn{1}{c|}{22:11:49.719513} & 22:11:50.763       & 1,043487                         \\ \hline
-    \multicolumn{1}{|c|}{E,204} & \multicolumn{1}{c|}{22:11:51.219962} & 22:11:52.271       & 1,051038                         \\ \hline
-    \multicolumn{1}{|c|}{B,26}  & \multicolumn{1}{c|}{22:11:52.720738} & 22:11:53.746       & 1,025262                         \\ \hline
-    \multicolumn{1}{|c|}{D,113} & \multicolumn{1}{c|}{22:13:39.843434} & 22:13:40.871       & 1,027566                         \\ \hline
-    \multicolumn{1}{|c|}{B,195} & \multicolumn{1}{c|}{22:13:41.344420} & 22:13:42.389       & 1,04458                          \\ \hline
-    \multicolumn{1}{|c|}{A,242} & \multicolumn{1}{c|}{22:13:42.845419} & 22:13:43.876       & 1,030581                         \\ \hline
-    \multicolumn{1}{|c|}{A,17}  & \multicolumn{1}{c|}{22:13:44.346312} & 22:13:45.360       & 1,013688                         \\ \hline
-    \multicolumn{1}{|c|}{A,140} & \multicolumn{1}{c|}{22:13:45.847280} & 22:13:46.915       & 1,06772                          \\ \hline
-    \multicolumn{3}{|c|}{Average Delay Time}                                                & \multicolumn{1}{r|}{1,038982875} \\ \hline
-  \end{tabular}
-\end{table}
+    \multicolumn{1}{|c|}{Data}  & \multicolumn{1}{c|}{Timestamp Send}  & Timestamp Received & Delay Time  \\ \hline
+    \endfirsthead
+    %
+    \endhead
+    %
+    \multicolumn{1}{|c|}{C,40}  & \multicolumn{1}{c|}{22:02:06.857715} & 22:02:07.892       & 1.034285    \\ \hline
+    \multicolumn{1}{|c|}{A,226} & \multicolumn{1}{c|}{22:02:08.358496} & 22:02:09.390       & 1.031504    \\ \hline
+    \multicolumn{1}{|c|}{E,21}  & \multicolumn{1}{c|}{22:02:09.859346} & 22:02:10.921       & 1.061654    \\ \hline
+    \multicolumn{1}{|c|}{C,168} & \multicolumn{1}{c|}{22:02:11.360115} & 22:02:12.405       & 1.044885    \\ \hline
+    \multicolumn{1}{|c|}{B,247} & \multicolumn{1}{c|}{22:02:12.860932} & 22:02:13.900       & 1.039068    \\ \hline
+    \multicolumn{1}{|c|}{B,72}  & \multicolumn{1}{c|}{22:02:14.361692} & 22:02:15.400       & 1.038308    \\ \hline
+    \multicolumn{1}{|c|}{E,129} & \multicolumn{1}{c|}{22:05:28.232092} & 22:05:29.283       & 1.050908    \\ \hline
+    \multicolumn{1}{|c|}{D,117} & \multicolumn{1}{c|}{22:05:29.732554} & 22:05:30.765       & 1.032446    \\ \hline
+    \multicolumn{1}{|c|}{C,31}  & \multicolumn{1}{c|}{22:05:31.233293} & 22:05:32.264       & 1.030707    \\ \hline
+    \multicolumn{1}{|c|}{B,248} & \multicolumn{1}{c|}{22:05:32.734151} & 22:05:33.779       & 1.044849    \\ \hline
+    \multicolumn{1}{|c|}{D,126} & \multicolumn{1}{c|}{22:05:34.235059} & 22:05:35.271       & 1.035941    \\ \hline
+    \multicolumn{1}{|c|}{C,2}   & \multicolumn{1}{c|}{22:07:30.543505} & 22:07:31.599       & 1.055495    \\ \hline
+    \multicolumn{1}{|c|}{B,29}  & \multicolumn{1}{c|}{22:07:32.044303} & 22:07:33.077       & 1.032697    \\ \hline
+    \multicolumn{1}{|c|}{C,247} & \multicolumn{1}{c|}{22:07:33.545370} & 22:07:34.595       & 1.04963     \\ \hline
+    \multicolumn{1}{|c|}{A,190} & \multicolumn{1}{c|}{22:07:35.046573} & 22:07:36.085       & 1.038427    \\ \hline
+    \multicolumn{1}{|c|}{A,49}  & \multicolumn{1}{c|}{22:07:36.547315} & 22:07:37.575       & 1.027685    \\ \hline
+    \multicolumn{1}{|c|}{B,25}  & \multicolumn{1}{c|}{22:09:44.370413} & 22:09:45.405       & 1.034587    \\ \hline
+    \multicolumn{1}{|c|}{D,72}  & \multicolumn{1}{c|}{22:09:45.871428} & 22:09:46.921       & 1.049572    \\ \hline
+    \multicolumn{1}{|c|}{C,63}  & \multicolumn{1}{c|}{22:09:47.372407} & 22:09:48.415       & 1.042593    \\ \hline
+    \multicolumn{1}{|c|}{A,245} & \multicolumn{1}{c|}{22:09:48.873310} & 22:09:49.885       & 1.01169     \\ \hline
+    \multicolumn{1}{|c|}{C,70}  & \multicolumn{1}{c|}{22:09:50.374135} & 22:09:51.406       & 1.031865    \\ \hline
+    \multicolumn{1}{|c|}{D,240} & \multicolumn{1}{c|}{22:09:51.874944} & 22:09:52.929       & 1.054056    \\ \hline
+    \multicolumn{1}{|c|}{A,46}  & \multicolumn{1}{c|}{22:11:46.717729} & 22:11:47.744       & 1.026271    \\ \hline
+    \multicolumn{1}{|c|}{B,245} & \multicolumn{1}{c|}{22:11:48.218593} & 22:11:49.263       & 1.044407    \\ \hline
+    \multicolumn{1}{|c|}{B,68}  & \multicolumn{1}{c|}{22:11:49.719513} & 22:11:50.763       & 1.043487    \\ \hline
+    \multicolumn{1}{|c|}{E,204} & \multicolumn{1}{c|}{22:11:51.219962} & 22:11:52.271       & 1.051038    \\ \hline
+    \multicolumn{1}{|c|}{B,26}  & \multicolumn{1}{c|}{22:11:52.720738} & 22:11:53.746       & 1.025262    \\ \hline
+    \multicolumn{1}{|c|}{D,113} & \multicolumn{1}{c|}{22:13:39.843434} & 22:13:40.871       & 1.027566    \\ \hline
+    \multicolumn{1}{|c|}{B,195} & \multicolumn{1}{c|}{22:13:41.344420} & 22:13:42.389       & 1.04458     \\ \hline
+    \multicolumn{1}{|c|}{A,242} & \multicolumn{1}{c|}{22:13:42.845419} & 22:13:43.876       & 1.030581    \\ \hline
+    \multicolumn{1}{|c|}{A,17}  & \multicolumn{1}{c|}{22:13:44.346312} & 22:13:45.360       & 1.013688    \\ \hline
+    \multicolumn{1}{|c|}{A,140} & \multicolumn{1}{c|}{22:13:45.847280} & 22:13:46.915       & 1.06772     \\ \hline
+    \multicolumn{3}{|c|}{Average Delay Time}                                                & 1.038982875 \\ \hline
+\end{longtable}
+
+
+% Tabel 4.2
+\begin{longtable}{|ccc|c|}
+  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data String Berisi 1 Nilai Melalui Bluetooth}
+  \label{tbl:delayBluetooth1}\\
+  \hline
+  \multicolumn{1}{|c|}{Data} & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time   \\ \hline
+  \endfirsthead
+  %
+  \endhead
+  %
+  \multicolumn{1}{|c|}{D}    & \multicolumn{1}{c|}{17:56:13.163165} & 17:56:14.352       & 1.189        \\ \hline
+  \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{17:56:14.260985} & 17:56:14.491       & 0.230        \\ \hline
+  \multicolumn{1}{|c|}{D}    & \multicolumn{1}{c|}{17:56:14.442510} & 17:56:14.708       & 0.265        \\ \hline
+  \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{17:56:14.649861} & 17:56:14.878       & 0.228        \\ \hline
+  \multicolumn{1}{|c|}{D}    & \multicolumn{1}{c|}{17:56:14.782992} & 17:56:15.017       & 0.234        \\ \hline
+  \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{17:56:14.957997} & 17:56:15.188       & 0.230        \\ \hline
+  \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{17:56:15.096377} & 17:56:15.311       & 0.215        \\ \hline
+  \multicolumn{1}{|c|}{D}    & \multicolumn{1}{c|}{17:56:15.255594} & 17:56:15.483       & 0.227        \\ \hline
+  \multicolumn{1}{|c|}{D}    & \multicolumn{1}{c|}{17:56:15.406847} & 17:56:15.745       & 0.338        \\ \hline
+  \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{17:56:15.663510} & 17:56:15.930       & 0.266        \\ \hline
+  \multicolumn{1}{|c|}{D}    & \multicolumn{1}{c|}{17:56:15.893686} & 17:56:16.195       & 0.301        \\ \hline
+  \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{17:56:16.118896} & 17:56:16.320       & 0.201        \\ \hline
+  \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{17:56:16.287623} & 17:56:16.458       & 0.170        \\ \hline
+  \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{17:56:16.416326} & 17:56:16.674       & 0.258        \\ \hline
+  \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{17:56:16.600528} & 17:56:16.862       & 0.261        \\ \hline
+  \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{17:56:16.800782} & 17:56:17.080       & 0.279        \\ \hline
+  \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{17:56:16.972893} & 17:56:17.360       & 0.387        \\ \hline
+  \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{17:56:17.250136} & 17:56:17.641       & 0.391        \\ \hline
+  \multicolumn{1}{|c|}{B}    & \multicolumn{1}{c|}{17:56:17.544344} & 17:56:17.779       & 0.235        \\ \hline
+  \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{17:56:17.728154} & 17:56:18.012       & 0.284        \\ \hline
+  \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{17:56:17.945683} & 17:56:18.151       & 0.205        \\ \hline
+  \multicolumn{1}{|c|}{D}    & \multicolumn{1}{c|}{17:56:18.097472} & 17:56:18.382       & 0.285        \\ \hline
+  \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{17:56:18.302853} & 17:56:18.614       & 0.311        \\ \hline
+  \multicolumn{1}{|c|}{D}    & \multicolumn{1}{c|}{17:56:18.550624} & 17:56:18.818       & 0.267        \\ \hline
+  \multicolumn{1}{|c|}{B}    & \multicolumn{1}{c|}{17:56:18.745921} & 17:56:18.990       & 0.244        \\ \hline
+  \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{17:56:18.932188} & 17:56:19.162       & 0.230        \\ \hline
+  \multicolumn{1}{|c|}{B}    & \multicolumn{1}{c|}{17:56:19.129604} & 17:56:19.596       & 0.466        \\ \hline
+  \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{17:56:19.482713} & 17:56:19.937       & 0.454        \\ \hline
+  \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{17:56:19.876232} & 17:56:20.341       & 0.465        \\ \hline
+  \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{17:56:20.216948} & 17:56:20.649       & 0.432        \\ \hline
+  \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{17:56:20.588913} & 17:56:21.052       & 0.463        \\ \hline
+  \multicolumn{1}{|c|}{B}    & \multicolumn{1}{c|}{17:56:20.913091} & 17:56:21.468       & 0.555        \\ \hline
+  \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{17:56:21.323255} & 17:56:21.873       & 0.550        \\ \hline
+  \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{17:56:21.820789} & 17:56:22.278       & 0.457        \\ \hline
+  \multicolumn{1}{|c|}{B}    & \multicolumn{1}{c|}{17:56:22.149208} & 17:56:22.807       & 0.658        \\ \hline
+  \multicolumn{3}{|c|}{Average Delay Time}                                               & 0.3495228571 \\ \hline
+  \end{longtable}
 
 
 \section{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Melalui Bluetooth}
 \label{sec:delayBluetoothJSON}
 
-
-\begin{table}[H]
-\centering
-  \caption{Pengujian waktu \emph{delay} pengiriman data JSON melalui Bluetooth}
-  \label{tbl:delayBluetoothJSON}
-  \begin{tabular}{|ccc|c|}
+% Tabel 4.3
+\begin{longtable}{|ccc|c|}
+  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Berisi 2 Nilai Melalui Bluetooth}
+  \label{tbl:delayBluetoothJSON2}\\
     \hline
     \multicolumn{1}{|c|}{Data}                              & \multicolumn{1}{c|}{Timestamp Send}  & Timestamp Received & Delay Time  \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 73\}}  & \multicolumn{1}{c|}{20:50:22.830017} & 20:50:23.901       & 1,070983    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 69\}}  & \multicolumn{1}{c|}{20:50:23.931177} & 20:50:24.975       & 1,043823    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 140\}} & \multicolumn{1}{c|}{20:50:25.031644} & 20:50:26.109       & 1,077356    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 112\}} & \multicolumn{1}{c|}{20:50:26.132228} & 20:50:27.177       & 1,044772    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 125\}} & \multicolumn{1}{c|}{20:50:27.232932} & 20:50:28.265       & 1,032068    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 141\}} & \multicolumn{1}{c|}{20:50:28.333797} & 20:50:29.402       & 1,068203    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 210\}} & \multicolumn{1}{c|}{20:50:29.434256} & 20:50:30.531       & 1,096744    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 48\}}  & \multicolumn{1}{c|}{20:50:30.534885} & 20:50:31.585       & 1,050115    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 247\}} & \multicolumn{1}{c|}{20:50:31.635389} & 20:50:32.671       & 1,035611    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 48\}}  & \multicolumn{1}{c|}{20:50:32.736202} & 20:50:33.818       & 1,081798    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 117\}} & \multicolumn{1}{c|}{20:50:33.837167} & 20:50:34.942       & 1,104833    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 175\}} & \multicolumn{1}{c|}{20:50:34.937984} & 20:50:35.980       & 1,042016    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 121\}} & \multicolumn{1}{c|}{20:50:36.039064} & 20:50:37.066       & 1,026936    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 55\}}  & \multicolumn{1}{c|}{20:50:37.140106} & 20:50:38.211       & 1,070894    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 134\}} & \multicolumn{1}{c|}{20:50:38.240672} & 20:50:39.338       & 1,097328    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 241\}} & \multicolumn{1}{c|}{20:50:39.341402} & 20:50:40.380       & 1,038598    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 8\}}   & \multicolumn{1}{c|}{20:50:40.442061} & 20:50:41.484       & 1,041939    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 242\}} & \multicolumn{1}{c|}{20:50:41.542481} & 20:50:42.604       & 1,061519    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 251\}} & \multicolumn{1}{c|}{20:50:42.642951} & 20:50:43.741       & 1,098049    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 65\}}  & \multicolumn{1}{c|}{20:50:43.743514} & 20:50:44.754       & 1,010486    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 184\}} & \multicolumn{1}{c|}{20:50:44.844210} & 20:50:45.889       & 1,044790    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 244\}} & \multicolumn{1}{c|}{20:50:45.944934} & 20:50:47.010       & 1,065066    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 216\}} & \multicolumn{1}{c|}{20:50:47.045304} & 20:50:48.138       & 1,092696    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 209\}} & \multicolumn{1}{c|}{20:50:48.145895} & 20:50:49.194       & 1,048105    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 131\}} & \multicolumn{1}{c|}{20:50:49.246447} & 20:50:50.286       & 1,039553    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 172\}} & \multicolumn{1}{c|}{20:50:50.346836} & 20:50:51.407       & 1,060164    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 166\}} & \multicolumn{1}{c|}{20:50:51.447450} & 20:50:52.510       & 1,062550    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 47\}}  & \multicolumn{1}{c|}{20:50:52.548494} & 20:50:53.596       & 1,047506    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 193\}} & \multicolumn{1}{c|}{20:50:53.648852} & 20:50:54.701       & 1,052148    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 54\}}  & \multicolumn{1}{c|}{20:50:54.749663} & 20:50:55.812       & 1,062337    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 158\}} & \multicolumn{1}{c|}{20:50:55.850048} & 20:50:56.917       & 1,066952    \\ \hline
-    \multicolumn{3}{|c|}{Average Delay Time}                                                                            & 1,059223806 \\ \hline
-  \end{tabular}
-\end{table}
+    \endfirsthead
+    %
+    \endhead
+    %
+    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 73\}}  & \multicolumn{1}{c|}{20:50:22.830017} & 20:50:23.901       & 1.070983    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 69\}}  & \multicolumn{1}{c|}{20:50:23.931177} & 20:50:24.975       & 1.043823    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 140\}} & \multicolumn{1}{c|}{20:50:25.031644} & 20:50:26.109       & 1.077356    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 112\}} & \multicolumn{1}{c|}{20:50:26.132228} & 20:50:27.177       & 1.044772    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 125\}} & \multicolumn{1}{c|}{20:50:27.232932} & 20:50:28.265       & 1.032068    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 141\}} & \multicolumn{1}{c|}{20:50:28.333797} & 20:50:29.402       & 1.068203    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 210\}} & \multicolumn{1}{c|}{20:50:29.434256} & 20:50:30.531       & 1.096744    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 48\}}  & \multicolumn{1}{c|}{20:50:30.534885} & 20:50:31.585       & 1.050115    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 247\}} & \multicolumn{1}{c|}{20:50:31.635389} & 20:50:32.671       & 1.035611    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 48\}}  & \multicolumn{1}{c|}{20:50:32.736202} & 20:50:33.818       & 1.081798    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 117\}} & \multicolumn{1}{c|}{20:50:33.837167} & 20:50:34.942       & 1.104833    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 175\}} & \multicolumn{1}{c|}{20:50:34.937984} & 20:50:35.980       & 1.042016    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 121\}} & \multicolumn{1}{c|}{20:50:36.039064} & 20:50:37.066       & 1.026936    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 55\}}  & \multicolumn{1}{c|}{20:50:37.140106} & 20:50:38.211       & 1.070894    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 134\}} & \multicolumn{1}{c|}{20:50:38.240672} & 20:50:39.338       & 1.097328    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 241\}} & \multicolumn{1}{c|}{20:50:39.341402} & 20:50:40.380       & 1.038598    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 8\}}   & \multicolumn{1}{c|}{20:50:40.442061} & 20:50:41.484       & 1.041939    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 242\}} & \multicolumn{1}{c|}{20:50:41.542481} & 20:50:42.604       & 1.061519    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 251\}} & \multicolumn{1}{c|}{20:50:42.642951} & 20:50:43.741       & 1.098049    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 65\}}  & \multicolumn{1}{c|}{20:50:43.743514} & 20:50:44.754       & 1.010486    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 184\}} & \multicolumn{1}{c|}{20:50:44.844210} & 20:50:45.889       & 1.044790    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 244\}} & \multicolumn{1}{c|}{20:50:45.944934} & 20:50:47.010       & 1.065066    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 216\}} & \multicolumn{1}{c|}{20:50:47.045304} & 20:50:48.138       & 1.092696    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 209\}} & \multicolumn{1}{c|}{20:50:48.145895} & 20:50:49.194       & 1.048105    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 131\}} & \multicolumn{1}{c|}{20:50:49.246447} & 20:50:50.286       & 1.039553    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 172\}} & \multicolumn{1}{c|}{20:50:50.346836} & 20:50:51.407       & 1.060164    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 166\}} & \multicolumn{1}{c|}{20:50:51.447450} & 20:50:52.510       & 1.062550    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 47\}}  & \multicolumn{1}{c|}{20:50:52.548494} & 20:50:53.596       & 1.047506    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 193\}} & \multicolumn{1}{c|}{20:50:53.648852} & 20:50:54.701       & 1.052148    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 54\}}  & \multicolumn{1}{c|}{20:50:54.749663} & 20:50:55.812       & 1.062337    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 158\}} & \multicolumn{1}{c|}{20:50:55.850048} & 20:50:56.917       & 1.066952    \\ \hline
+    \multicolumn{3}{|c|}{Average Delay Time}                                                                            & 1.059223806 \\ \hline
+\end{longtable}
+
+% Tabel 4.4
+\begin{longtable}{|ccc|c|}
+  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Berisi 1 Nilai Melalui Bluetooth}
+  \label{tbl:delayBluetoothJSON1}\\
+    \hline
+    \multicolumn{1}{|c|}{Data}            & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
+    \endfirsthead
+    %
+    \endhead
+    %
+    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{20:18:19.920784} & 20:18:20.984       & 1.063216    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{20:18:21.040387} & 20:18:22.091       & 1.050613    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{20:18:22.093848} & 20:18:23.150       & 1.056152    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A'\}} & \multicolumn{1}{c|}{20:18:23.185556} & 20:18:24.238       & 1.052444    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{20:18:24.241774} & 20:18:25.281       & 1.039226    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{20:18:25.387649} & 20:18:26.526       & 1.138351    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{20:18:26.514085} & 20:18:27.550       & 1.035915    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{20:18:27.626023} & 20:18:28.683       & 1.056977    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{20:18:28.757853} & 20:18:29.807       & 1.049147    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{20:18:29.905233} & 20:18:31.037       & 1.131767    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{20:18:31.117422} & 20:18:32.255       & 1.137578    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{20:18:32.229935} & 20:18:33.284       & 1.054065    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{20:18:33.367298} & 20:18:34.424       & 1.056702    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{20:18:34.474402} & 20:18:35.527       & 1.052598    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{20:18:35.612564} & 20:18:36.661       & 1.048436    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{20:18:36.740207} & 20:18:37.795       & 1.054793    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A'\}} & \multicolumn{1}{c|}{20:18:37.857143} & 20:18:38.917       & 1.059857    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{20:18:38.997421} & 20:18:40.052       & 1.054579    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{20:18:40.134763} & 20:18:41.264       & 1.129237    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{20:18:41.242444} & 20:18:42.274       & 1.031556    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{20:18:42.457488} & 20:18:43.520       & 1.062512    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{20:18:43.614871} & 20:18:44.749       & 1.134129    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{20:18:44.738330} & 20:18:45.852       & 1.11367     \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A'\}} & \multicolumn{1}{c|}{20:18:45.857615} & 20:18:46.909       & 1.051385    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{20:18:46.987464} & 20:18:48.108       & 1.120536    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{20:18:48.117471} & 20:18:49.234       & 1.116529    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A'\}} & \multicolumn{1}{c|}{20:18:49.314138} & 20:18:50.375       & 1.060862    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{20:18:50.440545} & 20:18:51.498       & 1.057455    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{20:18:51.667602} & 20:18:52.728       & 1.060398    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{20:18:52.802780} & 20:18:53.846       & 1.04322     \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{20:18:53.935965} & 20:18:54.985       & 1.049035    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{20:18:55.069708} & 20:18:56.171       & 1.101292    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{20:18:56.275415} & 20:18:57.292       & 1.016585    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{20:18:57.399101} & 20:18:58.445       & 1.045899    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{20:18:58.536479} & 20:18:59.581       & 1.044521    \\ \hline
+    \multicolumn{3}{|c|}{Average Delay Time}                                                          & 1.069463914 \\ \hline
+\end{longtable}
 
 \section{Pengujian Waktu \emph{Delay} Pengiriman Data String Melalui \emph{Access Point} WiFi}
 \label{sec:delayWiFi}
 
-\begin{table}[H]
-\centering
-  \caption{Pengujian waktu \emph{delay} pengiriman data string melalui \emph{Access Point} WiFi}
-  \label{tbl:delayWiFi}
-  \begin{tabular}{|ccc|c|}
+% Tabel 4.5
+\begin{longtable}{|ccc|c|}
+  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data String Berisi 2 Nilai Melalui \emph{Access Point} WiFi}
+  \label{tbl:delayWiFi2}\\
     \hline
     \multicolumn{1}{|c|}{Data}  & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
-    \multicolumn{1}{|c|}{D,175} & \multicolumn{1}{c|}{22:34:36.127972} & 22:34:37.159       & 1,031028    \\ \hline
-    \multicolumn{1}{|c|}{D,220} & \multicolumn{1}{c|}{22:34:37.428370} & 22:34:38.433       & 1,00463     \\ \hline
-    \multicolumn{1}{|c|}{E,164} & \multicolumn{1}{c|}{22:34:38.728955} & 22:34:39.760       & 1,031045    \\ \hline
-    \multicolumn{1}{|c|}{E,109} & \multicolumn{1}{c|}{22:34:40.029352} & 22:34:41.068       & 1,038648    \\ \hline
-    \multicolumn{1}{|c|}{D,187} & \multicolumn{1}{c|}{22:34:41.329739} & 22:34:42.371       & 1,041261    \\ \hline
-    \multicolumn{1}{|c|}{A,174} & \multicolumn{1}{c|}{22:34:42.630322} & 22:34:43.649       & 1,018678    \\ \hline
-    \multicolumn{1}{|c|}{A,176} & \multicolumn{1}{c|}{22:34:43.931092} & 22:34:44.957       & 1,025908    \\ \hline
-    \multicolumn{1}{|c|}{C,245} & \multicolumn{1}{c|}{22:34:45.231675} & 22:34:46.276       & 1,044325    \\ \hline
-    \multicolumn{1}{|c|}{E,189} & \multicolumn{1}{c|}{22:34:46.532305} & 22:34:47.821       & 1,288695    \\ \hline
-    \multicolumn{1}{|c|}{B,149} & \multicolumn{1}{c|}{22:34:47.832930} & 22:34:48.865       & 1,03207     \\ \hline
-    \multicolumn{1}{|c|}{D,113} & \multicolumn{1}{c|}{22:34:49.133646} & 22:34:50.179       & 1,045354    \\ \hline
-    \multicolumn{1}{|c|}{A,150} & \multicolumn{1}{c|}{22:34:50.434051} & 22:34:51.482       & 1,047949    \\ \hline
-    \multicolumn{1}{|c|}{A,216} & \multicolumn{1}{c|}{22:34:51.734834} & 22:34:52.776       & 1,041166    \\ \hline
-    \multicolumn{1}{|c|}{B,21}  & \multicolumn{1}{c|}{22:34:53.035137} & 22:34:54.210       & 1,174863    \\ \hline
-    \multicolumn{1}{|c|}{B,153} & \multicolumn{1}{c|}{22:34:54.335986} & 22:34:55.466       & 1,130014    \\ \hline
-    \multicolumn{1}{|c|}{E,214} & \multicolumn{1}{c|}{22:34:55.636653} & 22:34:56.679       & 1,042347    \\ \hline
-    \multicolumn{1}{|c|}{C,231} & \multicolumn{1}{c|}{22:34:56.937379} & 22:34:57.974       & 1,036621    \\ \hline
-    \multicolumn{1}{|c|}{E,41}  & \multicolumn{1}{c|}{22:34:58.237752} & 22:34:59.514       & 1,276248    \\ \hline
-    \multicolumn{1}{|c|}{B,210} & \multicolumn{1}{c|}{22:34:59.538330} & 22:35:00.582       & 1,04367     \\ \hline
-    \multicolumn{1}{|c|}{C,38}  & \multicolumn{1}{c|}{22:35:00.838618} & 22:35:01.871       & 1,032382    \\ \hline
-    \multicolumn{1}{|c|}{E,83}  & \multicolumn{1}{c|}{22:35:02.139088} & 22:35:03.182       & 1,042912    \\ \hline
-    \multicolumn{1}{|c|}{A,52}  & \multicolumn{1}{c|}{22:35:03.439819} & 22:35:04.441       & 1,001181    \\ \hline
-    \multicolumn{1}{|c|}{A,106} & \multicolumn{1}{c|}{22:35:04.740350} & 22:35:05.764       & 1,02365     \\ \hline
-    \multicolumn{1}{|c|}{C,255} & \multicolumn{1}{c|}{22:35:06.040967} & 22:35:07.069       & 1,028033    \\ \hline
-    \multicolumn{1}{|c|}{B,205} & \multicolumn{1}{c|}{22:35:07.341426} & 22:35:08.380       & 1,038574    \\ \hline
-    \multicolumn{1}{|c|}{C,4}   & \multicolumn{1}{c|}{22:35:08.642326} & 22:35:09.764       & 1,121674    \\ \hline
-    \multicolumn{1}{|c|}{C,158} & \multicolumn{1}{c|}{22:35:09.942969} & 22:35:10.994       & 1,051031    \\ \hline
-    \multicolumn{1}{|c|}{A,64}  & \multicolumn{1}{c|}{22:35:11.243758} & 22:35:12.268       & 1,024242    \\ \hline
-    \multicolumn{1}{|c|}{E,132} & \multicolumn{1}{c|}{22:35:12.544406} & 22:35:13.581       & 1,036594    \\ \hline
-    \multicolumn{1}{|c|}{D,248} & \multicolumn{1}{c|}{22:35:13.844881} & 22:35:14.871       & 1,026119    \\ \hline
-    \multicolumn{1}{|c|}{B,194} & \multicolumn{1}{c|}{22:35:15.145789} & 22:35:16.175       & 1,029211    \\ \hline
-    \multicolumn{3}{|c|}{Average Delay Time}                                                & 1,059681387 \\ \hline
-  \end{tabular}
-\end{table}
+    \endfirsthead
+    %
+    \endhead
+    %
+    \multicolumn{1}{|c|}{D,175} & \multicolumn{1}{c|}{22:34:36.127972} & 22:34:37.159       & 1.031028    \\ \hline
+    \multicolumn{1}{|c|}{D,220} & \multicolumn{1}{c|}{22:34:37.428370} & 22:34:38.433       & 1.00463     \\ \hline
+    \multicolumn{1}{|c|}{E,164} & \multicolumn{1}{c|}{22:34:38.728955} & 22:34:39.760       & 1.031045    \\ \hline
+    \multicolumn{1}{|c|}{E,109} & \multicolumn{1}{c|}{22:34:40.029352} & 22:34:41.068       & 1.038648    \\ \hline
+    \multicolumn{1}{|c|}{D,187} & \multicolumn{1}{c|}{22:34:41.329739} & 22:34:42.371       & 1.041261    \\ \hline
+    \multicolumn{1}{|c|}{A,174} & \multicolumn{1}{c|}{22:34:42.630322} & 22:34:43.649       & 1.018678    \\ \hline
+    \multicolumn{1}{|c|}{A,176} & \multicolumn{1}{c|}{22:34:43.931092} & 22:34:44.957       & 1.025908    \\ \hline
+    \multicolumn{1}{|c|}{C,245} & \multicolumn{1}{c|}{22:34:45.231675} & 22:34:46.276       & 1.044325    \\ \hline
+    \multicolumn{1}{|c|}{E,189} & \multicolumn{1}{c|}{22:34:46.532305} & 22:34:47.821       & 1.288695    \\ \hline
+    \multicolumn{1}{|c|}{B,149} & \multicolumn{1}{c|}{22:34:47.832930} & 22:34:48.865       & 1.03207     \\ \hline
+    \multicolumn{1}{|c|}{D,113} & \multicolumn{1}{c|}{22:34:49.133646} & 22:34:50.179       & 1.045354    \\ \hline
+    \multicolumn{1}{|c|}{A,150} & \multicolumn{1}{c|}{22:34:50.434051} & 22:34:51.482       & 1.047949    \\ \hline
+    \multicolumn{1}{|c|}{A,216} & \multicolumn{1}{c|}{22:34:51.734834} & 22:34:52.776       & 1.041166    \\ \hline
+    \multicolumn{1}{|c|}{B,21}  & \multicolumn{1}{c|}{22:34:53.035137} & 22:34:54.210       & 1.174863    \\ \hline
+    \multicolumn{1}{|c|}{B,153} & \multicolumn{1}{c|}{22:34:54.335986} & 22:34:55.466       & 1.130014    \\ \hline
+    \multicolumn{1}{|c|}{E,214} & \multicolumn{1}{c|}{22:34:55.636653} & 22:34:56.679       & 1.042347    \\ \hline
+    \multicolumn{1}{|c|}{C,231} & \multicolumn{1}{c|}{22:34:56.937379} & 22:34:57.974       & 1.036621    \\ \hline
+    \multicolumn{1}{|c|}{E,41}  & \multicolumn{1}{c|}{22:34:58.237752} & 22:34:59.514       & 1.276248    \\ \hline
+    \multicolumn{1}{|c|}{B,210} & \multicolumn{1}{c|}{22:34:59.538330} & 22:35:00.582       & 1.04367     \\ \hline
+    \multicolumn{1}{|c|}{C,38}  & \multicolumn{1}{c|}{22:35:00.838618} & 22:35:01.871       & 1.032382    \\ \hline
+    \multicolumn{1}{|c|}{E,83}  & \multicolumn{1}{c|}{22:35:02.139088} & 22:35:03.182       & 1.042912    \\ \hline
+    \multicolumn{1}{|c|}{A,52}  & \multicolumn{1}{c|}{22:35:03.439819} & 22:35:04.441       & 1.001181    \\ \hline
+    \multicolumn{1}{|c|}{A,106} & \multicolumn{1}{c|}{22:35:04.740350} & 22:35:05.764       & 1.02365     \\ \hline
+    \multicolumn{1}{|c|}{C,255} & \multicolumn{1}{c|}{22:35:06.040967} & 22:35:07.069       & 1.028033    \\ \hline
+    \multicolumn{1}{|c|}{B,205} & \multicolumn{1}{c|}{22:35:07.341426} & 22:35:08.380       & 1.038574    \\ \hline
+    \multicolumn{1}{|c|}{C,4}   & \multicolumn{1}{c|}{22:35:08.642326} & 22:35:09.764       & 1.121674    \\ \hline
+    \multicolumn{1}{|c|}{C,158} & \multicolumn{1}{c|}{22:35:09.942969} & 22:35:10.994       & 1.051031    \\ \hline
+    \multicolumn{1}{|c|}{A,64}  & \multicolumn{1}{c|}{22:35:11.243758} & 22:35:12.268       & 1.024242    \\ \hline
+    \multicolumn{1}{|c|}{E,132} & \multicolumn{1}{c|}{22:35:12.544406} & 22:35:13.581       & 1.036594    \\ \hline
+    \multicolumn{1}{|c|}{D,248} & \multicolumn{1}{c|}{22:35:13.844881} & 22:35:14.871       & 1.026119    \\ \hline
+    \multicolumn{1}{|c|}{B,194} & \multicolumn{1}{c|}{22:35:15.145789} & 22:35:16.175       & 1.029211    \\ \hline
+    \multicolumn{3}{|c|}{Average Delay Time}                                                & 1.059681387 \\ \hline
+\end{longtable}
+
+% Tabel 4.6
+\begin{longtable}{|ccc|c|}
+  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data String Berisi 1 Nilai Melalui \emph{Access Point} WiFi}
+  \label{tbl:delayWiFi1}\\
+    \hline
+    \multicolumn{1}{|c|}{Data} & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time    \\ \hline
+    \endfirsthead
+    %
+    \endhead
+    %
+    \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{21:05:44.335642} & 21:05:44.386       & 0.050358      \\ \hline
+    \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{21:05:44.380617} & 21:05:44.433       & 0.052383      \\ \hline
+    \multicolumn{1}{|c|}{B}    & \multicolumn{1}{c|}{21:05:44.474109} & 21:05:44.526       & 0.051891      \\ \hline
+    \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{21:05:44.544724} & 21:05:44.572       & 0.027276      \\ \hline
+    \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{21:05:44.674358} & 21:05:44.682       & 0.007642      \\ \hline
+    \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{21:05:44.684230} & 21:05:44.728       & 0.04377       \\ \hline
+    \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{21:05:44.787668} & 21:05:44.822       & 0.034332      \\ \hline
+    \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{21:05:44.834278} & 21:05:44.854       & 0.019722      \\ \hline
+    \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{21:05:44.847274} & 21:05:44.899       & 0.051726      \\ \hline
+    \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{21:05:44.855957} & 21:05:44.899       & 0.043043      \\ \hline
+    \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{21:05:44.968575} & 21:05:44.977       & 0.008425      \\ \hline
+    \multicolumn{1}{|c|}{D}    & \multicolumn{1}{c|}{21:05:44.988174} & 21:05:45.024       & 0.035826      \\ \hline
+    \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{21:05:45.018276} & 21:05:45.062       & 0.043724      \\ \hline
+    \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{21:05:45.054604} & 21:05:45.100       & 0.045396      \\ \hline
+    \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{21:05:45.069057} & 21:05:45.100       & 0.030943      \\ \hline
+    \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{21:05:45.123548} & 21:05:45.147       & 0.023452      \\ \hline
+    \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{21:05:45.144644} & 21:05:45.194       & 0.049356      \\ \hline
+    \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{21:05:45.164004} & 21:05:45.194       & 0.029996      \\ \hline
+    \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{21:05:45.218556} & 21:05:45.270       & 0.051444      \\ \hline
+    \multicolumn{1}{|c|}{B}    & \multicolumn{1}{c|}{21:05:45.245502} & 21:05:45.270       & 0.024498      \\ \hline
+    \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{21:05:45.347689} & 21:05:45.373       & 0.025311      \\ \hline
+    \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{21:05:45.355225} & 21:05:45.373       & 0.017775      \\ \hline
+    \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{21:05:45.366221} & 21:05:45.410       & 0.043779      \\ \hline
+    \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{21:05:45.413087} & 21:05:45.456       & 0.042913      \\ \hline
+    \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{21:05:45.458212} & 21:05:45.492       & 0.033788      \\ \hline
+    \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{21:05:45.482171} & 21:05:45.534       & 0.051829      \\ \hline
+    \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{21:05:45.529777} & 21:05:45.579       & 0.049223      \\ \hline
+    \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{21:05:45.603062} & 21:05:45.626       & 0.022938      \\ \hline
+    \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{21:05:45.670848} & 21:05:45.710       & 0.039152      \\ \hline
+    \multicolumn{1}{|c|}{D}    & \multicolumn{1}{c|}{21:05:45.682481} & 21:05:45.710       & 0.027519      \\ \hline
+    \multicolumn{1}{|c|}{B}    & \multicolumn{1}{c|}{21:05:45.703240} & 21:05:45.749       & 0.04576       \\ \hline
+    \multicolumn{1}{|c|}{D}    & \multicolumn{1}{c|}{21:05:45.800390} & 21:05:45.843       & 0.04261       \\ \hline
+    \multicolumn{1}{|c|}{B}    & \multicolumn{1}{c|}{21:05:45.809048} & 21:05:45.843       & 0.033952      \\ \hline
+    \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{21:05:45.858800} & 21:05:45.875       & 0.0162        \\ \hline
+    \multicolumn{1}{|c|}{D}    & \multicolumn{1}{c|}{21:05:45.868054} & 21:05:45.875       & 0.006946      \\ \hline
+    \multicolumn{3}{|c|}{Average Delay Time}                                               & 0.03499708571 \\ \hline
+\end{longtable}
 
 \section{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Melalui \emph{Access Point} WiFi}
 \label{sec:delayWiFiJSON}
 
-\begin{table}[H]
-\centering
-  \caption{Pengujian waktu \emph{delay} pengiriman data json melalui \emph{Access Point} WiFi}
-  \label{tbl:delayWiFiJSON}
-  \begin{tabular}{|ccc|c|}
+% Tabel 4.7
+\begin{longtable}{|ccc|c|}
+  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Berisi 2 Nilai Melalui \emph{Access Point} WiFi}
+  \label{tbl:delayWiFiJSON}\\
     \hline
     \multicolumn{1}{|c|}{Data}                              & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 89\}}  & \multicolumn{1}{c|}{18:58:14.500967} & 18:58:15.534       & 1,033033    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 103\}} & \multicolumn{1}{c|}{18:58:16.001310} & 18:58:17.091       & 1,08969     \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 164\}} & \multicolumn{1}{c|}{18:58:17.502196} & 18:58:18.550       & 1,047804    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 101\}} & \multicolumn{1}{c|}{18:58:19.002654} & 18:58:20.026       & 1,023346    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 152\}} & \multicolumn{1}{c|}{18:58:20.502992} & 18:58:21.537       & 1,034008    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 19\}}  & \multicolumn{1}{c|}{18:58:22.003740} & 18:58:23.042       & 1,03826     \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 198\}} & \multicolumn{1}{c|}{18:58:23.504455} & 18:58:24.539       & 1,034545    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 211\}} & \multicolumn{1}{c|}{18:58:25.005622} & 18:58:26.045       & 1,039378    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 238\}} & \multicolumn{1}{c|}{18:58:26.506072} & 18:58:27.543       & 1,036928    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 30\}}  & \multicolumn{1}{c|}{18:58:28.006535} & 18:58:29.175       & 1,168465    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 112\}} & \multicolumn{1}{c|}{18:58:29.507104} & 18:58:30.532       & 1,024896    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 7\}}   & \multicolumn{1}{c|}{18:58:31.007617} & 18:58:32.011       & 1,003383    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 66\}}  & \multicolumn{1}{c|}{18:58:32.508185} & 18:58:33.547       & 1,038815    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 105\}} & \multicolumn{1}{c|}{18:58:34.008584} & 18:58:35.051       & 1,042416    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 117\}} & \multicolumn{1}{c|}{18:58:35.509099} & 18:58:36.526       & 1,016901    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 223\}} & \multicolumn{1}{c|}{18:58:37.009885} & 18:58:38.037       & 1,027115    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 245\}} & \multicolumn{1}{c|}{18:58:38.510667} & 18:58:39.515       & 1,004333    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 15\}}  & \multicolumn{1}{c|}{18:58:40.011508} & 18:58:41.050       & 1,038492    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 156\}} & \multicolumn{1}{c|}{18:58:41.512148} & 18:58:42.543       & 1,030852    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 118\}} & \multicolumn{1}{c|}{18:58:43.013213} & 18:58:44.048       & 1,034787    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 200\}} & \multicolumn{1}{c|}{18:58:44.514015} & 18:58:45.551       & 1,036985    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 159\}} & \multicolumn{1}{c|}{18:58:46.014630} & 18:58:47.027       & 1,01237     \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 39\}}  & \multicolumn{1}{c|}{18:58:47.515394} & 18:58:48.522       & 1,006606    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 200\}} & \multicolumn{1}{c|}{18:58:49.015871} & 18:58:50.056       & 1,040129    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 179\}} & \multicolumn{1}{c|}{18:58:50.516719} & 18:58:51.543       & 1,026281    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 55\}}  & \multicolumn{1}{c|}{18:58:52.017064} & 18:58:53.062       & 1,044936    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 228\}} & \multicolumn{1}{c|}{18:58:53.518106} & 18:58:54.544       & 1,025894    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 38\}}  & \multicolumn{1}{c|}{18:58:55.018428} & 18:58:56.059       & 1,040572    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 38\}}  & \multicolumn{1}{c|}{18:58:56.518869} & 18:58:57.560       & 1,041131    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 192\}} & \multicolumn{1}{c|}{18:58:58.019668} & 18:58:59.065       & 1,045332    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 56\}}  & \multicolumn{1}{c|}{18:58:59.520195} & 18:59:00.557       & 1,036805    \\ \hline
-    \multicolumn{3}{|c|}{Average Delay Time}                                                                            & 1,037564129 \\ \hline
-  \end{tabular}
-\end{table}
+    \endfirsthead
+    %
+    \endhead
+    %
+    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 89\}}  & \multicolumn{1}{c|}{18:58:14.500967} & 18:58:15.534       & 1.033033    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 103\}} & \multicolumn{1}{c|}{18:58:16.001310} & 18:58:17.091       & 1.08969     \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 164\}} & \multicolumn{1}{c|}{18:58:17.502196} & 18:58:18.550       & 1.047804    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 101\}} & \multicolumn{1}{c|}{18:58:19.002654} & 18:58:20.026       & 1.023346    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 152\}} & \multicolumn{1}{c|}{18:58:20.502992} & 18:58:21.537       & 1.034008    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 19\}}  & \multicolumn{1}{c|}{18:58:22.003740} & 18:58:23.042       & 1.03826     \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 198\}} & \multicolumn{1}{c|}{18:58:23.504455} & 18:58:24.539       & 1.034545    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 211\}} & \multicolumn{1}{c|}{18:58:25.005622} & 18:58:26.045       & 1.039378    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 238\}} & \multicolumn{1}{c|}{18:58:26.506072} & 18:58:27.543       & 1.036928    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 30\}}  & \multicolumn{1}{c|}{18:58:28.006535} & 18:58:29.175       & 1.168465    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 112\}} & \multicolumn{1}{c|}{18:58:29.507104} & 18:58:30.532       & 1.024896    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 7\}}   & \multicolumn{1}{c|}{18:58:31.007617} & 18:58:32.011       & 1.003383    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 66\}}  & \multicolumn{1}{c|}{18:58:32.508185} & 18:58:33.547       & 1.038815    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 105\}} & \multicolumn{1}{c|}{18:58:34.008584} & 18:58:35.051       & 1.042416    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 117\}} & \multicolumn{1}{c|}{18:58:35.509099} & 18:58:36.526       & 1.016901    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 223\}} & \multicolumn{1}{c|}{18:58:37.009885} & 18:58:38.037       & 1.027115    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 245\}} & \multicolumn{1}{c|}{18:58:38.510667} & 18:58:39.515       & 1.004333    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 15\}}  & \multicolumn{1}{c|}{18:58:40.011508} & 18:58:41.050       & 1.038492    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 156\}} & \multicolumn{1}{c|}{18:58:41.512148} & 18:58:42.543       & 1.030852    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 118\}} & \multicolumn{1}{c|}{18:58:43.013213} & 18:58:44.048       & 1.034787    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 200\}} & \multicolumn{1}{c|}{18:58:44.514015} & 18:58:45.551       & 1.036985    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 159\}} & \multicolumn{1}{c|}{18:58:46.014630} & 18:58:47.027       & 1.01237     \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 39\}}  & \multicolumn{1}{c|}{18:58:47.515394} & 18:58:48.522       & 1.006606    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 200\}} & \multicolumn{1}{c|}{18:58:49.015871} & 18:58:50.056       & 1.040129    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 179\}} & \multicolumn{1}{c|}{18:58:50.516719} & 18:58:51.543       & 1.026281    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 55\}}  & \multicolumn{1}{c|}{18:58:52.017064} & 18:58:53.062       & 1.044936    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 228\}} & \multicolumn{1}{c|}{18:58:53.518106} & 18:58:54.544       & 1.025894    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 38\}}  & \multicolumn{1}{c|}{18:58:55.018428} & 18:58:56.059       & 1.040572    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 38\}}  & \multicolumn{1}{c|}{18:58:56.518869} & 18:58:57.560       & 1.041131    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 192\}} & \multicolumn{1}{c|}{18:58:58.019668} & 18:58:59.065       & 1.045332    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 56\}}  & \multicolumn{1}{c|}{18:58:59.520195} & 18:59:00.557       & 1.036805    \\ \hline
+    \multicolumn{3}{|c|}{Average Delay Time}                                                                            & 1.037564129 \\ \hline
+\end{longtable}
+
+
+% Tabel 4.8
+\begin{longtable}{|ccc|c|}
+  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Berisi 1 Nilai Melalui \emph{Access Point} WiFi}
+  \label{tbl:delayWiFiJSON1}\\
+    \hline
+    \multicolumn{1}{|c|}{Data}            & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
+    \endfirsthead
+    %
+    \endhead
+    %
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:11.678759} & 22:27:12.710       & 1.031241    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:27:13.184177} & 22:27:14.233       & 1.048823    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:14.698806} & 22:27:15.748       & 1.049194    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A'\}} & \multicolumn{1}{c|}{22:27:16.203611} & 22:27:17.215       & 1.011389    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:17.715604} & 22:27:18.746       & 1.030396    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A'\}} & \multicolumn{1}{c|}{22:27:19.222435} & 22:27:20.228       & 1.005565    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:20.730434} & 22:27:21.771       & 1.040566    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{22:27:22.239679} & 22:27:23.285       & 1.045321    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:23.750695} & 22:27:24.788       & 1.037305    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{22:27:25.265167} & 22:27:26.301       & 1.035833    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:26.769275} & 22:27:27.804       & 1.034725    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:28.276680} & 22:27:29.317       & 1.04032     \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{22:27:29.789932} & 22:27:30.831       & 1.041068    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:27:31.342439} & 22:27:32.400       & 1.057561    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:27:32.848560} & 22:27:33.882       & 1.03344     \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A'\}} & \multicolumn{1}{c|}{22:27:34.369849} & 22:27:35.396       & 1.026151    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:35.877856} & 22:27:36.924       & 1.046144    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:27:37.525218} & 22:27:38.531       & 1.005782    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'A'\}} & \multicolumn{1}{c|}{22:27:39.043576} & 22:27:40.095       & 1.051424    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{22:27:40.637793} & 22:27:41.671       & 1.033207    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:27:42.143229} & 22:27:43.168       & 1.024771    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{22:27:43.677645} & 22:27:44.714       & 1.036355    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{22:27:45.218328} & 22:27:46.257       & 1.038672    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:46.723402} & 22:27:47.758       & 1.034598    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:27:48.296809} & 22:27:49.347       & 1.050191    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{22:27:49.898938} & 22:27:50.940       & 1.041062    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:27:51.405449} & 22:27:52.453       & 1.047551    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{22:27:52.914479} & 22:27:53.965       & 1.050521    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{22:27:54.458062} & 22:27:55.497       & 1.038938    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{22:27:55.966855} & 22:27:57.010       & 1.043145    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{22:27:57.472623} & 22:27:58.518       & 1.045377    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{22:28:01.988199} & 22:28:03.032       & 1.043801    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:28:03.502648} & 22:28:04.548       & 1.045352    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:28:05.007693} & 22:28:06.048       & 1.040307    \\ \hline
+    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:28:07.635244} & 22:28:08.708       & 1.072756    \\ \hline
+    \multicolumn{3}{|c|}{Average Delay Time}                                                          & 1.038824343 \\ \hline
+\end{longtable}
