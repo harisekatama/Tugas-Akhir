@@ -25,7 +25,7 @@ Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimk
     Arah(char),Kecepatan(integer)
 \end{equation}
 
-Variabel arah memiliki tipe data \emph{char} yang digunakan untuk menentukan arah gerak dari motor kursi roda. serta variabel kecepatan memiliki tipe data integer yang akan menentukan kecepatan maksimal dari rotasi motor kursi roda. Hasil dari pengujian waktu \emph{delay} pengiriman data string melalui bluetooth dapat dilihat pada Tabel \ref{tbl:delayBluetooth} dan Tabel \ref{tbl:delayBluetooth1}.
+Variabel arah memiliki tipe data \emph{char} yang digunakan untuk menentukan arah gerak dari motor kursi roda serta variabel kecepatan memiliki tipe data integer yang akan menentukan kecepatan maksimal dari rotasi motor kursi roda. Hasil dari pengujian waktu \emph{delay} pengiriman data string melalui bluetooth dapat dilihat pada Tabel \ref{tbl:delayBluetooth} dan Tabel \ref{tbl:delayBluetooth1}.
 % Tabel 4.1
 \begin{longtable}{|ccc|c|}
   \caption{Pengujian Waktu \emph{Delay} Pengiriman Data String Berisi 2 Nilai Melalui Bluetooth}
@@ -243,6 +243,15 @@ Dari kedua cara pengujian tersebut, didapatkan bahwa waktu \emph{delay} antara p
 \section{Pengujian Waktu \emph{Delay} Pengiriman Data String Melalui \emph{Access Point} WiFi}
 \label{sec:delayWiFi}
 
+Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimkan data berupa String dari laptop menuji ESP32 melalui WiFi. ESP32 diatur sebagai \emph{Access Point}. Data yang dikirimkan adalah data arah dan kecepatan yang dipisahkan dengan simbol koma seperti yang dapat dilihat pada Persamaan \ref{eq:string-2Data}
+
+\begin{equation}
+  \label{eq:string-2Data}
+    Arah(char),Kecepatan(integer)
+\end{equation}
+
+Variabel arah memiliki tipe data char yang digunakan untuk menentukan arah gerak dari motor kursi roda serta variabel kecepatan yang memiliki tipe data integer yang akan menentukan kecepatan maksimal dari rotasi motor kursi roda. Hasil dari pengujian waktu \emph{delay} pengiriman data String melalui WiFi dapat dilihat pada Tabel \ref{tbl:delayWiFi2} dan Tabel \ref{tbl:delayWiFi1}
+
 % Tabel 4.5
 \begin{longtable}{|ccc|c|}
   \caption{Pengujian Waktu \emph{Delay} Pengiriman Data String Berisi 2 Nilai Melalui \emph{Access Point} WiFi}
@@ -286,6 +295,8 @@ Dari kedua cara pengujian tersebut, didapatkan bahwa waktu \emph{delay} antara p
     \multicolumn{1}{|c|}{B,194} & \multicolumn{1}{c|}{22:35:15.145789} & 22:35:16.175       & 1.029211    \\ \hline
     \multicolumn{3}{|c|}{Average Delay Time}                                                & 1.059681387 \\ \hline
 \end{longtable}
+
+Tabel \ref{tbl:delayWiFi2} menampilkan pengiriman data string yang terdiri dari 2 nilai dan dipisahkan dengan simbol koma (","). Dalam pengujian kali ini, data dikirimkan sebanyak 31 kali secara berturut-turut dengan penambahan waktu \emph{delay} sebesar 1.3 detik setiap kali mengirimkan data. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan dan memasukkan kedua nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui WiFi adalah sebesar 1.059681387 detik.
 
 % Tabel 4.6
 \begin{longtable}{|ccc|c|}
@@ -334,6 +345,10 @@ Dari kedua cara pengujian tersebut, didapatkan bahwa waktu \emph{delay} antara p
     \multicolumn{1}{|c|}{D}    & \multicolumn{1}{c|}{21:05:45.868054} & 21:05:45.875       & 0.006946      \\ \hline
     \multicolumn{3}{|c|}{Average Delay Time}                                               & 0.03499708571 \\ \hline
 \end{longtable}
+
+Tabel \ref{tbl:delayWiFi1} menampilkan pengiriman data string yang terdiri dari 1 nilai, yaitu arah. Dalam pengujian kali ini, data dikirimkan sebanyak 35 kali secara berturut-turut tanpa penambahan waktu \emph{delay} setiap kali mengirimkan data. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui WiFi adalah sebesar 0.03499708571 detik.
+
+Ditemukan perbedaan waktu \emph{delay} yang cukup signifikan antara proses pengiriman string yang mengandung 2 nilai dibandingkan dengan string yang hanya berisikan 1 nilai. Saat mengirimkan string yang memuat 2 data, pengujian menunjukkan adanya waktu \emph{delay} sekitar 1.059681387 detik. Dalam perbandingan dengan pengujian yang melibatkan string dengan 1 nilai, waktu yang \emph{delay} yang tercatat hanya 0.03499708571 detik. Penting untuk diperhatikan bahwa terdapat kekurangan saat mengirimkan data string yang mengandung 2 nilai, yaitu adanya penambahan \emph{delay} sebesar 1.3 detik setiap kali pengiriman data dilakukan. Hal ini dilakukan agar ESP32 dapat menerima data secara optimal. Oleh karena itu, dapat disimpulkan bahwa dalam konteks pengiriman data melalui WiFi, lebih disarankan untuk mengirimkan string dengan hanya 1 nilai guna menghindari \emph{delay} tambahan yang dapat mempengaruhi efisiensi dan kecepatan transmiri data secara keseluruhan.
 
 \section{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Melalui \emph{Access Point} WiFi}
 \label{sec:delayWiFiJSON}

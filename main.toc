@@ -48,9 +48,9 @@
 \contentsline {section}{\numberline {4.1}Pengujian Waktu \emph {Delay} Pengiriman Data String Melalui Bluetooth}{35}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Pengujian Waktu \emph {Delay} Pengiriman Data JSON Melalui Bluetooth}{38}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Pengujian Waktu \emph {Delay} Pengiriman Data String Melalui \emph {Access Point} WiFi}{40}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Pengujian Waktu \emph {Delay} Pengiriman Data JSON Melalui \emph {Access Point} WiFi}{42}{section.4.4}%
-\contentsline {chapter}{\numberline {5}PENUTUP}{45}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Kesimpulan}{45}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Saran}{45}{section.5.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{47}{chapter*.5}%
-\contentsline {chapter}{BIOGRAFI PENULIS}{49}{chapter*.5}%
+\contentsline {section}{\numberline {4.4}Pengujian Waktu \emph {Delay} Pengiriman Data JSON Melalui \emph {Access Point} WiFi}{43}{section.4.4}%
+\contentsline {chapter}{\numberline {5}PENUTUP}{47}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{47}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Saran}{47}{section.5.2}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{49}{chapter*.5}%
+\contentsline {chapter}{BIOGRAFI PENULIS}{51}{chapter*.5}%
