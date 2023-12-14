@@ -5,7 +5,7 @@
 
 Pada bab ini akan dipaparkan mengenai beberapa skenario pengujian sesuai dengan telah dijelaskan pada metodologi. Skenario pengujian ini dilakukan guna untuk mengetahui waktu \emph{delay} yang dibutuhkan untuk mentransmisikan data dari laptop menuju ESP32. Skenario yang nantinya akan diterapkan pada pengujian meliputi beberapa poin sebagai berikut:
 
-\begin{enumerate}
+\begin{enumerate}[nosep]
   \item Pengujian waktu \emph{delay} pengiriman data String melalui Bluetooth
   \item Pengujian waktu \emph{delay} pengiriman data JSON melalui Bluetooth
   \item Pengujian waktu \emph{delay} pengiriman data String melalui \emph{Access Point} WiFi
@@ -25,13 +25,13 @@ Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimk
     Arah(char),Kecepatan(integer)
 \end{equation}
 
-
+Variabel arah memiliki tipe data \emph{char} yang digunakan untuk menentukan arah gerak dari motor kursi roda. serta variabel kecepatan memiliki tipe data integer yang akan menentukan kecepatan maksimal dari rotasi motor kursi roda. Hasil dari pengujian waktu \emph{delay} pengiriman data string melalui bluetooth dapat dilihat pada Tabel \ref{tbl:delayBluetooth} dan Tabel \ref{tbl:delayBluetooth1}.
 % Tabel 4.1
 \begin{longtable}{|ccc|c|}
   \caption{Pengujian Waktu \emph{Delay} Pengiriman Data String Berisi 2 Nilai Melalui Bluetooth}
   \label{tbl:delayBluetooth}\\
     \hline
-    \multicolumn{1}{|c|}{Data}  & \multicolumn{1}{c|}{Timestamp Send}  & Timestamp Received & Delay Time  \\ \hline
+    \multicolumn{1}{|c|}{Data}  & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
     \endfirsthead
     %
     \endhead
@@ -71,6 +71,7 @@ Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimk
     \multicolumn{3}{|c|}{Average Delay Time}                                                & 1.038982875 \\ \hline
 \end{longtable}
 
+Tabel 4.1 menampilkan pengiriman data string yang terdiri dari 2 nilai dan dipisahkan dengan simbol koma (","). Dalam pengujian kali ini, data dikirimkan sebanyak 32 kali secara berturut-turut dengan penambahan waktu \emph{delay} sebesar 1.5 detik setiap kali mengirimkan data. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan dan memasukkan kedua nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth adalah sebesar 1.038982875 detik.
 
 % Tabel 4.2
 \begin{longtable}{|ccc|c|}
@@ -118,8 +119,11 @@ Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimk
   \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{17:56:21.820789} & 17:56:22.278       & 0.457        \\ \hline
   \multicolumn{1}{|c|}{B}    & \multicolumn{1}{c|}{17:56:22.149208} & 17:56:22.807       & 0.658        \\ \hline
   \multicolumn{3}{|c|}{Average Delay Time}                                               & 0.3495228571 \\ \hline
-  \end{longtable}
+\end{longtable}
 
+Tabel \ref{tbl:delayBluetooth1} menampilkan pengiriman data string yang terdiri dari 1 nilai, yaitu arah. Dalam pengujian kali ini, data dikirimkan sebanyak 35 kali secara berturut-turut tanpa penambahan waktu \emph{delay} setiap kali mengirimkan data. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth adalah sebesar 0.3495228571 detik.
+
+Ditemukan perbedaan waktu \emph{delay} yang cukup signifikan antara proses pengiriman string yang mengandung 2 nilai dibandingkan dengan string yang hanya berisi 1 nilai. Saat mengirimkan string yang memuat 2 data, catatan menunjukkan adanya \emph{delay} sekitar 1.038982875 detik. Dalam perbandingan dengan pengujian yang melibatkan string 1 nilai, waktu \emph{delay} yang tercatat hanya sekitar 0.3495228571 detik. Penting untuk diperhatikan bahwa terdapat kekurangan saat mengirimkan data string yang mengandung 2 nilai, yaitu adanya penambahan \emph{delay} sebesar 1.5 detik setiap kali pengiriman data dilakukan. Hal ini dilakukan agar ESP32 dapat menerima data secara optimal. Oleh karena itu, dapat disimpulkan bahwa dalam konteks pengiriman data melalui Bluetooth, lebih disarankan untuk mengirimkan string dengan hanya 1 nilai guna menghindari \emph{delay} tambahan yang dapat mempengaruhi efisiensi dan kecepatan transmisi data secara keseluruhan.
 
 \section{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Melalui Bluetooth}
 \label{sec:delayBluetoothJSON}
@@ -129,7 +133,7 @@ Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimk
   \caption{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Berisi 2 Nilai Melalui Bluetooth}
   \label{tbl:delayBluetoothJSON2}\\
     \hline
-    \multicolumn{1}{|c|}{Data}                              & \multicolumn{1}{c|}{Timestamp Send}  & Timestamp Received & Delay Time  \\ \hline
+    \multicolumn{1}{|c|}{Data}                              & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
     \endfirsthead
     %
     \endhead
