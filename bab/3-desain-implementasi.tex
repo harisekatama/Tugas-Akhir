@@ -241,7 +241,6 @@ void loop(){
     else{
       Serial.println("FALSE");
     }
-
   }
 }
     
@@ -391,6 +390,8 @@ Fungsi void loop() akan berjalan terus-menerus setelah fungsi void setup() dijal
 
 \subsection{Program Untuk Menerima Data JSON Melalui \emph{Access Point} WiFi Pada ESP32}
 
+Program ini dirancang untuk menerima data JSON melalui WiFi. ESP32 berperan sebagai \emph{Access Point} WiFi yang dapat menerima data JSON dari \emph{client} dan mencetaknya ke dalam \emph{Serial Monitor}. Berikut merupakan Program \ref{lst:ReceivedWiFiJSON} yang digunakan untuk menerima data JSON melalui \emph{Access Point} WiFi pada ESP32.
+
 % Program 3.5
 \begin{lstlisting}[
     language=Arduino,
@@ -461,6 +462,14 @@ void loop(){
   }
 }
 \end{lstlisting}
+
+Program ini menggunakan \emph{library} WiFi yang menyediakan fungsionalitas untuk mengkonfigurasi dan mengelola koneksi WiFi pada ESP32. Selain itu \emph{library} Arduino juga digunakan pada program ini yang menyediakan fungsi-fungsi dasar untuk pemrograman mikrokontroler. \emph{Library} ArduinoJson dari Beno\^{\i}t Blanchon digunakan untuk mengolah data JSON. Variabel maxspeed yang dideklarasikan sebagai suatu variabel yang menyimpan nilai kecepatan maksimum yang diterima dari data JSON. Variabel ssid dan password digunakan untuk menyimpan nilai nama dan \emph{password} untuk \emph{access point} yang akan dibuat oleh ESP32. lalu objek server dari kelas WiFiServer dibuat untuk menangani koneksi pada port 80.
+
+Pada void setup() terdapat Serial.begin() yang digunakan untuk menginisialisasi komunikasi serial dengan kecepatan 115200 bps. Selanjutnya \emph{access point} akan dibuat sesuai dengan ssid dan password yang telah ditentukan sebelumnya. IP \emph{Address} kemudian akan ditampilkan pada \emph{Serial Monitor}. Akhirnya server akan dimulai pada port 80.
+
+Fungsi void loop() akan berjalan terus-menerus setelah fungsi void setup() dijalankan. ESP32 akan mencoba untuk menerima koneksi dari \emph{client} melalui fungsi server.available(). Jika terdapat \emph{client} yang terhubung maka ESP32 akan memeriksa apakah \emph{client} masih tetap terhubung. Jika terdapat data yang tersedia maka data akan dibaca hingga terdapat karakter \emph{newline}('\textbackslash n'). Selanjutnya objek doc akan dibuat dari kelas DynamicJsonDocument dengan kapasitas 1024 \emph{byte}. Data yang didapatkan kemudian akan dipecah dengan menggunakan fungsi deserializeJson.
+
+Jika terjadi kesalahan saat mengurai JSON maka program akan mencetak pesan \emph{error}. Jika \emph{parsing} JSON berhasil dilakukan, maka nilai dari JSON akan diakses. Data JSON akan diurai dan disimpan kedalam variabel arah serta kecepatan. Selanjutnya program akan menampilkan variabel tersebut ke \emph{Serial Monitor}. Setelah data JSON selesai diproses maka koneksi dengan \emph{client} akan ditutup.
 
 \subsection{Program Untuk Menguji Rangkaian Kontrol ESP32}
 
