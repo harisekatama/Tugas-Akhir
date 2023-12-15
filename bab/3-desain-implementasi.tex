@@ -986,7 +986,7 @@ Pada fungsi void loop() terdapat perintah untuk memeriksa ketersediaan koneksi \
 
 \subsection{Program Untuk Mengirim Data String Melalui Bluetooth}
 
-Program ini meenggunakan bahasa pemrograman Python. Program ini dirancang untuk mengirin data ke perangkat ESP32 melalui Bluetooth. Berikut merupakan Program \ref{lst:SendBluetooth} yang digunakan untuk mengirim data string melalui Bluetooth.
+Program ini menggunakan bahasa pemrograman Python. Program ini dirancang untuk mengirim data string ke perangkat ESP32 melalui Bluetooth. Berikut merupakan Program \ref{lst:SendBluetooth} yang digunakan untuk mengirim data string melalui Bluetooth.
 
 % Program 3.7
 \begin{lstlisting}[
@@ -1022,13 +1022,14 @@ sock.close()
 
 \end{lstlisting}
 
-Program ini menggunakan \emph{library} Bluetooth untuk berinteraksi dengan perangkat lain melalui Bluetooth dan juga \emph{library} datetime yang digunakan untuk mendapatkan informasi waktu secara realtime. Lalu menginisialisasi MAC \emph{Address} dari perangkat ESP32 yang akan dikendalikan. Objek soket Bluetooth dibuat menggunakan fungsi BluetoothSocket lalu menghubungkannya dengan perangkat ESP32 melalui MAC \emph{Address} dan nomor \emph{channel}. Pada umumnya, \emph{channel} 1 digunakan untuk profil \emph{Serial Port Profile} (SPP)
+Program ini menggunakan \emph{library} Bluetooth untuk berinteraksi dengan perangkat lain melalui Bluetooth dan juga \emph{library} datetime yang digunakan untuk mendapatkan informasi waktu secara \emph{realtime}. Lalu menginisialisasi MAC \emph{Address} dari perangkat ESP32 yang akan dikendalikan. Objek soket Bluetooth dibuat menggunakan fungsi BluetoothSocket lalu menghubungkannya dengan perangkat ESP32 melalui MAC \emph{Address} dan nomor \emph{channel}. Pada umumnya, \emph{channel} 1 digunakan untuk profil \emph{Serial Port Profile} (SPP)
 
 Kemudian program berjalan pada perulangan yang tak terbatas. Pengguna diminta untuk memasukkan nilai arah dan kecepatan melalui \emph{input}. Data tersebut kemudian akan digabungkan menjadi satu pesan dan dikirimkan ke perangkat ESP32 melalui soket Bluetooth. Apabila pengguna memasukkan "q" sebagai nilai arah maupun kecepatan, maka perulangan akan dihentikan dan soket Bluetooth akan ditutup.
 
 \subsection{Program Untuk Mengirim Data String Melalui WiFi}
 
-% Program 3.8
+Program ini menggunakan bahasa pemrograman Python. Program ini dirancang untuk mengirim data string ke perangkat ESP32 melalui WiFi. ESP32 akan bertindak sebagai \emph{Access Point}. Berikut merupakan Program \ref{lst:SendWiFiAP} yang digunakan untuk mengirimkan data string melalui WiFi.
+
 \begin{lstlisting}[
   language=Python,
   caption={Program Untuk Mengirim Data String Melalui WiFi},
@@ -1063,6 +1064,12 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 s.close()
 
 \end{lstlisting}
+
+Program ini menggunakan \emph{library} socket, time, dan datetime. \emph{Library} socket menyediakan antarmuka utuk membuat dan berinteraksi dengan soket sehingga dapat membuat koneksi dan mengirim ataupun menerima data melalui jaringan internet. \emph{Library} time menyediakan fungsi-fungsi terkait waktu dan pengukuran waktu. Fungsi yang sering digunakan adalah time.sleep() yang berguna untuk menghentikan eksekusi program selama jumlah waktu tertentu. \emph{Library} datetime digunakan untuk mendapatkan informasi waktu secara \emph{realtime}. Selanjutnya IP \emph{Address} dari \emph{Access Point} ESP32 dimasukkan kedalam variabel host. Variabel port merupakan nomor port yang digunakan untuk koneksi, umumnya menggunakan port 80.
+
+Objek soket kemudian dibuat menggunakan socket.socket() dengan alamat IPv4 dan tipe soket streaming. Ini menunjukkan bahwa program ini akan menggunakan protokol TCP/IP untuk koneksi. Kemudian mencoba untuk membuat koneksi ke server yang telah ditentukan sesuai IP \emph{Address} host dan nomor port.
+
+Kemudian program akan berjalan pada perulangan yang tak terbatas. Pengguna diminta untuk memasukkan nilai arah dan kecepatan melalui \emph{input}. Data tersebut kemudian digabungkan menjadi 1 pesan. Pesan kemudian dikonversi menjadi byte menggunakan encoding UTF-8. Setelah dikonversi maka pesan tersebut akan dikirimkan ke server. Apabila pengguna memasukkan "q" sebagai nilai arah maupun kecepatan, maka perulangan akan dihentikan dan program akan menutur koneksi soket.
 
 \subsection{Program Untuk Mengirim Data JSON Melalui Bluetooth}
 

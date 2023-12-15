@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.2)  15 DEC 2023 17:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.2)  15 DEC 2023 18:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1302,11 +1302,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [32] [33] (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [34] [35] [36]) [37] [38
-
-] (./bab/4-pengujian-analisis.tex
+) [34] [35] [36] [37]) [38] (./bab/4-pengujian-analisis.tex
 Chapter 4.
 [39
+
 
 ] [40]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1334,7 +1333,7 @@ Overfull \hbox (36.35515pt too wide) in paragraph at lines 244--244
 ] [54
 
 ] (./lainnya/biografi-penulis.tex
-<gambar/elon.jpg, id=1642, 578.16pt x 867.24pt>
+<gambar/elon.jpg, id=1643, 578.16pt x 867.24pt>
 File: gambar/elon.jpg Graphic file (type jpg)
 <use gambar/elon.jpg>
 Package pdftex.def Info: gambar/elon.jpg  used on input line 14.
@@ -1355,16 +1354,16 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  24476 strings out of 474267
  413876 string characters out of 5751465
- 2131558 words of memory out of 5000000
+ 2139558 words of memory out of 5000000
  45262 multiletter control sequences out of 15000+600000
  603294 words of font info for 131 fonts, out of 8000000 for 9000
  1160 hyphenation exceptions out of 8191
  75i,14n,81p,2431b,5052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (85 pages, 8024850 bytes).
+Output written on main.pdf (85 pages, 8026484 bytes).
 PDF statistics:
- 1928 PDF objects out of 2073 (max. 8388607)
- 1765 compressed objects within 18 object streams
+ 1929 PDF objects out of 2073 (max. 8388607)
+ 1766 compressed objects within 18 object streams
  993 named destinations out of 1000 (max. 500000)
  524 words of extra memory for PDF output out of 10000 (max. 10000000)
 
