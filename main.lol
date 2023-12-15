@@ -8,5 +8,5 @@
 \contentsline {lstlisting}{\numberline {3.8}Program Kontrol Motor Kursi Roda Melalui \emph {Access Point} WiFi}{30}{lstlisting.3.8}%
 \contentsline {lstlisting}{\numberline {3.9}Program Untuk Mengirim Data String Melalui Bluetooth}{34}{lstlisting.3.9}%
 \contentsline {lstlisting}{\numberline {3.10}Program Untuk Mengirim Data String Melalui WiFi}{35}{lstlisting.3.10}%
-\contentsline {lstlisting}{\numberline {3.11}Program Untuk Mengirim Data JSON Melalui Bluetooth}{35}{lstlisting.3.11}%
-\contentsline {lstlisting}{\numberline {3.12}Program Untuk Mengirim Data JSON Melalui WiFi}{36}{lstlisting.3.12}%
+\contentsline {lstlisting}{\numberline {3.11}Program Untuk Mengirim Data JSON Melalui Bluetooth}{36}{lstlisting.3.11}%
+\contentsline {lstlisting}{\numberline {3.12}Program Untuk Mengirim Data JSON Melalui WiFi}{37}{lstlisting.3.12}%

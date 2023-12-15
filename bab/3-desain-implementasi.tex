@@ -824,7 +824,7 @@ Pada fungsi void loop() terdapat perintah untuk memeriksa ketersediaan data dari
 
 \subsection{Program Kontrol Motor Kursi Roda Melalui \emph{Access Point} WiFi}
 
-Program ini dirancang untuk mengendalikan motor DC dengan memproses perintah yang diterima melalui koneksi WiFi. ESP32 bertindak sebagai \emph{Access Point}. Setelah menerima data arah dan kecepatan, maka program ini akan mengatur motor sesuai dengan perintah yang diterima. Berikut merupakan Program \ref{lst:MotorWiFiAP} yang digunakan untuk mengontrol motor kursi roda melalui WiFi.
+Program ini dirancang untuk mengendalikan motor DC dengan memproses perintah yang diterima melalui koneksi WiFi. ESP32 bertindak sebagai \emph{Access Point}. Setelah menerima data arah maka program ini akan mengatur motor sesuai dengan perintah yang diterima. Berikut merupakan Program \ref{lst:MotorWiFiAP} yang digunakan untuk mengontrol motor kursi roda melalui WiFi.
 
 \begin{lstlisting}[
   language=Arduino,
@@ -986,6 +986,8 @@ Pada fungsi void loop() terdapat perintah untuk memeriksa ketersediaan koneksi \
 
 \subsection{Program Untuk Mengirim Data String Melalui Bluetooth}
 
+Program ini meenggunakan bahasa pemrograman Python. Program ini dirancang untuk mengirin data ke perangkat ESP32 melalui Bluetooth. Berikut merupakan Program \ref{lst:SendBluetooth} yang digunakan untuk mengirim data string melalui Bluetooth.
+
 % Program 3.7
 \begin{lstlisting}[
     language=Python,
@@ -1019,6 +1021,10 @@ while True:
 sock.close()
 
 \end{lstlisting}
+
+Program ini menggunakan \emph{library} Bluetooth untuk berinteraksi dengan perangkat lain melalui Bluetooth dan juga \emph{library} datetime yang digunakan untuk mendapatkan informasi waktu secara realtime. Lalu menginisialisasi MAC \emph{Address} dari perangkat ESP32 yang akan dikendalikan. Objek soket Bluetooth dibuat menggunakan fungsi BluetoothSocket lalu menghubungkannya dengan perangkat ESP32 melalui MAC \emph{Address} dan nomor \emph{channel}. Pada umumnya, \emph{channel} 1 digunakan untuk profil \emph{Serial Port Profile} (SPP)
+
+Kemudian program berjalan pada perulangan yang tak terbatas. Pengguna diminta untuk memasukkan nilai arah dan kecepatan melalui \emph{input}. Data tersebut kemudian akan digabungkan menjadi satu pesan dan dikirimkan ke perangkat ESP32 melalui soket Bluetooth. Apabila pengguna memasukkan "q" sebagai nilai arah maupun kecepatan, maka perulangan akan dihentikan dan soket Bluetooth akan ditutup.
 
 \subsection{Program Untuk Mengirim Data String Melalui WiFi}
 
