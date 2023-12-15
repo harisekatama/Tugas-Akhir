@@ -678,7 +678,6 @@ Program ini dirancang untuk mengendalikan motor DC dengan memproses perintah yan
   label={lst:MotorBluetooth}
 ]
 #include <BluetoothSerial.h>
-
 #include <Arduino.h>
 
 //Motor Kiri
@@ -1037,7 +1036,6 @@ Program ini menggunakan bahasa pemrograman Python. Program ini dirancang untuk m
 ]
 import socket
 import time
-
 import datetime
 
 host = "192.168.4.1" # Set to ESP32 Access Point IP Address
@@ -1065,11 +1063,11 @@ s.close()
 
 \end{lstlisting}
 
-Program ini menggunakan \emph{library} socket, time, dan datetime. \emph{Library} socket menyediakan antarmuka utuk membuat dan berinteraksi dengan soket sehingga dapat membuat koneksi dan mengirim ataupun menerima data melalui jaringan internet. \emph{Library} time menyediakan fungsi-fungsi terkait waktu dan pengukuran waktu. Fungsi yang sering digunakan adalah time.sleep() yang berguna untuk menghentikan eksekusi program selama jumlah waktu tertentu. \emph{Library} datetime digunakan untuk mendapatkan informasi waktu secara \emph{realtime}. Selanjutnya IP \emph{Address} dari \emph{Access Point} ESP32 dimasukkan kedalam variabel host. Variabel port merupakan nomor port yang digunakan untuk koneksi, umumnya menggunakan port 80.
+Program ini menggunakan \emph{library} socket, time, dan datetime. \emph{Library} socket menyediakan antarmuka untuk membuat dan berinteraksi dengan soket sehingga dapat membuat koneksi dan mengirim ataupun menerima data melalui jaringan. \emph{Library} time menyediakan fungsi-fungsi terkait waktu dan pengukuran waktu. Fungsi yang sering digunakan adalah time.sleep() yang berguna untuk menghentikan eksekusi program selama jumlah waktu tertentu. \emph{Library} datetime digunakan untuk mendapatkan informasi waktu secara \emph{realtime}. Selanjutnya IP \emph{Address} dari \emph{Access Point} ESP32 dimasukkan kedalam variabel host. Nomor port yang digunakan untuk koneksi akan dimasukkan kedalam variabel port. Umumnya menggunakan port 80.
 
 Objek soket kemudian dibuat menggunakan socket.socket() dengan alamat IPv4 dan tipe soket streaming. Ini menunjukkan bahwa program ini akan menggunakan protokol TCP/IP untuk koneksi. Kemudian mencoba untuk membuat koneksi ke server yang telah ditentukan sesuai IP \emph{Address} host dan nomor port.
 
-Kemudian program akan berjalan pada perulangan yang tak terbatas. Pengguna diminta untuk memasukkan nilai arah dan kecepatan melalui \emph{input}. Data tersebut kemudian digabungkan menjadi 1 pesan. Pesan kemudian dikonversi menjadi byte menggunakan encoding UTF-8. Setelah dikonversi maka pesan tersebut akan dikirimkan ke server. Apabila pengguna memasukkan "q" sebagai nilai arah maupun kecepatan, maka perulangan akan dihentikan dan program akan menutup koneksi soket.
+Kemudian program akan berjalan pada perulangan yang tak terbatas. Pengguna diminta untuk memasukkan nilai arah dan kecepatan melalui \emph{input}. Data tersebut kemudian digabungkan menjadi 1 pesan. Pesan kemudian dikonversi menjadi \emph{byte} menggunakan \emph{encoding} UTF-8. Setelah dikonversi maka pesan tersebut akan dikirimkan ke server. Apabila pengguna memasukkan "q" sebagai nilai arah maupun kecepatan, maka perulangan akan dihentikan dan program akan menutup koneksi soket.
 
 \subsection{Program Untuk Mengirim Data JSON Melalui Bluetooth}
 
@@ -1085,8 +1083,6 @@ import json
 
 # ESP32 Bluetooth address
 esp32_address = "EC:62:60:9B:E4:92"  # Replace with your ESP32's Bluetooth address
-
-# esp32_address = "30:C6:F7:2F:31:86" # Iqbal's ESP32
 
 # Create a Bluetooth socket
 sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
@@ -1122,7 +1118,8 @@ Kemudian program akan berjalan dalam perulangan yang tak terbatas. Pengguna dimi
 
 \subsection{Program Untuk Mengirim Data JSON Melalui WiFi}
 
-% Program 3.9
+Program ini dibuat dengan menggunakan bahasa pemrograman Python. Program ini dirancang untuk mengirim data JSON ke perangkat ESP32 melalui WiFi. ESP32 akan bertindak sebagai \emph{Access Point}. Berikut merupakan Program \ref{lst:SendWiFiJSON} yang digunakan untuk mengirimkan data JSON melalui WiFi.
+
 \begin{lstlisting}[
   language=Python,
   caption={Program Untuk Mengirim Data JSON Melalui WiFi},
@@ -1131,7 +1128,6 @@ Kemudian program akan berjalan dalam perulangan yang tak terbatas. Pengguna dimi
 import socket
 import time
 import json
-
 import datetime
 
 host = "192.168.4.1" # Set to ESP32 Access Point IP Address
@@ -1158,3 +1154,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 
 s.close()
 \end{lstlisting}
+Program ini menggunakan \emph{library} socket, time, json, dan datetime. \emph{Library} socket menyediakan antarmuka untuk membuat dan berinteraksi dengan soket sehingga dapat membuat koneksi dan mengirim ataupun menerima data melalui jaringan. \emph{Library} time menyediakan fungsi-fungsi terkait waktu dan pengukuran waktu. Fungsi yang sering digunakan adalah time.sleep() yang berguna untuk menghentikan eksekusi program selama jumlah waktu tertentu. \emph{Library} datetime digunakan untuk mendapatkan informasi waktu secara \emph{realtime}. \emph{Library} JSON digunakan untuk mengelola data dalam bentuk JSON. Selanjutnya IP \emph{Address} dari \emph{Access Point} ESP32 dimasukkan kedalam variabel host. Nomor port yang digunakan untuk koneksi akan dimasukkan kedalam variabel port. Umumnya menggunakan port 80.
+
+Kemudian program akan berjalan dalam perulangan yang tak terbatas. Pengguna diminta untuk memasukkan nilai arah dan kecepatan melalui \emph{input}. Objek JSON kemudian dibuat untuk menyimpan data yang telah dimasukkan. Objek JSON kemudian dikonversi menjadi string menggunakan json.dumps(). String JSON kemudian akan dikonversi menjadi \emph{byte} menggunakan \emph{encoding} UTF-8. Setelah dikonversi maka akan dikirimkan melalui koneksi WiFi menggunakan s.send(). Apabila pengguna memasukkan "q" sebagai nilai arah maupun kecepatan, maka perulangan akan dihentikan dan program akan menutup koneksi soket.
