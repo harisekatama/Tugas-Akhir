@@ -463,7 +463,7 @@ void loop(){
 }
 \end{lstlisting}
 
-Program ini menggunakan \emph{library} WiFi yang menyediakan fungsionalitas untuk mengkonfigurasi dan mengelola koneksi WiFi pada ESP32. Selain itu \emph{library} Arduino juga digunakan pada program ini yang menyediakan fungsi-fungsi dasar untuk pemrograman mikrokontroler. \emph{Library} ArduinoJson dari Beno\^{\i}t Blanchon digunakan untuk mengolah data JSON. Variabel maxspeed yang dideklarasikan sebagai suatu variabel yang menyimpan nilai kecepatan maksimum yang diterima dari data JSON. Variabel ssid dan password digunakan untuk menyimpan nilai nama dan \emph{password} untuk \emph{access point} yang akan dibuat oleh ESP32. lalu objek server dari kelas WiFiServer dibuat untuk menangani koneksi pada port 80.
+Program ini menggunakan \emph{library} WiFi yang menyediakan fungsionalitas untuk mengkonfigurasi dan mengelola koneksi WiFi pada ESP32. Selain itu \emph{library} Arduino juga digunakan pada program ini yang menyediakan fungsi-fungsi dasar untuk pemrograman mikrokontroler. \emph{Library} ArduinoJson dari Beno\^{\i}t Blanchon digunakan untuk mengolah data JSON. Variabel maxspeed yang dideklarasikan sebagai suatu variabel yang menyimpan nilai kecepatan maksimum yang diterima dari data JSON. Variabel ssid dan password digunakan untuk menyimpan nilai nama dan \emph{password} untuk \emph{access point} yang akan dibuat oleh ESP32. Lalu objek server dari kelas WiFiServer dibuat untuk menangani koneksi pada port 80.
 
 Pada void setup() terdapat Serial.begin() yang digunakan untuk menginisialisasi komunikasi serial dengan kecepatan 115200 bps. Selanjutnya \emph{access point} akan dibuat sesuai dengan ssid dan password yang telah ditentukan sebelumnya. IP \emph{Address} kemudian akan ditampilkan pada \emph{Serial Monitor}. Akhirnya server akan dimulai pada port 80.
 
@@ -823,6 +823,9 @@ Fungsi void setup() dieksekusi satu kali pada saat program pertama kali dijalank
 Pada fungsi void loop() terdapat perintah untuk memeriksa ketersediaan data dari Bluetooth dengan SerialBT.acailable(). Jika terdapat \emph{client} yang terhubung maka data akan dibaca hingga \emph{newline} ('\textbackslash n'). Data yang diterima kemudian akan diurai dan dimasukkan kedalam variabel arah dan kecepatan. Tipe data dari variabel kecepatan akan diubah dari string menjadi integer dengan menggunakan fungsi toInt(). Nilai dari maxspeed dan turnspeed kemudian akan diatur sesuai dengan perintah. Kontrol arah gerak motor menggunakan pernyataan kondisional (\emph{if-else}) berdasarkan variabel arah yang diterima. Pada setiap kondisi terdapat perulangan \emph{while}. Hal ini dilakukan agar perubahan kecepatan putar motor tidak terjadi secara tiba-tiba. digitalWrite digunakan untuk menetapkan arah putar motor. ledcWrite digunakan untuk mengendalikan kecepatan motor. Perulangan ini terus dilakukan selama ESP32 masih menerima data melalui Bluetooth.
 
 \subsection{Program Kontrol Motor Kursi Roda Melalui \emph{Access Point} WiFi}
+
+Program ini dirancang untuk mengendalikan motor DC dengan memproses perintah yang diterima melalui koneksi WiFi. ESP32 bertindak sebagai \emph{Access Point}. Setelah menerima data arah dan kecepatan, maka program ini akan mengatur motor sesuai dengan perintah yang diterima. Berikut merupakan Program \ref{lst:MotorWiFiAP} yang digunakan untuk mengontrol motor kursi roda melalui WiFi.
+
 \begin{lstlisting}[
   language=Arduino,
   caption={Program Kontrol Motor Kursi Roda Melalui \emph{Access Point} WiFi},
@@ -858,7 +861,6 @@ int stdir[4];
 int PWM1_DutyCycle = 0;
 int maxspeed = 70;
 int turnspeed = 35;
-int kecepatan = 0;
 
 void setup() {
   Serial.begin(115200);
@@ -881,9 +883,6 @@ void setup() {
 
   ledcAttachPin(pwmpin1, pwmChannel1);
   ledcAttachPin(pwmpin2, pwmChannel2);
-
-  Serial.begin(115200);
-
 }
 
 void loop() {
@@ -976,6 +975,14 @@ void loop() {
   }
 }  
 \end{lstlisting}
+
+Program ini menggunakan \emph{library} WiFi yang menyediakan fungsionalitas untuk mengkonfigurasi dan mengelola koneksi WiFi pada ESP32. Selain itu \emph{library} Arduino juga digunakan pada program ini yang menyediakan fungsi-fungsi dasar untuk pemrograman mikrokontroler. Variabel ssid dan password digunakan untuk menyimpan nilai nama dan \emph{password} untuk \emph{access point} yang akan dibuat oleh ESP32. Lalu objek server dari kelas WiFiServer dibuat untuk menangani koneksi pada port 80.
+
+pwmPin1, dir1, dan dir2 merupakan variabel yang digunakan untuk mengatur kerja dari motor kiri. pwmPin1 didefinisikan dengan nilai 5 yang kemudian akan terhubung dengan GPIO5 pada ESP32, dir1 didefinisikan dengan nilai 18 yang kemudian akan terhubung dengan GPIO18 pada ESP32, dan dir2 didefinisikan dengan nilai 19 yang kemudian akan terhubung dengan GPIO19 pada ESP32. Selanjutnya terdapat pwmPin2, dir3, dan dir4 merupakan variabel yang akan digunakan untuk mengatur kerja dari motor kanan. pwmPin2 didefinisikan dengan nilai 25 yang kemudian akan terhubung dengan GPIO25 pada ESP32, dir3 didefinisikan dengan nilai 32 yang kemudian akan terhubung dengan GPIO32, dan dir4 yang didefinisikan dengan nilai 33 yang kemudian akan terhubung dengan GPIO33 pada ESP32. Array stdir digunakan untuk menyimpan keadaan arah motor pada setiap langkah. Lalu variabel pwmChannel1, pwmChannel2. req, dan res dideklarasikan. pwmChannel1 dan pwmChannel2 merupakan nomor saluran PWM yang digunakan. Variabel freq merupakan frekuensi PWM yang diatur menjadi 15 kHz untuk meminimalisir \emph{noise} pada motor ketika bekerja. Variabel res digunakan untuk mengatur resolusi dari PWM yang diatur menjadi 8-bit. Variabel PWM1\_DutyCycle akan menyimpan siklus tugas yang kemudian akan digunakan untuk mengendalikan kecepatan motor. Variabel maxspeed digunakan untuk mengatur kecepatan maksimal dari motor dan variabel turnspeed digunakan untuk kecepatan maksimal ketika kursi roda berbelok.
+
+Fungsi void setup() dieksekusi satu kali pada saat program pertama kali dijalankan. Pada fungsi ini terdapat Serial.begin() yang digunakan untuk menginisialisasi komunikasi serial dengan kecepatan 115200 bps. Selanjutnya \emph{access point} akan dibuat sesuai dengan ssid dan \emph{password} yang telah ditentukan. IP \emph{Address} kemudian akan ditampilkan pada \emph{Serial Monitor}. Lalu server akan dimulai pada port 80. dir1, dir2, dir3, dan dir4 diatur sebagai \emph{output}. ledcSetup merupakan fungsi dari \emph{library} ledc yang digunakan untuk menghubungkan suatu pin dengan saluran PWM tertentu. Fungsi ini memerlukan 2 variabel, yaitu pin PWM dan juga PWM \emph{Channel}. Secara keseluruhan blok kode ini digunakan untuk melakukan konfigurasi pin-pin pada mikrokontroler ESP32 sehingga motor dapat dikendalikan. Pin-pin yang diatur sebagai \emph{output} akan digunakan untuk mengatur arah putar motor. Sedangkan saluran PWM akan digunakan untuk mengatur kecepatan putar motor.
+
+Pada fungsi void loop() terdapat perintah untuk memeriksa ketersediaan koneksi \emph{client}. Jika terdapat \emph{client} yang terhubung maka ESP32 akan memeriksa apakah \emph{client} masih tetap terhubung. Jika terdapat data yang tersedia maka data tersebut akan dibaca hingga terdapat karakter \emph{newline} ('\textbackslash n'). Data yang diterima kemudian akan diurai dan dimasukkan kedalam variabel arah. Kontrol arah gerak motor menggunakan pernyataan kondisional \emph{if-else} berdasarkan variabel arah yang diterima. Pada setiap kondisi terdapat perulangan \emph{while}. Hal ini dilakukan agar perubahan kecepatan motor tidak terjadi secara tiba-tiba. digitalWrite digunakan untuk menetapkan arah putar motor. ledcWrite digunakan untuk mengendalikan kecepatan motor. Perulangan ini terus dilakukan selama ESP32 masih menerima data melalui WiFi.
 
 \subsection{Program Untuk Mengirim Data String Melalui Bluetooth}
 

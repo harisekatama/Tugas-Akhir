@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber main"] 1702616456 "main.bcf" "main.bbl" "main" 1702629151 0
+["biber main"] 1702616456 "main.bcf" "main.bbl" "main" 1702632456 0
   "./pustaka/pustaka.bib" 1701763103 6882 b4a34e7366201f0fdf6b3632adcbce8e ""
-  "main.bcf" 1702629150 134232 8aff93520d61414b4f271c36914ddf63 "pdflatex"
+  "main.bcf" 1702632455 134232 8aff93520d61414b4f271c36914ddf63 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1702629144 "d:/SKRIPSI/Latex/Buku Tugas Akhir (Kursi Roda)/main.tex" "main.pdf" "main" 1702629151 0
+["pdflatex"] 1702632449 "d:/SKRIPSI/Latex/Buku Tugas Akhir (Kursi Roda)/main.tex" "main.pdf" "main" 1702632456 0
   "abstrak/abstrak-en.tex" 1701487114 729 b502e436fe536ef5f97b2311d296617d ""
   "abstrak/abstrak-id.tex" 1701487114 669 f323e81eb6d276181c9e4f3b321e286a ""
   "bab/1-pendahuluan.tex" 1701487114 4927 11814416808d9f5587b55ca2b14045f1 ""
   "bab/2-tinjauan-pustaka.tex" 1701487114 9333 b710d8afc8370f0b04fcf7ce5b69150f ""
-  "bab/3-desain-implementasi.tex" 1702629141 53699 294e23b73f9d5b98a953f7bfbc8708a2 ""
+  "bab/3-desain-implementasi.tex" 1702632431 57860 41066535866a995b307cb9d8a707cd2b ""
   "bab/4-pengujian-analisis.tex" 1702569690 50505 dd25df1b0c672e68ee6286a16324538b ""
   "bab/5-penutup.tex" 1701487114 576 5fd563a6832a4b6f574e5b54e52ec4e8 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1701505782 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -210,17 +210,17 @@
   "lainnya/lembar-pengesahan.tex" 1701487114 2623 83e45db2674f9da59e3bd30d60059c4d ""
   "lainnya/pernyataan-keaslian-en.tex" 1701487114 1718 33da5cd57ecc69c52b9f9eca149ff0f8 ""
   "lainnya/pernyataan-keaslian.tex" 1701487114 1731 cf2b9a935be90844da38a1970f6d7907 ""
-  "main.aux" 1702629150 24444 dd603f51b86fc843b58bb753c7b8c662 "pdflatex"
+  "main.aux" 1702632455 24444 1a79e5c5f58a1b580b1b6e9172249be5 "pdflatex"
   "main.bbl" 1702616464 50599 e96d969fb7781a1d9bec61479d400994 "biber main"
-  "main.lof" 1702629150 818 fc0d65279a3804b039614a1adcaab283 "pdflatex"
-  "main.lol" 1702629150 1488 68dc8f02d06bd6b3a7456221c8eec3b9 "pdflatex"
-  "main.lot" 1702629150 1660 c07c6f5a28ea90b181fb09c99537acb6 "pdflatex"
-  "main.out" 1702629150 13563 bbdb8213dba2b299e9f907486ef85134 "pdflatex"
-  "main.run.xml" 1702629150 2432 d86e3c911a3ecb27bc3d70589f12457d "pdflatex"
+  "main.lof" 1702632455 818 fc0d65279a3804b039614a1adcaab283 "pdflatex"
+  "main.lol" 1702632455 1488 1a7fe4a73bfcfe61c726c0a0679e91c8 "pdflatex"
+  "main.lot" 1702632455 1660 37851787a0bc6b78a7c3b3d224733e52 "pdflatex"
+  "main.out" 1702632455 13563 bbdb8213dba2b299e9f907486ef85134 "pdflatex"
+  "main.run.xml" 1702632455 2432 d86e3c911a3ecb27bc3d70589f12457d "pdflatex"
   "main.tex" 1702624765 5913 cf942ea32ffa79df436bb7ae9478d567 ""
-  "main.toc" 1702629150 5333 f5e4e5dcd3a0aa735a3f716d1ae8f9f5 "pdflatex"
+  "main.toc" 1702632455 5333 cc03cd717330421349a8cf5c1c7d81a2 "pdflatex"
   "program/arduinoLanguage.tex" 1702321453 9927 3d99fef2c9424b1400ccac2e6a4a6abc ""
-  "pustaka/tanda-hubung.tex" 1702616654 293 9365f3e2e313e4ccd6ff55122ad6a98a ""
+  "pustaka/tanda-hubung.tex" 1702632082 328 7bb7122f59655d0e5391e38ae43c5471 ""
   "pustaka/variables.tex" 1701487114 1508 b04383b2e647ff5c96a6ece7c02c2413 ""
   "sampul/gambar/sampul-luar-tipis.png" 1701487114 81872 ab3c1cc3a1f4eaae1870a63859862634 ""
   "sampul/gambar/sampul-luar.png" 1701487114 68642 fedfdcbf8429179bf472d79498fef8ce ""
