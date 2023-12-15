@@ -203,7 +203,7 @@ Array esp32Address dideklarasi pada awal fungsi void loop(). Array ini akan digu
 
 \subsection{Program Untuk Menerima Data String Melalui Bluetooth Pada ESP32}
 
-Program ini dirancang untuk menerima data string melalui Bluetooth dan memisahkannya menjadi 2 bagian. Kemudian terdapat data yang dievaluasi untuk mengetahui apakah data tersebut sudah berubah menjadi integer. Berikut ini merupakan Program \ref{lst:ReceivedBluetooth} yang digunakan untuk menguji kemampuan ESP32 dalam menerima data string melalui bluetooth.
+Program ini dirancang untuk menerima data string melalui Bluetooth dan memisahkannya menjadi 2 bagian. Kemudian terdapat data yang dievaluasi untuk mengetahui apakah data tersebut sudah berubah menjadi integer. Berikut ini merupakan Program \ref{lst:ReceivedBluetooth} yang digunakan untuk menguji kemampuan ESP32 dalam menerima data string melalui Bluetooth.
 
 % Program 3.2
 \begin{lstlisting}[
@@ -663,12 +663,15 @@ void loop() {
 
 \emph{Library} Arduino digunakan pada program ini. \emph{Library} ini menyediakan berbagai fungsi-fungsi dasar untuk pemrograman mikrokontroler. pwmPin1, dir1, dan dir2 merupakan variabel untuk mengatur kerja dari motor kiri. pwmPin1 didefinisikan dengan nilai 5 yang kemudian akan terhubung dengan GPIO5 pada ESP32, dir1 didefinisikan dengan nilai 18 yang kemudian akan terhubung dengan GPIO18 pada ESP32, dan dir2 yang didefinisikan dengan nilai 19 yang kemudian akan terhubung dengan GPIO19 pada ESP32. Selanjutnya terdapat pwmPin2, dir3, dan dir4 yang merupakan variabel yang digunakan untuk mengatur kerja dari motor kanan. pwmPin2 didefinisikan dengan nilai 25 yang kemudian akan terhubung dengan GPIO25 pada ESP32, dir3 didefinisikan dengan nilai 32 yang kemudian akan terhubung dengan GPIO32 pada ESP32, dan dir4 yang didefinisikan dengan nilai 33 yang kemudian akan terhubung dengan GPIO33 pada ESP32. Lalu variabel pwmChannel1, pwmChannel2, freq, dan res dideklarasikan. pwmChannel1 dan pwmChannel2 merupakan nomor saluran PWM yang digunakan. Variabel freq merupakan frekuensi PWM yang diatur menjadi 15kHz untuk meminimalisir \emph{noise} pada motor ketika bekerja. Variabel res digunakan untuk mengatur resolusi dari PWM yang diatur menjadi 8-bit. Variabel PWM1\_DutyCycle akan menyimpan siklus tugas yang kemudian akan digunakan untuk mengendalikan kecepatan motor dan variabel maxspeed merupakan nilai dari kecepatan motor maksimal.
 
-Terdapat fungsi void setup() yang dieksekusi satu kali pada saat program pertama kali dijalankan. Pada fungsi ini terdapat dir1, dir2, dir3, dan dir4 yang diatur sebagai pin \emph{output}. ledcSetup merupakan fungsi dari \emph{library} ledc yang digunakan untuk mengonfigurasi saluran PWM. Fungsi ini memerlukan 3 variabel, yaitu pwmChannel, freq, dan res. Selanjutnya terdapat fungsi ledcAttachPin yang merupakan fungsi dari \emph{library} ledc yang digunakan untuk menghubungkan suatu pin dengan saluran PWM tertentu. Fungsi ini memerlukan 2 variabel, yaitu pin PWM dan juga PWM Channel. Secara keseluruhan, blok kode ini digunakan untuk melakukan konfigurasi pin-pin pada mikrokontroler ESP32 sehingga motor dapat dikendalikan. Pin-pin yang diatur sebagai \emph{output} akan digunakan tunuk mengatur arah putar motor. Sedangkan saluran PWM akan digunakan untuk mengatur kecepatan motor.
+Terdapat fungsi void setup() yang dieksekusi satu kali pada saat program pertama kali dijalankan. Pada fungsi ini terdapat dir1, dir2, dir3, dan dir4 yang diatur sebagai pin \emph{output}. ledcSetup merupakan fungsi dari \emph{library} ledc yang digunakan untuk mengonfigurasi saluran PWM. Fungsi ini memerlukan 3 variabel, yaitu pwmChannel, freq, dan res. Selanjutnya terdapat fungsi ledcAttachPin yang merupakan fungsi dari \emph{library} ledc yang digunakan untuk menghubungkan suatu pin dengan saluran PWM tertentu. Fungsi ini memerlukan 2 variabel, yaitu pin PWM dan juga PWM Channel. Secara keseluruhan, blok kode ini digunakan untuk melakukan konfigurasi pin-pin pada mikrokontroler ESP32 sehingga motor dapat dikendalikan. Pin-pin yang diatur sebagai \emph{output} akan digunakan untuk mengatur arah putar motor. Sedangkan saluran PWM akan digunakan untuk mengatur kecepatan motor.
 
 Pada fungsi void loop() terdapat serangkaian perintah yang mengatur gerakan kursi roda dengan menggunakan motor DC. Gerakan ini akan diulang secara terus-menerus. Hal ini berguna untuk menguji rangkaian kontrol pada ESP32. Setiap gerakan diawali dengan \emph{softstart} dan diakhiri dengan \emph{softstop}. Pada gerakan maju, kedua motor akan bergerak maju. Selama nilai PWM1\_DutyCycle kurang dari maxspeed, maka nilai PWM1\_DutyCycle akan ditambahkan secara bertahap hingga mencapai nilai maxspeed yang telah ditentukan. Selama itu juga kecepatan putar motor akan bertambah secara bertahap. Penambahan nilai PWM1\_DutyCycle akan ditunda selama 10 milidetik. Setelah PWM1\_DutyCycle mencapai nilai maxspeed maka kode selanjutnya akan ditunda selama 5 detik yang mengakibatkan motor akan berputar maju dengan kecepatan maksimum selama 5 detik. Setelah 5 detik, apabila nilai dari PWM1\_DutyCycle lebih dari 0 maka akan dilakukan \emph{softstop}. Arah putar kedua motor tetap diatur maju. Nilai PWM1\_DutyCycle akan diturunkan secara bertahap. Pengurangan nilai PWM1\_DutyCycle akan ditunda selama 10 milidetik. Apabila nilai PWM1\_DutyCycle sudah mencapai nilai 0 maka kode selanjutnya akan ditunda selama 1 detik. Langkah yang serupa akan dilakukan untuk setiap gerakan. Setiap gerakan memiliki fase \emph{softstart} dan \emph{softstop} yang bertujuan untuk memberikan perubahan kecepatan yang halus dan menghindari perubahan secara tiba-tiba. Penggunaan variabel PWM1\_DutyCycle digunakan untuk mengatur siklus kerja PWM untuk sebagai kontrol kecepatan yang fleksibel. fungsi \emph{delay} digunakan untuk memberikan jeda waktu antara setiap gerakan untuk mengatur durasi gerakan dan memberikan waktu bagi motor kursi roda untuk menyelesaikan setiap gerakan sebelum beralih ke gerakan berikutnya. Pada fungsi mundur, kedua roda akan berputar mundur. Pada fungsi belok kanan, roda kiri akan berputar maju sedangkan roda kanan tidak berputar sehingga kursi roda dapat berbelok ke arah kanan. Pada fungsi belok kiri, motor kiri tidak berputar namun roda kanan akan berputar maju sehingga kursi roda dapat berbelok ke arah kiri. Pada fungsi stop, kedua roda tidak akan berputar. Proses ini terus berulang didalam \emph{loop}, sehingga kursi roda akan melakukan gerakan berulang sesuai dengan logika yang telah diatur.
 
 
 \subsection{Program Kontrol Motor Kursi Roda Melalui Bluetooth}
+
+Program ini dirancang untuk mengendalikan motor DC dengan memproses perintah yang diterima melalui koneksi Bluetooth. Setelah menerima data arah dan kecepatan, maka program ini akan mengatur motor sesuai dengan perintah yang diterima. Berikut merupakan Program \ref{lst:MotorBluetooth} yang digunakan untuk mengontrol motor kursi roda melalui Bluetooth.
+
 \begin{lstlisting}[
   language=Arduino,
   caption={Program Kontrol Motor Kursi Roda Melalui Bluetooth},
@@ -704,7 +707,7 @@ BluetoothSerial SerialBT;
 
 void setup() {
   Serial.begin(115200);
-  SerialBT.begin("ESP32_B300");
+  SerialBT.begin("ESP32_Haris");
 
   pinMode(dir1, OUTPUT);
   pinMode(dir2, OUTPUT);
@@ -716,9 +719,6 @@ void setup() {
 
   ledcAttachPin(pwmpin1, pwmChannel1);
   ledcAttachPin(pwmpin2, pwmChannel2);
-
-  Serial.begin(115200);
-
 }
 
 void loop() {
@@ -815,6 +815,12 @@ void loop() {
   }
 }  
 \end{lstlisting}
+
+Program ini menggunakan \emph{library} BluetoothSerial dari Henry Abrahamsen dan juga \emph{library} Arduino. \emph{Library} BluetoothSerial menyediakan fungsionalitas untuk menerima data melalui koneksi Bluetooth \parencite{Abrahamsen_2023}. \emph{Library} Arduino menyediakan berbagai fungsi dasar untuk pemrograman mikrokontroler. pwmPin1, dir1, dan dir2 merupakan variabel yang digunakan untuk mengatur kerja dari motor kiri. pwmPin1 didefinisikan dengan nilai 5 yang kemudian akan terhubung dengan GPIO5 pada ESP32, dir1 didefinisikan dengan nilai 18 yang kemudian akan terhubung dengan GPIO18 pada ESP32, dan dir2 didefinisikan dengan nilai 19 yang kemudian akan terhubung dengan GPIO19 pada ESP32. Selanjutnya terdapat pwmPin2, dir3, dan dir4 merupakan variabel yang akan digunakan untuk mengatur kerja dari motor kanan. pwmPin2 didefinisikan dengan nilai 25 yang kemudian akan terhubung dengan GPIO25 pada ESP32, dir3 didefinisikan dengan nilai 32 yang kemudian akan terhubung dengan GPIO32, dan dir4 yang didefinisikan dengan nilai 33 yang kemudian akan terhubung dengan GPIO33 pada ESP32. Array stdir digunakan untuk menyimpan keadaan arah motor pada setiap langkah. Lalu variabel pwmChannel1, pwmChannel2. req, dan res dideklarasikan. pwmChannel1 dan pwmChannel2 merupakan nomor saluran PWM yang digunakan. Variabel freq merupakan frekuensi PWM yang diatur menjadi 15 kHz untuk meminimalisir \emph{noise} pada motor ketika bekerja. Variabel res digunakan untuk mengatur resolusi dari PWM yang diatur menjadi 8-bit. Variabel PWM1\_DutyCycle akan menyimpan siklus tugas yang kemudian akan digunakan untuk mengendalikan kecepatan motor. Variabel maxspeed digunakan untuk mengatur kecepatan maksimal dari motor dan variabel turnspeed digunakan untuk kecepatan maksimal ketika kursi roda berbelok.
+
+Fungsi void setup() dieksekusi satu kali pada saat program pertama kali dijalankan. Pada fungsi ini objek SerialBT diinisialisasi sebagai Bluetooth Serial dengan nama ESP32\_Haris. dir1, dir2, dir3, dan dir4 diatur sebagai \emph{output}. ledcSetup merupakan fungsi dari \emph{library} ledc yang digunakan untuk menghubungkan suatu pin dengan saluran PWM tertentu. Fungsi ini memerlukan 2 variabel, yaitu pin PWM dan juga PWM \emph{Channel}. Secara keseluruhan blok kode ini digunakan untuk melakukan konfigurasi pin-pin pada mikrokontroler ESP32 sehingga motor dapat dikendalikan. Pin-pin yang diatur sebagai \emph{output} akan digunakan untuk mengatur arah putar motor. Sedangkan saluran PWM akan digunakan untuk mengatur kecepatan putar motor.
+
+Pada fungsi void loop() terdapat perintah untuk memeriksa ketersediaan data dari Bluetooth dengan SerialBT.acailable(). Jika terdapat \emph{client} yang terhubung maka data akan dibaca hingga \emph{newline} ('\textbackslash n'). Data yang diterima kemudian akan diurai dan dimasukkan kedalam variabel arah dan kecepatan. Tipe data dari variabel kecepatan akan diubah dari string menjadi integer dengan menggunakan fungsi toInt(). Nilai dari maxspeed dan turnspeed kemudian akan diatur sesuai dengan perintah. Kontrol arah gerak motor menggunakan pernyataan kondisional (\emph{if-else}) berdasarkan variabel arah yang diterima. Pada setiap kondisi terdapat perulangan \emph{while}. Hal ini dilakukan agar perubahan kecepatan putar motor tidak terjadi secara tiba-tiba. digitalWrite digunakan untuk menetapkan arah putar motor. ledcWrite digunakan untuk mengendalikan kecepatan motor. Perulangan ini terus dilakukan selama ESP32 masih menerima data melalui Bluetooth.
 
 \subsection{Program Kontrol Motor Kursi Roda Melalui \emph{Access Point} WiFi}
 \begin{lstlisting}[
