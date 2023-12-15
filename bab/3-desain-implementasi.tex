@@ -1069,11 +1069,12 @@ Program ini menggunakan \emph{library} socket, time, dan datetime. \emph{Library
 
 Objek soket kemudian dibuat menggunakan socket.socket() dengan alamat IPv4 dan tipe soket streaming. Ini menunjukkan bahwa program ini akan menggunakan protokol TCP/IP untuk koneksi. Kemudian mencoba untuk membuat koneksi ke server yang telah ditentukan sesuai IP \emph{Address} host dan nomor port.
 
-Kemudian program akan berjalan pada perulangan yang tak terbatas. Pengguna diminta untuk memasukkan nilai arah dan kecepatan melalui \emph{input}. Data tersebut kemudian digabungkan menjadi 1 pesan. Pesan kemudian dikonversi menjadi byte menggunakan encoding UTF-8. Setelah dikonversi maka pesan tersebut akan dikirimkan ke server. Apabila pengguna memasukkan "q" sebagai nilai arah maupun kecepatan, maka perulangan akan dihentikan dan program akan menutur koneksi soket.
+Kemudian program akan berjalan pada perulangan yang tak terbatas. Pengguna diminta untuk memasukkan nilai arah dan kecepatan melalui \emph{input}. Data tersebut kemudian digabungkan menjadi 1 pesan. Pesan kemudian dikonversi menjadi byte menggunakan encoding UTF-8. Setelah dikonversi maka pesan tersebut akan dikirimkan ke server. Apabila pengguna memasukkan "q" sebagai nilai arah maupun kecepatan, maka perulangan akan dihentikan dan program akan menutup koneksi soket.
 
 \subsection{Program Untuk Mengirim Data JSON Melalui Bluetooth}
 
-% Program 3.9
+Program ini menggunakan bahasa pemrograman Python. Program ini dirancang untuk mengirimkan data JSON melalui Bluetooth. Berikut merupakan Program \ref{lst:SendBluetoothJSON} yang digunakan untuk mengirim data JSON melalui Bluetooth.
+
 \begin{lstlisting}[
     language=Python,
     caption={Program Untuk Mengirim Data JSON Melalui Bluetooth},
@@ -1114,6 +1115,10 @@ while True:
 sock.close()
 
 \end{lstlisting}
+
+Program ini menggunakan \emph{library} Bluetooth untuk berinteraksi dengan perangkat lain melalui Bluetooth dan \emph{library} JSON untuk mengelola data dalam format JSON. Alamat Bluetooth dari perangkat ESP32 yang akan dikendalikan kemudian dimasukkan kedalam suatu variabel. Objek soket Bluetooth kemudian dibuat dengan menggunakan protokol \emph{Radio Frequency Communication}(RFCOMM). RFCOMM merupakan protokol yang umum digunakan untuk komunikasi serial melalui Bluetooth. Soket Bluetooth kemudian dihubungkan ke perangkat ESP32 menggunakan alamat Bluetooth dan nomor \emph{channel}. Pada umumnya \emph{channel} 1 digunakan untuk profil SPP (\emph{Serial Port Profile}).
+
+Kemudian program akan berjalan dalam perulangan yang tak terbatas. Pengguna diminta untuk memasukkan nilai arah dan kecepatan melalui \emph{input}. Objek JSON kemudian dibuat untuk menyimpan data yang telah dimasukkan. Objek JSON kemudian dikonversi menjadi string menggunakan json.dumps(). String JSON kemudian akan dikirimkan melalui koneksi Bluetooth menggunakan sock.send(). Apabila pengguna memasukkan "q" sebagai nilai arah maupun kecepatan, maka perulangan akan dihentikan dan program akan menutup koneksi soket.
 
 \subsection{Program Untuk Mengirim Data JSON Melalui WiFi}
 
