@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.2)  16 DEC 2023 18:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.2)  16 DEC 2023 20:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1335,7 +1335,7 @@ Overfull \hbox (36.35515pt too wide) in paragraph at lines 244--244
 ] [54
 
 ] (./lainnya/biografi-penulis.tex
-<gambar/elon.jpg, id=1644, 578.16pt x 867.24pt>
+<gambar/elon.jpg, id=1643, 578.16pt x 867.24pt>
 File: gambar/elon.jpg Graphic file (type jpg)
 <use gambar/elon.jpg>
 Package pdftex.def Info: gambar/elon.jpg  used on input line 14.
@@ -1354,18 +1354,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24478 strings out of 474267
- 413847 string characters out of 5751465
+ 24477 strings out of 474267
+ 413840 string characters out of 5751465
  2131558 words of memory out of 5000000
  45262 multiletter control sequences out of 15000+600000
  603294 words of font info for 131 fonts, out of 8000000 for 9000
  1163 hyphenation exceptions out of 8191
  75i,14n,81p,2431b,5052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (85 pages, 8030783 bytes).
+Output written on main.pdf (85 pages, 8030525 bytes).
 PDF statistics:
- 1930 PDF objects out of 2073 (max. 8388607)
- 1767 compressed objects within 18 object streams
- 992 named destinations out of 1000 (max. 500000)
+ 1929 PDF objects out of 2073 (max. 8388607)
+ 1766 compressed objects within 18 object streams
+ 991 named destinations out of 1000 (max. 500000)
  524 words of extra memory for PDF output out of 10000 (max. 10000000)
 
