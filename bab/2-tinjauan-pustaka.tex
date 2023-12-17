@@ -97,11 +97,49 @@ Flatten merupakan suatu proses dimana hasil dari \emph{Feature Learning} diubah 
     \label{fig:Proses Flattening}
 \end{figure}
 
+\subsection{Mediapipe}
+
+MediaPipe merupakan \emph{framework} untuk membangun \emph{pipelines} yang dapat digunakan dalam melakukan pengambilan kesimpulan atau prediksi atas data sensorik. Dengan MediaPipe, sebuah \emph{perception pipeline} dapat dibangun sebagai grafik dari komponen modular termasuk inferensi model, algoritma pemrosesan media, serta transformasi data \parencite{lugaresi2019mediapipe}. MediaPipe menyediakan beragam solusi dari \emph{machine learning} seperti deteksi objek, klasifikasi citra, segmentasi citra, segmentasi interaktif, pengenalan gestur, deteksi \emph{landmark} tangan, deteksi wajah, deteksi \emph{landmark} wajah, deteksi pose, klasifikasi teks, penyematan teks, deteksi bahasa hingga klasifikasi suara.
+
+Keunggulan dari menggunakan MediaPipe adalah dari fleksibilitas yang dimiliki oleh \emph{fra-mework} ini. MediaPipe telah dikembangkan menggunakan bahasa pemrograman C++ sebagai bahasa inti. Namun MediaPipe juga menyediakan berbagai ikatan bahasa pemrograman yang lain seperti Python dan Java. Hal ini membuatnya dapat digunakan pada berbagai lingkungan pengembangan. Sehingga MediaPipe dapat diintegrasikan pada berbagai projek pengembangan dengan berbagai bahasa pemrograman.
+
+Kemampuan MediaPipe yang dapat berjalan pada berbagai platform merupakan terobosan yang sangat membantu para pengembang. MediaPipe dapat berjalan pada perangkat seluler, desktop hingga lingkungan cloud. Sehingga para pengembang dapat menerapkan berbagai solusi MediaPipe pada berbagai skenario dan perangkat tanpa perlu membatasi diri pada suatu platform tertentu.
+
+Komponen-komponen untuk mengestimasi tangan manusia sudah tersedia pada MediaPipe dalam video maupun aliran gambar. MediaPipe dapat mengenali posisi dan orientasi berbagai bagian tangan manusia, baik pergelangan tangan hingga ruas-ruas setiap jari yang dapat dilihat pada Gambar \ref{fig:handLandmark}. Dengan kemampuan tersebut maka MediaPipe dapat mengidentifikasi pola-pola khusus yang berkaitan dengan aktivitas yang kompleks seperti menerjemah bahasa isyarat.
+
+\begin{figure} [ht] \centering
+    % Nama dari file gambar yang diinputkan
+    \includegraphics[scale=0.4]{gambar/handLandmark.png}
+    % Keterangan gambar yang diinputkan
+    \caption{\emph{Landmark} Tangan Manusia Pada MediaPipe}
+    % Label referensi dari gambar yang diinputkan
+    \label{fig:handLandmark}
+\end{figure}
 \newpage
+
+\subsection{TensorFlow} 
+
+\begin{figure} [ht] \centering
+    % Nama dari file gambar yang diinputkan
+    \includegraphics[scale=0.65]{gambar/TensorflowLogo.png}
+    % Keterangan gambar yang diinputkan
+    \caption{Logo TensorFlow}
+    % Label referensi dari gambar yang diinputkan
+    \label{fig:TensorflowLogo}
+\end{figure}
+
+TensorFlow merupakan platform \emph{open source} untuk \emph{machine learning}. TensorFlow memiliki fitur untuk menjalankan \emph{training} model menggunakan \emph{Central Processing Unit} (CPU) dan \emph{training} model \emph{Graphic Processing Unit} (GPU) yang memiliki waktu \emph{training} yang lebih cepat dibanding \emph{training} model CPU \parencite{nurfita2018implementasi}.
+
+TensorFlow awalnya dikembangkan oleh para peneliti dan pengembang yang bekerja sebagai tim \emph{Machine Learning} di Google Brain untuk melakukan penelitian di bidang \emph{machine learning} dan \emph{neural network}. \emph{Framework} ini dirilis pertama kali pada bulan Februari 2017 dan terus dikembangkan hingga sekarang\parencite{Developers_2021}.
+
+\subsection{Arduino IDE}
+
+Arduino Integrated Development Environment (IDE) merupakan perangkat lunak sumber terbuka yang digunakan untuk menulis dan mengunggah kode ke mikrokontroler seperti Arduino maupun ESP buatan Espressif System. Arduino IDE berisikan editor teks untuk menulis kode program, toolbar dengan tombol untuk fungsi umum serta serangkaian menu. Program yang ditulis menggunakan Arduino IDE disebut sketches. Sketches ditulis 
+pada teks editor dan disimpan pada file dengan ekstensi .ino. Editor memiliki fitur untuk memotong dan menempel serta untuk mencari dan mengganti teks. Area pesan akan memberikan umpan balik ketika menyimpan dan mengekspor serta akan menampilkan error. Konsol menampilkan keluaran teks oleh Arduino IDE termasuk pesan error yang lengkap serta informasi lainnya \parencite{Söderby_Hylén_2023}.
+
 
 \subsection{NVIDIA® Jetson Nano™}
 
-% Gambar 2.1
 \begin{figure} [ht] \centering
     % Nama dari file gambar yang diinputkan
     \includegraphics[scale=0.25]{gambar/JetsonNano.jpg}
@@ -114,3 +152,37 @@ Flatten merupakan suatu proses dimana hasil dari \emph{Feature Learning} diubah 
 NVIDIA® Jetson Nano™ Developer Kit adalah komputer kecil dan kuat yang dapat digunakan untuk menjalankan beberapa \emph{neural network} secara paralel untuk berbagai penerapan seperti klasifikasi gambar, deteksi objek, segmentasi, dan pemrosesan ucapan. Semuanya dikemas dalam platform yang mudah digunakan dan hanya membutuhkan daya 5 watt \parencite{Developer_2023}.
 
 Perangkat ini memiliki pin \emph{input} serta \emph{output} yang berlimpah, mulai dari GPIO hingga pin CSI. Jumlah pin yang berlimpah ini sangat memudahkan para pengembang dalam menghubung-kan berbagai perangkat tambahan seperti sensor untuk keperluan pengembangan aplikasi \emph{Artificial Intelligence}. NVIDIA® Jetson Nano™ Developer Kit juga didukung dengan NVIDIA JetPack yang mencakup berbagai perangkat lunak seperti Sistem Operasi Linux, cuDNN, NVIDIA CUDA, TensorRT, dan juga \emph{Board Support Package} (BSP) yang digunakan untuk keperluan \emph{Deep Learning} serta visi komputer.
+
+\subsection{ESP32 Devkit V1}
+
+ESP32 Devkit V1 merupakan salah satu \emph{development board} yang dibuat oleh DOIT untuk menjalankan modul ESP-WROOM-32 buatan Espressif. \emph{Development Board} ini berisi WiFi, Bluetooth, serta berdaya rendah hanya dengan 1 chip. Setiap pin dari ESP32 Devkit V1 dapat dilihat pada Gambar \ref{fig:Perangkat ESP32}. Flash internal modul ESP32 disusun dalam satu area flash dengan 4096 \emph{byte} pada masing-masing halaman. Alamat flash dimulai dari 0x00000.
+
+\begin{figure} [ht] \centering
+    % Nama dari file gambar yang diinputkan
+    \includegraphics[scale=0.39]{gambar/ESP32DevkitV1.jpg}
+    % Keterangan gambar yang diinputkan
+    \caption{Perangkat ESP32 Devkit V1}
+    % Label referensi dari gambar yang diinputkan
+    \label{fig:Perangkat ESP32}
+\end{figure}
+
+Daya untuk menjalankan ESP32 disuplai melalui konektor Micro USB Tipe B atau dapat langsung melalui pin "VIN". Perangkat dapat beroperasi pada tegangan antara 6 Volt hingga 20 Volt. Jika menggunakan daya lebih dari 12 Volt maka regulator akan menjadi panas sehingga dapat merusak perangkat.
+
+\subsection{\emph{Motor Driver H-Bridge}}
+
+\emph{H-Bridge} merupakan salah satu jenis \emph{driver motor} yang paling sering digunakan untuk mengendalikan motor listrik. Perangkat ini dapat digunakan untuk mengendalikan arah serta kecepatan putar motor. \emph{Driver Motor H-Bridge} bekerja seperti saklar pada transistor. Transistor merupakan bagian utama dari perangkat ini. \emph{Driver Motor H-Bridge} tersusun oleh sekumpulan transistor yang berfungsi sebagai pengendali motor, terutama yang memerlukan arus serta tegangan yang cukup besar \parencite{Muhammad_2018}.
+
+Penelitian ini menggunakan \emph{Motor Driver H-Bridge} dari MRI. Perangkat ini dapat digunakan untuk mengatur kecepatan dan arah putar motor \emph{brushed} dengan kapasitas maksimal 50 A pada tegangan 48 V. Driver motor ini dilengkapi dengan satu kanal PWM yang dapat digunakan untuk mengatur kecepatan putar motor dengan cara mengubah lebar pulsa yang dikirimkan ke motor. Lebar pulsa PWM dapat diatur menggunakan potensiometer maupun melalui kontrol sinyal eksternal. Perangkat ini juga memiliki kemampuan untuk mengatur arah putar motor melalui kedua pin dir. Dengan mengganti keadaan \emph{input} kontrol maka pengguna dapat mengubah arah putaran motor secara mudah. Gambar \ref*{fig:DriverMotor} merupakan perangkat yang digunakan pada penelitian ini.
+
+\begin{figure} [ht]
+\centering
+    % Nama dari file gambar yang diinputkan
+    \includegraphics[scale=0.3]{gambar/MotorDriver.png}
+    % Keterangan gambar yang diinputkan
+    \caption{\emph{H-Bridge Motor Driver}}
+    % Label referensi dari gambar yang diinputkan
+    \label{fig:DriverMotor}
+\end{figure}
+\newpage
+
+\subsection{asd}

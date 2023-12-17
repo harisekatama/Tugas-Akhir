@@ -1,24 +1,26 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[180] biber-MSWIN64:340> INFO - === 
-[232] Biber.pm:419> INFO - Reading 'main.bcf'
-[448] Biber.pm:979> INFO - Found 16 citekeys in bib section 0
-[487] Biber.pm:4419> INFO - Processing section 0
-[507] Biber.pm:4610> INFO - Looking for bibtex file 'pustaka/pustaka.bib' for section 0
-[571] bibtex.pm:1713> INFO - LaTeX decoding ...
-[619] bibtex.pm:1519> INFO - Found BibTeX data source 'pustaka/pustaka.bib'
-[928] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[928] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[929] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[929] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1007] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1009] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1009] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[1010] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1060] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[1090] bbl.pm:763> INFO - Output to main.bbl
-[1090] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'Pansawira_2022' is not an integer - this will probably not sort properly.
-[1090] Biber.pm:131> WARN - legacy month field 'Oct' in entry 'Abrahamsen_2023' is not an integer - this will probably not sort properly.
-[1090] Biber.pm:131> WARN - legacy month field 'Dec' in entry 'Systems_2023' is not an integer - this will probably not sort properly.
-[1090] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\haris\AppData\Local\Temp\biber_tmp_3ifh\edf1f315de8056cfaef35fb8874dd844_20292.utf8, line 8, warning: 357 characters of junk seen at toplevel
-[1090] Biber.pm:133> INFO - WARNINGS: 4
+[168] biber-MSWIN64:340> INFO - === 
+[224] Biber.pm:419> INFO - Reading 'main.bcf'
+[426] Biber.pm:979> INFO - Found 21 citekeys in bib section 0
+[460] Biber.pm:4419> INFO - Processing section 0
+[476] Biber.pm:4610> INFO - Looking for bibtex file 'pustaka/pustaka.bib' for section 0
+[555] bibtex.pm:1713> INFO - LaTeX decoding ...
+[601] bibtex.pm:1519> INFO - Found BibTeX data source 'pustaka/pustaka.bib'
+[864] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[864] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[864] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[864] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[938] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[939] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[939] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[939] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[980] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1016] bbl.pm:763> INFO - Output to main.bbl
+[1016] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'Pansawira_2022' is not an integer - this will probably not sort properly.
+[1016] Biber.pm:131> WARN - legacy month field 'May' in entry 'Developers_2021' is not an integer - this will probably not sort properly.
+[1016] Biber.pm:131> WARN - legacy month field 'Dec' in entry 'Muhammad_2018' is not an integer - this will probably not sort properly.
+[1016] Biber.pm:131> WARN - legacy month field 'Oct' in entry 'Abrahamsen_2023' is not an integer - this will probably not sort properly.
+[1016] Biber.pm:131> WARN - legacy month field 'Dec' in entry 'Systems_2023' is not an integer - this will probably not sort properly.
+[1016] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\haris\AppData\Local\Temp\biber_tmp_5vdV\edf1f315de8056cfaef35fb8874dd844_25260.utf8, line 8, warning: 357 characters of junk seen at toplevel
+[1016] Biber.pm:133> INFO - WARNINGS: 6
