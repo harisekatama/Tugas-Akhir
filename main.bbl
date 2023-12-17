@@ -271,6 +271,49 @@
       \field{type}{phdthesis}
       \field{year}{2019}
     \endentry
+    \entry{10280784}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=23cc6e6855254152b03b6d365b6824f4}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Pengyu},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d8a1b48d724db2f998df0a5d102b824d}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Haitao},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0f9d4795e094ecdb83c7352954a49b69}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yuxin},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{43d6782e523d9e9899aa248c2143d0c1}
+      \strng{fullhash}{8405e94a8d681b305749ebbf4b566eac}
+      \strng{bibnamehash}{8405e94a8d681b305749ebbf4b566eac}
+      \strng{authorbibnamehash}{8405e94a8d681b305749ebbf4b566eac}
+      \strng{authornamehash}{43d6782e523d9e9899aa248c2143d0c1}
+      \strng{authorfullhash}{8405e94a8d681b305749ebbf4b566eac}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2023 2nd International Symposium on Sensor Technology and Control (ISSTC)}
+      \field{title}{Vision-based head posture control wheelchair system research}
+      \field{year}{2023}
+      \field{pages}{232\bibrangedash 237}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ISSTC59603.2023.10280784
+      \endverb
+    \endentry
     \entry{hakim2018penerapan}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -822,6 +865,49 @@
       \field{title}{Klasifikasi Tingkat Retakan Pada Bangunan Berbasis Citra Menggunakan Metode Convolution Neural Network}
       \field{type}{phdthesis}
       \field{year}{2019}
+    \endentry
+    \entry{10280784}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=23cc6e6855254152b03b6d365b6824f4}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Pengyu},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d8a1b48d724db2f998df0a5d102b824d}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Haitao},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0f9d4795e094ecdb83c7352954a49b69}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yuxin},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{43d6782e523d9e9899aa248c2143d0c1}
+      \strng{fullhash}{8405e94a8d681b305749ebbf4b566eac}
+      \strng{bibnamehash}{8405e94a8d681b305749ebbf4b566eac}
+      \strng{authorbibnamehash}{8405e94a8d681b305749ebbf4b566eac}
+      \strng{authornamehash}{43d6782e523d9e9899aa248c2143d0c1}
+      \strng{authorfullhash}{8405e94a8d681b305749ebbf4b566eac}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2023 2nd International Symposium on Sensor Technology and Control (ISSTC)}
+      \field{title}{Vision-based head posture control wheelchair system research}
+      \field{year}{2023}
+      \field{pages}{232\bibrangedash 237}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ISSTC59603.2023.10280784
+      \endverb
     \endentry
     \entry{hakim2018penerapan}{article}{}
       \true{moreauthor}
