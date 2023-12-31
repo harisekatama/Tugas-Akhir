@@ -1,16 +1,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Tabel titik \emph {keypoints} yang relevan pada tahap estimasi pose}}{12}{table.3.1}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Tabel contoh klasifikasi citra}}{14}{table.3.2}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Kode instruksi dari hasil klasifikasi}}{15}{table.3.3}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Tabel titik \emph {keypoints} yang relevan pada tahap estimasi pose}}{14}{table.3.1}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Tabel contoh klasifikasi citra}}{16}{table.3.2}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Kode instruksi dari hasil klasifikasi}}{17}{table.3.3}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{Pengujian Waktu \emph {Delay} Pengiriman Data String Berisi 2 Nilai Melalui Bluetooth}}{43}{table.4.1}%
-\contentsline {table}{\numberline {4.2}{Pengujian Waktu \emph {Delay} Pengiriman Data String Berisi 1 Nilai Melalui Bluetooth}}{44}{table.4.2}%
-\contentsline {table}{\numberline {4.3}{Pengujian Waktu \emph {Delay} Pengiriman Data JSON Berisi 2 Nilai Melalui Bluetooth}}{46}{table.4.3}%
-\contentsline {table}{\numberline {4.4}{Pengujian Waktu \emph {Delay} Pengiriman Data JSON Berisi 1 Nilai Melalui Bluetooth}}{47}{table.4.4}%
-\contentsline {table}{\numberline {4.5}{Pengujian Waktu \emph {Delay} Pengiriman Data String Berisi 2 Nilai Melalui \emph {Access Point} WiFi}}{49}{table.4.5}%
-\contentsline {table}{\numberline {4.6}{Pengujian Waktu \emph {Delay} Pengiriman Data String Berisi 1 Nilai Melalui \emph {Access Point} WiFi}}{50}{table.4.6}%
-\contentsline {table}{\numberline {4.7}{Pengujian Waktu \emph {Delay} Pengiriman Data JSON Berisi 2 Nilai Melalui \emph {Access Point} WiFi}}{51}{table.4.7}%
-\contentsline {table}{\numberline {4.8}{Pengujian Waktu \emph {Delay} Pengiriman Data JSON Berisi 1 Nilai Melalui \emph {Access Point} WiFi}}{52}{table.4.8}%
+\contentsline {table}{\numberline {4.1}{Pengujian Waktu \emph {Delay} Pengiriman Data String Berisi 2 Nilai Melalui Bluetooth}}{45}{table.4.1}%
+\contentsline {table}{\numberline {4.2}{Pengujian Waktu \emph {Delay} Pengiriman Data String Berisi 1 Nilai Melalui Bluetooth}}{46}{table.4.2}%
+\contentsline {table}{\numberline {4.3}{Pengujian Waktu \emph {Delay} Pengiriman Data JSON Berisi 2 Nilai Melalui Bluetooth}}{48}{table.4.3}%
+\contentsline {table}{\numberline {4.4}{Pengujian Waktu \emph {Delay} Pengiriman Data JSON Berisi 1 Nilai Melalui Bluetooth}}{49}{table.4.4}%
+\contentsline {table}{\numberline {4.5}{Pengujian Waktu \emph {Delay} Pengiriman Data String Berisi 2 Nilai Melalui \emph {Access Point} WiFi}}{51}{table.4.5}%
+\contentsline {table}{\numberline {4.6}{Pengujian Waktu \emph {Delay} Pengiriman Data String Berisi 1 Nilai Melalui \emph {Access Point} WiFi}}{52}{table.4.6}%
+\contentsline {table}{\numberline {4.7}{Pengujian Waktu \emph {Delay} Pengiriman Data JSON Berisi 2 Nilai Melalui \emph {Access Point} WiFi}}{53}{table.4.7}%
+\contentsline {table}{\numberline {4.8}{Pengujian Waktu \emph {Delay} Pengiriman Data JSON Berisi 1 Nilai Melalui \emph {Access Point} WiFi}}{54}{table.4.8}%
 \addvspace {10\p@ }

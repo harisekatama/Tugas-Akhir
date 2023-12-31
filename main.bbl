@@ -377,6 +377,41 @@
       \field{title}{PENERAPAN DEEP LEARNING MENGGUNAKAN CONVOLUTIONAL NEURAL NETWORK UNTUK KLASIFIKASI CITRA WAYANG PUNAKAWAN}
       \field{year}{2018}
     \endentry
+    \entry{Inc_2018}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c67bc6e7ec71f7386278bb6f311cd874}{%
+           family={Inc},
+           familyi={I\bibinitperiod},
+           given={Anaconda},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Anaconda,Inc}%
+      }
+      \strng{namehash}{c67bc6e7ec71f7386278bb6f311cd874}
+      \strng{fullhash}{c67bc6e7ec71f7386278bb6f311cd874}
+      \strng{bibnamehash}{c67bc6e7ec71f7386278bb6f311cd874}
+      \strng{authorbibnamehash}{c67bc6e7ec71f7386278bb6f311cd874}
+      \strng{authornamehash}{c67bc6e7ec71f7386278bb6f311cd874}
+      \strng{authorfullhash}{c67bc6e7ec71f7386278bb6f311cd874}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{What is Anaconda Distribution? - Anaconda documentation}
+      \field{title}{What is anaconda distribution?}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://docs.anaconda.com/free/anaconda/getting-started/what-is-distro/
+      \endverb
+      \verb{url}
+      \verb https://docs.anaconda.com/free/anaconda/getting-started/what-is-distro/
+      \endverb
+    \endentry
     \entry{junior2019prototipe}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=299d11d8eb37a6ce058f56f6d4d4095b}{%
@@ -625,7 +660,39 @@
       \field{labeltitlesource}{title}
       \field{title}{Wheelchair Control Using Bluetooth-Based Electromyography Signals [Kontrol Kursi Roda Menggunakan Sinyal Elektromiografi Berbasis Bluetooth]}
     \endentry
-    \entry{Söderby_Hylén_2023}{misc}{}
+    \entry{Söderby_2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=37ce62a7384ceac0d203388f20ad1c24}{%
+           family={Söderby},
+           familyi={S\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{37ce62a7384ceac0d203388f20ad1c24}
+      \strng{fullhash}{37ce62a7384ceac0d203388f20ad1c24}
+      \strng{bibnamehash}{37ce62a7384ceac0d203388f20ad1c24}
+      \strng{authorbibnamehash}{37ce62a7384ceac0d203388f20ad1c24}
+      \strng{authornamehash}{37ce62a7384ceac0d203388f20ad1c24}
+      \strng{authorfullhash}{37ce62a7384ceac0d203388f20ad1c24}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Arduino Documentation}
+      \field{title}{Using the Serial Monitor Tool}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-serial-monitor
+      \endverb
+      \verb{url}
+      \verb https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-serial-monitor
+      \endverb
+    \endentry
+    \entry{Söderby_Hylén_2023a}{misc}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=37ce62a7384ceac0d203388f20ad1c24}{%
            family={Söderby},
@@ -646,8 +713,10 @@
       \strng{authorbibnamehash}{bbb6cd548875edd0743f7ab64880a10f}
       \strng{authornamehash}{bbb6cd548875edd0743f7ab64880a10f}
       \strng{authorfullhash}{bbb6cd548875edd0743f7ab64880a10f}
+      \field{extraname}{1}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
@@ -661,6 +730,86 @@
       \endverb
       \verb{url}
       \verb https://docs.arduino.cc/software/ide-v2/tutorials/getting-started-ide-v2
+      \endverb
+    \endentry
+    \entry{Söderby_Hylén_2023b}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=37ce62a7384ceac0d203388f20ad1c24}{%
+           family={Söderby},
+           familyi={S\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e71f3c4cf4999ec8271a4ec8c56badf0}{%
+           family={Hylén},
+           familyi={H\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{fullhash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{bibnamehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{authorbibnamehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{authornamehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{authorfullhash}{bbb6cd548875edd0743f7ab64880a10f}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Arduino Documentation}
+      \field{title}{Installing a board package in the IDE 2}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-board-manager
+      \endverb
+      \verb{url}
+      \verb https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-board-manager
+      \endverb
+    \endentry
+    \entry{Söderby_Hylén_2023c}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=37ce62a7384ceac0d203388f20ad1c24}{%
+           family={Söderby},
+           familyi={S\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e71f3c4cf4999ec8271a4ec8c56badf0}{%
+           family={Hylén},
+           familyi={H\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{fullhash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{bibnamehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{authorbibnamehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{authornamehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{authorfullhash}{bbb6cd548875edd0743f7ab64880a10f}
+      \field{extraname}{3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Arduino Documentation}
+      \field{title}{Installing libraries}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-installing-a-library
+      \endverb
+      \verb{url}
+      \verb https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-installing-a-library
       \endverb
     \endentry
     \entry{Systems_2023}{misc}{}
@@ -1190,6 +1339,41 @@
       \field{title}{PENERAPAN DEEP LEARNING MENGGUNAKAN CONVOLUTIONAL NEURAL NETWORK UNTUK KLASIFIKASI CITRA WAYANG PUNAKAWAN}
       \field{year}{2018}
     \endentry
+    \entry{Inc_2018}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c67bc6e7ec71f7386278bb6f311cd874}{%
+           family={Inc},
+           familyi={I\bibinitperiod},
+           given={Anaconda},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Anaconda,Inc}%
+      }
+      \strng{namehash}{c67bc6e7ec71f7386278bb6f311cd874}
+      \strng{fullhash}{c67bc6e7ec71f7386278bb6f311cd874}
+      \strng{bibnamehash}{c67bc6e7ec71f7386278bb6f311cd874}
+      \strng{authorbibnamehash}{c67bc6e7ec71f7386278bb6f311cd874}
+      \strng{authornamehash}{c67bc6e7ec71f7386278bb6f311cd874}
+      \strng{authorfullhash}{c67bc6e7ec71f7386278bb6f311cd874}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{What is Anaconda Distribution? - Anaconda documentation}
+      \field{title}{What is anaconda distribution?}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://docs.anaconda.com/free/anaconda/getting-started/what-is-distro/
+      \endverb
+      \verb{url}
+      \verb https://docs.anaconda.com/free/anaconda/getting-started/what-is-distro/
+      \endverb
+    \endentry
     \entry{junior2019prototipe}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=299d11d8eb37a6ce058f56f6d4d4095b}{%
@@ -1438,7 +1622,39 @@
       \field{labeltitlesource}{title}
       \field{title}{Wheelchair Control Using Bluetooth-Based Electromyography Signals [Kontrol Kursi Roda Menggunakan Sinyal Elektromiografi Berbasis Bluetooth]}
     \endentry
-    \entry{Söderby_Hylén_2023}{misc}{}
+    \entry{Söderby_2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=37ce62a7384ceac0d203388f20ad1c24}{%
+           family={Söderby},
+           familyi={S\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{37ce62a7384ceac0d203388f20ad1c24}
+      \strng{fullhash}{37ce62a7384ceac0d203388f20ad1c24}
+      \strng{bibnamehash}{37ce62a7384ceac0d203388f20ad1c24}
+      \strng{authorbibnamehash}{37ce62a7384ceac0d203388f20ad1c24}
+      \strng{authornamehash}{37ce62a7384ceac0d203388f20ad1c24}
+      \strng{authorfullhash}{37ce62a7384ceac0d203388f20ad1c24}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Arduino Documentation}
+      \field{title}{Using the Serial Monitor Tool}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-serial-monitor
+      \endverb
+      \verb{url}
+      \verb https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-serial-monitor
+      \endverb
+    \endentry
+    \entry{Söderby_Hylén_2023a}{misc}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=37ce62a7384ceac0d203388f20ad1c24}{%
            family={Söderby},
@@ -1459,8 +1675,10 @@
       \strng{authorbibnamehash}{bbb6cd548875edd0743f7ab64880a10f}
       \strng{authornamehash}{bbb6cd548875edd0743f7ab64880a10f}
       \strng{authorfullhash}{bbb6cd548875edd0743f7ab64880a10f}
+      \field{extraname}{1}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
@@ -1474,6 +1692,86 @@
       \endverb
       \verb{url}
       \verb https://docs.arduino.cc/software/ide-v2/tutorials/getting-started-ide-v2
+      \endverb
+    \endentry
+    \entry{Söderby_Hylén_2023b}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=37ce62a7384ceac0d203388f20ad1c24}{%
+           family={Söderby},
+           familyi={S\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e71f3c4cf4999ec8271a4ec8c56badf0}{%
+           family={Hylén},
+           familyi={H\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{fullhash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{bibnamehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{authorbibnamehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{authornamehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{authorfullhash}{bbb6cd548875edd0743f7ab64880a10f}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Arduino Documentation}
+      \field{title}{Installing a board package in the IDE 2}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-board-manager
+      \endverb
+      \verb{url}
+      \verb https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-board-manager
+      \endverb
+    \endentry
+    \entry{Söderby_Hylén_2023c}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=37ce62a7384ceac0d203388f20ad1c24}{%
+           family={Söderby},
+           familyi={S\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e71f3c4cf4999ec8271a4ec8c56badf0}{%
+           family={Hylén},
+           familyi={H\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{fullhash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{bibnamehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{authorbibnamehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{authornamehash}{bbb6cd548875edd0743f7ab64880a10f}
+      \strng{authorfullhash}{bbb6cd548875edd0743f7ab64880a10f}
+      \field{extraname}{3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Arduino Documentation}
+      \field{title}{Installing libraries}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-installing-a-library
+      \endverb
+      \verb{url}
+      \verb https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-installing-a-library
       \endverb
     \endentry
     \entry{Systems_2023}{misc}{}

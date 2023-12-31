@@ -14,7 +14,7 @@ Pada penelitian ini dapat disimpulkan bahwa pengujian koneksi Bluetooth dan Andr
 
 \subsection{Rancang Bangun Kursi Roda Elektrik Dengan Sistem Kontrol \emph{Joystick} Dan \emph{Smartphone} Android}
 
-Pada tahun 2023 telah dilakukan penelitian yang berjudul "Rancang Bangun Kursi Roda Elektrik Dengan Sistem Kontrol \emph{Joystick} dan \emph{Smartphone} Android" oleh Bayu Ahityanto Wicaksono dari Program Studi Diploma IV Rekayasa Perancangan Mekanik, Sekolah Vokasi Universitas Diponegoro \parencite{wicaksono2023rancang}.
+Pada tahun 2023 telah dilakukan penelitian yang berjudul "Rancang Bangun Kursi Roda Elektrik Dengan Sistem Kontrol \emph{Joystick} dan \emph{Smartphone} Android" oleh Bayu Ahityanto Wi-caksono dari Program Studi Diploma IV Rekayasa Perancangan Mekanik, Sekolah Vokasi Universitas Diponegoro \parencite{wicaksono2023rancang}.
 
 Pada penelitian ini didapatkan kesimpulan bahwa kursi roda konvensional yang dijadikan kursi roda elektrik berhasil dijalankan dengan kecepatan maksimal 2 km/h sesuai perencanaan. Kursi roda elektrik dapat dikontrol dengan \emph{joystick} maupun dari aplikasi yang berada di \emph{smartphone} android. Kursi roda elektrik dapat berjalan dengan beban maksimal 80 kg. Terdapat beberapa saran dari penulis seperti menambahkan sandaran kepala agar pengguna lebih nyaman di kursi roda elektrik, serta pembuatan sistem aplikasi untuk pengguna \emph{smartphone} dari Apple.
 
@@ -42,7 +42,7 @@ Pada penelitian ini didapatkan kesimpulan bahwa sistem pendeteksi pose kepada be
 
 \emph{Convolutional Neural Network} (CNN) telah mencapai hasil yang luar biasa selama beberapa dekade terakhir dalam berbagai bidang yang terkait dengan pengenalan pola, mulai dari pemrosesan gambar hingga pengenalan suara. Aspek paling bermanfaat dari CNN adalah mengurangi jumlah parameter dalam \emph{Artificial Neural Network}. Pencapaian ini telah membantu banyak peneliti dan pengembang dalam mengembangkan model yang lebih besar guna mengatasi tugas-tugas yang kompleks yang tidak mungkin untuk diselesaikan dengan menggunakan \emph{Artificial Neural Network} klasik. Aspek penting dari CNN adalah untuk mendapatkan fitur-fitur abstrak ketika input menyebar menuju lapisan-lapisan yang lebih dalam \parencite{8308186}.
 
-Arsitektur pada CNN terdiri dari tiga bagian, yaitu input, \emph{feature learning}, dan \emph{classification}. \emph{Feature Learning} terdiri dari dua buah \emph{convolution layer} dan dua buah \emph{pooling layer}. Pada \emph{classification} terdiri dari dua \emph{hidden layer} dan satu \emph{output layer}. Arsitektur CNN dapat digambarkan seperti pada Gambar 2.1.
+Arsitektur pada CNN terdiri dari tiga bagian, yaitu input, \emph{feature learning}, dan \emph{classification}. \emph{Feature Learning} terdiri dari dua buah \emph{convolution layer} dan dua buah \emph{pooling layer}. Pada \emph{classification} terdiri dari dua \emph{hidden layer} dan satu \emph{output layer}. Arsitektur CNN dapat digambarkan seperti pada Gambar \ref{fig:arsitektur cnn}.
 
 % Gambar 2.1
 \begin{figure} [ht] \centering
@@ -54,14 +54,15 @@ Arsitektur pada CNN terdiri dari tiga bagian, yaitu input, \emph{feature learnin
     \label{fig:arsitektur cnn}
 \end{figure}
 
-Input CNN merupakan array tiga dimensi dengan ukuran seperti pada Persamaan 2.1. Apabila input merupakan suatu citra maka citra tersebut harus diubah menjadi array dua dimensi. 
+Input CNN merupakan array tiga dimensi dengan ukuran seperti pada Persamaan \ref{eq:array3D}. Apabila input merupakan suatu citra maka citra tersebut harus diubah menjadi array dua dimensi. 
 
 % Persamaan 2.1
 \begin{equation}
-Baris * Kolom * Depth
+    \label{eq:array3D}
+    Baris * Kolom * Depth
 \end{equation}
 
-\emph{Convolution Layer} digunakan untuk menyaring (\emph{filter}) matriks dari citra \emph{input}. \emph{Zero Padd-ing} akan diperlukan untuk mempertahankan ukuran matriks dari citra \parencite{dwitama2019klasifikasi}. Ukuran kernel yang digunakan pada layer konvolusi adalah \(3 \times 3\) dan \(5 \times 5\). \emph{Output} dari lapisan konvolusi ini akan digunakan sebagai \emph{input} pada \emph{Pooling Layer} \parencite{hakim2018penerapan}. Apabila output dari \emph{Convolution Layer} bernilai negatif maka akan dilakukan perhitungan tambahan berupa aktifasi ReLU. Fungsi aktivasi ReLU akan nilai matriks yang bernilai negatif menjadi nol. Contoh penerapan dari aktivasi ReLU dapat dilihat pada Gambar 2.2.
+\emph{Convolution Layer} digunakan untuk menyaring (\emph{filter}) matriks dari citra \emph{input}. \emph{Zero Padd-ing} akan diperlukan untuk mempertahankan ukuran matriks dari citra \parencite{dwitama2019klasifikasi}. Ukuran kernel yang digunakan pada layer konvolusi adalah \(3 \times 3\) dan \(5 \times 5\). \emph{Output} dari lapisan konvolusi ini akan digunakan sebagai \emph{input} pada \emph{Pooling Layer} \parencite{hakim2018penerapan}. Apabila output dari \emph{Convolution Layer} bernilai negatif maka akan dilakukan perhitungan tambahan berupa aktifasi ReLU. Fungsi aktivasi ReLU akan nilai matriks yang bernilai negatif menjadi nol. Contoh penerapan dari aktivasi ReLU dapat dilihat pada Gambar \ref{fig:Aktivasi ReLU}.
 
 % Gambar 2.2
 \begin{figure} [ht] \centering
@@ -73,7 +74,7 @@ Baris * Kolom * Depth
     \label{fig:Aktivasi ReLU}
 \end{figure}
 
-\emph{Pooling Layer} digunakan untuk mengurangi jumlah parameter ketika ukuran citra terlalu besar dengan cara mengurangi dimensi setiap fitur. Karena ukuran citra menjadi lebih kecil maka proses \emph{feature map} akan menjadi lebih cepat \parencite{hakim2018penerapan}. \emph{Max Pooling} dilakukan dengan cara mengambil nilai dengan elemen terbesar sesuai dengan ukuran filter. Sebagai contoh pada Gambar 2.3 merupakan \emph{max pooling} dengan filter \(2 \times 2\) dengan \emph{stride} sebesar 2.
+\emph{Pooling Layer} digunakan untuk mengurangi jumlah parameter ketika ukuran citra terlalu besar dengan cara mengurangi dimensi setiap fitur. Karena ukuran citra menjadi lebih kecil maka proses \emph{feature map} akan menjadi lebih cepat \parencite{hakim2018penerapan}. \emph{Max Pooling} dilakukan dengan cara mengambil nilai dengan elemen terbesar sesuai dengan ukuran filter. Sebagai contoh pada Gambar \ref{fig:Max Pooling} merupakan \emph{max pooling} dengan filter \(2 \times 2\) dengan \emph{stride} sebesar 2.
 
 % Gambar 2.3
 \begin{figure} [ht] \centering
@@ -85,7 +86,7 @@ Baris * Kolom * Depth
     \label{fig:Max Pooling}
 \end{figure}
 
-Flatten merupakan suatu proses dimana hasil dari \emph{Feature Learning} diubah menjadi vektor yang selanjutnya akan menjadi input pada proses klasifikasi dengan arsitektur \emph{fully connected layer}. Flatten digunakan untuk mengubah matriks menjadi vektor dengan menyesuaikan sesuai format \emph{input} pada \emph{neural network layer}. Flatten dapat digambarkan seperti pada Gambar 2.4.
+Flatten merupakan suatu proses dimana hasil dari \emph{Feature Learning} diubah menjadi vektor yang selanjutnya akan menjadi input pada proses klasifikasi dengan arsitektur \emph{fully connected layer}. Flatten digunakan untuk mengubah matriks menjadi vektor dengan menyesuaikan sesuai format \emph{input} pada \emph{neural network layer}. Flatten dapat digambarkan seperti pada Gambar \ref{fig:Proses Flattening}.
 
 % Gambar 2.4
 \begin{figure} [ht] \centering
@@ -135,7 +136,39 @@ TensorFlow awalnya dikembangkan oleh para peneliti dan pengembang yang bekerja s
 \subsection{Arduino IDE}
 
 Arduino Integrated Development Environment (IDE) merupakan perangkat lunak sumber terbuka yang digunakan untuk menulis dan mengunggah kode ke mikrokontroler seperti Arduino maupun ESP buatan Espressif System. Arduino IDE berisikan editor teks untuk menulis kode program, toolbar dengan tombol untuk fungsi umum serta serangkaian menu. Program yang ditulis menggunakan Arduino IDE disebut sketches. Sketches ditulis 
-pada teks editor dan disimpan pada file dengan ekstensi .ino. Editor memiliki fitur untuk memotong dan menempel serta untuk mencari dan mengganti teks. Area pesan akan memberikan umpan balik ketika menyimpan dan mengekspor serta akan menampilkan error. Konsol menampilkan keluaran teks oleh Arduino IDE termasuk pesan error yang lengkap serta informasi lainnya \parencite{Söderby_Hylén_2023}.
+pada teks editor dan disimpan pada file dengan ekstensi .ino. Editor memiliki fitur untuk memotong dan menempel serta untuk mencari dan mengganti teks. Area pesan akan memberikan umpan balik ketika menyimpan dan mengekspor serta akan menampilkan error. Konsol menampilkan keluaran teks oleh Arduino IDE termasuk pesan error yang lengkap serta informasi lainnya \parencite{Söderby_Hylén_2023a}.
+
+\begin{figure} [ht] \centering
+    % Nama dari file gambar yang diinputkan
+    \includegraphics[scale=0.235]{gambar/arduinoIDEoverview.png}
+    % Keterangan gambar yang diinputkan
+    \caption{Tampilan Arduino IDE 2}
+    % Label referensi dari gambar yang diinputkan
+    \label{fig:ArduinoIDEOverview}
+\end{figure}
+
+Gambar \ref{fig:ArduinoIDEOverview} merupakan tampilan dari Arduino IDE. Arduino IDE 2 dilengkapi dengan \emph{sidebar} baru yang memudahkan pengguna dalam mengakses \emph{tools} yang umum digunakan. \emph{Verify/Upload} digunakan untuk \emph{compile} dan \emph{upload} program ke \emph{Board} Arduino. \emph{Select Board} \& \emph{Port} digunakan untuk mendeteksi \emph{Board} Arduino beserta nomor port yang terhubung dengan Arduino. \emph{Sketchbook} merupakan tempat untuk mencari semua \emph{sketchbook} lokal yang disimpan pada komputer pengguna. Sebagai tambahan, pengguna dapat menguhubungkan Arduino IDE dengan Arduino Cloud sehingga pengguna dapat menyimpan \emph{sketch} pada lingkungan daring. \emph{Board Manager} merupakan kumpulan \emph{board} arduino serta \emph{board packages} pihak ketiga yang dapat diinstal \parencite{Söderby_Hylén_2023b}. \emph{Library Manager} merupakan tempat untuk menginstal berbagai \emph{library} yang mendukung pengembangan Arduino, baik yang dibuat oleh Arduino maupun dari komunitas \parencite{Söderby_Hylén_2023c}. \emph{Debugger} berguna untuk menguji dan men-\emph{debug} program secara \emph{realtime}. \emph{Search} digunakan untuk mencari kata kunci pada program yang sedang dimuat. \emph{Open Serial Monitor} berguna untuk memuat Serial Monitor yang sangat berguna untuk pengembangan \parencite{Söderby_2023}.
+
+\emph{Sketchbook} merupakan tempat dimana file program akan disimpan. \emph{Sketches} Arduino akan disimpan dengan tipe file .ino dan harus disimpan pada folder dengan nama folder yang sama dengan nama file. Sebagai contoh, file my\_sketch.ino harus disimpan pada folder dengan nama folder my\_sketch.
+
+Dengan menggunakan \emph{Library Manager}, pengguna dapat menemukan dan menginstal ribuan \emph{library} yang dapat membantu dalam mengembangkan proyek menggunakan . \emph{Library} merupakan \emph{extension} dari Arduino API yang dapat memudahkan pengembang. Sebagai contoh, para pengembang dapat mengontrol motor servo, membaca sensor tertentu, hingga menggunakan modul WiFi hanya dengan memanggil fungsi yang terdapat pada \emph{library} \parencite{Söderby_Hylén_2023c}.
+
+\emph{Serial Monitor} merupakan alat yang memungkinkan pengguna untuk melihat \emph{streaming} data pada \emph{Board} Arduino yang terhubung. Pada Arduino versi 1, \emph{tool} ini ditempatkan pada jendela yang terpisah, namun untuk memudahkan pengguna maka \emph{tool} ini kini terintegrasi dengan editor \parencite{Söderby_2023}. 
+
+\subsection{Anaconda®}
+
+Anaconda® merupakan distribusi Python yang berisi conda yang merupakan manajer paket dan lingkungan pengembangan dengan menggunakan CLI (\emph{Command Line Interface}), Anaconda Navigator yang merupakan aplikasi desktop yang dibangun diatas conda, hingga akses ke Anaconda \emph{Public Repository} \parencite{Inc_2018}.
+
+\begin{figure} [ht] \centering
+    % Nama dari file gambar yang diinputkan
+    \includegraphics[scale=0.262]{gambar/AnacondaNavigatorOverview.png}
+    % Keterangan gambar yang diinputkan
+    \caption{Tampilan Anaconda Navigator}
+    % Label referensi dari gambar yang diinputkan
+    \label{fig:Tampilan Anaconda Navigator}
+\end{figure}
+
+Tampilan utama pada Anaconda Navigator dapat dilihat pada Gambar \ref{fig:Tampilan Anaconda Navigator}. \emph{Navigator Pages} yang ditandai dengan nomor 1 digunakan untuk mengakses halaman utama. Halaman utama akan secara otomatis terbuka ketika pertama kali membuka aplikasi Anaconda Navigator. \emph{Application/Package Tile} ditandai dengan nomor 2 yang digunakan untuk menginstal atau menjalankan aplikasi Python yang dapat berjalan didalam lingkungan Anaconda. \emph{Channels} ditandai dengan nomor 3 digunakan untuk mencari dan menginstal paket. \emph{Connect} yang ditandai dengan nomor 4 digunakan untuk menghubungkan Anaconda Navigator dengan Anaconda Cloud. Masuk ke layanan repositori akan memungkinkan pencarian paket dalam repositori itu. \emph{Outside Links} yang ditandai dengan nomor 5 digunakan untuk mengunjungi dokumentasi, blog, serta sosial media resmi Anaconda.
 
 
 \subsection{NVIDIA® Jetson Nano™}
@@ -157,6 +190,8 @@ Perangkat ini memiliki pin \emph{input} serta \emph{output} yang berlimpah, mula
 
 ESP32 Devkit V1 merupakan salah satu \emph{development board} yang dibuat oleh DOIT untuk menjalankan modul ESP-WROOM-32 buatan Espressif. \emph{Development Board} ini berisi WiFi, Bluetooth, serta berdaya rendah hanya dengan 1 chip. Setiap pin dari ESP32 Devkit V1 dapat dilihat pada Gambar \ref{fig:Perangkat ESP32}. Flash internal modul ESP32 disusun dalam satu area flash dengan 4096 \emph{byte} pada masing-masing halaman. Alamat flash dimulai dari 0x00000.
 
+Daya untuk menjalankan ESP32 disuplai melalui konektor Micro USB Tipe B atau dapat langsung melalui pin "VIN". Perangkat dapat beroperasi pada tegangan antara 6 Volt hingga 20 Volt. Jika menggunakan daya lebih dari 12 Volt maka regulator akan menjadi panas sehingga dapat merusak perangkat.
+
 \begin{figure} [ht] \centering
     % Nama dari file gambar yang diinputkan
     \includegraphics[scale=0.39]{gambar/ESP32DevkitV1.jpg}
@@ -165,24 +200,24 @@ ESP32 Devkit V1 merupakan salah satu \emph{development board} yang dibuat oleh D
     % Label referensi dari gambar yang diinputkan
     \label{fig:Perangkat ESP32}
 \end{figure}
-
-Daya untuk menjalankan ESP32 disuplai melalui konektor Micro USB Tipe B atau dapat langsung melalui pin "VIN". Perangkat dapat beroperasi pada tegangan antara 6 Volt hingga 20 Volt. Jika menggunakan daya lebih dari 12 Volt maka regulator akan menjadi panas sehingga dapat merusak perangkat.
+\newpage
 
 \subsection{\emph{Motor Driver H-Bridge}}
+
+\begin{figure} [ht]
+    \centering
+        % Nama dari file gambar yang diinputkan
+        \includegraphics[scale=0.2]{gambar/MotorDriver.png}
+        % Keterangan gambar yang diinputkan
+        \caption{\emph{H-Bridge Motor Driver}}
+        % Label referensi dari gambar yang diinputkan
+        \label{fig:DriverMotor}
+\end{figure}
 
 \emph{H-Bridge} merupakan salah satu jenis \emph{driver motor} yang paling sering digunakan untuk mengendalikan motor listrik. Perangkat ini dapat digunakan untuk mengendalikan arah serta kecepatan putar motor. \emph{Driver Motor H-Bridge} bekerja seperti saklar pada transistor. Transistor merupakan bagian utama dari perangkat ini. \emph{Driver Motor H-Bridge} tersusun oleh sekumpulan transistor yang berfungsi sebagai pengendali motor, terutama yang memerlukan arus serta tegangan yang cukup besar \parencite{Muhammad_2018}.
 
 Penelitian ini menggunakan \emph{Motor Driver H-Bridge} dari MRI. Perangkat ini dapat digunakan untuk mengatur kecepatan dan arah putar motor \emph{brushed} dengan kapasitas maksimal 50 A pada tegangan 48 V. Driver motor ini dilengkapi dengan satu kanal PWM yang dapat digunakan untuk mengatur kecepatan putar motor dengan cara mengubah lebar pulsa yang dikirimkan ke motor. Lebar pulsa PWM dapat diatur menggunakan potensiometer maupun melalui kontrol sinyal eksternal. Perangkat ini juga memiliki kemampuan untuk mengatur arah putar motor melalui kedua pin dir. Dengan mengganti keadaan \emph{input} kontrol maka pengguna dapat mengubah arah putaran motor secara mudah. Gambar \ref*{fig:DriverMotor} merupakan perangkat yang digunakan pada penelitian ini.
 
-\begin{figure} [ht]
-\centering
-    % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=0.3]{gambar/MotorDriver.png}
-    % Keterangan gambar yang diinputkan
-    \caption{\emph{H-Bridge Motor Driver}}
-    % Label referensi dari gambar yang diinputkan
-    \label{fig:DriverMotor}
-\end{figure}
-\newpage
+
 
 \subsection{asd}

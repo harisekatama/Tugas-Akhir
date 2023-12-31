@@ -3075,15 +3075,21 @@
     <bcf:citekey order="14" intorder="1">lugaresi2019mediapipe</bcf:citekey>
     <bcf:citekey order="15" intorder="1">nurfita2018implementasi</bcf:citekey>
     <bcf:citekey order="16" intorder="1">Developers_2021</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">Söderby_Hylén_2023</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">Developer_2023</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">Muhammad_2018</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">Abrahamsen_2023</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">Systems_2023</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">Abrahamsen_2023</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">Abrahamsen_2023</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">blanchon2021mastering</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">Abrahamsen_2023</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Söderby_Hylén_2023a</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">Söderby_Hylén_2023b</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">Söderby_Hylén_2023c</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">Söderby_2023</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Söderby_Hylén_2023c</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">Söderby_2023</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">Inc_2018</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">Developer_2023</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">Muhammad_2018</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">Abrahamsen_2023</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">Systems_2023</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">Abrahamsen_2023</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">Abrahamsen_2023</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">blanchon2021mastering</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">Abrahamsen_2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
