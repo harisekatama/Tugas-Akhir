@@ -28,7 +28,7 @@
 \contentsline {subsection}{\numberline {2.2.7}NVIDIA® Jetson Nano™}{11}{subsection.2.2.7}%
 \contentsline {subsection}{\numberline {2.2.8}ESP32 Devkit V1}{12}{subsection.2.2.8}%
 \contentsline {subsection}{\numberline {2.2.9}\emph {Motor Driver H-Bridge}}{12}{subsection.2.2.9}%
-\contentsline {subsection}{\numberline {2.2.10}asd}{13}{subsection.2.2.10}%
+\contentsline {subsection}{\numberline {2.2.10}Kursi Roda Elektrik KY-123}{13}{subsection.2.2.10}%
 \contentsline {chapter}{\numberline {3}METODOLOGI}{15}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Deskripsi Sistem}{15}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Estimasi Pose}{16}{subsection.3.1.1}%

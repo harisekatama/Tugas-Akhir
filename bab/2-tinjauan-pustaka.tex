@@ -245,6 +245,37 @@ Daya untuk menjalankan ESP32 disuplai melalui konektor Micro USB Tipe B atau dap
 
 Penelitian ini menggunakan \emph{Motor Driver H-Bridge} dari MRI. Perangkat ini dapat digunakan untuk mengatur kecepatan dan arah putar motor \emph{brushed} dengan kapasitas maksimal 50 A pada tegangan 48 V. Driver motor ini dilengkapi dengan satu kanal PWM yang dapat digunakan untuk mengatur kecepatan putar motor dengan cara mengubah lebar pulsa yang dikirimkan ke motor. Lebar pulsa PWM dapat diatur menggunakan potensiometer maupun melalui kontrol sinyal eksternal. Perangkat ini juga memiliki kemampuan untuk mengatur arah putar motor melalui kedua pin dir. Dengan mengganti keadaan \emph{input} kontrol maka pengguna dapat mengubah arah putaran motor secara mudah. Gambar \ref{fig:DriverMotor} merupakan perangkat yang digunakan pada penelitian ini.
 
+\subsection{Kursi Roda Elektrik KY-123}
 
+\begin{figure} [ht]
+    \centering
+        % Nama dari file gambar yang diinputkan
+        \includegraphics[scale=0.72]{gambar/WheelchairMySellaKY123.png}
+        % Keterangan gambar yang diinputkan
+        \caption{Tampilan Kursi Roda Elektrik KY-123}
+        % Label referensi dari gambar yang diinputkan
+        \label{fig:KY123}
+\end{figure}
 
-\subsection{asd}
+Kursi roda elektrik sebagian besar terdiri dari rangka kursi roda, alat kontrol gerak kursi roda, motor listrik, serta unit baterai. Alat ini dapat dioperasikan dengan fleksibel, mudah, dan sederhana sehingga tidak memerlukan tenaga yang besar dari pengguna jika dibandingkan dengan kursi roda biasa. Kursi roda ini dapat dioperasikan dengan satu tangan oleh pengguna yang mengalami kelumpuhan hemiplegia. Alat ini juga dapat membantu manula yang susah dalam melakukan mobilisasi. 
+
+Perusahaan MySella telah mengembangkan beberapa model kursi roda elektrik sesuai dengan skenario dan syarat pengaplikasian yang berbeda. Gambar \ref{fig:KY123} merupakan salah satu kursi roda elektrik buatan MySella yang digunakan pada penelitian ini. Kursi roda ini sudah memenuhi persyaratan standar nasional GB 12996-2012. Berikut Tabel \ref{tbl:gb12996} yang menjadi persyaratan standar nasional GB12996-2012.
+
+\begin{longtable}{|l|l|}
+    \caption{Standar Nasional GB 12996-2012}
+    \label{tbl:gb12996}\\
+    \hline
+    \multicolumn{1}{|c|}{Parameter} & Indikator Kinerja \\ \hline
+    \endfirsthead
+    %
+    \endhead
+    %
+    Kecepatan Maksimal              & $\le$ 6 Km/Jam          \\ \hline
+    Derajat Kemiringan              & 6\textdegree - 8\textdegree               \\ \hline
+    Ketinggian Penghalang           & $\le$ 40 mm             \\ \hline
+    Jarak Tempuh                    & $\le$ 20 Km             \\ \hline
+    Radius Putar Minimal            & 1.2 m             \\ \hline
+    Kemampuan Docking               & 9\textdegree                 \\ \hline
+    Lebar Parit                     & 100 mm            \\ \hline
+    Suhu Kerja Optimal              & -5\textdegree C - 40\textdegree C           \\ \hline
+\end{longtable}
