@@ -1,16 +1,16 @@
 # Fdb version 4
-["biber main"] 1704117428 "main.bcf" "main.bbl" "main" 1704119127 0
+["biber main"] 1704117428 "main.bcf" "main.bbl" "main" 1704120482 0
   "./pustaka/pustaka.bib" 1704113770 10662 489d7c2a58f1776890acb983157c1242 ""
-  "main.bcf" 1704119126 135381 1bc9814c6f26679fcedad6ff57a5c7f6 "pdflatex"
+  "main.bcf" 1704120481 135381 1bc9814c6f26679fcedad6ff57a5c7f6 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1704119117 "d:/SKRIPSI/Latex/Buku Tugas Akhir (Kursi Roda)/main.tex" "main.pdf" "main" 1704119127 0
+["pdflatex"] 1704120471 "d:/SKRIPSI/Latex/Buku Tugas Akhir (Kursi Roda)/main.tex" "main.pdf" "main" 1704120482 0
   "abstrak/abstrak-en.tex" 1701487114 729 b502e436fe536ef5f97b2311d296617d ""
   "abstrak/abstrak-id.tex" 1701487114 669 f323e81eb6d276181c9e4f3b321e286a ""
   "bab/1-pendahuluan.tex" 1701487114 4927 11814416808d9f5587b55ca2b14045f1 ""
-  "bab/2-tinjauan-pustaka.tex" 1704119116 27047 72c552c600beb9969a0239637abc7626 ""
+  "bab/2-tinjauan-pustaka.tex" 1704120470 27797 0a67135df9fc0a532caaadf6b0310591 ""
   "bab/3-desain-implementasi.tex" 1702643766 63926 15297f74c34d556bdd74e0a5e09b9917 ""
   "bab/4-pengujian-analisis.tex" 1702569690 50505 dd25df1b0c672e68ee6286a16324538b ""
   "bab/5-penutup.tex" 1702733099 3043 4836188a5d4967d9c906c25bd316c267 ""
@@ -193,6 +193,7 @@
   "d:/SKRIPSI/Latex/Buku Tugas Akhir (Kursi Roda)/main.tex" 1702624765 5913 cf942ea32ffa79df436bb7ae9478d567 ""
   "gambar/AnacondaEnvironments.png" 1704100290 614150 7cc4b5a882f241c396bcbaf006d2e270 ""
   "gambar/AnacondaNavigatorOverview.png" 1704030746 747530 0e48211e5e5367882384762971c7e0cb ""
+  "gambar/DCMotorMY1016Z.jpg" 1704119672 203928 269ccc1ea17c888cc6d6148df36927d7 ""
   "gambar/ESP32DevkitV1.jpg" 1702813129 209514 cfdc8e7250db7a444d8e797fa71a8e24 ""
   "gambar/JetsonNano.jpg" 1701487114 645428 b62f3fc0d209a883f34f1548e34d5253 ""
   "gambar/JupyterLab.png" 1704103475 158414 3e33ab6e760a931daa0969800f2248da ""
@@ -219,15 +220,15 @@
   "lainnya/lembar-pengesahan.tex" 1701487114 2623 83e45db2674f9da59e3bd30d60059c4d ""
   "lainnya/pernyataan-keaslian-en.tex" 1701487114 1718 33da5cd57ecc69c52b9f9eca149ff0f8 ""
   "lainnya/pernyataan-keaslian.tex" 1701487114 1731 cf2b9a935be90844da38a1970f6d7907 ""
-  "main.aux" 1704119126 31772 54cbfa1e458d6001348c4dc4ee2b4d3b "pdflatex"
+  "main.aux" 1704120481 32095 bebbb6496f8495331b9b959242b59ce5 "pdflatex"
   "main.bbl" 1704117432 96543 d57d7abdf45ff5040c13e15b3d09394c "biber main"
-  "main.lof" 1704119126 1794 5aed7c08814c82098f4f9171f609c32b "pdflatex"
-  "main.lol" 1704119126 1488 4ee29206d81972da777dd4c4ec146ad4 "pdflatex"
-  "main.lot" 1704119126 1750 9fdeae3eb7f30d1adb1230e537e11717 "pdflatex"
-  "main.out" 1704119126 15181 c0be467ffa3aece58213f55a80a96eb0 "pdflatex"
-  "main.run.xml" 1704119126 2432 d86e3c911a3ecb27bc3d70589f12457d "pdflatex"
+  "main.lof" 1704120481 1878 fc01146d54b6fd227e4b48c2c0b3b837 "pdflatex"
+  "main.lol" 1704120481 1488 4ee29206d81972da777dd4c4ec146ad4 "pdflatex"
+  "main.lot" 1704120481 1750 9fdeae3eb7f30d1adb1230e537e11717 "pdflatex"
+  "main.out" 1704120481 15368 9b15cd850682b445445e3f1d01d5931c "pdflatex"
+  "main.run.xml" 1704120481 2432 d86e3c911a3ecb27bc3d70589f12457d "pdflatex"
   "main.tex" 1702624765 5913 cf942ea32ffa79df436bb7ae9478d567 ""
-  "main.toc" 1704119126 6083 c400917645056e412edc332507f231b9 "pdflatex"
+  "main.toc" 1704120481 6172 21dab3fe8f1c62848ba9824e6bb0e572 "pdflatex"
   "program/arduinoLanguage.tex" 1702321453 9927 3d99fef2c9424b1400ccac2e6a4a6abc ""
   "pustaka/tanda-hubung.tex" 1704113818 467 7b745634133d177c79730eb1bffa9b54 ""
   "pustaka/variables.tex" 1701487114 1508 b04383b2e647ff5c96a6ece7c02c2413 ""
