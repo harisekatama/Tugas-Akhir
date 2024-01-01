@@ -3065,7 +3065,7 @@
     <bcf:citekey order="4" intorder="1">TIAN20201</bcf:citekey>
     <bcf:citekey order="5" intorder="1">wisaksono2023kontrol</bcf:citekey>
     <bcf:citekey order="6" intorder="1">wicaksono2023rancang</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">prasetyowheelchair</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">prasetyo2023wheelchair</bcf:citekey>
     <bcf:citekey order="8" intorder="1">junior2019prototipe</bcf:citekey>
     <bcf:citekey order="9" intorder="1">10280784</bcf:citekey>
     <bcf:citekey order="10" intorder="1">8308186</bcf:citekey>
@@ -3082,14 +3082,18 @@
     <bcf:citekey order="21" intorder="1">Söderby_Hylén_2023c</bcf:citekey>
     <bcf:citekey order="22" intorder="1">Söderby_2023</bcf:citekey>
     <bcf:citekey order="23" intorder="1">Inc_2018</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">Developer_2023</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">Muhammad_2018</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">Abrahamsen_2023</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">Systems_2023</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">Abrahamsen_2023</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">Abrahamsen_2023</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">blanchon2021mastering</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">Abrahamsen_2023</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">Jupyter_2023</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">Team_2015</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">Jupyter_2023b</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">Developer_2023</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">SmartArduino_2022</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">Muhammad_2018</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">Abrahamsen_2023</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">Systems_2023</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">Abrahamsen_2023</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">Abrahamsen_2023</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">blanchon2021mastering</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">Abrahamsen_2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

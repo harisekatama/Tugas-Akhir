@@ -20,7 +20,7 @@ Pada penelitian ini didapatkan kesimpulan bahwa kursi roda konvensional yang dij
 
 \subsection{\emph{Wheelchair Control Using Bluetooth-Based Electromyography Signals}}
 
-Telah dilakukan penelitian yang berjudul \emph{"Wheelchair Control Using Bluetooth-Based Electromyography Signals"} oleh Yoga Eko Prasetyo dari Program Studi Teknik Elektro dan Hindarto Hindarto dari Program Studi Informatika Universitas Muhammadiyah Sidoarjo \parencite{prasetyowheelchair}.
+Telah dilakukan penelitian yang berjudul \emph{"Wheelchair Control Using Bluetooth-Based Electromyography Signals"} oleh Yoga Eko Prasetyo dari Program Studi Teknik Elektro dan Hindarto Hindarto dari Program Studi Informatika Universitas Muhammadiyah Sidoarjo \parencite{prasetyo2023wheelchair}.
 
 Pada penelitian ini didapatkan kesimpulan bahwa durasi tunggu dari bluetooth master dengan bluetooth slave sebesar 4 detik hingga 5 detik. Pengujian sensor elektromiografi dapat berjalan dengan normal dan menghasilkan nilai yang berbeda ketika otot berkontraksi maupun relaksasi. 
 
@@ -181,6 +181,24 @@ Tampilan utama pada Anaconda Navigator dapat dilihat pada Gambar \ref{fig:Tampil
 
 Tampilan halaman \emph{environments} pada Anaconda Navigator dapat dilihat pada Gambar \ref{fig:Tampilan Anaconda Environments}. Halaman \emph{environments} memungkinkan pengguna untuk mengelola \emph{environment}, \emph{package}, dan \emph{channel}. Pada kolom kiri terdapat daftar dari \emph{environment} yang dibuat oleh pengguna. Dengan menggunakan Navigator maka pengguna dapat membuat, mengekspor, membuat daftar, menghapus, dan memperbaharui \emph{environments} dengan versi Python serta \emph{packages} yang berbeda. Pada kolom kanan terdapat daftar dari \emph{packages} yang terinstal maupun yang dapat diinstal. Tampilan \emph{default}nya adalah \emph{packages} yang terinstal. Untuk melihat daftar \emph{packages} lainnya pengguna dapat memilih daftar \emph{Installed, Not Installed, Updatable, Selected,} serta \emph{All Packages}. \emph{Channels} merupakan tempat dimana Navigator maupun conda mencari \emph{packages}.
 
+\subsection{JupyterLab}
+
+JupyterLab merupakan \emph{environment} pengembangan yang dirancang untuk analisis data, komputasi ilmiah, hingga pengembangan proyek menggunakan Python maupun R. JupyterLab masih menjadi bagian dari Proyek Jupyter yang terpusat dengan tujuan untuk menyediakan layanan komputasi interaktif dengan \emph{notebooks} yang terkomputasi \parencite{Jupyter_2023}. 
+
+\emph{Computational Notebook} atau \emph{notebook} yang terkomputasi merupakan suatu dokumen yang dapat dibagikan kepada pengguna lain yang menggabungkan kode komputer, deskripsi kode, data, visualisasi data seperti 3D Model, grafik, diagram, gambar, hingga kontrol yang interaktif \parencite{Team_2015}. Suatu \emph{notebook}, bersamaan dengan editor seperti JupyterLab, menyediakan \emph{environment} interaktif untuk mengembangkan prototipe, menjelaskan kode, mengeksplorasi serta memvisualisasi data. 
+
+\newpage
+\begin{figure} [ht] \centering
+    % Nama dari file gambar yang diinputkan
+    \includegraphics[scale=0.35]{gambar/JupyterLab.png}
+    % Keterangan gambar yang diinputkan
+    \caption{Tampilan Halaman pada JupyterLab}
+    % Label referensi dari gambar yang diinputkan
+    \label{fig:JupyterLab}
+\end{figure}
+
+Gambar \ref{fig:JupyterLab} merupakan tampilan utama dari JupyterLab. JupyterLab akan berjalan pada browser pengguna karena sifatnya yang \emph{web-based} \parencite{Jupyter_2023b}. JupyterLab memungkinkan pengguna untuk bekerja dengan dokumen pada Jupyter Notebook, editor teks, terminal, serta komponen kustom secara fleksibel, terintegrasi dan dapat diperluas. Pengguna dapat mengatur beberapa dokumen dan aktivitas secara berdampingan pada area kerja menggunakan tab dan pemisah. Dokumen serta aktivitas akan terintegrasi antara satu dengan yang lainnya sehingga memungkinkan untuk melakukan alur kerja baru dengan komputasi yang interaktif.
+
 \subsection{NVIDIA® Jetson Nano™}
 
 \begin{figure} [ht] \centering
@@ -198,10 +216,6 @@ Perangkat ini memiliki pin \emph{input} serta \emph{output} yang berlimpah, mula
 
 \subsection{ESP32 Devkit V1}
 
-ESP32 Devkit V1 merupakan salah satu \emph{development board} yang dibuat oleh DOIT untuk menjalankan modul ESP-WROOM-32 buatan Espressif. \emph{Development Board} ini berisi WiFi, Bluetooth, serta berdaya rendah hanya dengan 1 chip. Setiap pin dari ESP32 Devkit V1 dapat dilihat pada Gambar \ref{fig:Perangkat ESP32}. Flash internal modul ESP32 disusun dalam satu area flash dengan 4096 \emph{byte} pada masing-masing halaman. Alamat flash dimulai dari 0x00000.
-
-Daya untuk menjalankan ESP32 disuplai melalui konektor Micro USB Tipe B atau dapat langsung melalui pin "VIN". Perangkat dapat beroperasi pada tegangan antara 6 Volt hingga 20 Volt. Jika menggunakan daya lebih dari 12 Volt maka regulator akan menjadi panas sehingga dapat merusak perangkat.
-
 \begin{figure} [ht] \centering
     % Nama dari file gambar yang diinputkan
     \includegraphics[scale=0.39]{gambar/ESP32DevkitV1.jpg}
@@ -210,9 +224,14 @@ Daya untuk menjalankan ESP32 disuplai melalui konektor Micro USB Tipe B atau dap
     % Label referensi dari gambar yang diinputkan
     \label{fig:Perangkat ESP32}
 \end{figure}
-\newpage
+
+ESP32 Devkit V1 merupakan salah satu \emph{development board} yang dibuat oleh DOIT untuk menjalankan modul ESP-WROOM-32 buatan Espressif \parencite{SmartArduino_2022}. \emph{Development Board} ini berisi WiFi, Bluetooth, serta berdaya rendah hanya dengan 1 chip. Setiap pin dari ESP32 Devkit V1 dapat dilihat pada Gambar \ref{fig:Perangkat ESP32}. Flash internal modul ESP32 disusun dalam satu area flash dengan 4096 \emph{byte} pada masing-masing halaman. Alamat flash dimulai dari 0x00000.
+
+Daya untuk menjalankan ESP32 disuplai melalui konektor Micro USB Tipe B atau dapat langsung melalui pin "VIN". Perangkat dapat beroperasi pada tegangan antara 6 Volt hingga 20 Volt. Jika menggunakan daya lebih dari 12 Volt maka regulator akan menjadi panas sehingga dapat merusak perangkat.
 
 \subsection{\emph{Motor Driver H-Bridge}}
+
+\emph{H-Bridge} merupakan salah satu jenis \emph{driver motor} yang paling sering digunakan untuk mengendalikan motor listrik. Perangkat ini dapat digunakan untuk mengendalikan arah serta kecepatan putar motor. \emph{Driver Motor H-Bridge} bekerja seperti saklar pada transistor. Transistor merupakan bagian utama dari perangkat ini. \emph{Driver Motor H-Bridge} tersusun oleh sekumpulan transistor yang berfungsi sebagai pengendali motor, terutama yang memerlukan arus serta tegangan yang cukup besar \parencite{Muhammad_2018}.
 
 \begin{figure} [ht]
     \centering
@@ -224,9 +243,7 @@ Daya untuk menjalankan ESP32 disuplai melalui konektor Micro USB Tipe B atau dap
         \label{fig:DriverMotor}
 \end{figure}
 
-\emph{H-Bridge} merupakan salah satu jenis \emph{driver motor} yang paling sering digunakan untuk mengendalikan motor listrik. Perangkat ini dapat digunakan untuk mengendalikan arah serta kecepatan putar motor. \emph{Driver Motor H-Bridge} bekerja seperti saklar pada transistor. Transistor merupakan bagian utama dari perangkat ini. \emph{Driver Motor H-Bridge} tersusun oleh sekumpulan transistor yang berfungsi sebagai pengendali motor, terutama yang memerlukan arus serta tegangan yang cukup besar \parencite{Muhammad_2018}.
-
-Penelitian ini menggunakan \emph{Motor Driver H-Bridge} dari MRI. Perangkat ini dapat digunakan untuk mengatur kecepatan dan arah putar motor \emph{brushed} dengan kapasitas maksimal 50 A pada tegangan 48 V. Driver motor ini dilengkapi dengan satu kanal PWM yang dapat digunakan untuk mengatur kecepatan putar motor dengan cara mengubah lebar pulsa yang dikirimkan ke motor. Lebar pulsa PWM dapat diatur menggunakan potensiometer maupun melalui kontrol sinyal eksternal. Perangkat ini juga memiliki kemampuan untuk mengatur arah putar motor melalui kedua pin dir. Dengan mengganti keadaan \emph{input} kontrol maka pengguna dapat mengubah arah putaran motor secara mudah. Gambar \ref*{fig:DriverMotor} merupakan perangkat yang digunakan pada penelitian ini.
+Penelitian ini menggunakan \emph{Motor Driver H-Bridge} dari MRI. Perangkat ini dapat digunakan untuk mengatur kecepatan dan arah putar motor \emph{brushed} dengan kapasitas maksimal 50 A pada tegangan 48 V. Driver motor ini dilengkapi dengan satu kanal PWM yang dapat digunakan untuk mengatur kecepatan putar motor dengan cara mengubah lebar pulsa yang dikirimkan ke motor. Lebar pulsa PWM dapat diatur menggunakan potensiometer maupun melalui kontrol sinyal eksternal. Perangkat ini juga memiliki kemampuan untuk mengatur arah putar motor melalui kedua pin dir. Dengan mengganti keadaan \emph{input} kontrol maka pengguna dapat mengubah arah putaran motor secara mudah. Gambar \ref{fig:DriverMotor} merupakan perangkat yang digunakan pada penelitian ini.
 
 
 

@@ -492,6 +492,11 @@ INPUT ./gambar/AnacondaEnvironments.png
 INPUT ./gambar/AnacondaEnvironments.png
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/txfonts/tcxb.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtcxb.tfm
+INPUT ./gambar/JupyterLab.png
+INPUT ./gambar/JupyterLab.png
+INPUT ./gambar/JupyterLab.png
+INPUT ./gambar/JupyterLab.png
+INPUT ./gambar/JupyterLab.png
 INPUT ./gambar/JetsonNano.jpg
 INPUT ./gambar/JetsonNano.jpg
 INPUT ./gambar/JetsonNano.jpg

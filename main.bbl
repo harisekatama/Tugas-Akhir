@@ -448,6 +448,74 @@
       \field{pages}{62\bibrangedash 68}
       \range{pages}{7}
     \endentry
+    \entry{Jupyter_2023b}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=04455645f6d0f265d82db1f3f715e4eb}{%
+           family={Jupyter},
+           familyi={J\bibinitperiod},
+           given={Project},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{fullhash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{bibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{authorbibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{authornamehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{authorfullhash}{04455645f6d0f265d82db1f3f715e4eb}
+      \field{extraname}{1}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Get Started - JupyterLab 4.1.0b0 documentation}
+      \field{title}{Get Started}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://jupyterlab.readthedocs.io/en/latest/getting_started/overview.html
+      \endverb
+      \verb{url}
+      \verb https://jupyterlab.readthedocs.io/en/latest/getting_started/overview.html
+      \endverb
+    \endentry
+    \entry{Jupyter_2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=04455645f6d0f265d82db1f3f715e4eb}{%
+           family={Jupyter},
+           familyi={J\bibinitperiod},
+           given={Project},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{fullhash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{bibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{authorbibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{authornamehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{authorfullhash}{04455645f6d0f265d82db1f3f715e4eb}
+      \field{extraname}{2}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{JupyterLab Documentation - JupyterLab 4.1.0b0 documentation}
+      \field{title}{JupyterLab documentation}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://jupyterlab.readthedocs.io/en/latest/
+      \endverb
+      \verb{url}
+      \verb https://jupyterlab.readthedocs.io/en/latest/
+      \endverb
+    \endentry
     \entry{lugaresi2019mediapipe}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -631,8 +699,8 @@
       \verb https://www.alodokter.com/kelumpuhan#:~:text=Kondisi%20ini%20dapat%20disebabkan%20oleh,Penanganan%20kelumpuhan%20tergantung%20pada%20penyebabnya.
       \endverb
     \endentry
-    \entry{prasetyowheelchair}{article}{}
-      \name{author}{2}{}{%
+    \entry{prasetyo2023wheelchair}{article}{}
+      \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=d1fa7969595eff57b2c1548617b6d65e}{%
            family={Prasetyo},
            familyi={P\bibinitperiod},
@@ -645,20 +713,71 @@
            given={Hindarto},
            giveni={H\bibinitperiod},
            givenun=0}}%
+        {{un=0,uniquepart=base,hash=769f1fda06910fd4eb6f4fd581353935}{%
+           family={Syahrorini},
+           familyi={S\bibinitperiod},
+           given={Syamsudduha},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f53f65b2a04da414a797c77aa6855d1}{%
+           family={Wisaksono},
+           familyi={W\bibinitperiod},
+           given={Arief},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{8a842d59d5ded83f8dd809870b1f49d4}
-      \strng{fullhash}{8a842d59d5ded83f8dd809870b1f49d4}
-      \strng{bibnamehash}{8a842d59d5ded83f8dd809870b1f49d4}
-      \strng{authorbibnamehash}{8a842d59d5ded83f8dd809870b1f49d4}
-      \strng{authornamehash}{8a842d59d5ded83f8dd809870b1f49d4}
-      \strng{authorfullhash}{8a842d59d5ded83f8dd809870b1f49d4}
+      \strng{namehash}{5fd4b389a71b725d2215e829b3ad2b3c}
+      \strng{fullhash}{fb904dac1e67f024e3983d27e956385b}
+      \strng{bibnamehash}{fb904dac1e67f024e3983d27e956385b}
+      \strng{authorbibnamehash}{fb904dac1e67f024e3983d27e956385b}
+      \strng{authornamehash}{5fd4b389a71b725d2215e829b3ad2b3c}
+      \strng{authorfullhash}{fb904dac1e67f024e3983d27e956385b}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Wheelchair Control Using Bluetooth-Based Electromyography Signals [Kontrol Kursi Roda Menggunakan Sinyal Elektromiografi Berbasis Bluetooth]}
+      \field{journaltitle}{Journal of Computer Networks, Architecture and High Performance Computing}
+      \field{number}{1}
+      \field{title}{Wheelchair Control Using Bluetooth-Based Electromyography Signals}
+      \field{volume}{5}
+      \field{year}{2023}
+      \field{pages}{148\bibrangedash 159}
+      \range{pages}{12}
+    \endentry
+    \entry{SmartArduino_2022}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b647a1444b367b988367599aae8e92ec}{%
+           family={SmartArduino},
+           familyi={S\bibinitperiod},
+           given={Yichone},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b647a1444b367b988367599aae8e92ec}
+      \strng{fullhash}{b647a1444b367b988367599aae8e92ec}
+      \strng{bibnamehash}{b647a1444b367b988367599aae8e92ec}
+      \strng{authorbibnamehash}{b647a1444b367b988367599aae8e92ec}
+      \strng{authornamehash}{b647a1444b367b988367599aae8e92ec}
+      \strng{authorfullhash}{b647a1444b367b988367599aae8e92ec}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GitHub}
+      \field{title}{ESP8266 ESP32}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://github.com/SmartArduino/SZDOITWiKi/wiki/ESP8266---ESP32
+      \endverb
+      \verb{url}
+      \verb https://github.com/SmartArduino/SZDOITWiKi/wiki/ESP8266---ESP32
+      \endverb
     \endentry
     \entry{Söderby_2023}{misc}{}
       \name{author}{1}{}{%
@@ -844,6 +963,38 @@
       \endverb
       \verb{url}
       \verb https://docs.espressif.com/projects/esp-idf/en/latest/esp32/esp-idf-en-master-esp32.pdf
+      \endverb
+    \endentry
+    \entry{Team_2015}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e3e351acd9b708d10348b55bd8405497}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Jupyter},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e3e351acd9b708d10348b55bd8405497}
+      \strng{fullhash}{e3e351acd9b708d10348b55bd8405497}
+      \strng{bibnamehash}{e3e351acd9b708d10348b55bd8405497}
+      \strng{authorbibnamehash}{e3e351acd9b708d10348b55bd8405497}
+      \strng{authornamehash}{e3e351acd9b708d10348b55bd8405497}
+      \strng{authorfullhash}{e3e351acd9b708d10348b55bd8405497}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Project Jupyter Documentation - Jupyter Documentation 4.1.1 alpha documentation}
+      \field{title}{Project Jupyter Documentation}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://docs.jupyter.org/en/latest/
+      \endverb
+      \verb{url}
+      \verb https://docs.jupyter.org/en/latest/
       \endverb
     \endentry
     \entry{TIAN20201}{article}{}
@@ -1410,6 +1561,74 @@
       \field{pages}{62\bibrangedash 68}
       \range{pages}{7}
     \endentry
+    \entry{Jupyter_2023b}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=04455645f6d0f265d82db1f3f715e4eb}{%
+           family={Jupyter},
+           familyi={J\bibinitperiod},
+           given={Project},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{fullhash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{bibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{authorbibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{authornamehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{authorfullhash}{04455645f6d0f265d82db1f3f715e4eb}
+      \field{extraname}{1}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Get Started - JupyterLab 4.1.0b0 documentation}
+      \field{title}{Get Started}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://jupyterlab.readthedocs.io/en/latest/getting_started/overview.html
+      \endverb
+      \verb{url}
+      \verb https://jupyterlab.readthedocs.io/en/latest/getting_started/overview.html
+      \endverb
+    \endentry
+    \entry{Jupyter_2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=04455645f6d0f265d82db1f3f715e4eb}{%
+           family={Jupyter},
+           familyi={J\bibinitperiod},
+           given={Project},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{fullhash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{bibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{authorbibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{authornamehash}{04455645f6d0f265d82db1f3f715e4eb}
+      \strng{authorfullhash}{04455645f6d0f265d82db1f3f715e4eb}
+      \field{extraname}{2}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{JupyterLab Documentation - JupyterLab 4.1.0b0 documentation}
+      \field{title}{JupyterLab documentation}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://jupyterlab.readthedocs.io/en/latest/
+      \endverb
+      \verb{url}
+      \verb https://jupyterlab.readthedocs.io/en/latest/
+      \endverb
+    \endentry
     \entry{lugaresi2019mediapipe}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -1593,8 +1812,8 @@
       \verb https://www.alodokter.com/kelumpuhan#:~:text=Kondisi%20ini%20dapat%20disebabkan%20oleh,Penanganan%20kelumpuhan%20tergantung%20pada%20penyebabnya.
       \endverb
     \endentry
-    \entry{prasetyowheelchair}{article}{}
-      \name{author}{2}{}{%
+    \entry{prasetyo2023wheelchair}{article}{}
+      \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=d1fa7969595eff57b2c1548617b6d65e}{%
            family={Prasetyo},
            familyi={P\bibinitperiod},
@@ -1607,20 +1826,71 @@
            given={Hindarto},
            giveni={H\bibinitperiod},
            givenun=0}}%
+        {{un=0,uniquepart=base,hash=769f1fda06910fd4eb6f4fd581353935}{%
+           family={Syahrorini},
+           familyi={S\bibinitperiod},
+           given={Syamsudduha},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f53f65b2a04da414a797c77aa6855d1}{%
+           family={Wisaksono},
+           familyi={W\bibinitperiod},
+           given={Arief},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{8a842d59d5ded83f8dd809870b1f49d4}
-      \strng{fullhash}{8a842d59d5ded83f8dd809870b1f49d4}
-      \strng{bibnamehash}{8a842d59d5ded83f8dd809870b1f49d4}
-      \strng{authorbibnamehash}{8a842d59d5ded83f8dd809870b1f49d4}
-      \strng{authornamehash}{8a842d59d5ded83f8dd809870b1f49d4}
-      \strng{authorfullhash}{8a842d59d5ded83f8dd809870b1f49d4}
+      \strng{namehash}{5fd4b389a71b725d2215e829b3ad2b3c}
+      \strng{fullhash}{fb904dac1e67f024e3983d27e956385b}
+      \strng{bibnamehash}{fb904dac1e67f024e3983d27e956385b}
+      \strng{authorbibnamehash}{fb904dac1e67f024e3983d27e956385b}
+      \strng{authornamehash}{5fd4b389a71b725d2215e829b3ad2b3c}
+      \strng{authorfullhash}{fb904dac1e67f024e3983d27e956385b}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Wheelchair Control Using Bluetooth-Based Electromyography Signals [Kontrol Kursi Roda Menggunakan Sinyal Elektromiografi Berbasis Bluetooth]}
+      \field{journaltitle}{Journal of Computer Networks, Architecture and High Performance Computing}
+      \field{number}{1}
+      \field{title}{Wheelchair Control Using Bluetooth-Based Electromyography Signals}
+      \field{volume}{5}
+      \field{year}{2023}
+      \field{pages}{148\bibrangedash 159}
+      \range{pages}{12}
+    \endentry
+    \entry{SmartArduino_2022}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b647a1444b367b988367599aae8e92ec}{%
+           family={SmartArduino},
+           familyi={S\bibinitperiod},
+           given={Yichone},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b647a1444b367b988367599aae8e92ec}
+      \strng{fullhash}{b647a1444b367b988367599aae8e92ec}
+      \strng{bibnamehash}{b647a1444b367b988367599aae8e92ec}
+      \strng{authorbibnamehash}{b647a1444b367b988367599aae8e92ec}
+      \strng{authornamehash}{b647a1444b367b988367599aae8e92ec}
+      \strng{authorfullhash}{b647a1444b367b988367599aae8e92ec}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GitHub}
+      \field{title}{ESP8266 ESP32}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://github.com/SmartArduino/SZDOITWiKi/wiki/ESP8266---ESP32
+      \endverb
+      \verb{url}
+      \verb https://github.com/SmartArduino/SZDOITWiKi/wiki/ESP8266---ESP32
+      \endverb
     \endentry
     \entry{Söderby_2023}{misc}{}
       \name{author}{1}{}{%
@@ -1806,6 +2076,38 @@
       \endverb
       \verb{url}
       \verb https://docs.espressif.com/projects/esp-idf/en/latest/esp32/esp-idf-en-master-esp32.pdf
+      \endverb
+    \endentry
+    \entry{Team_2015}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e3e351acd9b708d10348b55bd8405497}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Jupyter},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e3e351acd9b708d10348b55bd8405497}
+      \strng{fullhash}{e3e351acd9b708d10348b55bd8405497}
+      \strng{bibnamehash}{e3e351acd9b708d10348b55bd8405497}
+      \strng{authorbibnamehash}{e3e351acd9b708d10348b55bd8405497}
+      \strng{authornamehash}{e3e351acd9b708d10348b55bd8405497}
+      \strng{authorfullhash}{e3e351acd9b708d10348b55bd8405497}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Project Jupyter Documentation - Jupyter Documentation 4.1.1 alpha documentation}
+      \field{title}{Project Jupyter Documentation}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://docs.jupyter.org/en/latest/
+      \endverb
+      \verb{url}
+      \verb https://docs.jupyter.org/en/latest/
       \endverb
     \endentry
     \entry{TIAN20201}{article}{}
