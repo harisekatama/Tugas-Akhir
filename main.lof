@@ -8,9 +8,10 @@
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Logo TensorFlow}}{7}{figure.2.6}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Tampilan Arduino IDE 2}}{8}{figure.2.7}%
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Tampilan Anaconda Navigator}}{9}{figure.2.8}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Perangkat Jetson Nano}}{10}{figure.2.9}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Perangkat ESP32 Devkit V1}}{11}{figure.2.10}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces \emph {H-Bridge Motor Driver}}}{11}{figure.2.11}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Tampilan Halaman \emph {Environments} pada Anaconda Navigator}}{10}{figure.2.9}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Perangkat Jetson Nano}}{11}{figure.2.10}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Perangkat ESP32 Devkit V1}}{11}{figure.2.11}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces \emph {H-Bridge Motor Driver}}}{12}{figure.2.12}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Blok Diagram Penelitian}}{13}{figure.3.1}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Contoh citra yang telah diestimasi pose}}{15}{figure.3.2}%

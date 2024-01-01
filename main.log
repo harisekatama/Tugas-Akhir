@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.2)  31 DEC 2023 21:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.2)  1 JAN 2024 16:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1058,7 +1058,7 @@ l.30
 
 
 ]
-<gambar/arsitekturcnn.png, id=569, 3517.14pt x 1261.71375pt>
+<gambar/arsitekturcnn.png, id=571, 3517.14pt x 1261.71375pt>
 File: gambar/arsitekturcnn.png Graphic file (type png)
 <use gambar/arsitekturcnn.png>
 Package pdftex.def Info: gambar/arsitekturcnn.png  used on input line 50.
@@ -1072,12 +1072,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has b
                    \relax 
 l.66 
       [4]
-<gambar/aktivasiReLU.png, id=583, 251.94125pt x 98.3675pt>
+<gambar/aktivasiReLU.png, id=585, 251.94125pt x 98.3675pt>
 File: gambar/aktivasiReLU.png Graphic file (type png)
 <use gambar/aktivasiReLU.png>
 Package pdftex.def Info: gambar/aktivasiReLU.png  used on input line 70.
 (pdftex.def)             Requested size: 251.94063pt x 98.36723pt.
-<gambar/maxPooling.png, id=586, 164.25pt x 68.547pt>
+<gambar/maxPooling.png, id=588, 164.25pt x 68.547pt>
 File: gambar/maxPooling.png Graphic file (type png)
 <use gambar/maxPooling.png>
 Package pdftex.def Info: gambar/maxPooling.png  used on input line 82.
@@ -1103,12 +1103,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) h
                                                   \__shipout_drop_firstpage_...
 l.90 
       <./gambar/arsitekturcnn.png> <./gambar/aktivasiReLU.png> <./gambar/maxPooling.png>]
-<gambar/flattening.png, id=595, 420.57124pt x 256.96pt>
+<gambar/flattening.png, id=597, 420.57124pt x 256.96pt>
 File: gambar/flattening.png Graphic file (type png)
 <use gambar/flattening.png>
 Package pdftex.def Info: gambar/flattening.png  used on input line 94.
 (pdftex.def)             Requested size: 252.3447pt x 154.17719pt.
-<gambar/handLandmark.png, id=598, 1077.02374pt x 373.395pt>
+<gambar/handLandmark.png, id=600, 1077.02374pt x 373.395pt>
 File: gambar/handLandmark.png Graphic file (type png)
 <use gambar/handLandmark.png>
 Package pdftex.def Info: gambar/handLandmark.png  used on input line 113.
@@ -1124,7 +1124,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4}) h
                                                   \__shipout_drop_firstpage_...
 l.119 \newpage
                <./gambar/flattening.png>]
-<gambar/TensorflowLogo.png, id=604, 687.90334pt x 230.8625pt>
+<gambar/TensorflowLogo.png, id=606, 687.90334pt x 230.8625pt>
 File: gambar/TensorflowLogo.png Graphic file (type png)
 <use gambar/TensorflowLogo.png>
 Package pdftex.def Info: gambar/TensorflowLogo.png  used on input line 125.
@@ -1145,7 +1145,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6}) h
                                                   \__shipout_drop_firstpage_...
 l.140 
        <./gambar/handLandmark.png> <./gambar/TensorflowLogo.png>]
-<gambar/arduinoIDEoverview.png, id=615, 1927.2pt x 1084.05pt>
+<gambar/arduinoIDEoverview.png, id=617, 1927.2pt x 1084.05pt>
 File: gambar/arduinoIDEoverview.png Graphic file (type png)
 <use gambar/arduinoIDEoverview.png>
 Package pdftex.def Info: gambar/arduinoIDEoverview.png  used on input line 143.
@@ -1163,71 +1163,82 @@ l.156 \emph{Serial Monitor}
                             merupakan alat yang memungkinkan pengguna untuk ... <./gambar/arduinoIDEoverview.png>]
 LaTeX Font Info:    Font shape `TS1/txr/b/n' in size <14.4> not available
 (Font)              Font shape `TS1/txr/bx/n' tried instead on input line 158.
-<gambar/AnacondaNavigatorOverview.png, id=634, 1736.4875pt x 1085.05376pt>
+<gambar/AnacondaNavigatorOverview.png, id=636, 1736.4875pt x 1085.05376pt>
 File: gambar/AnacondaNavigatorOverview.png Graphic file (type png)
 <use gambar/AnacondaNavigatorOverview.png>
 Package pdftex.def Info: gambar/AnacondaNavigatorOverview.png  used on input line 164.
 (pdftex.def)             Requested size: 454.94716pt x 284.27623pt.
-<gambar/JetsonNano.jpg, id=636, 903.375pt x 737.00343pt>
-File: gambar/JetsonNano.jpg Graphic file (type jpg)
-<use gambar/JetsonNano.jpg>
-Package pdftex.def Info: gambar/JetsonNano.jpg  used on input line 178.
-(pdftex.def)             Requested size: 225.8432pt x 184.2504pt.
+<gambar/AnacondaEnvironments.png, id=638, 1736.4875pt x 1084.05pt>
+File: gambar/AnacondaEnvironments.png Graphic file (type png)
+<use gambar/AnacondaEnvironments.png>
+Package pdftex.def Info: gambar/AnacondaEnvironments.png  used on input line 175.
+(pdftex.def)             Requested size: 454.94716pt x 284.01326pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.183 \end{figure}
-                   [9
+l.183 
+       [9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.183 \end{figure}
-                   <./gambar/AnacondaNavigatorOverview.png>]
-<gambar/ESP32DevkitV1.jpg, id=645, 1156.32pt x 566.115pt>
-File: gambar/ESP32DevkitV1.jpg Graphic file (type jpg)
-<use gambar/ESP32DevkitV1.jpg>
-Package pdftex.def Info: gambar/ESP32DevkitV1.jpg  used on input line 197.
-(pdftex.def)             Requested size: 450.96298pt x 220.78395pt.
+l.183 
+       <./gambar/AnacondaNavigatorOverview.png>]
+<gambar/JetsonNano.jpg, id=646, 903.375pt x 737.00343pt>
+File: gambar/JetsonNano.jpg Graphic file (type jpg)
+<use gambar/JetsonNano.jpg>
+Package pdftex.def Info: gambar/JetsonNano.jpg  used on input line 188.
+(pdftex.def)             Requested size: 225.8432pt x 184.2504pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.203 \newpage
-               [10
+l.202 
+       [10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.203 \newpage
-               <./gambar/JetsonNano.jpg>]
-<gambar/MotorDriver.png, id=650, 903.375pt x 903.375pt>
-File: gambar/MotorDriver.png Graphic file (type png)
-<use gambar/MotorDriver.png>
-Package pdftex.def Info: gambar/MotorDriver.png  used on input line 210.
-(pdftex.def)             Requested size: 180.6718pt x 180.6718pt.
+l.202 
+       <./gambar/AnacondaEnvironments.png>]
+<gambar/ESP32DevkitV1.jpg, id=654, 1156.32pt x 566.115pt>
+File: gambar/ESP32DevkitV1.jpg Graphic file (type jpg)
+<use gambar/ESP32DevkitV1.jpg>
+Package pdftex.def Info: gambar/ESP32DevkitV1.jpg  used on input line 207.
+(pdftex.def)             Requested size: 450.96298pt x 220.78395pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.220 
-       [11
+l.213 \newpage
+               [11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.220 
-      
+l.213 \newpage
+              
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.220 
-       <./gambar/ESP32DevkitV1.jpg> <./gambar/MotorDriver.png>])
+l.213 \newpage
+               <./gambar/JetsonNano.jpg> <./gambar/ESP32DevkitV1.jpg>]
+<gambar/MotorDriver.png, id=658, 903.375pt x 903.375pt>
+File: gambar/MotorDriver.png Graphic file (type png)
+<use gambar/MotorDriver.png>
+Package pdftex.def Info: gambar/MotorDriver.png  used on input line 220.
+(pdftex.def)             Requested size: 180.6718pt x 180.6718pt.
+)
 pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.222 \cleardoublepage
-                       [12] (./bab/3-desain-implementasi.tex
+                       [12
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.12}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.222 \cleardoublepage
+                       <./gambar/MotorDriver.png>] (./bab/3-desain-implementasi.tex
 Chapter 3.
-<gambar/blokDiagram.png, id=660, 201.75375pt x 603.25375pt>
+<gambar/blokDiagram.png, id=665, 201.75375pt x 603.25375pt>
 File: gambar/blokDiagram.png Graphic file (type png)
 <use gambar/blokDiagram.png>
 Package pdftex.def Info: gambar/blokDiagram.png  used on input line 16.
@@ -1241,7 +1252,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) h
                                                   \__shipout_drop_firstpage_...
 l.25 
       <./gambar/blokDiagram.png>]
-<gambar/bab3/EstimasiPose.png, id=668, 484.209pt x 386.6445pt>
+<gambar/bab3/EstimasiPose.png, id=673, 484.209pt x 386.6445pt>
 File: gambar/bab3/EstimasiPose.png Graphic file (type png)
 <use gambar/bab3/EstimasiPose.png>
 Package pdftex.def Info: gambar/bab3/EstimasiPose.png  used on input line 64.
@@ -1257,27 +1268,27 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) h
                                                   \__shipout_drop_firstpage_...
 l.76 \newpage
               <./gambar/bab3/EstimasiPose.png>]
-<gambar/bab3/Kiri.png, id=680, 483.60675pt x 385.44pt>
+<gambar/bab3/Kiri.png, id=685, 483.60675pt x 385.44pt>
 File: gambar/bab3/Kiri.png Graphic file (type png)
 <use gambar/bab3/Kiri.png>
 Package pdftex.def Info: gambar/bab3/Kiri.png  used on input line 86.
 (pdftex.def)             Requested size: 159.59071pt x 127.19559pt.
-<gambar/bab3/Maju.png, id=681, 484.81125pt x 387.849pt>
+<gambar/bab3/Maju.png, id=686, 484.81125pt x 387.849pt>
 File: gambar/bab3/Maju.png Graphic file (type png)
 <use gambar/bab3/Maju.png>
 Package pdftex.def Info: gambar/bab3/Maju.png  used on input line 87.
 (pdftex.def)             Requested size: 159.9882pt x 127.99055pt.
-<gambar/bab3/Stop.png, id=682, 484.81125pt x 387.849pt>
+<gambar/bab3/Stop.png, id=687, 484.81125pt x 387.849pt>
 File: gambar/bab3/Stop.png Graphic file (type png)
 <use gambar/bab3/Stop.png>
 Package pdftex.def Info: gambar/bab3/Stop.png  used on input line 88.
 (pdftex.def)             Requested size: 159.9882pt x 127.99055pt.
-<gambar/bab3/Mundur.png, id=683, 485.4135pt x 387.849pt>
+<gambar/bab3/Mundur.png, id=688, 485.4135pt x 387.849pt>
 File: gambar/bab3/Mundur.png Graphic file (type png)
 <use gambar/bab3/Mundur.png>
 Package pdftex.def Info: gambar/bab3/Mundur.png  used on input line 89.
 (pdftex.def)             Requested size: 160.18694pt x 127.99055pt.
-<gambar/bab3/Kanan.png, id=684, 483.0045pt x 387.849pt>
+<gambar/bab3/Kanan.png, id=689, 483.0045pt x 387.849pt>
 File: gambar/bab3/Kanan.png Graphic file (type png)
 <use gambar/bab3/Kanan.png>
 Package pdftex.def Info: gambar/bab3/Kanan.png  used on input line 90.
@@ -1401,7 +1412,7 @@ Overfull \hbox (36.35515pt too wide) in paragraph at lines 244--244
  []
 
 [60] (./lainnya/biografi-penulis.tex
-<gambar/elon.jpg, id=1771, 578.16pt x 867.24pt>
+<gambar/elon.jpg, id=1776, 578.16pt x 867.24pt>
 File: gambar/elon.jpg Graphic file (type jpg)
 <use gambar/elon.jpg>
 Package pdftex.def Info: gambar/elon.jpg  used on input line 14.
@@ -1416,24 +1427,24 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 401DD2C6265D383AF5EA2E3E9F54030F;14838.
+(rerunfilecheck)             Checksum: 574A756293163E9D614A7C696804671B;14906.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24629 strings out of 474267
- 418343 string characters out of 5751465
+ 24638 strings out of 474267
+ 418655 string characters out of 5751465
  2131558 words of memory out of 5000000
- 45383 multiletter control sequences out of 15000+600000
+ 45391 multiletter control sequences out of 15000+600000
  603294 words of font info for 131 fonts, out of 8000000 for 9000
  1165 hyphenation exceptions out of 8191
  75i,14n,81p,2431b,5052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (91 pages, 9602643 bytes).
+Output written on main.pdf (91 pages, 10030302 bytes).
 PDF statistics:
- 2062 PDF objects out of 2073 (max. 8388607)
- 1882 compressed objects within 19 object streams
- 1020 named destinations out of 1200 (max. 500000)
- 610 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2068 PDF objects out of 2073 (max. 8388607)
+ 1886 compressed objects within 19 object streams
+ 1021 named destinations out of 1200 (max. 500000)
+ 615 words of extra memory for PDF output out of 10000 (max. 10000000)
 

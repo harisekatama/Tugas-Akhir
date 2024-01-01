@@ -23,10 +23,10 @@
 \contentsline {subsection}{\numberline {2.2.2}Mediapipe}{6}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}TensorFlow}{7}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}Arduino IDE}{7}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Anaconda®}{9}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.5}Anaconda® Distribution}{9}{subsection.2.2.5}%
 \contentsline {subsection}{\numberline {2.2.6}NVIDIA® Jetson Nano™}{10}{subsection.2.2.6}%
-\contentsline {subsection}{\numberline {2.2.7}ESP32 Devkit V1}{10}{subsection.2.2.7}%
-\contentsline {subsection}{\numberline {2.2.8}\emph {Motor Driver H-Bridge}}{11}{subsection.2.2.8}%
+\contentsline {subsection}{\numberline {2.2.7}ESP32 Devkit V1}{11}{subsection.2.2.7}%
+\contentsline {subsection}{\numberline {2.2.8}\emph {Motor Driver H-Bridge}}{12}{subsection.2.2.8}%
 \contentsline {subsection}{\numberline {2.2.9}asd}{12}{subsection.2.2.9}%
 \contentsline {chapter}{\numberline {3}METODOLOGI}{13}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Deskripsi Sistem}{13}{section.3.1}%
