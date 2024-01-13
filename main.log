@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.2)  13 JAN 2024 22:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.2)  13 JAN 2024 23:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1058,7 +1058,7 @@ l.30
 
 
 ]
-<gambar/arsitekturcnn.png, id=590, 3517.14pt x 1261.71375pt>
+<gambar/arsitekturcnn.png, id=591, 3517.14pt x 1261.71375pt>
 File: gambar/arsitekturcnn.png Graphic file (type png)
 <use gambar/arsitekturcnn.png>
 Package pdftex.def Info: gambar/arsitekturcnn.png  used on input line 50.
@@ -1072,12 +1072,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has b
                    \relax 
 l.66 
       [4]
-<gambar/aktivasiReLU.png, id=604, 251.94125pt x 98.3675pt>
+<gambar/aktivasiReLU.png, id=605, 251.94125pt x 98.3675pt>
 File: gambar/aktivasiReLU.png Graphic file (type png)
 <use gambar/aktivasiReLU.png>
 Package pdftex.def Info: gambar/aktivasiReLU.png  used on input line 70.
 (pdftex.def)             Requested size: 251.94063pt x 98.36723pt.
-<gambar/maxPooling.png, id=607, 164.25pt x 68.547pt>
+<gambar/maxPooling.png, id=608, 164.25pt x 68.547pt>
 File: gambar/maxPooling.png Graphic file (type png)
 <use gambar/maxPooling.png>
 Package pdftex.def Info: gambar/maxPooling.png  used on input line 82.
@@ -1103,12 +1103,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) h
                                                   \__shipout_drop_firstpage_...
 l.90 
       <./gambar/arsitekturcnn.png> <./gambar/aktivasiReLU.png> <./gambar/maxPooling.png>]
-<gambar/flattening.png, id=616, 420.57124pt x 256.96pt>
+<gambar/flattening.png, id=617, 420.57124pt x 256.96pt>
 File: gambar/flattening.png Graphic file (type png)
 <use gambar/flattening.png>
 Package pdftex.def Info: gambar/flattening.png  used on input line 94.
 (pdftex.def)             Requested size: 252.3447pt x 154.17719pt.
-<gambar/handLandmark.png, id=619, 1077.02374pt x 373.395pt>
+<gambar/handLandmark.png, id=620, 1077.02374pt x 373.395pt>
 File: gambar/handLandmark.png Graphic file (type png)
 <use gambar/handLandmark.png>
 Package pdftex.def Info: gambar/handLandmark.png  used on input line 113.
@@ -1124,7 +1124,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4}) h
                                                   \__shipout_drop_firstpage_...
 l.119 \newpage
                <./gambar/flattening.png>]
-<gambar/TensorflowLogo.png, id=625, 687.90334pt x 230.8625pt>
+<gambar/TensorflowLogo.png, id=626, 687.90334pt x 230.8625pt>
 File: gambar/TensorflowLogo.png Graphic file (type png)
 <use gambar/TensorflowLogo.png>
 Package pdftex.def Info: gambar/TensorflowLogo.png  used on input line 125.
@@ -1145,7 +1145,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6}) h
                                                   \__shipout_drop_firstpage_...
 l.140 
        <./gambar/handLandmark.png> <./gambar/TensorflowLogo.png>]
-<gambar/arduinoIDEoverview.png, id=637, 1927.2pt x 1084.05pt>
+<gambar/arduinoIDEoverview.png, id=638, 1927.2pt x 1084.05pt>
 File: gambar/arduinoIDEoverview.png Graphic file (type png)
 <use gambar/arduinoIDEoverview.png>
 Package pdftex.def Info: gambar/arduinoIDEoverview.png  used on input line 143.
@@ -1465,14 +1465,14 @@ Overfull \hbox (0.87115pt too wide) in paragraph at lines 244--244
  []
 
 [64] (./lainnya/biografi-penulis.tex
-<gambar/elon.jpg, id=1838, 578.16pt x 867.24pt>
-File: gambar/elon.jpg Graphic file (type jpg)
-<use gambar/elon.jpg>
-Package pdftex.def Info: gambar/elon.jpg  used on input line 14.
-(pdftex.def)             Requested size: 136.57462pt x 204.86006pt.
+<gambar/HarisSetiadi.jpg, id=1838, 2161.07375pt x 2881.76625pt>
+File: gambar/HarisSetiadi.jpg Graphic file (type jpg)
+<use gambar/HarisSetiadi.jpg>
+Package pdftex.def Info: gambar/HarisSetiadi.jpg  used on input line 14.
+(pdftex.def)             Requested size: 136.57462pt x 182.0887pt.
 ) [65
 
- <./gambar/elon.jpg>] [66
+ <./gambar/HarisSetiadi.jpg>] [66
 
 ] (./main.aux)
  ***********
@@ -1487,14 +1487,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  24715 strings out of 474267
- 420798 string characters out of 5751465
+ 420854 string characters out of 5751465
  2141558 words of memory out of 5000000
  45452 multiletter control sequences out of 15000+600000
  603294 words of font info for 131 fonts, out of 8000000 for 9000
  1167 hyphenation exceptions out of 8191
  75i,14n,81p,2431b,5052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (95 pages, 10521508 bytes).
+Output written on main.pdf (95 pages, 10455836 bytes).
 PDF statistics:
  2132 PDF objects out of 2487 (max. 8388607)
  1939 compressed objects within 20 object streams

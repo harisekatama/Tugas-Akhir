@@ -603,11 +603,11 @@ INPUT bab/5-penutup.tex
 INPUT ./lainnya/biografi-penulis.tex
 INPUT ./lainnya/biografi-penulis.tex
 INPUT lainnya/biografi-penulis.tex
-INPUT ./gambar/elon.jpg
-INPUT ./gambar/elon.jpg
-INPUT ./gambar/elon.jpg
-INPUT ./gambar/elon.jpg
-INPUT ./gambar/elon.jpg
+INPUT ./gambar/HarisSetiadi.jpg
+INPUT ./gambar/HarisSetiadi.jpg
+INPUT ./gambar/HarisSetiadi.jpg
+INPUT ./gambar/HarisSetiadi.jpg
+INPUT ./gambar/HarisSetiadi.jpg
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
