@@ -38,100 +38,73 @@ Pada penelitian ini didapatkan kesimpulan bahwa sistem pendeteksi pose kepada be
 
 \section{Teori/Konsep Dasar}
 
-\subsection{\emph{Convolutional Neural Network} (CNN)}
+\subsection{\emph{Pulse Width Modulation} (PWM)}
 
-\emph{Convolutional Neural Network} (CNN) telah mencapai hasil yang luar biasa selama beberapa dekade terakhir dalam berbagai bidang yang terkait dengan pengenalan pola, mulai dari pemrosesan gambar hingga pengenalan suara. Aspek paling bermanfaat dari CNN adalah mengurangi jumlah parameter dalam \emph{Artificial Neural Network}. Pencapaian ini telah membantu banyak peneliti dan pengembang dalam mengembangkan model yang lebih besar guna mengatasi tugas-tugas yang kompleks yang tidak mungkin untuk diselesaikan dengan menggunakan \emph{Artificial Neural Network} klasik. Aspek penting dari CNN adalah untuk mendapatkan fitur-fitur abstrak ketika input menyebar menuju lapisan-lapisan yang lebih dalam \parencite{8308186}.
+\emph{Pulse Width Modulation}, atau PWM, adalah teknik untuk menghasilkan sinyal analog menggunakan metode digital \parencite{Hirzel_2024}. Dalam metode ini, kontrol digital digunakan untuk menghasilkan sinyal yang beralih antara kondisi \emph{on} dan \emph{off}. Sinyal ini kemudian dapat disesuaikan untuk mensimulasikan tegangan di antara nilai VCC penuh (misalnya, 5V pada \emph{board} Arduino UNO, atau 3.3 V pada \emph{board} MKR) dan VCC rendah (0V) dengan mengatur proporsi waktu sinyal dalam kondisi \emph{on} dan \emph{off}. Durasi sinyal dalam kondisi hidup disebut sebagai lebar pulsa (\emph{pulse widht}). Untuk mendapatkan nilai analog yang bervariasi, lebar pulsa tersebut dapat diubah atau dimodulasi. Misalnya, dengan mengulangi pola \emph{on-off} dengan cepat pada sebuah LED, hasilnya akan terlihat seperti tegangan yang stabil antara 0V dan VCC yang mengatur kecerahan LED tersebut.
 
-Arsitektur pada CNN terdiri dari tiga bagian, yaitu input, \emph{feature learning}, dan \emph{classification}. \emph{Feature Learning} terdiri dari dua buah \emph{convolution layer} dan dua buah \emph{pooling layer}. Pada \emph{classification} terdiri dari dua \emph{hidden layer} dan satu \emph{output layer}. Arsitektur CNN dapat digambarkan seperti pada Gambar \ref{fig:arsitektur cnn}.
-
-% Gambar 2.1
-\begin{figure} [ht] \centering
-    % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=0.12]{gambar/arsitekturcnn.png}
-    % Keterangan gambar yang diinputkan
-    \caption{Arsitektur pada \emph{Convolutional Neural Network}}
-    % Label referensi dari gambar yang diinputkan
-    \label{fig:arsitektur cnn}
-\end{figure}
-
-Input CNN merupakan array tiga dimensi dengan ukuran seperti pada Persamaan \ref{eq:array3D}. Apabila input merupakan suatu citra maka citra tersebut harus diubah menjadi array dua dimensi. 
-
-% Persamaan 2.1
-\begin{equation}
-    \label{eq:array3D}
-    Baris * Kolom * Depth
-\end{equation}
-
-\emph{Convolution Layer} digunakan untuk menyaring (\emph{filter}) matriks dari citra \emph{input}. \emph{Zero Padd-ing} akan diperlukan untuk mempertahankan ukuran matriks dari citra \parencite{dwitama2019klasifikasi}. Ukuran kernel yang digunakan pada layer konvolusi adalah \(3 \times 3\) dan \(5 \times 5\). \emph{Output} dari lapisan konvolusi ini akan digunakan sebagai \emph{input} pada \emph{Pooling Layer} \parencite{hakim2018penerapan}. Apabila output dari \emph{Convolution Layer} bernilai negatif maka akan dilakukan perhitungan tambahan berupa aktifasi ReLU. Fungsi aktivasi ReLU akan nilai matriks yang bernilai negatif menjadi nol. Contoh penerapan dari aktivasi ReLU dapat dilihat pada Gambar \ref{fig:Aktivasi ReLU}.
-
-% Gambar 2.2
-\begin{figure} [ht] \centering
-    % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=1]{gambar/aktivasiReLU.png}
-    % Keterangan gambar yang diinputkan
-    \caption{\emph{Aktivasi ReLU}}
-    % Label referensi dari gambar yang diinputkan
-    \label{fig:Aktivasi ReLU}
-\end{figure}
-
-\emph{Pooling Layer} digunakan untuk mengurangi jumlah parameter ketika ukuran citra terlalu besar dengan cara mengurangi dimensi setiap fitur. Karena ukuran citra menjadi lebih kecil maka proses \emph{feature map} akan menjadi lebih cepat \parencite{hakim2018penerapan}. \emph{Max Pooling} dilakukan dengan cara mengambil nilai dengan elemen terbesar sesuai dengan ukuran filter. Sebagai contoh pada Gambar \ref{fig:Max Pooling} merupakan \emph{max pooling} dengan filter \(2 \times 2\) dengan \emph{stride} sebesar 2.
-
-% Gambar 2.3
-\begin{figure} [ht] \centering
-    % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=1.5]{gambar/maxPooling.png}
-    % Keterangan gambar yang diinputkan
-    \caption{\emph{Max Pooling}}
-    % Label referensi dari gambar yang diinputkan
-    \label{fig:Max Pooling}
-\end{figure}
-
-Flatten merupakan suatu proses dimana hasil dari \emph{Feature Learning} diubah menjadi vektor yang selanjutnya akan menjadi input pada proses klasifikasi dengan arsitektur \emph{fully connected layer}. Flatten digunakan untuk mengubah matriks menjadi vektor dengan menyesuaikan sesuai format \emph{input} pada \emph{neural network layer}. Flatten dapat digambarkan seperti pada Gambar \ref{fig:Proses Flattening}.
-
-% Gambar 2.4
-\begin{figure} [ht] \centering
-    % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=0.6]{gambar/flattening.png}
-    % Keterangan gambar yang diinputkan
-    \caption{Proses \emph{Flattening}}
-    % Label referensi dari gambar yang diinputkan
-    \label{fig:Proses Flattening}
-\end{figure}
-
-\subsection{Mediapipe}
-
-MediaPipe merupakan \emph{framework} untuk membangun \emph{pipelines} yang dapat digunakan dalam melakukan pengambilan kesimpulan atau prediksi atas data sensorik. Dengan MediaPipe, sebuah \emph{perception pipeline} dapat dibangun sebagai grafik dari komponen modular termasuk inferensi model, algoritma pemrosesan media, serta transformasi data \parencite{lugaresi2019mediapipe}. MediaPipe menyediakan beragam solusi dari \emph{machine learning} seperti deteksi objek, klasifikasi citra, segmentasi citra, segmentasi interaktif, pengenalan gestur, deteksi \emph{landmark} tangan, deteksi wajah, deteksi \emph{landmark} wajah, deteksi pose, klasifikasi teks, penyematan teks, deteksi bahasa hingga klasifikasi suara.
-
-Keunggulan dari menggunakan MediaPipe adalah dari fleksibilitas yang dimiliki oleh \emph{fra-mework} ini. MediaPipe telah dikembangkan menggunakan bahasa pemrograman C++ sebagai bahasa inti. Namun MediaPipe juga menyediakan berbagai ikatan bahasa pemrograman yang lain seperti Python dan Java. Hal ini membuatnya dapat digunakan pada berbagai lingkungan pengembangan. Sehingga MediaPipe dapat diintegrasikan pada berbagai projek pengembangan dengan berbagai bahasa pemrograman.
-
-Kemampuan MediaPipe yang dapat berjalan pada berbagai platform merupakan terobosan yang sangat membantu para pengembang. MediaPipe dapat berjalan pada perangkat seluler, desktop hingga lingkungan cloud. Sehingga para pengembang dapat menerapkan berbagai solusi MediaPipe pada berbagai skenario dan perangkat tanpa perlu membatasi diri pada suatu platform tertentu.
-
-Komponen-komponen untuk mengestimasi tangan manusia sudah tersedia pada MediaPipe dalam video maupun aliran gambar. MediaPipe dapat mengenali posisi dan orientasi berbagai bagian tangan manusia, baik pergelangan tangan hingga ruas-ruas setiap jari yang dapat dilihat pada Gambar \ref{fig:handLandmark}. Dengan kemampuan tersebut maka MediaPipe dapat mengidentifikasi pola-pola khusus yang berkaitan dengan aktivitas yang kompleks seperti menerjemah bahasa isyarat.
+Pada Gambar \ref{fig:PulseWidthModulation} garis hijau mewakili periode waktu yang teratur. Durasi atau periode ini adalah kebalikan dari frekuensi PWM. Dengan kata lain, dengan frekuensi PWM Arduino sekitar 500HZ maka garis hijau akan memiliki panjang 2 milidetik setiap satunya. Pemanggilan analogWrite() berkisar antara 0-255, sehingga analogWrite(255) akan meminta siklus tugas 100\%(selalu menyala) dan analogWrite(127) akan meminta siklus tugas 50\% (menyala setengah waktu).
 
 \begin{figure} [ht] \centering
     % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=0.4]{gambar/handLandmark.png}
+    \includegraphics[scale=0.8]{gambar/pwm.png}
     % Keterangan gambar yang diinputkan
-    \caption{\emph{Landmark} Tangan Manusia Pada MediaPipe}
+    \caption{\emph{Pulse Width Modulation}(PWM)}
     % Label referensi dari gambar yang diinputkan
-    \label{fig:handLandmark}
+    \label{fig:PulseWidthModulation}
 \end{figure}
+
 \newpage
 
-\subsection{TensorFlow} 
+Pada beberapa mikrokontroler, PWM hanya tersedia pada pin tertentu. Silakan pertimbangkan diagram \emph{pinout} pada \emph{board} yang akan digunakan untuk mengetahui pin mana saja yang dapat digunakan sebagai PWM. Pin yang dapat digunakan sebagai PWM biasanya dilambangkan dengan tanda tilde (\(\sim \)).
 
-\begin{figure} [ht] \centering
-    % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=0.65]{gambar/TensorflowLogo.png}
-    % Keterangan gambar yang diinputkan
-    \caption{Logo TensorFlow}
-    % Label referensi dari gambar yang diinputkan
-    \label{fig:TensorflowLogo}
-\end{figure}
+\subsection{JSON}
 
-TensorFlow merupakan platform \emph{open source} untuk \emph{machine learning}. TensorFlow memiliki fitur untuk menjalankan \emph{training} model menggunakan \emph{Central Processing Unit} (CPU) dan \emph{training} model \emph{Graphic Processing Unit} (GPU) yang memiliki waktu \emph{training} yang lebih cepat dibanding \emph{training} model CPU \parencite{nurfita2018implementasi}.
+\emph{JavaScript Object Notation} (JSON) merupakan format pertukaran data yang ringan dan mudah digunakan \parencite{Data}. JSON mudah dipahami oleh manusia dan mesin. JSON didasarkan pada sebagian kecil dari Standar Bahasa Pemrograman JavaScript ECMA-262 Edisi ke-3 yang dirilis pada bulan Desember 1999. JSON menggunakan konvensi yang familiar bagi para programmer dengan berbagai latar bahasa pemrograman, termasuk C, C++, C\#, Java, JavaScript, Perl, hingga Python \parencite{Org_2017}. Karena sifatnya yang fleksibel ini membuat JSON menjadi bahasa pertukaran data yang sangat ideal.
 
-TensorFlow awalnya dikembangkan oleh para peneliti dan pengembang yang bekerja sebagai tim \emph{Machine Learning} di Google Brain untuk melakukan penelitian di bidang \emph{machine learning} dan \emph{neural network}. \emph{Framework} ini dirilis pertama kali pada bulan Februari 2017 dan terus dikembangkan hingga sekarang\parencite{Developers_2021}.
+JSON terdiri dari 2 struktur utama, yaitu \emph{key} dan \emph{value}. Sekumpulan \emph{key-value} dapat dianggap sebagai objek pada beberapa bahasa pemrograman. Selain itu JSON juga dapat terdiri dari sebuah daftar nilai yang diurutkan (\emph{ordered list of values}). Struktur ini dapat diwakili sebagai \emph{array, vector, list,} maupun \emph{sequence} pada berbagai bahasa pemrograman.
+
+\subsection{Bluetooth}
+
+Bluetooth merupakan sebuah standar terbuka untuk konektivitas nirkabel dengan dukungan tinggi dari industri komputer dan perangkat seluler \parencite{sairam2002bluetooth}. Bluetooth diciptakan pada tahun 1994 oleh L. M. Ericsson dari Swedia. 
+
+Bluetooth Classic radio, juga dikenal sebagai Bluetooth Basic Rate/Enhanced Data Rate (BR/EDR), adalah jenis radio dengan konsumsi daya rendah yang mengirimkan data melalui 79 saluran di band frekuensi 2.4 GHz yang tidak berlisensi untuk penggunaan industri, ilmiah, dan medis (ISM) \parencite{SIG_2024}. Fitur komunikasi antar-perangkat titik ke titik, Bluetooth Classic umumnya digunakan untuk mengaktifkan streaming audio nirkabel dan telah menjadi standar protokol radio untuk perangkat seperti speaker nirkabel, headphone, dan sistem hiburan di mobil. Selain itu, radio Bluetooth Classic juga memungkinkan aplikasi transfer data, termasuk pencetakan melalui perangkat seluler.
+
+Radio Bluetooth Low Energy (BLE) dirancang untuk beroperasi dengan sangat efisien dalam penggunaan daya. Dengan mentransmisikan data melalui 40 saluran di band frekuensi ISM 2.4 GHz yang tidak berlisensi, radio Bluetooth LE memberikan fleksibilitas yang besar bagi para pengembang untuk membuat produk yang sesuai dengan kebutuhan konektivitas pasar mereka. Bluetooth LE mendukung berbagai topologi komunikasi, mulai dari titik ke titik hingga siaran dan, yang terbaru, mesh, sehingga teknologi Bluetooth dapat mendukung pembuatan jaringan perangkat yang andal dan luas. Awalnya dikenal karena kemampuannya dalam komunikasi perangkat, Bluetooth LE kini juga banyak digunakan sebagai teknologi penentuan posisi perangkat untuk mengatasi permintaan yang semakin meningkat untuk layanan lokasi dalam ruangan yang akurat. Bluetooth LE sekarang dilengkapi dengan fitur yang memungkinkan satu perangkat menentukan keberadaan, jarak, dan arah perangkat lainnya. Perbandingan antara Bluetooth Low Energy dengan Bluetooth Classic dapat dilihat pada Tabel \ref{tbl:perbandinganBLEBC}
+
+\begin{longtable}{|p{1.7cm}|l|l|l|}
+    \caption{Tabel Perbandingan Bluetooth Low Energy dengan Bluetooth Classic}
+    \label{tbl:perbandinganBLEBC}\\
+    \hline
+                                                                        & Bluetooth Low Energy (BLE)                                                                                                                                                                         & Bluetooth Classic                                                                                                        \\ \hline
+    \endfirsthead
+    %
+    \endhead
+    %
+    Frequency Band                                                      & 2.4 GHz ISM Band                                                                                                                                                                                   & 2.4 GHz ISM band                                                                                                         \\ \hline
+    Channels                                                            & \begin{tabular}[c]{@{}l@{}}40 channels with 2 MHz spacing\\ (3 advertising channels/37 data channels)\end{tabular}                                                                                 & 79 channels with 1 MHz spacing                                                                                           \\ \hline
+    Channel Usage                                                       & FHSS                                                                                                                                                                                               & FHSS                                                                                                                     \\ \hline
+    Modulation                                                          & GFSK                                                                                                                                                                                               & GFSK, $\pi$/4 DQPSK, 8 DPSK                                                                                              \\ \hline
+    Data Rate                                                           & \begin{tabular}[c]{@{}l@{}}LE 2M PHY: 2 Mb/s\\ LE 1M PHY: 1 Mb/s\\ LE Coded PHY (S=2): 500 Kb/s\\ LE Coded PHY (S=8): 125 Kb/s\end{tabular}                                                        & \begin{tabular}[c]{@{}l@{}}EDR PHY (8DPSK): 3 Mb/s\\ EDR PHY ($\pi$/4 DQPSK): 2 Mb/s\\ BR PHY (GFSK): 1Mb/s\end{tabular} \\ \hline
+    Tx Power*                                                           & $\le$ 100mW (+20 dBm)                                                                                                                                                                              & $\le$ 100mW (+20 dBm)                                                                                                    \\ \hline
+    Rx Sensitivity                                                      & \begin{tabular}[c]{@{}l@{}}LE 2M PHY: $\le$ -70 dBm\\ LE 1M PHY: $\le$ -70 dBm\\ LE Coded PHY (S=2): $\le$ -75 dBm\\ LE Coded PHY (S=8): $\le$ -82 dBm\end{tabular}                                & $\le$ -70 dBm                                                                                                            \\ \hline
+    Data Transports                                                     & \begin{tabular}[c]{@{}l@{}}Asynchronous Connection-oriented\\ Isochronous Connection-oriented\\ Asynchronous Connectionless\\ Synchronous Connectionless\\ Isochronous Connectionless\end{tabular} & \begin{tabular}[c]{@{}l@{}}Asynchronous Connection-oriented\\ Synchronous Connection-oriented\end{tabular}               \\ \hline
+    \begin{tabular}[c]{@{}l@{}}Commu\\nication \\ Topologies\end{tabular} & \begin{tabular}[c]{@{}l@{}}Point-to-Point (including piconet)\\ Broadcast\\ Mesh\end{tabular}                                                                                                      & Point-to-Point (including piconet)                                                                                       \\ \hline
+    \begin{tabular}[c]{@{}l@{}}Positioning \\ Features\end{tabular}     & \begin{tabular}[c]{@{}l@{}}Presence: Advertising\\ Direction: Direction Finding(AoA/AoD)\\ Distance: RSSI, HADM(Coming)\end{tabular}                                                               & None                                                                                                                     \\ \hline
+\end{longtable}
+
+\subsection{WiFi}
+
+WiFi merupakan teknologi jaringan nirkabel yang dapat menghubungkan perangkat dengan perangkat lainnya maupun terhubung dengan internet. WiFi terstandarisasi sebagai IEEE 802.11. Keuntungan terbesar dari WiFi adalah kesederhanaannya. Komputer dapat dihubungkan tanpa kabel baik dengan internet maupun dengan perangkat lainnya. Komputer terhubung ke jaringan menggunakan sinyal radio dengan radius sejauh 100 kaki. 
+
+Radio WiFi yang bekerja pada standar 802.11b dan 802.11g mengirimkan sinyal pada frekuensi 2.4GHz, sementara WiFi dengan standar 802.11a mengirimkan sinyal pada frekuensi 5GHz. Frekuensi yang lebih tinggi akan memungkinkan pengiriman data yang lebih tinggi.
+
+Radio WiFi menggunakan teknik pengkodean yang jauh lebih efisien. Untuk standar 802.11a dan 802.11 g, teknik ini dikenal sebagai \emph{Orthogonal Frequency-Division Multiplexing}(OFDM). Sedangkan untuk standar 802.11b, teknik ini disebut \emph{Complementary Code Keying}(CCK).
+
+Kartu WiFi 802.11b memiliki kemampuan untuk mentransmisikan sinyal pada tiga frekuensi yang berbeda secara langsung. 802.11b juga dapat membagi lebar pita radio yang tersedia menjadi banyak saluran dan dengan cepat berpindah-pindah frekuensi diantara mereka. Metode ini lebih tahan terhadap gangguan dan dapat memungkinkan banyak kartu WiFi beroperasi secara bersamaan tanpa saling mengganggu.
+
+Radio WiFi dapat mengirimkan data yang besar pada setiap detiknya. Standar 802.11b dapat menangani hingga 11 Mb/detik. Sedangkan standar 802.11a dan 802.11g mampu menangani hingga 54 Mb/detik.
+
+\emph{The Instituteof Electrical and Electronics Engineers} (IEEE) telah membuat standar penamaan dan penomoran yang unik pada teknologi WiFi. Standar 802.11 berkaitan erat dengan jaringan nirkabel. Notasi a, b, dan g mengidentifikasikan variasi yang berbeda dari standar 802.11. 
 
 \subsection{Arduino IDE}
 
@@ -154,50 +127,6 @@ Gambar \ref{fig:ArduinoIDEOverview} merupakan tampilan dari Arduino IDE. Arduino
 Dengan menggunakan \emph{Library Manager}, pengguna dapat menemukan dan menginstal ribuan \emph{library} yang dapat membantu dalam mengembangkan proyek menggunakan . \emph{Library} merupakan \emph{extension} dari Arduino API yang dapat memudahkan pengembang. Sebagai contoh, para pengembang dapat mengontrol motor servo, membaca sensor tertentu, hingga menggunakan modul WiFi hanya dengan memanggil fungsi yang terdapat pada \emph{library} \parencite{Söderby_Hylén_2023c}.
 
 \emph{Serial Monitor} merupakan alat yang memungkinkan pengguna untuk melihat \emph{streaming} data pada \emph{Board} Arduino yang terhubung. Pada Arduino versi 1, \emph{tool} ini ditempatkan pada jendela yang terpisah, namun untuk memudahkan pengguna maka \emph{tool} ini kini terintegrasi dengan editor \parencite{Söderby_2023}. 
-
-\subsection{Anaconda® Distribution}
-
-Anaconda® merupakan distribusi Python yang berisi conda yang merupakan manajer paket dan lingkungan pengembangan dengan menggunakan CLI (\emph{Command Line Interface}), Anaconda Navigator yang merupakan aplikasi desktop yang dibangun diatas conda, hingga akses ke Anaconda \emph{Public Repository} \parencite{Inc_2018}.
-
-\begin{figure} [ht] \centering
-    % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=0.262]{gambar/AnacondaNavigatorOverview.png}
-    % Keterangan gambar yang diinputkan
-    \caption{Tampilan Anaconda Navigator}
-    % Label referensi dari gambar yang diinputkan
-    \label{fig:Tampilan Anaconda Navigator}
-\end{figure}
-
-Tampilan utama pada Anaconda Navigator dapat dilihat pada Gambar \ref{fig:Tampilan Anaconda Navigator}. \emph{Navigator Pages} yang ditandai dengan nomor 1 digunakan untuk mengakses halaman utama. Halaman utama akan secara otomatis terbuka ketika pertama kali membuka aplikasi Anaconda Navigator. \emph{Application/Package Tile} ditandai dengan nomor 2 yang digunakan untuk menginstal atau menjalankan aplikasi Python yang dapat berjalan didalam lingkungan Anaconda. \emph{Channels} ditandai dengan nomor 3 digunakan untuk mencari dan menginstal paket. \emph{Connect} yang ditandai dengan nomor 4 digunakan untuk menghubungkan Anaconda Navigator dengan Anaconda Cloud. Masuk ke layanan repositori akan memungkinkan pencarian paket dalam repositori itu. \emph{Outside Links} yang ditandai dengan nomor 5 digunakan untuk mengunjungi dokumentasi, blog, serta sosial media resmi Anaconda.
-
-\begin{figure} [ht] \centering
-    % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=0.262]{gambar/AnacondaEnvironments.png}
-    % Keterangan gambar yang diinputkan
-    \caption{Tampilan Halaman \emph{Environments} pada Anaconda Navigator}
-    % Label referensi dari gambar yang diinputkan
-    \label{fig:Tampilan Anaconda Environments}
-\end{figure}
-
-Tampilan halaman \emph{environments} pada Anaconda Navigator dapat dilihat pada Gambar \ref{fig:Tampilan Anaconda Environments}. Halaman \emph{environments} memungkinkan pengguna untuk mengelola \emph{environment}, \emph{package}, dan \emph{channel}. Pada kolom kiri terdapat daftar dari \emph{environment} yang dibuat oleh pengguna. Dengan menggunakan Navigator maka pengguna dapat membuat, mengekspor, membuat daftar, menghapus, dan memperbaharui \emph{environments} dengan versi Python serta \emph{packages} yang berbeda. Pada kolom kanan terdapat daftar dari \emph{packages} yang terinstal maupun yang dapat diinstal. Tampilan \emph{default}nya adalah \emph{packages} yang terinstal. Untuk melihat daftar \emph{packages} lainnya pengguna dapat memilih daftar \emph{Installed, Not Installed, Updatable, Selected,} serta \emph{All Packages}. \emph{Channels} merupakan tempat dimana Navigator maupun conda mencari \emph{packages}.
-
-\subsection{JupyterLab}
-
-JupyterLab merupakan \emph{environment} pengembangan yang dirancang untuk analisis data, komputasi ilmiah, hingga pengembangan proyek menggunakan Python maupun R. JupyterLab masih menjadi bagian dari Proyek Jupyter yang terpusat dengan tujuan untuk menyediakan layanan komputasi interaktif dengan \emph{notebooks} yang terkomputasi \parencite{Jupyter_2023}. 
-
-\emph{Computational Notebook} atau \emph{notebook} yang terkomputasi merupakan suatu dokumen yang dapat dibagikan kepada pengguna lain yang menggabungkan kode komputer, deskripsi kode, data, visualisasi data seperti 3D Model, grafik, diagram, gambar, hingga kontrol yang interaktif \parencite{Team_2015}. Suatu \emph{notebook}, bersamaan dengan editor seperti JupyterLab, menyediakan \emph{environment} interaktif untuk mengembangkan prototipe, menjelaskan kode, mengeksplorasi serta memvisualisasi data. 
-
-\newpage
-\begin{figure} [ht] \centering
-    % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=0.35]{gambar/JupyterLab.png}
-    % Keterangan gambar yang diinputkan
-    \caption{Tampilan Halaman pada JupyterLab}
-    % Label referensi dari gambar yang diinputkan
-    \label{fig:JupyterLab}
-\end{figure}
-
-Gambar \ref{fig:JupyterLab} merupakan tampilan utama dari JupyterLab. JupyterLab akan berjalan pada browser pengguna karena sifatnya yang \emph{web-based} \parencite{Jupyter_2023b}. JupyterLab memungkinkan pengguna untuk bekerja dengan dokumen pada Jupyter Notebook, editor teks, terminal, serta komponen kustom secara fleksibel, terintegrasi dan dapat diperluas. Pengguna dapat mengatur beberapa dokumen dan aktivitas secara berdampingan pada area kerja menggunakan tab dan pemisah. Dokumen serta aktivitas akan terintegrasi antara satu dengan yang lainnya sehingga memungkinkan untuk melakukan alur kerja baru dengan komputasi yang interaktif.
 
 \subsection{NVIDIA® Jetson Nano™}
 

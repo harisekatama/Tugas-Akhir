@@ -52,49 +52,6 @@
       \verb https://www.arduino.cc/reference/en/libraries/bluetoothserial/
       \endverb
     \endentry
-    \entry{8308186}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=a92a8d7d47ce475bde1f4d0c575e3415}{%
-           family={Albawi},
-           familyi={A\bibinitperiod},
-           given={Saad},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b0c7df6171cf87ebe4270071829a7d26}{%
-           family={Mohammed},
-           familyi={M\bibinitperiod},
-           given={Tareq\bibnamedelima Abed},
-           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c2f9de2eb7b3ac9408b9e418ef2a1e39}{%
-           family={Al-Zawi},
-           familyi={A\bibinithyphendelim Z\bibinitperiod},
-           given={Saad},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{a8f90775da450f48ca2cc0c936f55cce}
-      \strng{fullhash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
-      \strng{bibnamehash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
-      \strng{authorbibnamehash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
-      \strng{authornamehash}{a8f90775da450f48ca2cc0c936f55cce}
-      \strng{authorfullhash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{2017 International Conference on Engineering and Technology (ICET)}
-      \field{title}{Understanding of a convolutional neural network}
-      \field{year}{2017}
-      \field{pages}{1\bibrangedash 6}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1109/ICEngTechnol.2017.8308186
-      \endverb
-    \endentry
     \entry{blanchon2021mastering}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=fba67d794259a6e8c046775b644beb46}{%
@@ -209,6 +166,36 @@
       \verb https://kbbi.kemdikbud.go.id/entri/lumpuh
       \endverb
     \endentry
+    \entry{Data}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f7ff92d9412041e5d320a0a7f35dc06a}{%
+           family={Data},
+           familyi={D\bibinitperiod},
+           given={Refsnes},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f7ff92d9412041e5d320a0a7f35dc06a}
+      \strng{fullhash}{f7ff92d9412041e5d320a0a7f35dc06a}
+      \strng{bibnamehash}{f7ff92d9412041e5d320a0a7f35dc06a}
+      \strng{authorbibnamehash}{f7ff92d9412041e5d320a0a7f35dc06a}
+      \strng{authornamehash}{f7ff92d9412041e5d320a0a7f35dc06a}
+      \strng{authorfullhash}{f7ff92d9412041e5d320a0a7f35dc06a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{What is JSON}
+      \field{title}{What is JSON?}
+      \verb{urlraw}
+      \verb https://www.w3schools.com/whatis/whatis_json.asp
+      \endverb
+      \verb{url}
+      \verb https://www.w3schools.com/whatis/whatis_json.asp
+      \endverb
+    \endentry
     \entry{Developer_2023}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1ca4f9c151cdae7523e5c8879bb551a3}{%
@@ -241,68 +228,6 @@
       \verb{url}
       \verb https://developer.nvidia.com/embedded/jetson-nano-developer-kit
       \endverb
-    \endentry
-    \entry{Developers_2021}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=b7b2b331845335bdaf47d13dce7d318d}{%
-           family={Developers},
-           familyi={D\bibinitperiod},
-           given={TensorFlow},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{b7b2b331845335bdaf47d13dce7d318d}
-      \strng{fullhash}{b7b2b331845335bdaf47d13dce7d318d}
-      \strng{bibnamehash}{b7b2b331845335bdaf47d13dce7d318d}
-      \strng{authorbibnamehash}{b7b2b331845335bdaf47d13dce7d318d}
-      \strng{authornamehash}{b7b2b331845335bdaf47d13dce7d318d}
-      \strng{authorfullhash}{b7b2b331845335bdaf47d13dce7d318d}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Zenodo}
-      \field{month}{5}
-      \field{title}{Tensorflow}
-      \field{year}{2021}
-      \verb{urlraw}
-      \verb https://zenodo.org/record/4758419
-      \endverb
-      \verb{url}
-      \verb https://zenodo.org/record/4758419
-      \endverb
-    \endentry
-    \entry{dwitama2019klasifikasi}{thesis}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=d8f49cf9a63b7233c9fd242c60085ebf}{%
-           family={Dwitama},
-           familyi={D\bibinitperiod},
-           given={Aditya\bibnamedelimb Perwira\bibnamedelima Joan},
-           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim J\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{institution}{1}{%
-        {Universitas Mataram}%
-      }
-      \strng{namehash}{d8f49cf9a63b7233c9fd242c60085ebf}
-      \strng{fullhash}{d8f49cf9a63b7233c9fd242c60085ebf}
-      \strng{bibnamehash}{d8f49cf9a63b7233c9fd242c60085ebf}
-      \strng{authorbibnamehash}{d8f49cf9a63b7233c9fd242c60085ebf}
-      \strng{authornamehash}{d8f49cf9a63b7233c9fd242c60085ebf}
-      \strng{authorfullhash}{d8f49cf9a63b7233c9fd242c60085ebf}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Klasifikasi Tingkat Retakan Pada Bangunan Berbasis Citra Menggunakan Metode Convolution Neural Network}
-      \field{type}{phdthesis}
-      \field{year}{2019}
     \endentry
     \entry{10280784}{article}{}
       \name{author}{3}{}{%
@@ -347,26 +272,21 @@
       \verb 10.1109/ISSTC59603.2023.10280784
       \endverb
     \endentry
-    \entry{hakim2018penerapan}{article}{}
-      \true{moreauthor}
-      \true{morelabelname}
+    \entry{Hirzel_2024}{misc}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=d9c0fe883af5baaeed0d4e7432647b25}{%
-           family={Hakim},
+        {{un=0,uniquepart=base,hash=2f565f45e0faadc2ec7c0fbf40e550cc}{%
+           family={Hirzel},
            familyi={H\bibinitperiod},
-           given={RB\bibnamedelima Fajiya},
-           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {UNIVERSITAS ISLAM INDONESIA}%
-      }
-      \strng{namehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
-      \strng{fullhash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
-      \strng{bibnamehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
-      \strng{authorbibnamehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
-      \strng{authornamehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
-      \strng{authorfullhash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
+      \strng{namehash}{2f565f45e0faadc2ec7c0fbf40e550cc}
+      \strng{fullhash}{2f565f45e0faadc2ec7c0fbf40e550cc}
+      \strng{bibnamehash}{2f565f45e0faadc2ec7c0fbf40e550cc}
+      \strng{authorbibnamehash}{2f565f45e0faadc2ec7c0fbf40e550cc}
+      \strng{authornamehash}{2f565f45e0faadc2ec7c0fbf40e550cc}
+      \strng{authorfullhash}{2f565f45e0faadc2ec7c0fbf40e550cc}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{extradatescope}{labelyear}
@@ -374,42 +294,15 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{PENERAPAN DEEP LEARNING MENGGUNAKAN CONVOLUTIONAL NEURAL NETWORK UNTUK KLASIFIKASI CITRA WAYANG PUNAKAWAN}
-      \field{year}{2018}
-    \endentry
-    \entry{Inc_2018}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=c67bc6e7ec71f7386278bb6f311cd874}{%
-           family={Inc},
-           familyi={I\bibinitperiod},
-           given={Anaconda},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Anaconda,Inc}%
-      }
-      \strng{namehash}{c67bc6e7ec71f7386278bb6f311cd874}
-      \strng{fullhash}{c67bc6e7ec71f7386278bb6f311cd874}
-      \strng{bibnamehash}{c67bc6e7ec71f7386278bb6f311cd874}
-      \strng{authorbibnamehash}{c67bc6e7ec71f7386278bb6f311cd874}
-      \strng{authornamehash}{c67bc6e7ec71f7386278bb6f311cd874}
-      \strng{authorfullhash}{c67bc6e7ec71f7386278bb6f311cd874}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{What is Anaconda Distribution? - Anaconda documentation}
-      \field{title}{What is anaconda distribution?}
-      \field{year}{2018}
+      \field{journaltitle}{docs.arduino.cc}
+      \field{month}{1}
+      \field{title}{Basics of PWM (Pulse Width Modulation)}
+      \field{year}{2024}
       \verb{urlraw}
-      \verb https://docs.anaconda.com/free/anaconda/getting-started/what-is-distro/
+      \verb https://docs.arduino.cc/learn/microcontrollers/analog-output/
       \endverb
       \verb{url}
-      \verb https://docs.anaconda.com/free/anaconda/getting-started/what-is-distro/
+      \verb https://docs.arduino.cc/learn/microcontrollers/analog-output/
       \endverb
     \endentry
     \entry{junior2019prototipe}{article}{}
@@ -448,156 +341,6 @@
       \field{pages}{62\bibrangedash 68}
       \range{pages}{7}
     \endentry
-    \entry{Jupyter_2023b}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=04455645f6d0f265d82db1f3f715e4eb}{%
-           family={Jupyter},
-           familyi={J\bibinitperiod},
-           given={Project},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{fullhash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{bibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{authorbibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{authornamehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{authorfullhash}{04455645f6d0f265d82db1f3f715e4eb}
-      \field{extraname}{1}
-      \field{sortinit}{J}
-      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
-      \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Get Started - JupyterLab 4.1.0b0 documentation}
-      \field{title}{Get Started}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://jupyterlab.readthedocs.io/en/latest/getting_started/overview.html
-      \endverb
-      \verb{url}
-      \verb https://jupyterlab.readthedocs.io/en/latest/getting_started/overview.html
-      \endverb
-    \endentry
-    \entry{Jupyter_2023}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=04455645f6d0f265d82db1f3f715e4eb}{%
-           family={Jupyter},
-           familyi={J\bibinitperiod},
-           given={Project},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{fullhash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{bibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{authorbibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{authornamehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{authorfullhash}{04455645f6d0f265d82db1f3f715e4eb}
-      \field{extraname}{2}
-      \field{sortinit}{J}
-      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{JupyterLab Documentation - JupyterLab 4.1.0b0 documentation}
-      \field{title}{JupyterLab documentation}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://jupyterlab.readthedocs.io/en/latest/
-      \endverb
-      \verb{url}
-      \verb https://jupyterlab.readthedocs.io/en/latest/
-      \endverb
-    \endentry
-    \entry{lugaresi2019mediapipe}{article}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{10}{}{%
-        {{un=0,uniquepart=base,hash=ec152126f5b7712b4664db54b34b4645}{%
-           family={Lugaresi},
-           familyi={L\bibinitperiod},
-           given={Camillo},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=6ac68c9c2cdd3f35d3081f63bbff53f4}{%
-           family={Tang},
-           familyi={T\bibinitperiod},
-           given={Jiuqiang},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=5ffdaa304dcd72834225b0118f1bcafe}{%
-           family={Nash},
-           familyi={N\bibinitperiod},
-           given={Hadon},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=1f3300784d32984e9ecd83fc5a802b42}{%
-           family={McClanahan},
-           familyi={M\bibinitperiod},
-           given={Chris},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=45e413ffcaa4c9502fa2324ff7119a96}{%
-           family={Uboweja},
-           familyi={U\bibinitperiod},
-           given={Esha},
-           giveni={E\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=08c98dbfe4aa3b8cf880d282aa412f88}{%
-           family={Hays},
-           familyi={H\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ae021641a8f85fd2607152ab99ed115b}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Fan},
-           giveni={F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=570d1b661550e4426ad790a065b53790}{%
-           family={Chang},
-           familyi={C\bibinitperiod},
-           given={Chuo-Ling},
-           giveni={C\bibinithyphendelim L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c96625f13ef34649dd2787aa5040e50f}{%
-           family={Yong},
-           familyi={Y\bibinitperiod},
-           given={Ming\bibnamedelima Guang},
-           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=34ea7cffda58c3dbe4f6a54a086b1f5f}{%
-           family={Lee},
-           familyi={L\bibinitperiod},
-           given={Juhyun},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{61a5cc34be11c6018e3b2391e9ea2937}
-      \strng{fullhash}{fd75d1dd40a1dd2d67ad874ea81e9013}
-      \strng{bibnamehash}{fd75d1dd40a1dd2d67ad874ea81e9013}
-      \strng{authorbibnamehash}{fd75d1dd40a1dd2d67ad874ea81e9013}
-      \strng{authornamehash}{61a5cc34be11c6018e3b2391e9ea2937}
-      \strng{authorfullhash}{fd75d1dd40a1dd2d67ad874ea81e9013}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint arXiv:1906.08172}
-      \field{title}{Mediapipe: A framework for building perception pipelines}
-      \field{year}{2019}
-    \endentry
     \entry{Muhammad_2018}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0b25313888c462091a67dbacb78d39f3}{%
@@ -628,40 +371,37 @@
       \verb https://repository.unej.ac.id/handle/123456789/89217
       \endverb
     \endentry
-    \entry{nurfita2018implementasi}{thesis}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=d465a99b497e4d0e3791e10586673827}{%
-           family={Nurfita},
-           familyi={N\bibinitperiod},
-           given={Royani\bibnamedelima Darma},
-           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f34ad3565b45e8195ca56cfeced0280d}{%
-           family={Gunawan\bibnamedelima Ariyanto},
-           familyi={G\bibinitperiod\bibinitdelim A\bibinitperiod},
-           given={ST},
-           giveni={S\bibinitperiod},
+    \entry{Org_2017}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7cef26d0bc33cab92ade2c463cb0e16e}{%
+           family={Org},
+           familyi={O\bibinitperiod},
+           given={JSON},
+           giveni={J\bibinitperiod},
            givenun=0}}%
       }
-      \list{institution}{1}{%
-        {Universitas Muhammadiyah Surakarta}%
-      }
-      \strng{namehash}{bd7b60fc977da8901934d88ef502959a}
-      \strng{fullhash}{bd7b60fc977da8901934d88ef502959a}
-      \strng{bibnamehash}{bd7b60fc977da8901934d88ef502959a}
-      \strng{authorbibnamehash}{bd7b60fc977da8901934d88ef502959a}
-      \strng{authornamehash}{bd7b60fc977da8901934d88ef502959a}
-      \strng{authorfullhash}{bd7b60fc977da8901934d88ef502959a}
-      \field{sortinit}{N}
-      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \strng{namehash}{7cef26d0bc33cab92ade2c463cb0e16e}
+      \strng{fullhash}{7cef26d0bc33cab92ade2c463cb0e16e}
+      \strng{bibnamehash}{7cef26d0bc33cab92ade2c463cb0e16e}
+      \strng{authorbibnamehash}{7cef26d0bc33cab92ade2c463cb0e16e}
+      \strng{authornamehash}{7cef26d0bc33cab92ade2c463cb0e16e}
+      \strng{authorfullhash}{7cef26d0bc33cab92ade2c463cb0e16e}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Implementasi Deep Learning Berbasis Tensorflow Untuk Pengenalan Sidik Jari}
-      \field{type}{phdthesis}
-      \field{year}{2018}
+      \field{journaltitle}{JSON}
+      \field{title}{Introducing JSON}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.json.org/json-en.html
+      \endverb
+      \verb{url}
+      \verb https://www.json.org/json-en.html
+      \endverb
     \endentry
     \entry{Pansawira_2022}{misc}{}
       \name{author}{1}{}{%
@@ -746,6 +486,83 @@
       \field{year}{2023}
       \field{pages}{148\bibrangedash 159}
       \range{pages}{12}
+    \endentry
+    \entry{sairam2002bluetooth}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=9365e5889f0608f63ae97d02974cb5a6}{%
+           family={Sairam},
+           familyi={S\bibinitperiod},
+           given={KVSSSS},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=549db6995a2ddfdc143af6afa6dbbda6}{%
+           family={Gunasekaran},
+           familyi={G\bibinitperiod},
+           given={N},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=269118bc7ea308ab67f627fd5c18ee63}{%
+           family={Redd},
+           familyi={R\bibinitperiod},
+           given={S\bibnamedelima Rama},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{e8bb6e3c4d5eaad4dc3d26abd180effb}
+      \strng{fullhash}{3c96a6b7b5ba5eaa10853fcf86664f1d}
+      \strng{bibnamehash}{3c96a6b7b5ba5eaa10853fcf86664f1d}
+      \strng{authorbibnamehash}{3c96a6b7b5ba5eaa10853fcf86664f1d}
+      \strng{authornamehash}{e8bb6e3c4d5eaad4dc3d26abd180effb}
+      \strng{authorfullhash}{3c96a6b7b5ba5eaa10853fcf86664f1d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Communications Magazine}
+      \field{number}{6}
+      \field{title}{Bluetooth in wireless communication}
+      \field{volume}{40}
+      \field{year}{2002}
+      \field{pages}{90\bibrangedash 96}
+      \range{pages}{7}
+    \endentry
+    \entry{SIG_2024}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e7d1c8379033aeddfc72a6d05391b210}{%
+           family={SIG},
+           familyi={S\bibinitperiod},
+           given={Bluetooth},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e7d1c8379033aeddfc72a6d05391b210}
+      \strng{fullhash}{e7d1c8379033aeddfc72a6d05391b210}
+      \strng{bibnamehash}{e7d1c8379033aeddfc72a6d05391b210}
+      \strng{authorbibnamehash}{e7d1c8379033aeddfc72a6d05391b210}
+      \strng{authornamehash}{e7d1c8379033aeddfc72a6d05391b210}
+      \strng{authorfullhash}{e7d1c8379033aeddfc72a6d05391b210}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bluetooth® Technology Website}
+      \field{title}{Bluetooth technology overview}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.bluetooth.com/learn-about-bluetooth/tech-overview/
+      \endverb
+      \verb{url}
+      \verb https://www.bluetooth.com/learn-about-bluetooth/tech-overview/
+      \endverb
     \endentry
     \entry{SmartArduino_2022}{misc}{}
       \name{author}{1}{}{%
@@ -963,38 +780,6 @@
       \endverb
       \verb{url}
       \verb https://docs.espressif.com/projects/esp-idf/en/latest/esp32/esp-idf-en-master-esp32.pdf
-      \endverb
-    \endentry
-    \entry{Team_2015}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e3e351acd9b708d10348b55bd8405497}{%
-           family={Team},
-           familyi={T\bibinitperiod},
-           given={Jupyter},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{e3e351acd9b708d10348b55bd8405497}
-      \strng{fullhash}{e3e351acd9b708d10348b55bd8405497}
-      \strng{bibnamehash}{e3e351acd9b708d10348b55bd8405497}
-      \strng{authorbibnamehash}{e3e351acd9b708d10348b55bd8405497}
-      \strng{authornamehash}{e3e351acd9b708d10348b55bd8405497}
-      \strng{authorfullhash}{e3e351acd9b708d10348b55bd8405497}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Project Jupyter Documentation - Jupyter Documentation 4.1.1 alpha documentation}
-      \field{title}{Project Jupyter Documentation}
-      \field{year}{2015}
-      \verb{urlraw}
-      \verb https://docs.jupyter.org/en/latest/
-      \endverb
-      \verb{url}
-      \verb https://docs.jupyter.org/en/latest/
       \endverb
     \endentry
     \entry{TIAN20201}{article}{}
@@ -1165,49 +950,6 @@
       \verb https://www.arduino.cc/reference/en/libraries/bluetoothserial/
       \endverb
     \endentry
-    \entry{8308186}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=a92a8d7d47ce475bde1f4d0c575e3415}{%
-           family={Albawi},
-           familyi={A\bibinitperiod},
-           given={Saad},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b0c7df6171cf87ebe4270071829a7d26}{%
-           family={Mohammed},
-           familyi={M\bibinitperiod},
-           given={Tareq\bibnamedelima Abed},
-           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c2f9de2eb7b3ac9408b9e418ef2a1e39}{%
-           family={Al-Zawi},
-           familyi={A\bibinithyphendelim Z\bibinitperiod},
-           given={Saad},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{a8f90775da450f48ca2cc0c936f55cce}
-      \strng{fullhash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
-      \strng{bibnamehash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
-      \strng{authorbibnamehash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
-      \strng{authornamehash}{a8f90775da450f48ca2cc0c936f55cce}
-      \strng{authorfullhash}{a7a6dfa5d4d520d174dfaa3acc2c04e0}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{2017 International Conference on Engineering and Technology (ICET)}
-      \field{title}{Understanding of a convolutional neural network}
-      \field{year}{2017}
-      \field{pages}{1\bibrangedash 6}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1109/ICEngTechnol.2017.8308186
-      \endverb
-    \endentry
     \entry{blanchon2021mastering}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=fba67d794259a6e8c046775b644beb46}{%
@@ -1322,6 +1064,36 @@
       \verb https://kbbi.kemdikbud.go.id/entri/lumpuh
       \endverb
     \endentry
+    \entry{Data}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f7ff92d9412041e5d320a0a7f35dc06a}{%
+           family={Data},
+           familyi={D\bibinitperiod},
+           given={Refsnes},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f7ff92d9412041e5d320a0a7f35dc06a}
+      \strng{fullhash}{f7ff92d9412041e5d320a0a7f35dc06a}
+      \strng{bibnamehash}{f7ff92d9412041e5d320a0a7f35dc06a}
+      \strng{authorbibnamehash}{f7ff92d9412041e5d320a0a7f35dc06a}
+      \strng{authornamehash}{f7ff92d9412041e5d320a0a7f35dc06a}
+      \strng{authorfullhash}{f7ff92d9412041e5d320a0a7f35dc06a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{What is JSON}
+      \field{title}{What is JSON?}
+      \verb{urlraw}
+      \verb https://www.w3schools.com/whatis/whatis_json.asp
+      \endverb
+      \verb{url}
+      \verb https://www.w3schools.com/whatis/whatis_json.asp
+      \endverb
+    \endentry
     \entry{Developer_2023}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1ca4f9c151cdae7523e5c8879bb551a3}{%
@@ -1354,68 +1126,6 @@
       \verb{url}
       \verb https://developer.nvidia.com/embedded/jetson-nano-developer-kit
       \endverb
-    \endentry
-    \entry{Developers_2021}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=b7b2b331845335bdaf47d13dce7d318d}{%
-           family={Developers},
-           familyi={D\bibinitperiod},
-           given={TensorFlow},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{b7b2b331845335bdaf47d13dce7d318d}
-      \strng{fullhash}{b7b2b331845335bdaf47d13dce7d318d}
-      \strng{bibnamehash}{b7b2b331845335bdaf47d13dce7d318d}
-      \strng{authorbibnamehash}{b7b2b331845335bdaf47d13dce7d318d}
-      \strng{authornamehash}{b7b2b331845335bdaf47d13dce7d318d}
-      \strng{authorfullhash}{b7b2b331845335bdaf47d13dce7d318d}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Zenodo}
-      \field{month}{5}
-      \field{title}{Tensorflow}
-      \field{year}{2021}
-      \verb{urlraw}
-      \verb https://zenodo.org/record/4758419
-      \endverb
-      \verb{url}
-      \verb https://zenodo.org/record/4758419
-      \endverb
-    \endentry
-    \entry{dwitama2019klasifikasi}{thesis}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=d8f49cf9a63b7233c9fd242c60085ebf}{%
-           family={Dwitama},
-           familyi={D\bibinitperiod},
-           given={Aditya\bibnamedelimb Perwira\bibnamedelima Joan},
-           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim J\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{institution}{1}{%
-        {Universitas Mataram}%
-      }
-      \strng{namehash}{d8f49cf9a63b7233c9fd242c60085ebf}
-      \strng{fullhash}{d8f49cf9a63b7233c9fd242c60085ebf}
-      \strng{bibnamehash}{d8f49cf9a63b7233c9fd242c60085ebf}
-      \strng{authorbibnamehash}{d8f49cf9a63b7233c9fd242c60085ebf}
-      \strng{authornamehash}{d8f49cf9a63b7233c9fd242c60085ebf}
-      \strng{authorfullhash}{d8f49cf9a63b7233c9fd242c60085ebf}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Klasifikasi Tingkat Retakan Pada Bangunan Berbasis Citra Menggunakan Metode Convolution Neural Network}
-      \field{type}{phdthesis}
-      \field{year}{2019}
     \endentry
     \entry{10280784}{article}{}
       \name{author}{3}{}{%
@@ -1460,26 +1170,21 @@
       \verb 10.1109/ISSTC59603.2023.10280784
       \endverb
     \endentry
-    \entry{hakim2018penerapan}{article}{}
-      \true{moreauthor}
-      \true{morelabelname}
+    \entry{Hirzel_2024}{misc}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=d9c0fe883af5baaeed0d4e7432647b25}{%
-           family={Hakim},
+        {{un=0,uniquepart=base,hash=2f565f45e0faadc2ec7c0fbf40e550cc}{%
+           family={Hirzel},
            familyi={H\bibinitperiod},
-           given={RB\bibnamedelima Fajiya},
-           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {UNIVERSITAS ISLAM INDONESIA}%
-      }
-      \strng{namehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
-      \strng{fullhash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
-      \strng{bibnamehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
-      \strng{authorbibnamehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
-      \strng{authornamehash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
-      \strng{authorfullhash}{f3eb346d9f1cbc3ec1affdc17d33fc5f}
+      \strng{namehash}{2f565f45e0faadc2ec7c0fbf40e550cc}
+      \strng{fullhash}{2f565f45e0faadc2ec7c0fbf40e550cc}
+      \strng{bibnamehash}{2f565f45e0faadc2ec7c0fbf40e550cc}
+      \strng{authorbibnamehash}{2f565f45e0faadc2ec7c0fbf40e550cc}
+      \strng{authornamehash}{2f565f45e0faadc2ec7c0fbf40e550cc}
+      \strng{authorfullhash}{2f565f45e0faadc2ec7c0fbf40e550cc}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{extradatescope}{labelyear}
@@ -1487,42 +1192,15 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{PENERAPAN DEEP LEARNING MENGGUNAKAN CONVOLUTIONAL NEURAL NETWORK UNTUK KLASIFIKASI CITRA WAYANG PUNAKAWAN}
-      \field{year}{2018}
-    \endentry
-    \entry{Inc_2018}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=c67bc6e7ec71f7386278bb6f311cd874}{%
-           family={Inc},
-           familyi={I\bibinitperiod},
-           given={Anaconda},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Anaconda,Inc}%
-      }
-      \strng{namehash}{c67bc6e7ec71f7386278bb6f311cd874}
-      \strng{fullhash}{c67bc6e7ec71f7386278bb6f311cd874}
-      \strng{bibnamehash}{c67bc6e7ec71f7386278bb6f311cd874}
-      \strng{authorbibnamehash}{c67bc6e7ec71f7386278bb6f311cd874}
-      \strng{authornamehash}{c67bc6e7ec71f7386278bb6f311cd874}
-      \strng{authorfullhash}{c67bc6e7ec71f7386278bb6f311cd874}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{What is Anaconda Distribution? - Anaconda documentation}
-      \field{title}{What is anaconda distribution?}
-      \field{year}{2018}
+      \field{journaltitle}{docs.arduino.cc}
+      \field{month}{1}
+      \field{title}{Basics of PWM (Pulse Width Modulation)}
+      \field{year}{2024}
       \verb{urlraw}
-      \verb https://docs.anaconda.com/free/anaconda/getting-started/what-is-distro/
+      \verb https://docs.arduino.cc/learn/microcontrollers/analog-output/
       \endverb
       \verb{url}
-      \verb https://docs.anaconda.com/free/anaconda/getting-started/what-is-distro/
+      \verb https://docs.arduino.cc/learn/microcontrollers/analog-output/
       \endverb
     \endentry
     \entry{junior2019prototipe}{article}{}
@@ -1561,156 +1239,6 @@
       \field{pages}{62\bibrangedash 68}
       \range{pages}{7}
     \endentry
-    \entry{Jupyter_2023b}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=04455645f6d0f265d82db1f3f715e4eb}{%
-           family={Jupyter},
-           familyi={J\bibinitperiod},
-           given={Project},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{fullhash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{bibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{authorbibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{authornamehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{authorfullhash}{04455645f6d0f265d82db1f3f715e4eb}
-      \field{extraname}{1}
-      \field{sortinit}{J}
-      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
-      \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Get Started - JupyterLab 4.1.0b0 documentation}
-      \field{title}{Get Started}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://jupyterlab.readthedocs.io/en/latest/getting_started/overview.html
-      \endverb
-      \verb{url}
-      \verb https://jupyterlab.readthedocs.io/en/latest/getting_started/overview.html
-      \endverb
-    \endentry
-    \entry{Jupyter_2023}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=04455645f6d0f265d82db1f3f715e4eb}{%
-           family={Jupyter},
-           familyi={J\bibinitperiod},
-           given={Project},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{fullhash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{bibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{authorbibnamehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{authornamehash}{04455645f6d0f265d82db1f3f715e4eb}
-      \strng{authorfullhash}{04455645f6d0f265d82db1f3f715e4eb}
-      \field{extraname}{2}
-      \field{sortinit}{J}
-      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{JupyterLab Documentation - JupyterLab 4.1.0b0 documentation}
-      \field{title}{JupyterLab documentation}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://jupyterlab.readthedocs.io/en/latest/
-      \endverb
-      \verb{url}
-      \verb https://jupyterlab.readthedocs.io/en/latest/
-      \endverb
-    \endentry
-    \entry{lugaresi2019mediapipe}{article}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{10}{}{%
-        {{un=0,uniquepart=base,hash=ec152126f5b7712b4664db54b34b4645}{%
-           family={Lugaresi},
-           familyi={L\bibinitperiod},
-           given={Camillo},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=6ac68c9c2cdd3f35d3081f63bbff53f4}{%
-           family={Tang},
-           familyi={T\bibinitperiod},
-           given={Jiuqiang},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=5ffdaa304dcd72834225b0118f1bcafe}{%
-           family={Nash},
-           familyi={N\bibinitperiod},
-           given={Hadon},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=1f3300784d32984e9ecd83fc5a802b42}{%
-           family={McClanahan},
-           familyi={M\bibinitperiod},
-           given={Chris},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=45e413ffcaa4c9502fa2324ff7119a96}{%
-           family={Uboweja},
-           familyi={U\bibinitperiod},
-           given={Esha},
-           giveni={E\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=08c98dbfe4aa3b8cf880d282aa412f88}{%
-           family={Hays},
-           familyi={H\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ae021641a8f85fd2607152ab99ed115b}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Fan},
-           giveni={F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=570d1b661550e4426ad790a065b53790}{%
-           family={Chang},
-           familyi={C\bibinitperiod},
-           given={Chuo-Ling},
-           giveni={C\bibinithyphendelim L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c96625f13ef34649dd2787aa5040e50f}{%
-           family={Yong},
-           familyi={Y\bibinitperiod},
-           given={Ming\bibnamedelima Guang},
-           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=34ea7cffda58c3dbe4f6a54a086b1f5f}{%
-           family={Lee},
-           familyi={L\bibinitperiod},
-           given={Juhyun},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{61a5cc34be11c6018e3b2391e9ea2937}
-      \strng{fullhash}{fd75d1dd40a1dd2d67ad874ea81e9013}
-      \strng{bibnamehash}{fd75d1dd40a1dd2d67ad874ea81e9013}
-      \strng{authorbibnamehash}{fd75d1dd40a1dd2d67ad874ea81e9013}
-      \strng{authornamehash}{61a5cc34be11c6018e3b2391e9ea2937}
-      \strng{authorfullhash}{fd75d1dd40a1dd2d67ad874ea81e9013}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint arXiv:1906.08172}
-      \field{title}{Mediapipe: A framework for building perception pipelines}
-      \field{year}{2019}
-    \endentry
     \entry{Muhammad_2018}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0b25313888c462091a67dbacb78d39f3}{%
@@ -1741,40 +1269,37 @@
       \verb https://repository.unej.ac.id/handle/123456789/89217
       \endverb
     \endentry
-    \entry{nurfita2018implementasi}{thesis}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=d465a99b497e4d0e3791e10586673827}{%
-           family={Nurfita},
-           familyi={N\bibinitperiod},
-           given={Royani\bibnamedelima Darma},
-           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f34ad3565b45e8195ca56cfeced0280d}{%
-           family={Gunawan\bibnamedelima Ariyanto},
-           familyi={G\bibinitperiod\bibinitdelim A\bibinitperiod},
-           given={ST},
-           giveni={S\bibinitperiod},
+    \entry{Org_2017}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7cef26d0bc33cab92ade2c463cb0e16e}{%
+           family={Org},
+           familyi={O\bibinitperiod},
+           given={JSON},
+           giveni={J\bibinitperiod},
            givenun=0}}%
       }
-      \list{institution}{1}{%
-        {Universitas Muhammadiyah Surakarta}%
-      }
-      \strng{namehash}{bd7b60fc977da8901934d88ef502959a}
-      \strng{fullhash}{bd7b60fc977da8901934d88ef502959a}
-      \strng{bibnamehash}{bd7b60fc977da8901934d88ef502959a}
-      \strng{authorbibnamehash}{bd7b60fc977da8901934d88ef502959a}
-      \strng{authornamehash}{bd7b60fc977da8901934d88ef502959a}
-      \strng{authorfullhash}{bd7b60fc977da8901934d88ef502959a}
-      \field{sortinit}{N}
-      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \strng{namehash}{7cef26d0bc33cab92ade2c463cb0e16e}
+      \strng{fullhash}{7cef26d0bc33cab92ade2c463cb0e16e}
+      \strng{bibnamehash}{7cef26d0bc33cab92ade2c463cb0e16e}
+      \strng{authorbibnamehash}{7cef26d0bc33cab92ade2c463cb0e16e}
+      \strng{authornamehash}{7cef26d0bc33cab92ade2c463cb0e16e}
+      \strng{authorfullhash}{7cef26d0bc33cab92ade2c463cb0e16e}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Implementasi Deep Learning Berbasis Tensorflow Untuk Pengenalan Sidik Jari}
-      \field{type}{phdthesis}
-      \field{year}{2018}
+      \field{journaltitle}{JSON}
+      \field{title}{Introducing JSON}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.json.org/json-en.html
+      \endverb
+      \verb{url}
+      \verb https://www.json.org/json-en.html
+      \endverb
     \endentry
     \entry{Pansawira_2022}{misc}{}
       \name{author}{1}{}{%
@@ -1859,6 +1384,83 @@
       \field{year}{2023}
       \field{pages}{148\bibrangedash 159}
       \range{pages}{12}
+    \endentry
+    \entry{sairam2002bluetooth}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=9365e5889f0608f63ae97d02974cb5a6}{%
+           family={Sairam},
+           familyi={S\bibinitperiod},
+           given={KVSSSS},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=549db6995a2ddfdc143af6afa6dbbda6}{%
+           family={Gunasekaran},
+           familyi={G\bibinitperiod},
+           given={N},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=269118bc7ea308ab67f627fd5c18ee63}{%
+           family={Redd},
+           familyi={R\bibinitperiod},
+           given={S\bibnamedelima Rama},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{e8bb6e3c4d5eaad4dc3d26abd180effb}
+      \strng{fullhash}{3c96a6b7b5ba5eaa10853fcf86664f1d}
+      \strng{bibnamehash}{3c96a6b7b5ba5eaa10853fcf86664f1d}
+      \strng{authorbibnamehash}{3c96a6b7b5ba5eaa10853fcf86664f1d}
+      \strng{authornamehash}{e8bb6e3c4d5eaad4dc3d26abd180effb}
+      \strng{authorfullhash}{3c96a6b7b5ba5eaa10853fcf86664f1d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Communications Magazine}
+      \field{number}{6}
+      \field{title}{Bluetooth in wireless communication}
+      \field{volume}{40}
+      \field{year}{2002}
+      \field{pages}{90\bibrangedash 96}
+      \range{pages}{7}
+    \endentry
+    \entry{SIG_2024}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e7d1c8379033aeddfc72a6d05391b210}{%
+           family={SIG},
+           familyi={S\bibinitperiod},
+           given={Bluetooth},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e7d1c8379033aeddfc72a6d05391b210}
+      \strng{fullhash}{e7d1c8379033aeddfc72a6d05391b210}
+      \strng{bibnamehash}{e7d1c8379033aeddfc72a6d05391b210}
+      \strng{authorbibnamehash}{e7d1c8379033aeddfc72a6d05391b210}
+      \strng{authornamehash}{e7d1c8379033aeddfc72a6d05391b210}
+      \strng{authorfullhash}{e7d1c8379033aeddfc72a6d05391b210}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bluetooth® Technology Website}
+      \field{title}{Bluetooth technology overview}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.bluetooth.com/learn-about-bluetooth/tech-overview/
+      \endverb
+      \verb{url}
+      \verb https://www.bluetooth.com/learn-about-bluetooth/tech-overview/
+      \endverb
     \endentry
     \entry{SmartArduino_2022}{misc}{}
       \name{author}{1}{}{%
@@ -2076,38 +1678,6 @@
       \endverb
       \verb{url}
       \verb https://docs.espressif.com/projects/esp-idf/en/latest/esp32/esp-idf-en-master-esp32.pdf
-      \endverb
-    \endentry
-    \entry{Team_2015}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e3e351acd9b708d10348b55bd8405497}{%
-           family={Team},
-           familyi={T\bibinitperiod},
-           given={Jupyter},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{e3e351acd9b708d10348b55bd8405497}
-      \strng{fullhash}{e3e351acd9b708d10348b55bd8405497}
-      \strng{bibnamehash}{e3e351acd9b708d10348b55bd8405497}
-      \strng{authorbibnamehash}{e3e351acd9b708d10348b55bd8405497}
-      \strng{authornamehash}{e3e351acd9b708d10348b55bd8405497}
-      \strng{authorfullhash}{e3e351acd9b708d10348b55bd8405497}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Project Jupyter Documentation - Jupyter Documentation 4.1.1 alpha documentation}
-      \field{title}{Project Jupyter Documentation}
-      \field{year}{2015}
-      \verb{urlraw}
-      \verb https://docs.jupyter.org/en/latest/
-      \endverb
-      \verb{url}
-      \verb https://docs.jupyter.org/en/latest/
       \endverb
     \endentry
     \entry{TIAN20201}{article}{}
