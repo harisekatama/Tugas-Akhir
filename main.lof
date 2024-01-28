@@ -9,7 +9,18 @@
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Motor DC MY1016Z}}{12}{figure.2.7}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Blok Diagram Penelitian}}{13}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Contoh citra yang telah diestimasi pose}}{15}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Skematik kontrol motor kursi roda}}{19}{figure.3.3}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Skematik kontrol motor kursi roda}}{16}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \emph {Flowchart} Memeriksa MAC Address Pada ESP32}}{17}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \emph {Flowchart} Menerima Data String Melalui Bluetooth Pada ESP32}}{19}{figure.3.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \emph {Flowchart} Menerima Data JSON Melalui Bluetooth Pada ESP32}}{20}{figure.3.5}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \emph {Flowchart} Menerima Data String Melalui \emph {Access Point} WiFi Pada ESP32}}{21}{figure.3.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces \emph {Flowchart} Menerima Data JSON Melalui \emph {Access Point} WiFi Pada ESP32}}{23}{figure.3.7}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces \emph {Flowchart} Menguji Rangkaian Kontrol ESP32}}{24}{figure.3.8}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces \emph {Flowchart} Kontrol Motor Kursi Roda Melalui Bluetooth}}{26}{figure.3.9}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces \emph {Flowchart} Kontrol Motor Kursi Roda Melalui \emph {Access Point} WiFi}}{27}{figure.3.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces \emph {Flowchart} Mengirim Data String Melalui Bluetooth}}{28}{figure.3.11}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces \emph {Flowchart} Mengirim Data String Melalui WiFi}}{29}{figure.3.12}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces \emph {Flowchart} Mengirim Data JSON Melalui Bluetooth}}{30}{figure.3.13}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces \emph {Flowchart} Mengirim Data JSON Melalui WiFi}}{31}{figure.3.14}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
