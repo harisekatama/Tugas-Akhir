@@ -1,7 +1,7 @@
 \chapter*{LAMPIRAN}
 
-\section{Kode Program}
-\subsection{Program Untuk Memeriksa MAC Address Pada ESP32}
+\section*{Kode Program}
+\subsection*{Program Untuk Memeriksa MAC Address Pada ESP32}
 % Program 3.1 
 \begin{lstlisting}[
     language=Arduino,
@@ -30,7 +30,7 @@ void loop() {
     
 \end{lstlisting}
 
-\subsection{Program Untuk Menerima Data String Melalui Bluetooth Pada ESP32}
+\subsection*{Program Untuk Menerima Data String Melalui Bluetooth Pada ESP32}
 
 % Program 3.2
 \begin{lstlisting}[
@@ -61,6 +61,7 @@ void loop(){
     Serial.println(arah);
     Serial.print("Kecepatan : ");
     Serial.println(kecepatan);
+    SerialBT.println("1");
 
     if(maxspeed < 20){
       Serial.println("TRUE");
@@ -73,7 +74,7 @@ void loop(){
     
 \end{lstlisting}
 
-\subsection{Program Untuk Menerima Data JSON Melalui Bluetooth Pada ESP32}
+\subsection*{Program Untuk Menerima Data JSON Melalui Bluetooth Pada ESP32}
 
 % Program 3.3
 \begin{lstlisting}[
@@ -118,7 +119,7 @@ void loop() {
     
 \end{lstlisting}
 
-\subsection{Program Untuk Menerima Data String Melalui \emph{Access Point} WiFi Pada ESP32}
+\subsection*{Program Untuk Menerima Data String Melalui \emph{Access Point} WiFi Pada ESP32}
 
 
 % Program 3.4
@@ -193,7 +194,7 @@ void loop(){
 }
 \end{lstlisting}
 
-\subsection{Program Untuk Menerima Data JSON Melalui \emph{Access Point} WiFi Pada ESP32}
+\subsection*{Program Untuk Menerima Data JSON Melalui \emph{Access Point} WiFi Pada ESP32}
 
 % Program 3.5
 \begin{lstlisting}[
@@ -266,7 +267,7 @@ void loop(){
 }
 \end{lstlisting}
 
-\subsection{Program Untuk Menguji Rangkaian Kontrol ESP32}
+\subsection*{Program Untuk Menguji Rangkaian Kontrol ESP32}
 % Program 3.6
 \begin{lstlisting}[
     language=Arduino,
@@ -453,7 +454,7 @@ void loop() {
 }
 \end{lstlisting}
 
-\subsection{Program Kontrol Motor Kursi Roda Melalui Bluetooth}
+\subsection*{Program Kontrol Motor Kursi Roda Melalui Bluetooth}
 
 \begin{lstlisting}[
     language=Arduino,
@@ -598,7 +599,7 @@ void loop() {
   }  
   \end{lstlisting}
 
-\subsection{Program Kontrol Motor Kursi Roda Melalui \emph{Access Point} WiFi}
+\subsection*{Program Kontrol Motor Kursi Roda Melalui \emph{Access Point} WiFi}
 
 \begin{lstlisting}[
     language=Arduino,
@@ -750,7 +751,7 @@ void loop() {
   }  
   \end{lstlisting}
 
-\subsection{Program Untuk Mengirim Data String Melalui Bluetooth}
+\subsection*{Program Untuk Mengirim Data String Melalui Bluetooth}
 
 % Program 3.7
 \begin{lstlisting}[
@@ -759,34 +760,56 @@ void loop() {
     label={lst:SendBluetooth}
 ]
 import bluetooth
+import random
 import datetime
+import time
 
-# ESP32's Bluetooth MAC address
-esp32_mac_address = "30:C6:F7:2F:31:86"  # Replace with your ESP32's MAC addres
+# Cari perangkat Bluetooth
+nearby_devices = bluetooth.discover_devices()
 
-# Establish a Bluetooth connection
+# Ambil alamat MAC dari ESP32 (pastikan sudah dipasangkan sebelumnya)
+esp32_address = "C0:49:EF:E7:BD:EA"  # Ganti dengan alamat MAC ESP32 yang sesuai
+
+# Lakukan koneksi
 sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
-sock.connect((esp32_mac_address, 1))  # Channel 1 is commonly used for SPP (Serial Port Profile)
+sock.connect((esp32_address, 1))
 
+arah = random.choice('ABCDE')
+kecepatan = random.choice('OPQRSTUVW')
+pesan = f"{arah},{kecepatan}"
+sock.send(pesan)
+
+date = datetime.datetime.now()
+print(f"{date} -> {pesan}")
+
+i = 0
+
+# Terima data
 while True:
-    # Send two data values
-    arah = input("Enter arah : ")
-    kecepatan = input("Enter kecepatan : ")
-    message = f"{arah},{kecepatan}"
-    date = datetime.datetime.now()
-    print(date)
+    data = sock.recv(8)
+    flag = data.decode("utf-8")
+    #print("Received:", flag)
     
-    if arah == "q" or kecepatan == "q":
-        break
-    
-    sock.send(message)
-
-# Close the Bluetooth connection
+    if flag == '1':
+        arah = random.choice('ABCDE')
+        kecepatan = random.choice('OPQRSTUVW')
+        pesan = f"{arah},{kecepatan}"
+        i = i + 1
+        
+        if arah == 'q' or i == 10:
+            break
+        
+        sock.send(pesan)
+        date = datetime.datetime.now()
+        print(f"{date} -> {pesan}")
+        
+# Tutup koneksi
 sock.close()
+
 
 \end{lstlisting}
 
-\subsection{Program Untuk Mengirim Data String Melalui WiFi}
+\subsection*{Program Untuk Mengirim Data String Melalui WiFi}
 
 \begin{lstlisting}[
     language=Python,
@@ -822,7 +845,7 @@ sock.close()
   
 \end{lstlisting}
 
-\subsection{Program Untuk Mengirim Data JSON Melalui Bluetooth}
+\subsection*{Program Untuk Mengirim Data JSON Melalui Bluetooth}
 
 \begin{lstlisting}[
     language=Python,
@@ -863,7 +886,7 @@ sock.close()
 
 \end{lstlisting}
 
-\subsection{Program Untuk Mengirim Data JSON Melalui WiFi}
+\subsection*{Program Untuk Mengirim Data JSON Melalui WiFi}
 
 \begin{lstlisting}[
     language=Python,
@@ -898,4 +921,14 @@ sock.close()
               print(f"{date} -> {json_data}")
   
   s.close()
-  \end{lstlisting}
+\end{lstlisting}
+
+\subsection*{Pengujian Kestabilan Motor Kursi Roda}
+\begin{figure} [ht] \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.28]{gambar/lampiran/Pengujian Kestabilan.jpg}
+  % Keterangan gambar yang diinputkan
+  \caption{Dokumentasi Perhitungan Jarak Penyimpangan}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:DokumentasiJarakPenyimpangan}
+\end{figure}
