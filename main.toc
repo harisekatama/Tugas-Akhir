@@ -60,4 +60,4 @@
 \contentsline {section}{\numberline {5.1}Kesimpulan}{47}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Saran}{47}{section.5.2}%
 \contentsline {chapter}{DAFTAR PUSTAKA}{49}{chapter*.5}%
-\contentsline {chapter}{BIOGRAFI PENULIS}{71}{figure.5.1}%
+\contentsline {chapter}{BIOGRAFI PENULIS}{71}{lstnumber.5.12.39}%

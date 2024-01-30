@@ -6,7 +6,7 @@
 \contentsline {lstlisting}{\numberline {5.6}Program Untuk Menguji Rangkaian Kontrol Pada ESP32}{56}{lstlisting.5.6}%
 \contentsline {lstlisting}{\numberline {5.7}Program Kontrol Motor Kursi Roda Melalui Bluetooth}{60}{lstlisting.5.7}%
 \contentsline {lstlisting}{\numberline {5.8}Program Kontrol Motor Kursi Roda Melalui \emph {Access Point} WiFi}{63}{lstlisting.5.8}%
-\contentsline {lstlisting}{\numberline {5.9}Program Untuk Mengirim Data String Melalui Bluetooth}{66}{lstlisting.5.9}%
-\contentsline {lstlisting}{\numberline {5.10}Program Untuk Mengirim Data String Melalui WiFi}{67}{lstlisting.5.10}%
+\contentsline {lstlisting}{\numberline {5.9}Program Untuk Mengirim Data String Melalui Bluetooth}{67}{lstlisting.5.9}%
+\contentsline {lstlisting}{\numberline {5.10}Program Untuk Mengirim Data String Melalui WiFi}{68}{lstlisting.5.10}%
 \contentsline {lstlisting}{\numberline {5.11}Program Untuk Mengirim Data JSON Melalui Bluetooth}{68}{lstlisting.5.11}%
-\contentsline {lstlisting}{\numberline {5.12}Program Untuk Mengirim Data JSON Melalui WiFi}{68}{lstlisting.5.12}%
+\contentsline {lstlisting}{\numberline {5.12}Program Untuk Mengirim Data JSON Melalui WiFi}{69}{lstlisting.5.12}%

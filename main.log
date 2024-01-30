@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.2)  30 JAN 2024 18:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.2)  30 JAN 2024 21:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1065,7 +1065,7 @@ l.30
 
 
 ]
-<gambar/pwm.png, id=598, 401.5pt x 439.6425pt>
+<gambar/pwm.png, id=597, 401.5pt x 439.6425pt>
 File: gambar/pwm.png Graphic file (type png)
 <use gambar/pwm.png>
 Package pdftex.def Info: gambar/pwm.png  used on input line 49.
@@ -1142,7 +1142,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has b
                    \relax 
 l.113 
        [7]
-<gambar/arduinoIDEoverview.png, id=630, 1927.2pt x 1084.05pt>
+<gambar/arduinoIDEoverview.png, id=628, 1927.2pt x 1084.05pt>
 File: gambar/arduinoIDEoverview.png Graphic file (type png)
 <use gambar/arduinoIDEoverview.png>
 Package pdftex.def Info: gambar/arduinoIDEoverview.png  used on input line 116.
@@ -1160,12 +1160,12 @@ l.128
        <./gambar/arduinoIDEoverview.png>]
 LaTeX Font Info:    Font shape `TS1/txr/b/n' in size <14.4> not available
 (Font)              Font shape `TS1/txr/bx/n' tried instead on input line 131.
-<gambar/JetsonNano.jpg, id=645, 903.375pt x 737.00343pt>
+<gambar/JetsonNano.jpg, id=644, 903.375pt x 737.00343pt>
 File: gambar/JetsonNano.jpg Graphic file (type jpg)
 <use gambar/JetsonNano.jpg>
 Package pdftex.def Info: gambar/JetsonNano.jpg  used on input line 135.
 (pdftex.def)             Requested size: 225.8432pt x 184.2504pt.
-<gambar/ESP32DevkitV1.jpg, id=647, 1156.32pt x 566.115pt>
+<gambar/ESP32DevkitV1.jpg, id=646, 1156.32pt x 566.115pt>
 File: gambar/ESP32DevkitV1.jpg Graphic file (type jpg)
 <use gambar/ESP32DevkitV1.jpg>
 Package pdftex.def Info: gambar/ESP32DevkitV1.jpg  used on input line 150.
@@ -1181,7 +1181,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) h
                                                   \__shipout_drop_firstpage_...
 l.159 D
        aya untuk menjalankan ESP32 disuplai melalui konektor Micro USB Tipe ... <./gambar/JetsonNano.jpg>]
-<gambar/MotorDriver.png, id=657, 903.375pt x 903.375pt>
+<gambar/MotorDriver.png, id=656, 903.375pt x 903.375pt>
 File: gambar/MotorDriver.png Graphic file (type png)
 <use gambar/MotorDriver.png>
 Package pdftex.def Info: gambar/MotorDriver.png  used on input line 168.
@@ -1202,7 +1202,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5}) h
                                                   \__shipout_drop_firstpage_...
 l.176 
        <./gambar/ESP32DevkitV1.jpg> <./gambar/MotorDriver.png>]
-<gambar/WheelchairMySellaKY123.png, id=663, 301.125pt x 301.125pt>
+<gambar/WheelchairMySellaKY123.png, id=662, 301.125pt x 301.125pt>
 File: gambar/WheelchairMySellaKY123.png Graphic file (type png)
 <use gambar/WheelchairMySellaKY123.png>
 Package pdftex.def Info: gambar/WheelchairMySellaKY123.png  used on input line 182.
@@ -1218,7 +1218,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6}) h
                                                   \__shipout_drop_firstpage_...
 l.210 \end{longtable}
                       <./gambar/WheelchairMySellaKY123.png>]
-<gambar/DCMotorMY1016Z.jpg, id=670, 451.6875pt x 451.6875pt>
+<gambar/DCMotorMY1016Z.jpg, id=669, 451.6875pt x 451.6875pt>
 File: gambar/DCMotorMY1016Z.jpg Graphic file (type jpg)
 <use gambar/DCMotorMY1016Z.jpg>
 Package pdftex.def Info: gambar/DCMotorMY1016Z.jpg  used on input line 217.
@@ -1235,7 +1235,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.7}) h
 l.223 \cleardoublepage
                        <./gambar/DCMotorMY1016Z.jpg>] (./bab/3-desain-implementasi.tex
 Chapter 3.
-<gambar/DeskripsiSistem.png, id=676, 211.79124pt x 372.39125pt>
+<gambar/DeskripsiSistem.png, id=675, 211.79124pt x 372.39125pt>
 File: gambar/DeskripsiSistem.png Graphic file (type png)
 <use gambar/DeskripsiSistem.png>
 Package pdftex.def Info: gambar/DeskripsiSistem.png  used on input line 16.
@@ -1249,7 +1249,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) h
                                                   \__shipout_drop_firstpage_...
 l.30 \end{equation}
                     <./gambar/DeskripsiSistem.png>] [14]
-<gambar/bab3/Schematics.png, id=692, 1018.55531pt x 1510.14188pt>
+<gambar/bab3/Schematics.png, id=691, 1018.55531pt x 1510.14188pt>
 File: gambar/bab3/Schematics.png Graphic file (type png)
 <use gambar/bab3/Schematics.png>
 Package pdftex.def Info: gambar/bab3/Schematics.png  used on input line 115.
@@ -1263,7 +1263,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) h
                                                   \__shipout_drop_firstpage_...
 l.128 
        <./gambar/bab3/Schematics.png>]
-<gambar/program/1. MAC Address.png, id=714, 161.60374pt x 563.10374pt>
+<gambar/program/1. MAC Address.png, id=713, 161.60374pt x 563.10374pt>
 File: gambar/program/1. MAC Address.png Graphic file (type png)
 <use gambar/program/1. MAC Address.png>
 Package pdftex.def Info: gambar/program/1. MAC Address.png  used on input line 140.
@@ -1284,7 +1284,7 @@ File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 163.
-<gambar/program/2. Data String Bluetooth.png, id=725, 454.69875pt x 563.10374pt>
+<gambar/program/2. Data String Bluetooth.png, id=724, 454.69875pt x 563.10374pt>
 File: gambar/program/2. Data String Bluetooth.png Graphic file (type png)
 <use gambar/program/2. Data String Bluetooth.png>
 Package pdftex.def Info: gambar/program/2. Data String Bluetooth.png  used on input line 167.
@@ -1306,7 +1306,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) h
                                                   \__shipout_drop_firstpage_...
 l.183 
        <./gambar/program/2. Data String Bluetooth.png>]
-<gambar/program/3. JSON Bluetooth.png, id=744, 600.2425pt x 564.1075pt>
+<gambar/program/3. JSON Bluetooth.png, id=743, 600.2425pt x 564.1075pt>
 File: gambar/program/3. JSON Bluetooth.png Graphic file (type png)
 <use gambar/program/3. JSON Bluetooth.png>
 Package pdftex.def Info: gambar/program/3. JSON Bluetooth.png  used on input line 186.
@@ -1317,7 +1317,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5}) h
                                                   \__shipout_drop_firstpage_...
 l.197 
        <./gambar/program/3. JSON Bluetooth.png>]
-<gambar/program/4. String WiFi.png, id=752, 444.66125pt x 564.1075pt>
+<gambar/program/4. String WiFi.png, id=751, 444.66125pt x 564.1075pt>
 File: gambar/program/4. String WiFi.png Graphic file (type png)
 <use gambar/program/4. String WiFi.png>
 Package pdftex.def Info: gambar/program/4. String WiFi.png  used on input line 200.
@@ -1328,7 +1328,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6}) h
                                                   \__shipout_drop_firstpage_...
 l.211 F
        ungsi void loop() akan berjalan terus-menerus setelah fungsi void set... <./gambar/program/4. String WiFi.png>]
-<gambar/program/5. JSON WiFi.png, id=760, 600.2425pt x 564.1075pt>
+<gambar/program/5. JSON WiFi.png, id=759, 600.2425pt x 564.1075pt>
 File: gambar/program/5. JSON WiFi.png Graphic file (type png)
 <use gambar/program/5. JSON WiFi.png>
 Package pdftex.def Info: gambar/program/5. JSON WiFi.png  used on input line 219.
@@ -1345,7 +1345,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7}) h
                                                   \__shipout_drop_firstpage_...
 l.239 
        <./gambar/program/5. JSON WiFi.png>]
-<gambar/program/6. Uji Kontrol.png, id=772, 410.53375pt x 443.6575pt>
+<gambar/program/6. Uji Kontrol.png, id=771, 410.53375pt x 443.6575pt>
 File: gambar/program/6. Uji Kontrol.png Graphic file (type png)
 <use gambar/program/6. Uji Kontrol.png>
 Package pdftex.def Info: gambar/program/6. Uji Kontrol.png  used on input line 242.
@@ -1356,7 +1356,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8}) h
                                                   \__shipout_drop_firstpage_...
 l.252 
        <./gambar/program/6. Uji Kontrol.png>]
-<gambar/program/7. Kontrol Motor Bluetooth.png, id=781, 583.17876pt x 403.5075pt>
+<gambar/program/7. Kontrol Motor Bluetooth.png, id=780, 583.17876pt x 403.5075pt>
 File: gambar/program/7. Kontrol Motor Bluetooth.png Graphic file (type png)
 <use gambar/program/7. Kontrol Motor Bluetooth.png>
 Package pdftex.def Info: gambar/program/7. Kontrol Motor Bluetooth.png  used on input line 262.
@@ -1373,7 +1373,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9}) h
                                                   \__shipout_drop_firstpage_...
 l.276 
        <./gambar/program/7. Kontrol Motor Bluetooth.png>]
-<gambar/program/8. Kontrol Motor WiFi.png, id=794, 583.17876pt x 403.5075pt>
+<gambar/program/8. Kontrol Motor WiFi.png, id=793, 583.17876pt x 403.5075pt>
 File: gambar/program/8. Kontrol Motor WiFi.png Graphic file (type png)
 <use gambar/program/8. Kontrol Motor WiFi.png>
 Package pdftex.def Info: gambar/program/8. Kontrol Motor WiFi.png  used on input line 279.
@@ -1384,7 +1384,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.10}) 
                                                   \__shipout_drop_firstpage_...
 l.289 
        <./gambar/program/8. Kontrol Motor WiFi.png>]
-<gambar/program/9. Mengirim Data String Bluetooth.png, id=802, 410.53375pt x 353.32pt>
+<gambar/program/9. Mengirim Data String Bluetooth.png, id=801, 410.53375pt x 353.32pt>
 File: gambar/program/9. Mengirim Data String Bluetooth.png Graphic file (type png)
 <use gambar/program/9. Mengirim Data String Bluetooth.png>
 Package pdftex.def Info: gambar/program/9. Mengirim Data String Bluetooth.png  used on input line 300.
@@ -1395,7 +1395,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.11}) 
                                                   \__shipout_drop_firstpage_...
 l.308 
        <./gambar/program/9. Mengirim Data String Bluetooth.png>]
-<gambar/program/10. Mengirim Data String WiFi.png, id=810, 410.53375pt x 353.32pt>
+<gambar/program/10. Mengirim Data String WiFi.png, id=809, 410.53375pt x 353.32pt>
 File: gambar/program/10. Mengirim Data String WiFi.png Graphic file (type png)
 <use gambar/program/10. Mengirim Data String WiFi.png>
 Package pdftex.def Info: gambar/program/10. Mengirim Data String WiFi.png  used on input line 317.
@@ -1406,7 +1406,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.12}) 
                                                   \__shipout_drop_firstpage_...
 l.327 
        <./gambar/program/10. Mengirim Data String WiFi.png>]
-<gambar/program/11. Mengirim Data JSON Bluetooth.png, id=818, 410.53375pt x 423.5825pt>
+<gambar/program/11. Mengirim Data JSON Bluetooth.png, id=817, 410.53375pt x 423.5825pt>
 File: gambar/program/11. Mengirim Data JSON Bluetooth.png Graphic file (type png)
 <use gambar/program/11. Mengirim Data JSON Bluetooth.png>
 Package pdftex.def Info: gambar/program/11. Mengirim Data JSON Bluetooth.png  used on input line 336.
@@ -1417,7 +1417,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.13}) 
                                                   \__shipout_drop_firstpage_...
 l.346 
        <./gambar/program/11. Mengirim Data JSON Bluetooth.png>]
-<gambar/program/12. Mengirim Data JSON WiFi.png, id=826, 410.53375pt x 423.5825pt>
+<gambar/program/12. Mengirim Data JSON WiFi.png, id=825, 410.53375pt x 423.5825pt>
 File: gambar/program/12. Mengirim Data JSON WiFi.png Graphic file (type png)
 <use gambar/program/12. Mengirim Data JSON WiFi.png>
 Package pdftex.def Info: gambar/program/12. Mengirim Data JSON WiFi.png  used on input line 353.
@@ -1438,7 +1438,7 @@ Chapter 4.
 
 
 ] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43]
-<gambar/program/Sudut Penyimpangan.png, id=921, 804.00375pt x 169.63374pt>
+<gambar/program/Sudut Penyimpangan.png, id=920, 804.00375pt x 169.63374pt>
 File: gambar/program/Sudut Penyimpangan.png Graphic file (type png)
 <use gambar/program/Sudut Penyimpangan.png>
 Package pdftex.def Info: gambar/program/Sudut Penyimpangan.png  used on input line 514.
@@ -1452,18 +1452,16 @@ l.548   \end{longtable}
 
 ] (./bab/5-penutup.tex
 Chapter 5.
+) [47
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+] [48
 
- [47
-
-]) [48]
+]
 Overfull \hbox (0.46477pt too wide) in paragraph at lines 245--245
 [][]\OT1/txr/m/n/12 Choi, J. H., Chung, Y., & Oh, S. (2019). Mo-tion con-trol of joy-stick in-ter-faced elec-tric wheelchair
  []
 
 [49
-
 
 ]
 Overfull \hbox (0.87115pt too wide) in paragraph at lines 245--245
@@ -1491,10 +1489,10 @@ File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )
 Underfull \vbox (badness 3199) has occurred while \output is active []
 
- [52] [53] [54]
+ [52] [53]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55] [56]
+ [54] [55] [56]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [57]
@@ -1517,19 +1515,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [65] (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [66] [67] [68]
-<gambar/lampiran/Pengujian Kestabilan.jpg, id=1859, 1606.0pt x 903.375pt>
-File: gambar/lampiran/Pengujian Kestabilan.jpg Graphic file (type jpg)
-<use gambar/lampiran/Pengujian Kestabilan.jpg>
-Package pdftex.def Info: gambar/lampiran/Pengujian Kestabilan.jpg  used on input line 929.
-(pdftex.def)             Requested size: 449.67694pt x 252.94327pt.
-) [69] [70
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.249 \cleardoublepage
-                       <./gambar/lampiran/Pengujian Kestabilan.jpg>] (./lainnya/biografi-penulis.tex
-<gambar/HarisSetiadi.jpg, id=1894, 2161.07375pt x 2881.76625pt>
+) [66] [67] [68] [69]) [70] (./lainnya/biografi-penulis.tex
+<gambar/HarisSetiadi.jpg, id=1944, 2161.07375pt x 2881.76625pt>
 File: gambar/HarisSetiadi.jpg Graphic file (type jpg)
 <use gambar/HarisSetiadi.jpg>
 Package pdftex.def Info: gambar/HarisSetiadi.jpg  used on input line 14.
@@ -1544,24 +1531,24 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C94ACB51CAAD8055F33D5DD3C292BDA1;15012.
+(rerunfilecheck)             Checksum: B6B623C4FCEBC3600CDE97E68D5BBDCC;15019.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24754 strings out of 474267
- 422223 string characters out of 5751465
- 2138558 words of memory out of 5000000
- 45449 multiletter control sequences out of 15000+600000
+ 24802 strings out of 474267
+ 422848 string characters out of 5751465
+ 2147558 words of memory out of 5000000
+ 45445 multiletter control sequences out of 15000+600000
  603294 words of font info for 131 fonts, out of 8000000 for 9000
  1176 hyphenation exceptions out of 8191
  75i,13n,81p,2431b,5052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txex.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (102 pages, 2454641 bytes).
+Output written on main.pdf (102 pages, 2366804 bytes).
 PDF statistics:
- 2197 PDF objects out of 2487 (max. 8388607)
- 1994 compressed objects within 20 object streams
- 1065 named destinations out of 1200 (max. 500000)
- 635 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2260 PDF objects out of 2487 (max. 8388607)
+ 2057 compressed objects within 21 object streams
+ 1117 named destinations out of 1200 (max. 500000)
+ 630 words of extra memory for PDF output out of 10000 (max. 10000000)
 

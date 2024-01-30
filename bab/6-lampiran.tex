@@ -113,6 +113,7 @@ void loop() {
       Serial.println(arah);
       Serial.print("Received Kecepatan: ");
       Serial.println(kecepatan);
+      SerialBT.println("1");
     }
   }
 }
@@ -177,6 +178,7 @@ void loop(){
         Serial.println(arah);
         Serial.print("Kecepatan : ");
         Serial.println(kecepatan);
+        client.print("1");
 
         if(maxspeed < 20){
           Serial.println("TRUE");
@@ -257,6 +259,7 @@ void loop(){
           Serial.print(arah);
           Serial.print("   Received Kecepatan : ");
           Serial.println(kecepatan);
+          client.print("1");
         }
       }
     }
@@ -510,8 +513,28 @@ void loop() {
   
       String arah = receivedData.substring(0, receivedData.indexOf(','));
       String kecepatan = receivedData.substring(receivedData.indexOf(',') + 1);
+
+      if (kecepatan == "O"){
+        maxspeed = 0;
+      }else if(kecepatan == "P"){
+        maxspeed = 31;
+      }else if(kecepatan == "Q"){
+        maxspeed = 63;
+      }else if(kecepatan == "R"){
+        maxspeed = 95;
+      }else if(kecepatan == "S"){
+        maxspeed = 127;
+      }else if(kecepatan == "T"){
+        maxspeed = 159;
+      }else if(kecepatan == "U"){
+        maxspeed = 191;
+      }else if(kecepatan == "V"){
+        maxspeed = 223;
+      }else if(kecepatan == "W"){
+        maxspeed = 255;
+      }
   
-      maxspeed = kecepatan.toInt();
+      //maxspeed = kecepatan.toInt();
       turnspeed = maxspeed / 2;
   
       Serial.print("Arah : ");
@@ -805,8 +828,6 @@ while True:
         
 # Tutup koneksi
 sock.close()
-
-
 \end{lstlisting}
 
 \subsection*{Program Untuk Mengirim Data String Melalui WiFi}
@@ -816,33 +837,35 @@ sock.close()
     caption={Program Untuk Mengirim Data String Melalui WiFi},
     label={lst:SendWiFiAP}
   ]
-  import socket
-  import time
-  import datetime
-  
-  host = "192.168.4.1" # Set to ESP32 Access Point IP Address
-  port = 80
-  
-  # Create a socket connection
-  with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-      # Connect to the ESP32 server
-      s.connect((host, port))
-      
-      while True:
-          # Send two data values
-          arah = input("Enter arah : ")
-          kecepatan = input("Enter kecepatan : ")
-          message = f"{arah},{kecepatan}"
-          date = datetime.datetime.now()
-          print(date)
-      
-          if arah == "q" or kecepatan == "q":
-              break
-      
-          s.send(message.encode('utf-8'))
-          
-  s.close()
-  
+import socket
+import random
+import datetime
+import time
+
+HOST = '192.168.4.1'  # Ganti dengan alamat IP ESP32
+PORT = 80  # Port yang sama seperti yang digunakan di ESP32
+
+def main():
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.connect((HOST, PORT))
+        
+        arah = random.choice('ABCDE')
+        s.send(arah.encode('utf-8'))
+        date = datetime.datetime.now()
+        print(f"{date} -> {arah}")
+        
+        while True:
+            data = s.recv(1024)
+            flag = data.decode('utf-8')
+            
+            if flag == '1':
+                arah = random.choice('ABCDE')
+                s.send(arah.encode('utf-8'))
+                date = datetime.datetime.now()
+                print(f"{date} -> {arah}")
+
+if __name__ == '__main__':
+    main()
 \end{lstlisting}
 
 \subsection*{Program Untuk Mengirim Data JSON Melalui Bluetooth}
@@ -853,6 +876,9 @@ sock.close()
     label={lst:SendBluetoothJSON}
 ]
 import bluetooth
+import random
+import datetime
+import time
 import json
 
 # ESP32 Bluetooth address
@@ -864,26 +890,41 @@ sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
 # Connect to the ESP32
 sock.connect((esp32_address, 1))
 
+arah = random.choice('ABCDE')
+jsonData = {"arah": arah}
+jsonString = json.dumps(jsonData)
+sock.send(jsonString)
+
+date = datetime.datetime.now()
+print(f"{date} -> {jsonData}")
+
+
 while True:
-    # Get keyboard input for two values
-    arah = input("Masukkan Arah: ")
-    kecepatan = input("Masukkan Kecepatan: ")
+    data = sock.recv(8)
+    flag = data.decode("utf-8")
     
-    # Create a JSON object
-    json_data = {"arah": arah, "kecepatan": kecepatan}
+    if flag == "1":
+        # Get keyboard input for two values
+        arah = random.choice('ABCDE')
+        #kecepatan = input("Masukkan Kecepatan: ")
 
-    # Serialize the JSON data
-    json_string = json.dumps(json_data)
-    
-    if arah == "q" or kecepatan == "q":
-        break
+        # Create a JSON object
+        jsonData = {"arah": arah}
+        #json_data = {"arah": arah, "kecepatan": kecepatan}
 
-    # Send the serialized JSON over Bluetooth
-    sock.send(json_string)
+        # Serialize the JSON data
+        json_string = json.dumps(jsonData)
+
+        if arah == "q":
+            break
+
+        # Send the serialized JSON over Bluetooth
+        sock.send(json_string)
+        date = datetime.datetime.now()
+        print(f"{date} -> {json_string}")
 
 # Close the Bluetooth socket
 sock.close()
-
 \end{lstlisting}
 
 \subsection*{Program Untuk Mengirim Data JSON Melalui WiFi}
@@ -892,43 +933,44 @@ sock.close()
     language=Python,
     caption={Program Untuk Mengirim Data JSON Melalui WiFi},
     label={lst:SendWiFiJSON}
-  ]
-  import socket
-  import time
-  import json
-  import datetime
-  
-  host = "192.168.4.1" # Set to ESP32 Access Point IP Address
-  port = 80
-  
-  # Create a socket connection
-  with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-      # Connect to the ESP32 server
-      s.connect((host, port))
-      
-      while True:
-          arah = input("Masukkan Arah: ")
-          kecepatan = input("Masukkan Kecepatan: ")
-          
-          json_data = {"arah": arah, "kecepatan": kecepatan}
-          date = datetime.datetime.now()
-          
-          if arah == q or kecepatan == q:
-              break
-          else:
-              json_string = json.dumps(json_data)
-              s.send(json_string.encode('utf-8'))
-              print(f"{date} -> {json_data}")
-  
-  s.close()
-\end{lstlisting}
+]
+import socket
+import json
+import random
+import datetime
+import time
 
-\subsection*{Pengujian Kestabilan Motor Kursi Roda}
-\begin{figure} [ht] \centering
-  % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.28]{gambar/lampiran/Pengujian Kestabilan.jpg}
-  % Keterangan gambar yang diinputkan
-  \caption{Dokumentasi Perhitungan Jarak Penyimpangan}
-  % Label referensi dari gambar yang diinputkan
-  \label{fig:DokumentasiJarakPenyimpangan}
-\end{figure}
+HOST = '192.168.4.1'  # Ganti dengan alamat IP ESP32
+PORT = 80  # Port yang sama seperti yang digunakan di ESP32
+
+def main():
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.connect((HOST, PORT))
+        
+        arah = random.choice('ABCDE')
+        #kecepatan = random.choice('OPQRSTUVW')
+        
+        jsonData = {"arah": arah}
+        jsonString = json.dumps(jsonData)
+        s.send(jsonString.encode('utf-8'))
+        date = datetime.datetime.now()
+        print(f"{date} -> {jsonString}")
+        
+        while True:
+            data = s.recv(1024)
+            flag = data.decode('utf-8')
+            
+            if flag == '1':
+                arah = random.choice('ABCDE')
+                #kecepatan = random.choice('OPQRSTUVW')
+                
+                jsonData = {"arah": arah}
+                json_string = json.dumps(jsonData)
+                
+                s.send(json_string.encode('utf-8'))
+                date = datetime.datetime.now()
+                print(f"{date} -> {json_string}")
+
+if __name__ == '__main__':
+    main()
+\end{lstlisting}
