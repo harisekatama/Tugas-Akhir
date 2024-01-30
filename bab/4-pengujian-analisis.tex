@@ -263,7 +263,7 @@ Tabel \ref{tbl:delayBluetoothJSON2} menampilkan pengiriman JSON yang terdiri dar
 
 Tabel \ref{tbl:delayBluetoothJSON1} menampilkan pengiriman JSON yang terdiri dari 1 \emph{key}-\emph{value}, yaitu arah. Dalam pengujian kali ini, data dikirimkan sebanyak 44 kali secara berturut-turut. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan (\emph{deserialize}) serta memasukkan nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth sebesar 1,033746386 detik.
 
-Dari kedua cara pengujian tersebut, didapatkan bahwa waktu \emph{delay} antara proses pengiriman JSON yang mengandung 2 \emph{key}-\emph{value} dibandingkan dengan JSON yang hanya berisikan 1 \emph{key}-\emph{value} tidak terlalu signifikan. Saat mengirimkan JSON yang berisikan 2 \emph{key}-\emph{value}, pengujian menunjukkan adanya \emph{delay} sebesar 1,038895345 detik. Jika dibandingkan dengan pengujian yang mengirimkan JSON dengan 1 \emph{key}-\emph{value}, waktu \emph{delay} yang tercatat adalah sebesar 1,033746386 detik. Dapat disimpulkan bahwa dalam konteks pengiriman data melalui Bluetooth, maka pengguna dapat mengirimkan data JSON baik yang berisi 1 \emph{key}-\emph{value} maupun yang berisi 2 \emph{key}-\emph{value}, karena perbedaan \emph{delay} kedua teknik tersebut tidak terlalu berbeda.
+Dari kedua cara pengujian tersebut, didapatkan bahwa waktu \emph{delay} antara proses pengiriman JSON yang mengandung 2 \emph{key}-\emph{value} dibandingkan dengan JSON yang hanya berisikan 1 \emph{key}-\emph{value} tidak terlalu signifikan. Saat mengirimkan JSON yang berisikan 2 \emph{key}-\emph{value}, pengujian menunjukkan adanya \emph{delay} sebesar 1,038895345 detik. Jika dibandingkan dengan pengujian yang mengirimkan JSON dengan 1 \emph{key}-\emph{value}, waktu \emph{delay} yang tercatat adalah sebesar 1,033746386 detik. Dapat disimpulkan bahwa dalam konteks pengiriman data melalui Bluetooth, maka pengguna dapat mengirimkan data JSON baik yang berisi 1 \emph{key}-\emph{value} maupun yang berisi 2 \emph{key}-\emph{value}, karena perbedaan \emph{delay} kedua teknik tersebut tidak terlalu signifikan.
 
 \section{Pengujian Waktu \emph{Delay} Pengiriman Data String Melalui \emph{Access Point} WiFi}
 \label{sec:delayWiFi}
@@ -378,12 +378,13 @@ Tabel \ref{tbl:delayWiFi2} menampilkan pengiriman data string yang terdiri dari 
 
 Tabel \ref{tbl:delayWiFi1} menampilkan pengiriman data string yang terdiri dari 1 nilai, yaitu arah. Dalam pengujian kali ini, data dikirimkan sebanyak 32 kali secara berturut-turut. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui WiFi adalah sebesar 1,03470275 detik.
 
-Ditemukan perbedaan waktu \emph{delay} yang cukup signifikan antara proses pengiriman string yang mengandung 2 nilai dibandingkan dengan string yang hanya berisikan 1 nilai. Saat mengirimkan string yang memuat 2 data, pengujian menunjukkan adanya waktu \emph{delay} sekitar 1.059681387 detik. Dalam perbandingan dengan pengujian yang melibatkan string dengan 1 nilai, waktu yang \emph{delay} yang tercatat hanya 0.03499708571 detik. Penting untuk diperhatikan bahwa terdapat kekurangan saat mengirimkan data string yang mengandung 2 nilai, yaitu adanya penambahan \emph{delay} sebesar 1.3 detik setiap kali pengiriman data dilakukan. Hal ini dilakukan agar ESP32 dapat menerima data secara optimal. Oleh karena itu, dapat disimpulkan bahwa dalam konteks pengiriman data melalui WiFi, lebih disarankan untuk mengirimkan string dengan hanya 1 nilai guna menghindari \emph{delay} tambahan yang dapat mempengaruhi efisiensi dan kecepatan transmiri data secara keseluruhan.
+Ditemukan perbedaan waktu \emph{delay} yang tidak terlalu signifikan antara proses pengiriman string yang mengandung 2 nilai dibandingkan dengan string yang hanya berisikan 1 nilai. Saat mengirimkan string yang memuat 2 data, pengujian menunjukkan adanya waktu \emph{delay} sekitar 1,035478061 detik. Dalam perbandingan dengan pengujian yang melibatkan string dengan 1 nilai, waktu \emph{delay} yang tercatat sebesar 1,03470275 detik. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data secara optimal. Oleh karena itu, dapat disimpulkan bahwa dalam konteks pengiriman data melalui WiFi, pengguna dapat mengirimkan data string baik yang berisi 1 nilai maupun data string dengan 2 nilai, karena perbedaan waktu \emph{delay} yang tidak terlalu signifikan.
 
 \section{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Melalui \emph{Access Point} WiFi}
 \label{sec:delayWiFiJSON}
 
 Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimkan data berupa JSON dari laptop menuju ESP32 melalui WiFi. Data yang dikirimkan adalah data arah dan kecepatan yang dirangkum menjadi JSON seperti yang dapat dilihat pada Persamaan \ref{eq:json-2Data} dan Persamaan \ref{eq:json-1Data}. 
+
 
 \begin{equation}
   \label{eq:json-2Data}
@@ -413,106 +414,109 @@ Data JSON terdiri dari 2 bagian, yaitu \emph{key} dan \emph{value}. Terdapat 2 \
 
 % Tabel 4.7
 \begin{longtable}{|ccc|c|}
-  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Berisi 2 Nilai Melalui \emph{Access Point} WiFi}
+  \caption{Pengujian Waktu Delay Pengiriman Data JSON Berisi 2 Nilai Melalui Access Point WiFi}
   \label{tbl:delayWiFiJSON}\\
-    \hline
-    \multicolumn{1}{|c|}{Data}                              & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
-    \endfirsthead
-    %
-    \endhead
-    %
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 89\}}  & \multicolumn{1}{c|}{18:58:14.500967} & 18:58:15.534       & 1.033033    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 103\}} & \multicolumn{1}{c|}{18:58:16.001310} & 18:58:17.091       & 1.08969     \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 164\}} & \multicolumn{1}{c|}{18:58:17.502196} & 18:58:18.550       & 1.047804    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 101\}} & \multicolumn{1}{c|}{18:58:19.002654} & 18:58:20.026       & 1.023346    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 152\}} & \multicolumn{1}{c|}{18:58:20.502992} & 18:58:21.537       & 1.034008    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 19\}}  & \multicolumn{1}{c|}{18:58:22.003740} & 18:58:23.042       & 1.03826     \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 198\}} & \multicolumn{1}{c|}{18:58:23.504455} & 18:58:24.539       & 1.034545    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 211\}} & \multicolumn{1}{c|}{18:58:25.005622} & 18:58:26.045       & 1.039378    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 238\}} & \multicolumn{1}{c|}{18:58:26.506072} & 18:58:27.543       & 1.036928    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 30\}}  & \multicolumn{1}{c|}{18:58:28.006535} & 18:58:29.175       & 1.168465    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 112\}} & \multicolumn{1}{c|}{18:58:29.507104} & 18:58:30.532       & 1.024896    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 7\}}   & \multicolumn{1}{c|}{18:58:31.007617} & 18:58:32.011       & 1.003383    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 66\}}  & \multicolumn{1}{c|}{18:58:32.508185} & 18:58:33.547       & 1.038815    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 105\}} & \multicolumn{1}{c|}{18:58:34.008584} & 18:58:35.051       & 1.042416    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 117\}} & \multicolumn{1}{c|}{18:58:35.509099} & 18:58:36.526       & 1.016901    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 223\}} & \multicolumn{1}{c|}{18:58:37.009885} & 18:58:38.037       & 1.027115    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 245\}} & \multicolumn{1}{c|}{18:58:38.510667} & 18:58:39.515       & 1.004333    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 15\}}  & \multicolumn{1}{c|}{18:58:40.011508} & 18:58:41.050       & 1.038492    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 156\}} & \multicolumn{1}{c|}{18:58:41.512148} & 18:58:42.543       & 1.030852    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 118\}} & \multicolumn{1}{c|}{18:58:43.013213} & 18:58:44.048       & 1.034787    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 200\}} & \multicolumn{1}{c|}{18:58:44.514015} & 18:58:45.551       & 1.036985    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 159\}} & \multicolumn{1}{c|}{18:58:46.014630} & 18:58:47.027       & 1.01237     \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 39\}}  & \multicolumn{1}{c|}{18:58:47.515394} & 18:58:48.522       & 1.006606    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 200\}} & \multicolumn{1}{c|}{18:58:49.015871} & 18:58:50.056       & 1.040129    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B', 'kecepatan': 179\}} & \multicolumn{1}{c|}{18:58:50.516719} & 18:58:51.543       & 1.026281    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 55\}}  & \multicolumn{1}{c|}{18:58:52.017064} & 18:58:53.062       & 1.044936    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 228\}} & \multicolumn{1}{c|}{18:58:53.518106} & 18:58:54.544       & 1.025894    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 38\}}  & \multicolumn{1}{c|}{18:58:55.018428} & 18:58:56.059       & 1.040572    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D', 'kecepatan': 38\}}  & \multicolumn{1}{c|}{18:58:56.518869} & 18:58:57.560       & 1.041131    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C', 'kecepatan': 192\}} & \multicolumn{1}{c|}{18:58:58.019668} & 18:58:59.065       & 1.045332    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E', 'kecepatan': 56\}}  & \multicolumn{1}{c|}{18:58:59.520195} & 18:59:00.557       & 1.036805    \\ \hline
-    \multicolumn{3}{|c|}{Average Delay Time}                                                                            & 1.037564129 \\ \hline
-\end{longtable}
+  \hline
+  \multicolumn{1}{|c|}{Data}                              & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
+  \endfirsthead
+  %
+  \endhead
+  %
+  \multicolumn{1}{|c|}{\{"arah": "E", "kecepatan": "U"\}} & \multicolumn{1}{c|}{04:35:28.923105} & 04:35:29.964       & 1,040895    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "D", "kecepatan": "R"\}} & \multicolumn{1}{c|}{04:35:29.947395} & 04:35:30.963       & 1,015605    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "E", "kecepatan": "T"\}} & \multicolumn{1}{c|}{04:35:30.969913} & 04:35:31.997       & 1,027087    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "E", "kecepatan": "P"\}} & \multicolumn{1}{c|}{04:35:32.001529} & 04:35:33.034       & 1,032471    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "D", "kecepatan": "S"\}} & \multicolumn{1}{c|}{04:35:33.017501} & 04:35:34.064       & 1,046499    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "E", "kecepatan": "P"\}} & \multicolumn{1}{c|}{04:35:34.041874} & 04:35:35.084       & 1,042126    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "B", "kecepatan": "U"\}} & \multicolumn{1}{c|}{04:35:35.065851} & 04:35:36.104       & 1,038149    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "A", "kecepatan": "P"\}} & \multicolumn{1}{c|}{04:35:36.089536} & 04:35:37.108       & 1,018464    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "E", "kecepatan": "Q"\}} & \multicolumn{1}{c|}{04:35:37.113538} & 04:35:38.140       & 1,026462    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "B", "kecepatan": "Q"\}} & \multicolumn{1}{c|}{04:35:38.136965} & 04:35:39.143       & 1,006035    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "D", "kecepatan": "T"\}} & \multicolumn{1}{c|}{04:35:39.174523} & 04:35:40.206       & 1,031477    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "B", "kecepatan": "S"\}} & \multicolumn{1}{c|}{04:35:40.185414} & 04:35:41.211       & 1,025586    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "B", "kecepatan": "W"\}} & \multicolumn{1}{c|}{04:35:41.209460} & 04:35:42.233       & 1,02354     \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "B", "kecepatan": "R"\}} & \multicolumn{1}{c|}{04:35:42.234019} & 04:35:43.266       & 1,031981    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "A", "kecepatan": "P"\}} & \multicolumn{1}{c|}{04:35:43.256937} & 04:35:44.298       & 1,041063    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "D", "kecepatan": "T"\}} & \multicolumn{1}{c|}{04:35:44.283925} & 04:35:45.318       & 1,034075    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "E", "kecepatan": "T"\}} & \multicolumn{1}{c|}{04:35:45.304852} & 04:35:46.348       & 1,043148    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "A", "kecepatan": "S"\}} & \multicolumn{1}{c|}{04:35:46.329379} & 04:35:47.353       & 1,023621    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "E", "kecepatan": "S"\}} & \multicolumn{1}{c|}{04:35:47.353526} & 04:35:48.386       & 1,032474    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "D", "kecepatan": "O"\}} & \multicolumn{1}{c|}{04:35:48.378134} & 04:35:49.401       & 1,022866    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "E", "kecepatan": "W"\}} & \multicolumn{1}{c|}{04:35:49.401090} & 04:35:50.450       & 1,04891     \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "B", "kecepatan": "P"\}} & \multicolumn{1}{c|}{04:35:50.425754} & 04:35:51.455       & 1,029246    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "E", "kecepatan": "R"\}} & \multicolumn{1}{c|}{04:35:51.454675} & 04:35:52.477       & 1,022325    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "B", "kecepatan": "T"\}} & \multicolumn{1}{c|}{04:35:52.474064} & 04:35:53.493       & 1,018936    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "D", "kecepatan": "Q"\}} & \multicolumn{1}{c|}{04:35:53.511150} & 04:35:54.559       & 1,04785     \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "B", "kecepatan": "W"\}} & \multicolumn{1}{c|}{04:35:54.515000} & 04:35:55.550       & 1,035       \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "A", "kecepatan": "O"\}} & \multicolumn{1}{c|}{04:35:56.803058} & 04:35:57.852       & 1,048942    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "C", "kecepatan": "V"\}} & \multicolumn{1}{c|}{04:35:57.808736} & 04:35:58.839       & 1,030264    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "E", "kecepatan": "R"\}} & \multicolumn{1}{c|}{04:35:58.811965} & 04:35:59.857       & 1,045035    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "A", "kecepatan": "T"\}} & \multicolumn{1}{c|}{04:35:59.830387} & 04:36:00.875       & 1,044613    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "B", "kecepatan": "P"\}} & \multicolumn{1}{c|}{04:36:00.833860} & 04:36:01.876       & 1,04214     \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "C", "kecepatan": "O"\}} & \multicolumn{1}{c|}{04:36:01.844947} & 04:36:02.881       & 1,036053    \\ \hline
+  \multicolumn{3}{|c|}{Average Delay Time}                                                                            & 1,032904312 \\ \hline
+  \end{longtable}
 
-Tabel \ref{tbl:delayWiFiJSON} menampilkan pengiriman JSON yang terdiri dari 2 \emph{key}-\emph{value}, yaitu arah dan kecepatan. Dalam pengujian kali ini, data dikirimkan sebanyak 31 kali secara berturut-turut dengan penambahan waktu \emph{delay} sebesar 1.5 detik setiap kali mengirimkan data. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan (\emph{deserialize}) serta memasukkan kedua nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth adalah sebesar 1,037564129 detik.
+Tabel \ref{tbl:delayWiFiJSON} menampilkan pengiriman JSON yang terdiri dari 2 \emph{key}-\emph{value}, yaitu arah dan kecepatan. Dalam pengujian kali ini, data dikirimkan sebanyak 32 kali. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima dan berhasil memisahkan (\emph{deserialize}) serta memasukkan kedua nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui WiFi adalah sebesar 1,032904312 detik.
 
 
 % Tabel 4.8
 \begin{longtable}{|ccc|c|}
-  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Berisi 1 Nilai Melalui \emph{Access Point} WiFi}
+  \caption{Pengujian Waktu Delay Pengiriman Data JSON Berisi 1 Nilai Melalui Access Point WiFi}
   \label{tbl:delayWiFiJSON1}\\
-    \hline
-    \multicolumn{1}{|c|}{Data}            & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
-    \endfirsthead
-    %
-    \endhead
-    %
-    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:11.678759} & 22:27:12.710       & 1.031241    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:27:13.184177} & 22:27:14.233       & 1.048823    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:14.698806} & 22:27:15.748       & 1.049194    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A'\}} & \multicolumn{1}{c|}{22:27:16.203611} & 22:27:17.215       & 1.011389    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:17.715604} & 22:27:18.746       & 1.030396    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A'\}} & \multicolumn{1}{c|}{22:27:19.222435} & 22:27:20.228       & 1.005565    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:20.730434} & 22:27:21.771       & 1.040566    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{22:27:22.239679} & 22:27:23.285       & 1.045321    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:23.750695} & 22:27:24.788       & 1.037305    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{22:27:25.265167} & 22:27:26.301       & 1.035833    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:26.769275} & 22:27:27.804       & 1.034725    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:28.276680} & 22:27:29.317       & 1.04032     \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{22:27:29.789932} & 22:27:30.831       & 1.041068    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:27:31.342439} & 22:27:32.400       & 1.057561    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:27:32.848560} & 22:27:33.882       & 1.03344     \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A'\}} & \multicolumn{1}{c|}{22:27:34.369849} & 22:27:35.396       & 1.026151    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:35.877856} & 22:27:36.924       & 1.046144    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:27:37.525218} & 22:27:38.531       & 1.005782    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'A'\}} & \multicolumn{1}{c|}{22:27:39.043576} & 22:27:40.095       & 1.051424    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{22:27:40.637793} & 22:27:41.671       & 1.033207    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:27:42.143229} & 22:27:43.168       & 1.024771    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{22:27:43.677645} & 22:27:44.714       & 1.036355    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{22:27:45.218328} & 22:27:46.257       & 1.038672    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:27:46.723402} & 22:27:47.758       & 1.034598    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:27:48.296809} & 22:27:49.347       & 1.050191    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{22:27:49.898938} & 22:27:50.940       & 1.041062    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:27:51.405449} & 22:27:52.453       & 1.047551    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{22:27:52.914479} & 22:27:53.965       & 1.050521    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{22:27:54.458062} & 22:27:55.497       & 1.038938    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{22:27:55.966855} & 22:27:57.010       & 1.043145    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'E'\}} & \multicolumn{1}{c|}{22:27:57.472623} & 22:27:58.518       & 1.045377    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{22:28:01.988199} & 22:28:03.032       & 1.043801    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:28:03.502648} & 22:28:04.548       & 1.045352    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'B'\}} & \multicolumn{1}{c|}{22:28:05.007693} & 22:28:06.048       & 1.040307    \\ \hline
-    \multicolumn{1}{|c|}{\{'arah': 'C'\}} & \multicolumn{1}{c|}{22:28:07.635244} & 22:28:08.708       & 1.072756    \\ \hline
-    \multicolumn{3}{|c|}{Average Delay Time}                                                          & 1.038824343 \\ \hline
-\end{longtable}
+  \hline
+  \multicolumn{1}{|c|}{Data}            & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
+  \endfirsthead
+  %
+  \endhead
+  %
+  \multicolumn{1}{|c|}{\{"arah": "E"\}} & \multicolumn{1}{c|}{04:45:27.023013} & 04:45:28.047       & 1,023987    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "E"\}} & \multicolumn{1}{c|}{04:45:28.041188} & 04:45:29.061       & 1,019812    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "B"\}} & \multicolumn{1}{c|}{04:45:29.059797} & 04:45:30.107       & 1,047203    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "B"\}} & \multicolumn{1}{c|}{04:45:30.085100} & 04:45:31.120       & 1,0349      \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "B"\}} & \multicolumn{1}{c|}{04:45:31.112640} & 04:45:32.152       & 1,03936     \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "B"\}} & \multicolumn{1}{c|}{04:45:33.157179} & 04:45:34.179       & 1,021821    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "A"\}} & \multicolumn{1}{c|}{04:45:34.186826} & 04:45:35.210       & 1,023174    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "E"\}} & \multicolumn{1}{c|}{04:45:35.203704} & 04:45:36.225       & 1,021296    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "A"\}} & \multicolumn{1}{c|}{04:45:36.227841} & 04:45:37.262       & 1,034159    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "A"\}} & \multicolumn{1}{c|}{04:45:37.255794} & 04:45:38.285       & 1,029206    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "A"\}} & \multicolumn{1}{c|}{04:45:38.277786} & 04:45:39.315       & 1,037214    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "C"\}} & \multicolumn{1}{c|}{04:45:41.349432} & 04:45:42.375       & 1,025568    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "E"\}} & \multicolumn{1}{c|}{04:45:42.373888} & 04:45:43.412       & 1,038112    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "D"\}} & \multicolumn{1}{c|}{04:45:43.377807} & 04:45:44.419       & 1,041193    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "C"\}} & \multicolumn{1}{c|}{04:45:45.443124} & 04:45:46.483       & 1,039876    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "B"\}} & \multicolumn{1}{c|}{04:45:46.476128} & 04:45:47.500       & 1,023872    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "B"\}} & \multicolumn{1}{c|}{04:45:47.491817} & 04:45:48.529       & 1,037183    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "D"\}} & \multicolumn{1}{c|}{04:45:48.517681} & 04:45:49.564       & 1,046319    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "E"\}} & \multicolumn{1}{c|}{04:45:51.592403} & 04:45:52.631       & 1,038597    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "A"\}} & \multicolumn{1}{c|}{04:45:52.611352} & 04:45:53.641       & 1,029648    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "D"\}} & \multicolumn{1}{c|}{04:45:53.620809} & 04:45:54.659       & 1,038191    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "A"\}} & \multicolumn{1}{c|}{04:45:54.660179} & 04:45:55.674       & 1,013821    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "D"\}} & \multicolumn{1}{c|}{04:45:55.683892} & 04:45:56.724       & 1,040108    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "C"\}} & \multicolumn{1}{c|}{04:45:56.707686} & 04:45:57.733       & 1,025314    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "E"\}} & \multicolumn{1}{c|}{04:45:57.732101} & 04:45:58.778       & 1,045899    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "E"\}} & \multicolumn{1}{c|}{04:45:59.786105} & 04:46:00.834       & 1,047895    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "D"\}} & \multicolumn{1}{c|}{04:46:00.804109} & 04:46:01.841       & 1,036891    \\ \hline
+  \multicolumn{1}{|c|}{\{"arah": "D"\}} & \multicolumn{1}{c|}{04:46:01.829633} & 04:46:02.859       & 1,029367    \\ \hline
+  \multicolumn{3}{|c|}{Average Delay Time}                                                          & 1,032374783 \\ \hline
+  \end{longtable}
 
-Tabel \ref{tbl:delayWiFiJSON1} menampilkan pengiriman JSON yang terdiri dari 1 \emph{key}-\emph{value}, yaitu arah. Dalam pengujian kali ini, data dikirimkan sebanyak 35 kali secara berturut-turut dengan penambahan waktu \emph{delay} sebesar 1.5 detik setiap kali mengirimkan data. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan (\emph{deserialize}) serta memasukkan nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth sebesar 1.038824343 detik.
+Tabel \ref{tbl:delayWiFiJSON1} menampilkan pengiriman JSON yang terdiri dari 1 \emph{key}-\emph{value}, yaitu arah. Dalam pengujian kali ini, data dikirimkan sebanyak 28 kali secara berturut-turut. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan (\emph{deserialize}) serta memasukkan nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth sebesar 1,032374783 detik.
 
-Dari kedua cara pengujian tersebut, didapatkan bahwa waktu \emph{delay} antara proses pengiriman JSON yang mengandung 2 \emph{key}-\emph{value} dibandingkan dengan JSON yang hanya berisikan 1 \emph{key}-\emph{value} tidak terlalu signifikan. Saat mengirimkan JSON yang berisikan 2 \emph{key}-\emph{value}, pengujian menunjukkan adanya \emph{delay} sebesar 1,037564129 detik. Jika dibandingkan dengan pengujian yang mengirimkan JSON dengan 1 \emph{key}-\emph{value}, waktu \emph{delay} yang tercatat adalah sebesar 1.038824343 detik. Terdapat anomali pada pengujian ini, karena waktu delay pada saat mengirimkan data JSON yang berisikan 2 \emph{key}-\emph{value} lebih kecil jika dibandingkan dengan saat mengirimkan data JSON yang berisikan 1 \emph{key}-\emph{value} walaupun perbedaan waktu \emph{delay}-nya tidak terlalu signifikan.
+Dari kedua cara pengujian tersebut, didapatkan bahwa waktu \emph{delay} antara proses pengiriman JSON yang mengandung 2 \emph{key}-\emph{value} dibandingkan dengan JSON yang hanya berisikan 1 \emph{key}-\emph{value} tidak terlalu signifikan. Saat mengirimkan JSON yang berisikan 2 \emph{key}-\emph{value}, pengujian menunjukkan adanya \emph{delay} sebesar 1,032904312 detik. Jika dibandingkan dengan pengujian yang mengirimkan JSON dengan 1 \emph{key}-\emph{value}, waktu \emph{delay} yang tercatat adalah sebesar 1,032374783 detik. Dapat disimpulkan bahwa dalam konteks pengiriman data melalui WiFi, pengguna dapat mengirimkan data JSON baik yang berisi 2 nilai maupun yang berisi 1 nilai, karena perbedaan waktu pengiriman yang tidak terlalu signifikan.
 
 \subsection{Pengujian Kestabilan Motor Kursi Roda}
 
-Pengujian kestabilan motor dilakukan untuk mendeteksi derajat penyimpangan dari setiap motor. Pada pengujian ini akan dilakukan dengan cara menggerakkan kursi roda kearah depan (maju) dan juga kearah belakang (mundur). Perbedaan antara posisi akhir roda dengan titik pusat akan diukur untuk menentukan sudut penyimpangan seperti pada Gambar \ref{fig:DokumentasiJarakPenyimpangan}. Sudut Penyimpangan dapat dihitung menggunakan Persamaan \ref{eq:sudut-error}. Hasil dari pengujian ini dapat dilihat pada Tabel \ref{tbl:kestabilanmaju} dan Tabel \ref{tbl:kestabilanmundur}.
+Pengujian kestabilan motor dilakukan untuk mendeteksi derajat penyimpangan dari setiap motor. Pada pengujian ini akan dilakukan dengan cara menggerakkan kursi roda kearah depan (maju) dan juga kearah belakang (mundur). Perbedaan antara posisi akhir roda dengan titik pusat akan diukur untuk menentukan sudut penyimpangan seperti pada Gambar \ref{fig:PengujianKestabilanMotor}. Sudut Penyimpangan dapat dihitung menggunakan Persamaan \ref{eq:sudut-error}. Hasil dari pengujian ini dapat dilihat pada Tabel \ref{tbl:kestabilanmaju} dan Tabel \ref{tbl:kestabilanmundur}.
+
+\begin{figure} [ht] \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.55]{gambar/program/Sudut Penyimpangan.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Sistem Pengujian Kestabilan Motor Kursi Roda}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:PengujianKestabilanMotor}
+\end{figure}
 
 \begin{equation}
   \label{eq:sudut-error}
