@@ -196,39 +196,6 @@
       \verb https://www.w3schools.com/whatis/whatis_json.asp
       \endverb
     \endentry
-    \entry{Developer_2023}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=1ca4f9c151cdae7523e5c8879bb551a3}{%
-           family={Developer},
-           familyi={D\bibinitperiod},
-           given={NVIDIA},
-           giveni={N\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {NVIDIA Developer}%
-      }
-      \strng{namehash}{1ca4f9c151cdae7523e5c8879bb551a3}
-      \strng{fullhash}{1ca4f9c151cdae7523e5c8879bb551a3}
-      \strng{bibnamehash}{1ca4f9c151cdae7523e5c8879bb551a3}
-      \strng{authorbibnamehash}{1ca4f9c151cdae7523e5c8879bb551a3}
-      \strng{authornamehash}{1ca4f9c151cdae7523e5c8879bb551a3}
-      \strng{authorfullhash}{1ca4f9c151cdae7523e5c8879bb551a3}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{journaltitle}{Jetson Nano Developer Kit}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://developer.nvidia.com/embedded/jetson-nano-developer-kit
-      \endverb
-      \verb{url}
-      \verb https://developer.nvidia.com/embedded/jetson-nano-developer-kit
-      \endverb
-    \endentry
     \entry{10280784}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=23cc6e6855254152b03b6d365b6824f4}{%
@@ -1092,39 +1059,6 @@
       \endverb
       \verb{url}
       \verb https://www.w3schools.com/whatis/whatis_json.asp
-      \endverb
-    \endentry
-    \entry{Developer_2023}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=1ca4f9c151cdae7523e5c8879bb551a3}{%
-           family={Developer},
-           familyi={D\bibinitperiod},
-           given={NVIDIA},
-           giveni={N\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {NVIDIA Developer}%
-      }
-      \strng{namehash}{1ca4f9c151cdae7523e5c8879bb551a3}
-      \strng{fullhash}{1ca4f9c151cdae7523e5c8879bb551a3}
-      \strng{bibnamehash}{1ca4f9c151cdae7523e5c8879bb551a3}
-      \strng{authorbibnamehash}{1ca4f9c151cdae7523e5c8879bb551a3}
-      \strng{authornamehash}{1ca4f9c151cdae7523e5c8879bb551a3}
-      \strng{authorfullhash}{1ca4f9c151cdae7523e5c8879bb551a3}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{journaltitle}{Jetson Nano Developer Kit}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://developer.nvidia.com/embedded/jetson-nano-developer-kit
-      \endverb
-      \verb{url}
-      \verb https://developer.nvidia.com/embedded/jetson-nano-developer-kit
       \endverb
     \endentry
     \entry{10280784}{article}{}

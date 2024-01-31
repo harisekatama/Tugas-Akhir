@@ -413,12 +413,6 @@ INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxb.tfm
 INPUT ./main.toc
 INPUT ./main.toc
 INPUT main.toc
-INPUT c:/texlive/2023/texmf-dist/tex/latex/txfonts/ts1txr.fd
-INPUT c:/texlive/2023/texmf-dist/tex/latex/txfonts/ts1txr.fd
-INPUT c:/texlive/2023/texmf-dist/tex/latex/txfonts/ts1txr.fd
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/tcxr.tfm
-INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/txfonts/tcxr.vf
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtcxr.tfm
 OUTPUT main.toc
 INPUT ./main.lof
 INPUT ./main.lof
@@ -447,26 +441,16 @@ INPUT ./gambar/pwm.png
 INPUT ./gambar/pwm.png
 INPUT ./gambar/pwm.png
 INPUT ./gambar/pwm.png
-INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/txfonts/txmi.vf
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxmi.tfm
 INPUT ./gambar/arduinoIDEoverview.png
 INPUT ./gambar/arduinoIDEoverview.png
 INPUT ./gambar/arduinoIDEoverview.png
 INPUT ./gambar/arduinoIDEoverview.png
 INPUT ./gambar/arduinoIDEoverview.png
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/tcxb.tfm
-INPUT ./gambar/JetsonNano.jpg
-INPUT ./gambar/JetsonNano.jpg
-INPUT ./gambar/JetsonNano.jpg
-INPUT ./gambar/JetsonNano.jpg
-INPUT ./gambar/JetsonNano.jpg
 INPUT ./gambar/ESP32DevkitV1.jpg
 INPUT ./gambar/ESP32DevkitV1.jpg
 INPUT ./gambar/ESP32DevkitV1.jpg
 INPUT ./gambar/ESP32DevkitV1.jpg
 INPUT ./gambar/ESP32DevkitV1.jpg
-INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/txfonts/tcxb.vf
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtcxb.tfm
 INPUT ./gambar/MotorDriver.png
 INPUT ./gambar/MotorDriver.png
 INPUT ./gambar/MotorDriver.png
@@ -477,11 +461,12 @@ INPUT ./gambar/WheelchairMySellaKY123.png
 INPUT ./gambar/WheelchairMySellaKY123.png
 INPUT ./gambar/WheelchairMySellaKY123.png
 INPUT ./gambar/WheelchairMySellaKY123.png
-INPUT ./gambar/DCMotorMY1016Z.jpg
-INPUT ./gambar/DCMotorMY1016Z.jpg
-INPUT ./gambar/DCMotorMY1016Z.jpg
-INPUT ./gambar/DCMotorMY1016Z.jpg
-INPUT ./gambar/DCMotorMY1016Z.jpg
+INPUT c:/texlive/2023/texmf-dist/tex/latex/txfonts/ts1txr.fd
+INPUT c:/texlive/2023/texmf-dist/tex/latex/txfonts/ts1txr.fd
+INPUT c:/texlive/2023/texmf-dist/tex/latex/txfonts/ts1txr.fd
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/tcxr.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/txfonts/tcxr.vf
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtcxr.tfm
 INPUT ./bab/3-desain-implementasi.tex
 INPUT ./bab/3-desain-implementasi.tex
 INPUT bab/3-desain-implementasi.tex
@@ -490,6 +475,8 @@ INPUT ./gambar/DeskripsiSistem.png
 INPUT ./gambar/DeskripsiSistem.png
 INPUT ./gambar/DeskripsiSistem.png
 INPUT ./gambar/DeskripsiSistem.png
+INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/txfonts/txmi.vf
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/txfonts/rtxmi.tfm
 INPUT ./gambar/bab3/Schematics.png
 INPUT ./gambar/bab3/Schematics.png
 INPUT ./gambar/bab3/Schematics.png
@@ -500,14 +487,14 @@ INPUT ./gambar/program/1. MAC Address.png
 INPUT ./gambar/program/1. MAC Address.png
 INPUT ./gambar/program/1. MAC Address.png
 INPUT ./gambar/program/1. MAC Address.png
+INPUT ./gambar/program/2. Data String Bluetooth.png
+INPUT ./gambar/program/2. Data String Bluetooth.png
+INPUT ./gambar/program/2. Data String Bluetooth.png
+INPUT ./gambar/program/2. Data String Bluetooth.png
+INPUT ./gambar/program/2. Data String Bluetooth.png
 INPUT c:/texlive/2023/texmf-dist/tex/latex/txfonts/omstxr.fd
 INPUT c:/texlive/2023/texmf-dist/tex/latex/txfonts/omstxr.fd
 INPUT c:/texlive/2023/texmf-dist/tex/latex/txfonts/omstxr.fd
-INPUT ./gambar/program/2. Data String Bluetooth.png
-INPUT ./gambar/program/2. Data String Bluetooth.png
-INPUT ./gambar/program/2. Data String Bluetooth.png
-INPUT ./gambar/program/2. Data String Bluetooth.png
-INPUT ./gambar/program/2. Data String Bluetooth.png
 INPUT ./gambar/program/3. JSON Bluetooth.png
 INPUT ./gambar/program/3. JSON Bluetooth.png
 INPUT ./gambar/program/3. JSON Bluetooth.png
@@ -611,8 +598,6 @@ INPUT ./main.out
 INPUT ./main.out
 INPUT main.run.xml
 OUTPUT main.run.xml
-INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxb.pfb
-INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb

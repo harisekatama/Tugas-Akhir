@@ -22,42 +22,41 @@
 \contentsline {subsection}{\numberline {2.2.1}\emph {Pulse Width Modulation} (PWM)}{4}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}JSON}{5}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Bluetooth}{6}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}WiFi}{7}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.4}WiFi}{6}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}Arduino IDE}{7}{subsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.2.6}NVIDIA® Jetson Nano™}{9}{subsection.2.2.6}%
-\contentsline {subsection}{\numberline {2.2.7}ESP32 Devkit V1}{9}{subsection.2.2.7}%
-\contentsline {subsection}{\numberline {2.2.8}\emph {Motor Driver H-Bridge}}{10}{subsection.2.2.8}%
-\contentsline {subsection}{\numberline {2.2.9}Kursi Roda Elektrik KY-123}{11}{subsection.2.2.9}%
-\contentsline {subsection}{\numberline {2.2.10}Motor DC MY1016Z}{12}{subsection.2.2.10}%
-\contentsline {chapter}{\numberline {3}METODOLOGI}{13}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Deskripsi Sistem}{13}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Paket Data}{13}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Memecahkan Paket Data}{14}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Kontrol Navigasi}{15}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}Implementasi Alat}{15}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}\emph {Hardware} dan \emph {Software} yang digunakan}{15}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Skematik Alat}{15}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Kode Program}{17}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Program Untuk Memeriksa MAC Address Pada ESP32}{17}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Program Untuk Menerima Data String Melalui Bluetooth Pada ESP32}{18}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Program Untuk Menerima Data JSON Melalui Bluetooth Pada ESP32}{19}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Program Untuk Menerima Data String Melalui \emph {Access Point} WiFi Pada ESP32}{20}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Program Untuk Menerima Data JSON Melalui \emph {Access Point} WiFi Pada ESP32}{22}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Program Untuk Menguji Rangkaian Kontrol ESP32}{23}{subsection.3.3.6}%
-\contentsline {subsection}{\numberline {3.3.7}Program Kontrol Motor Kursi Roda Melalui Bluetooth}{25}{subsection.3.3.7}%
-\contentsline {subsection}{\numberline {3.3.8}Program Kontrol Motor Kursi Roda Melalui \emph {Access Point} WiFi}{26}{subsection.3.3.8}%
-\contentsline {subsection}{\numberline {3.3.9}Program Untuk Mengirim Data String Melalui Bluetooth}{28}{subsection.3.3.9}%
-\contentsline {subsection}{\numberline {3.3.10}Program Untuk Mengirim Data String Melalui WiFi}{29}{subsection.3.3.10}%
-\contentsline {subsection}{\numberline {3.3.11}Program Untuk Mengirim Data JSON Melalui Bluetooth}{30}{subsection.3.3.11}%
-\contentsline {subsection}{\numberline {3.3.12}Program Untuk Mengirim Data JSON Melalui WiFi}{31}{subsection.3.3.12}%
-\contentsline {chapter}{\numberline {4}PENGUJIAN DAN ANALISIS}{33}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Pengujian Waktu \emph {Delay} Pengiriman Data String Melalui Bluetooth}{33}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Pengujian Waktu \emph {Delay} Pengiriman Data JSON Melalui Bluetooth}{36}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Pengujian Waktu \emph {Delay} Pengiriman Data String Melalui \emph {Access Point} WiFi}{39}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Pengujian Waktu \emph {Delay} Pengiriman Data JSON Melalui \emph {Access Point} WiFi}{41}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Pengujian Kestabilan Motor Kursi Roda}{44}{subsection.4.4.1}%
-\contentsline {chapter}{\numberline {5}PENUTUP}{47}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Kesimpulan}{47}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Saran}{47}{section.5.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{49}{chapter*.5}%
-\contentsline {chapter}{BIOGRAFI PENULIS}{71}{lstnumber.5.12.39}%
+\contentsline {subsection}{\numberline {2.2.6}ESP32 Devkit V1}{8}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.7}\emph {Motor Driver H-Bridge}}{9}{subsection.2.2.7}%
+\contentsline {subsection}{\numberline {2.2.8}Kursi Roda Elektrik KY-123}{9}{subsection.2.2.8}%
+\contentsline {subsection}{\numberline {2.2.9}Motor DC MY1016Z}{10}{subsection.2.2.9}%
+\contentsline {chapter}{\numberline {3}METODOLOGI}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Deskripsi Sistem}{11}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Paket Data}{11}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Memecahkan Paket Data}{12}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Kontrol Navigasi}{12}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Implementasi Alat}{13}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}\emph {Hardware} dan \emph {Software} yang digunakan}{13}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Skematik Alat}{13}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Kode Program}{15}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Program Untuk Memeriksa MAC Address Pada ESP32}{15}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Program Untuk Menerima Data String Melalui Bluetooth Pada ESP32}{16}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Program Untuk Menerima Data JSON Melalui Bluetooth Pada ESP32}{17}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Program Untuk Menerima Data String Melalui \emph {Access Point} WiFi Pada ESP32}{18}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Program Untuk Menerima Data JSON Melalui \emph {Access Point} WiFi Pada ESP32}{20}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Program Untuk Menguji Rangkaian Kontrol ESP32}{21}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.7}Program Kontrol Motor Kursi Roda Melalui Bluetooth}{23}{subsection.3.3.7}%
+\contentsline {subsection}{\numberline {3.3.8}Program Kontrol Motor Kursi Roda Melalui \emph {Access Point} WiFi}{24}{subsection.3.3.8}%
+\contentsline {subsection}{\numberline {3.3.9}Program Untuk Mengirim Data String Melalui Bluetooth}{26}{subsection.3.3.9}%
+\contentsline {subsection}{\numberline {3.3.10}Program Untuk Mengirim Data String Melalui WiFi}{27}{subsection.3.3.10}%
+\contentsline {subsection}{\numberline {3.3.11}Program Untuk Mengirim Data JSON Melalui Bluetooth}{28}{subsection.3.3.11}%
+\contentsline {subsection}{\numberline {3.3.12}Program Untuk Mengirim Data JSON Melalui WiFi}{29}{subsection.3.3.12}%
+\contentsline {chapter}{\numberline {4}PENGUJIAN DAN ANALISIS}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Pengujian Waktu \emph {Delay} Pengiriman Data String Melalui Bluetooth}{31}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Pengujian Waktu \emph {Delay} Pengiriman Data JSON Melalui Bluetooth}{34}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Pengujian Waktu \emph {Delay} Pengiriman Data String Melalui \emph {Access Point} WiFi}{37}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Pengujian Waktu \emph {Delay} Pengiriman Data JSON Melalui \emph {Access Point} WiFi}{40}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Pengujian Kestabilan Motor Kursi Roda}{43}{section.4.5}%
+\contentsline {chapter}{\numberline {5}PENUTUP}{45}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{45}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Saran}{45}{section.5.2}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{47}{chapter*.5}%
+\contentsline {chapter}{BIOGRAFI PENULIS}{69}{lstnumber.5.12.39}%

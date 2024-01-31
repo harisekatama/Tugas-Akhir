@@ -69,28 +69,7 @@ Bluetooth merupakan sebuah standar terbuka untuk konektivitas nirkabel dengan du
 
 Bluetooth Classic radio, juga dikenal sebagai Bluetooth Basic Rate/Enhanced Data Rate (BR/EDR), adalah jenis radio dengan konsumsi daya rendah yang mengirimkan data melalui 79 saluran di band frekuensi 2.4 GHz yang tidak berlisensi untuk penggunaan industri, ilmiah, dan medis (ISM) \parencite{SIG_2024}. Fitur komunikasi antar-perangkat titik ke titik, Bluetooth Classic umumnya digunakan untuk mengaktifkan streaming audio nirkabel dan telah menjadi standar protokol radio untuk perangkat seperti speaker nirkabel, headphone, dan sistem hiburan di mobil. Selain itu, radio Bluetooth Classic juga memungkinkan aplikasi transfer data, termasuk pencetakan melalui perangkat seluler.
 
-Radio Bluetooth Low Energy (BLE) dirancang untuk beroperasi dengan sangat efisien dalam penggunaan daya. Dengan mentransmisikan data melalui 40 saluran di band frekuensi ISM 2.4 GHz yang tidak berlisensi, radio Bluetooth LE memberikan fleksibilitas yang besar bagi para pengembang untuk membuat produk yang sesuai dengan kebutuhan konektivitas pasar mereka. Bluetooth LE mendukung berbagai topologi komunikasi, mulai dari titik ke titik hingga siaran dan, yang terbaru, mesh, sehingga teknologi Bluetooth dapat mendukung pembuatan jaringan perangkat yang andal dan luas. Awalnya dikenal karena kemampuannya dalam komunikasi perangkat, Bluetooth LE kini juga banyak digunakan sebagai teknologi penentuan posisi perangkat untuk mengatasi permintaan yang semakin meningkat untuk layanan lokasi dalam ruangan yang akurat. Bluetooth LE sekarang dilengkapi dengan fitur yang memungkinkan satu perangkat menentukan keberadaan, jarak, dan arah perangkat lainnya. Perbandingan antara Bluetooth Low Energy dengan Bluetooth Classic dapat dilihat pada Tabel \ref{tbl:perbandinganBLEBC}
-
-\begin{longtable}{|p{1.7cm}|l|l|l|}
-    \caption{Tabel Perbandingan Bluetooth Low Energy dengan Bluetooth Classic}
-    \label{tbl:perbandinganBLEBC}\\
-    \hline
-                                                                        & Bluetooth Low Energy (BLE)                                                                                                                                                                         & Bluetooth Classic                                                                                                        \\ \hline
-    \endfirsthead
-    %
-    \endhead
-    %
-    Frequency Band                                                      & 2.4 GHz ISM Band                                                                                                                                                                                   & 2.4 GHz ISM band                                                                                                         \\ \hline
-    Channels                                                            & \begin{tabular}[c]{@{}l@{}}40 channels with 2 MHz spacing\\ (3 advertising channels/37 data channels)\end{tabular}                                                                                 & 79 channels with 1 MHz spacing                                                                                           \\ \hline
-    Channel Usage                                                       & FHSS                                                                                                                                                                                               & FHSS                                                                                                                     \\ \hline
-    Modulation                                                          & GFSK                                                                                                                                                                                               & GFSK, $\pi$/4 DQPSK, 8 DPSK                                                                                              \\ \hline
-    Data Rate                                                           & \begin{tabular}[c]{@{}l@{}}LE 2M PHY: 2 Mb/s\\ LE 1M PHY: 1 Mb/s\\ LE Coded PHY (S=2): 500 Kb/s\\ LE Coded PHY (S=8): 125 Kb/s\end{tabular}                                                        & \begin{tabular}[c]{@{}l@{}}EDR PHY (8DPSK): 3 Mb/s\\ EDR PHY ($\pi$/4 DQPSK): 2 Mb/s\\ BR PHY (GFSK): 1Mb/s\end{tabular} \\ \hline
-    Tx Power*                                                           & $\le$ 100mW (+20 dBm)                                                                                                                                                                              & $\le$ 100mW (+20 dBm)                                                                                                    \\ \hline
-    Rx Sensitivity                                                      & \begin{tabular}[c]{@{}l@{}}LE 2M PHY: $\le$ -70 dBm\\ LE 1M PHY: $\le$ -70 dBm\\ LE Coded PHY (S=2): $\le$ -75 dBm\\ LE Coded PHY (S=8): $\le$ -82 dBm\end{tabular}                                & $\le$ -70 dBm                                                                                                            \\ \hline
-    Data Transports                                                     & \begin{tabular}[c]{@{}l@{}}Asynchronous Connection-oriented\\ Isochronous Connection-oriented\\ Asynchronous Connectionless\\ Synchronous Connectionless\\ Isochronous Connectionless\end{tabular} & \begin{tabular}[c]{@{}l@{}}Asynchronous Connection-oriented\\ Synchronous Connection-oriented\end{tabular}               \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Commu\\nication \\ Topologies\end{tabular} & \begin{tabular}[c]{@{}l@{}}Point-to-Point (including piconet)\\ Broadcast\\ Mesh\end{tabular}                                                                                                      & Point-to-Point (including piconet)                                                                                       \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Positioning \\ Features\end{tabular}     & \begin{tabular}[c]{@{}l@{}}Presence: Advertising\\ Direction: Direction Finding(AoA/AoD)\\ Distance: RSSI, HADM(Coming)\end{tabular}                                                               & None                                                                                                                     \\ \hline
-\end{longtable}
+Radio Bluetooth Low Energy (BLE) dirancang untuk beroperasi dengan sangat efisien dalam penggunaan daya. Dengan mentransmisikan data melalui 40 saluran di band frekuensi ISM 2.4 GHz yang tidak berlisensi, radio Bluetooth LE memberikan fleksibilitas yang besar bagi para pengembang untuk membuat produk yang sesuai dengan kebutuhan konektivitas pasar mereka. Bluetooth LE mendukung berbagai topologi komunikasi, mulai dari titik ke titik hingga siaran dan, yang terbaru, mesh, sehingga teknologi Bluetooth dapat mendukung pembuatan jaringan perangkat yang andal dan luas. Awalnya dikenal karena kemampuannya dalam komunikasi perangkat, Bluetooth LE kini juga banyak digunakan sebagai teknologi penentuan posisi perangkat untuk mengatasi permintaan yang semakin meningkat untuk layanan lokasi dalam ruangan yang akurat. Bluetooth LE sekarang dilengkapi dengan fitur yang memungkinkan satu perangkat menentukan keberadaan, jarak, dan arah perangkat lainnya.
 
 \subsection{WiFi}
 
@@ -127,21 +106,6 @@ Gambar \ref{fig:ArduinoIDEOverview} merupakan tampilan dari Arduino IDE. Arduino
 Dengan menggunakan \emph{Library Manager}, pengguna dapat menemukan dan menginstal ribuan \emph{library} yang dapat membantu dalam mengembangkan proyek menggunakan . \emph{Library} merupakan \emph{extension} dari Arduino API yang dapat memudahkan pengembang. Sebagai contoh, para pengembang dapat mengontrol motor servo, membaca sensor tertentu, hingga menggunakan modul WiFi hanya dengan memanggil fungsi yang terdapat pada \emph{library} \parencite{Söderby_Hylén_2023c}.
 
 \emph{Serial Monitor} merupakan alat yang memungkinkan pengguna untuk melihat \emph{streaming} data pada \emph{Board} Arduino yang terhubung. Pada Arduino versi 1, \emph{tool} ini ditempatkan pada jendela yang terpisah, namun untuk memudahkan pengguna maka \emph{tool} ini kini terintegrasi dengan editor \parencite{Söderby_2023}. 
-
-\subsection{NVIDIA® Jetson Nano™}
-
-\begin{figure} [ht] \centering
-    % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=0.25]{gambar/JetsonNano.jpg}
-    % Keterangan gambar yang diinputkan
-    \caption{Perangkat Jetson Nano}
-    % Label referensi dari gambar yang diinputkan
-    \label{fig:Perangkat Jetson Nano}
-\end{figure}
-
-NVIDIA® Jetson Nano™ Developer Kit adalah komputer kecil dan kuat yang dapat digunakan untuk menjalankan beberapa \emph{neural network} secara paralel untuk berbagai penerapan seperti klasifikasi gambar, deteksi objek, segmentasi, dan pemrosesan ucapan. Semuanya dikemas dalam platform yang mudah digunakan dan hanya membutuhkan daya 5 watt \parencite{Developer_2023}.
-
-Perangkat ini memiliki pin \emph{input} serta \emph{output} yang berlimpah, mulai dari GPIO hingga pin CSI. Jumlah pin yang berlimpah ini sangat memudahkan para pengembang dalam menghubung-kan berbagai perangkat tambahan seperti sensor untuk keperluan pengembangan aplikasi \emph{Artificial Intelligence}. NVIDIA® Jetson Nano™ Developer Kit juga didukung dengan NVIDIA JetPack yang mencakup berbagai perangkat lunak seperti Sistem Operasi Linux, cuDNN, NVIDIA CUDA, TensorRT, dan juga \emph{Board Support Package} (BSP) yang digunakan untuk keperluan \emph{Deep Learning} serta visi komputer.
 
 \subsection{ESP32 Devkit V1}
 
@@ -211,14 +175,4 @@ Perusahaan MySella telah mengembangkan beberapa model kursi roda elektrik sesuai
 
 \subsection{Motor DC MY1016Z}
 
-\begin{figure} [ht]
-    \centering
-        % Nama dari file gambar yang diinputkan
-        \includegraphics[scale=0.4]{gambar/DCMotorMY1016Z.jpg}
-        % Keterangan gambar yang diinputkan
-        \caption{Motor DC MY1016Z}
-        % Label referensi dari gambar yang diinputkan
-        \label{fig:MY1016Z DC Motor}
-\end{figure}
-
-Motor DC merupakan jenis dari motor listrik yang menggunakan arus searah untuk menghasilkan gerakan. MY1016Z merupakan \emph{geared} motor DC yang menggunakan mekanisme roda gigi didalamnya. Motor DC ini sering digunakan pada sepeda listrik serta kendaraan sejenisnya. Kursi roda buatan MySella yang bertipe KY-123 juga menggunakan motor DC MY1016Z seperti pada Gambar \ref{fig:MY1016Z DC Motor}.
+Motor DC merupakan jenis dari motor listrik yang menggunakan arus searah untuk menghasilkan gerakan. MY1016Z merupakan \emph{geared} motor DC yang menggunakan mekanisme roda gigi didalamnya. Motor DC ini sering digunakan pada sepeda listrik serta kendaraan sejenisnya. Kursi roda buatan MySella yang bertipe KY-123 juga menggunakan motor DC MY1016Z.

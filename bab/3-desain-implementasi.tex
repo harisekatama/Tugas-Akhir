@@ -21,19 +21,7 @@ Tugas akhir ini merupakan penelitian yang mengintegrasikan teknologi visi komput
 \end{figure}
 
 \subsection{Paket Data}
-Untuk dapat menggerakkan kursi roda maka perlu mengirimkan perintah ke kontroler kursi roda. Pada tahap klasifikasi pose telah didapatkan perintah dasar untuk menggerakkan kursi roda, seperti maju, mundur, kanan, kiri, maupun stop. Perintah ini kemudian akan digabungkan dengan kecepatan maksimal menjadi satu \emph{command} atau paket data seperti yang dilihat pada Persamaan \ref{eq:paket-data}.
-
-% Persamaan 3.1
-\begin{equation}
-  \label{eq:paket-data}
-    Arah,Kecepatan
-\end{equation}
-
-\begin{description}[nolistsep]
-  \item[Keterangan]
-  \item[Arah] : Variabel dengan tipe data \emph{char} yang digunakan untuk mengatur arah gerak motor kursi roda
-  \item[Kecepatan] : Variabel dengan tipe data \emph{char} yang digunakan untuk mengatur kecepatan putar motor kursi roda 
-\end{description}
+Untuk dapat menggerakkan kursi roda maka perlu mengirimkan perintah ke kontroler kursi roda. Pada tahap klasifikasi pose telah didapatkan perintah dasar untuk menggerakkan kursi roda, seperti maju, mundur, kanan, kiri, maupun stop. Perintah ini kemudian akan digabungkan dengan kecepatan maksimal menjadi satu \emph{command} atau paket data seperti \("Arah, Kecepatan"\). Arah merupakan variabel dengan tipe data \emph{char} yang digunakan untuk mengatur arah gerak motor kursi roda. Kecepatan merupakan variabel dengan tipe data \emph{char} yang digunakan untuk mengatur kecepatan putar motor kursi roda.
 
 Variabel arah memiliki tipe data \emph{char} yang akan menentukan gerak dari motor kursi roda, serta variabel kecepatan memiliki tipe data \emph{char} yang akan menentukan kecepatan maksimal dari kursi roda. Untuk memperkecil ukuran data maka kode instruksi untuk menentukan arah gerak dan kecepatan maksimal akan diwakili oleh satu huruf. Kode instruksi dapat dilihat pada Tabel \ref{tbl:kode-instruksi} dan Tabel \ref{tbl:kodePWM}. 
 
@@ -110,6 +98,10 @@ Skematik pada alat ini diilustrasikan secara rinci pada Gambar \ref{fig:Skematik
 
 Kode instruksi tersebut kemudian akan dikombinasikan dengan parameter kecepatam maksimal yang sebelumnya telah ditetapkan oleh pemngguna. Gabungan dari kode instruksi dan parameter kecepatan ini akan menjadi satu paket data sebagai kontrol gerak kursi roda. Paket data ini kemudian akan ditransmisikan secara nirkabel, baik dengan Bluetooth maupun WiFi, ke modul ESP32 Devkit V1. 
 
+ESP32 memiliki peranan penting dalam kontrol motor kursi roda. ESP32 akan digunakan sebagai pusat pengendalian yang menerima paket data yang telah dikirimkan oleh pengguna secara nirkabel. Kemudian ESP32 akan melakukan pemecahan paket data dan menyesuaikan data tersebut kedalam variabel-variabel yang telah ditentukan. Proses pemecahan paket data ini akan menghasilkan dua data utama yang kemudian akan diproses lebih lanjut oleh ESP32.
+
+Variabel pertama merupakan variabel arah yang memiliki fungsi krusial untuk menentukan arah gerak kedua motor pada kursi roda. Variabel ini akan memastikan bahwa motor bergerak sesuai dengan arah yang diinginkan sesuai dengan data yang diterima. Selain itu terdapat variabel kecepatan yang digunakan untuk menetapkan kecepatan maksimal pergerakan motor.
+
 \begin{figure} [ht] \centering
   % Nama dari file gambar yang diinputkan
   \includegraphics[scale=0.3]{gambar/bab3/Schematics.png}
@@ -118,11 +110,6 @@ Kode instruksi tersebut kemudian akan dikombinasikan dengan parameter kecepatam 
   % Label referensi dari gambar yang diinputkan
   \label{fig:Skematik Alat}
 \end{figure}
-
-ESP32 memiliki peranan penting dalam kontrol motor kursi roda. ESP32 akan digunakan sebagai pusat pengendalian yang menerima paket data yang telah dikirimkan oleh pengguna secara nirkabel. Kemudian ESP32 akan melakukan pemecahan paket data dan menyesuaikan data tersebut kedalam variabel-variabel yang telah ditentukan. Proses pemecahan paket data ini akan menghasilkan dua data utama yang kemudian akan diproses lebih lanjut oleh ESP32.
-
-Variabel pertama merupakan variabel arah yang memiliki fungsi krusial untuk menentukan arah gerak kedua motor pada kursi roda. Variabel ini akan memastikan bahwa motor bergerak sesuai dengan arah yang diinginkan sesuai dengan data yang diterima. Selain itu terdapat variabel kecepatan yang digunakan untuk menetapkan kecepatan maksimal pergerakan motor.
-
 
 Dalam implementasinya terdapat serangkaian logika \emph{if} berantai yang akan dijelaskan secara terperinci pada sub bab program. Sederhananya logika \emph{if} berantai ini memiliki peran yang penting dalam pengambilan keputusan baik arah dan kecepatan motor sesuai dengan data yang telah diterima. Hasil dari logika ini akan memberikan \emph{trigger} berupa tegangan 5V ataupun 0V. Tegangan ini kemudian akan mempengaruhi arah putar motor.
 
@@ -144,8 +131,6 @@ Agar dapat terhubung dengan Bluetooth pada ESP32 maka kita harus mengetahui MAC 
   \label{fig:Flowchart 1 MAC Address}
 \end{figure}
 
-\newpage
-
 Program ini menggunakan \emph{library} BluetoothSerial dari Henry Abrahamsen. \emph{Library} ini menyediakan fungsionalitas untuk mengontrol modul Bluetooth pada ESP32 \parencite{Abrahamsen_2023}. Selanjutnya akan dibuat objek SerialBT dari kelas BluetoothSerial. Objek ini digunakan untuk berkomunikasi melalui Bluetooth. 
 
 Pada void setup() terdapat Serial.begin() yang digunakan untuk menginisialisasi komunikasi serial dengan kecepatan 115200 bps. Selanjutnya modul Bluetooth diinisialisasikan dengan nama perangkat ESP32\_Haris. Berikan delay selama 1 detik agar Bluetooth dapat diinisialisasikan dengan baik.
@@ -156,12 +141,6 @@ Array esp32Address dideklarasi pada awal fungsi void loop(). Array ini akan digu
 
 Program ini dirancang untuk menerima data string melalui Bluetooth dan memisahkannya menjadi 2 bagian. Kemudian terdapat data yang dievaluasi untuk mengetahui apakah data tersebut sudah berubah menjadi integer. Berikut ini merupakan Program \ref{lst:ReceivedBluetooth} yang digunakan untuk menguji kemampuan ESP32 dalam menerima data string melalui Bluetooth beserta \emph{flowchart} sesuai Gambar \ref{fig:Flowchart 2 String}.
 
-Program ini menggunakan \emph{library} BluetoothSerial dari Henry Abrahamsen. \emph{Library} ini menyediakan fungsionalitas untuk menerima data melalui koneksi Bluetooth dan mengolahnya \parencite{Abrahamsen_2023}. Selanjutnya akan dibuat objek SerialBT dari kelas BluetoothSerial. Objek ini selanjutnya digunakan untuk berkomunikasi melalui Bluetooth. Terdapat juga variabel maxspeed yang dideklarasikan sebagai suatu variabel yang menyimpan nilai kecepatan maksimum bertipe data integer.
-
-Pada void setup() terdapat Serial.begin() yang digunakan untuk menginisialisasi komunikasi serial dengan kecepatan 115200 bps. Selanjutnya modul Bluetooth diinisialisasikan dengan nama perangkat ESP32\_Haris.
-
-Pada fungsi void loop() akan berjalan terus-menerus setelah fungsi void setup(). Pertama-tama akan diperiksa apakah terdapat data yang tersedia untuk dibaca dari koneksi Bluetooth dengan menggunakan SerialBT.available(). Apabila terdapat data yang diterima maka data tersebut akan dimasukkan kedalam variabel receivedData yang bertipe string dengan menggunakan fungsi SerialBT.readStringUntil(). Data tersebut akan dibaca hingga menemukan karakter \emph{newline} ('\textbackslash n'). Data kemudian akan dipisahkan menjadi arah dan kecepatan. arah akan memisahkan data sebelum koma (',') dari receivedData. kecepatan akan memisahkan data setelah (',') hingga akhir receivedData. Tipe data dari variabel kecepatan ini kemudian akan diubah menjadi integer dan nilai tersebut dimasukkan ke dalam variabel maxspeed. Kemudian nilai pada variabel arah dan kecepatan akan ditampilkan ke \emph{Serial Monitor}. fungsi \emph{if} ditambahkan untuk menguji apakah variabel maxspeed sudah bertipe integer. Apabila nilai maxspeed kurang dari 20 maka akan ditampilkan \emph{boolean} \emph{True}, apabila lebih dari atau sama dengan 20 maka akan menampilkan \emph{boolean} \emph{False}.
-
 \begin{figure} [ht] \centering
   % Nama dari file gambar yang diinputkan
   \includegraphics[scale=0.7]{gambar/program/2. Data String Bluetooth.png}
@@ -170,6 +149,12 @@ Pada fungsi void loop() akan berjalan terus-menerus setelah fungsi void setup().
   % Label referensi dari gambar yang diinputkan
   \label{fig:Flowchart 2 String}
 \end{figure}
+
+Program ini menggunakan \emph{library} BluetoothSerial dari Henry Abrahamsen. \emph{Library} ini menyediakan fungsionalitas untuk menerima data melalui koneksi Bluetooth dan mengolahnya \parencite{Abrahamsen_2023}. Selanjutnya akan dibuat objek SerialBT dari kelas BluetoothSerial. Objek ini selanjutnya digunakan untuk berkomunikasi melalui Bluetooth. Terdapat juga variabel maxspeed yang dideklarasikan sebagai suatu variabel yang menyimpan nilai kecepatan maksimum bertipe data integer.
+
+Pada void setup() terdapat Serial.begin() yang digunakan untuk menginisialisasi komunikasi serial dengan kecepatan 115200 bps. Selanjutnya modul Bluetooth diinisialisasikan dengan nama perangkat ESP32\_Haris.
+
+Pada fungsi void loop() akan berjalan terus-menerus setelah fungsi void setup(). Pertama-tama akan diperiksa apakah terdapat data yang tersedia untuk dibaca dari koneksi Bluetooth dengan menggunakan SerialBT.available(). Apabila terdapat data yang diterima maka data tersebut akan dimasukkan kedalam variabel receivedData yang bertipe string dengan menggunakan fungsi SerialBT.readStringUntil(). Data tersebut akan dibaca hingga menemukan karakter \emph{newline} ('\textbackslash n'). Data kemudian akan dipisahkan menjadi arah dan kecepatan. arah akan memisahkan data sebelum koma (',') dari receivedData. kecepatan akan memisahkan data setelah (',') hingga akhir receivedData. Tipe data dari variabel kecepatan ini kemudian akan diubah menjadi integer dan nilai tersebut dimasukkan ke dalam variabel maxspeed. Kemudian nilai pada variabel arah dan kecepatan akan ditampilkan ke \emph{Serial Monitor}. fungsi \emph{if} ditambahkan untuk menguji apakah variabel maxspeed sudah bertipe integer. Apabila nilai maxspeed kurang dari 20 maka akan ditampilkan \emph{boolean} \emph{True}, apabila lebih dari atau sama dengan 20 maka akan menampilkan \emph{boolean} \emph{False}.
 
 \subsection{Program Untuk Menerima Data JSON Melalui Bluetooth Pada ESP32}
 
@@ -195,6 +180,10 @@ Pada fungsi void loop() akan berjalan terus-menerus setelah fungsi void setup().
 
 Program ini dirancang sebagai server WiFi yang dapat menerima data dari \emph{client} yang terhubung dan mengolahnya. Data yang diterima akan diproses dan dipisahkan menjadi 2 variabel, yaitu variabel arah dan kecepatan. Kemudian nilai dari variabel kecepatan akan dimasukkan ke variabel maxspeed dan tipe datanya dievaluasi. Berikut merupakan Program \ref{lst:ReceivedWiFi} yang digunakan untuk menerima data string melalui \emph{Access Point} WiFi pada ESP32 beserta \emph{flowchart} sesuai Gambar \ref{fig:Flowchart 4 String}.
 
+Program ini menggunakan \emph{library} WiFi yang menyediakan fungsionalitas untuk mengonfigurasi dan mengelola koneksi WiFi pada ESP32. Selain itu \emph{library} Arduino juga digunakan pada program ini yang menyediakan fungsi-fungsi dasar untuk pemrograman mikrokontroler. Variabel maxspeed dideklarasikan sebagai variabel yang menyimpan nilai integer yang kemudian digunakan untuk menyimpan nilai kecepatan maksimum. Variabel ssid akan digunakan untuk menyimpan nama jaringan WiFi yang akan dibuat dan variabel \emph{password} akan menyimpan nilai \emph{password} dari WiFi Server yang dibuat. Kedua variabel ini sangat penting agar ESP32 dapat dikonfigurasikan sebagai \emph{Access Point}. Selanjutnya objek server dibuat dari kelas WiFiServer untuk menangani koneksi pada port 80.
+
+Pada void setup() terdapat Serial.begin() untuk menginisialisasi komunikasi serial dengan kecepatan 115200 bps. Lalu mengonfigurasi ESP32 sebagai \emph{Access Point} sesuai dengan SSID dan \emph{password} yang telah ditentukan. Apabila \emph{Access Point} telah dikonfigurasi maka IP \emph{Address} dari ESP32 akan disimpan pada variabel IP dan dicetak ke \emph{Serial Monitor}. server.begin() digunakan untuk memulai server pada port 80.
+
 \begin{figure} [ht] \centering
   % Nama dari file gambar yang diinputkan
   \includegraphics[scale=0.7]{gambar/program/4. String WiFi.png}
@@ -203,10 +192,6 @@ Program ini dirancang sebagai server WiFi yang dapat menerima data dari \emph{cl
   % Label referensi dari gambar yang diinputkan
   \label{fig:Flowchart 4 String}
 \end{figure}
-
-Program ini menggunakan \emph{library} WiFi yang menyediakan fungsionalitas untuk mengonfigurasi dan mengelola koneksi WiFi pada ESP32. Selain itu \emph{library} Arduino juga digunakan pada program ini yang menyediakan fungsi-fungsi dasar untuk pemrograman mikrokontroler. Variabel maxspeed dideklarasikan sebagai variabel yang menyimpan nilai integer yang kemudian digunakan untuk menyimpan nilai kecepatan maksimum. Variabel ssid akan digunakan untuk menyimpan nama jaringan WiFi yang akan dibuat dan variabel \emph{password} akan menyimpan nilai \emph{password} dari WiFi Server yang dibuat. Kedua variabel ini sangat penting agar ESP32 dapat dikonfigurasikan sebagai \emph{Access Point}. Selanjutnya objek server dibuat dari kelas WiFiServer untuk menangani koneksi pada port 80.
-
-Pada void setup() terdapat Serial.begin() untuk menginisialisasi komunikasi serial dengan kecepatan 115200 bps. Lalu mengonfigurasi ESP32 sebagai \emph{Access Point} sesuai dengan SSID dan \emph{password} yang telah ditentukan. Apabila \emph{Access Point} telah dikonfigurasi maka IP \emph{Address} dari ESP32 akan disimpan pada variabel IP dan dicetak ke \emph{Serial Monitor}. server.begin() digunakan untuk memulai server pada port 80.
 
 Fungsi void loop() akan berjalan terus-menerus setelah fungsi void setup() dijalankan. Pada fungsi ini terdapat WiFiClient yang digunakan untuk menguji apakah terdapat \emph{client} yang terhubung ke server. Jika terdapat \emph{client} yang terhubung maka akan masuk ke fungsi \emph{if}. Data yang dikirimkan akan dibaca secara terus-menerus melalui fungsi \emph{while}. Data yang diterima akan dimasukkan ke variabel receivedData hingga \emph{client} mengirimkan karakter \emph{newline} ('\textbackslash n'). Data kemudian akan dipisahkan menjadi arah dan kecepatan. arah akan memisahkan data sebelum koma (',') dari receivedData. kecepatan akan memisahkan data setelah (',') hingga akhir receivedData. Tipe data dari variabel kecepatan ini kemudian akan diubah menjadi integer dan nilai tersebut dimasukkan ke dalam variabel maxspeed. Kemudian nilai pada variabel arah dan kecepatan akan ditampilkan ke \emph{Serial Monitor}. fungsi \emph{if} ditambahkan untuk menguji apakah variabel maxspeed sudah bertipe integer. Apabila nilai maxspeed kurang dari 20 maka akan ditampilkan \emph{boolean} \emph{True}, apabila lebih dari atau sama dengan 20 maka akan menampilkan \emph{boolean} \emph{False}. Lalu koneksi akan ditutup setelah selesai membaca data dari \emph{client}.
 
@@ -237,6 +222,8 @@ Program ini dirancang untuk menguji rangkaian kontrol ESP32. Kedua motor akan di
 
 \emph{Library} Arduino digunakan pada program ini. \emph{Library} ini menyediakan berbagai fungsi-fungsi dasar untuk pemrograman mikrokontroler. pwmPin1, dir1, dan dir2 merupakan variabel untuk mengatur kerja dari motor kiri. pwmPin1 didefinisikan dengan nilai 5 yang kemudian akan terhubung dengan GPIO5 pada ESP32, dir1 didefinisikan dengan nilai 18 yang kemudian akan terhubung dengan GPIO18 pada ESP32, dan dir2 yang didefinisikan dengan nilai 19 yang kemudian akan terhubung dengan GPIO19 pada ESP32. Selanjutnya terdapat pwmPin2, dir3, dan dir4 yang merupakan variabel yang digunakan untuk mengatur kerja dari motor kanan. pwmPin2 didefinisikan dengan nilai 25 yang kemudian akan terhubung dengan GPIO25 pada ESP32, dir3 didefinisikan dengan nilai 32 yang kemudian akan terhubung dengan GPIO32 pada ESP32, dan dir4 yang didefinisikan dengan nilai 33 yang kemudian akan terhubung dengan GPIO33 pada ESP32. Lalu variabel pwmChannel1, pwmChannel2, freq, dan res dideklarasikan. pwmChannel1 dan pwmChannel2 merupakan nomor saluran PWM yang digunakan. Variabel freq merupakan frekuensi PWM yang diatur menjadi 15kHz untuk meminimalisir \emph{noise} pada motor ketika bekerja. Variabel res digunakan untuk mengatur resolusi dari PWM yang diatur menjadi 8-bit. Variabel PWM1\_DutyCycle akan menyimpan siklus tugas yang kemudian akan digunakan untuk mengendalikan kecepatan motor dan variabel maxspeed merupakan nilai dari kecepatan motor maksimal.
 
+Terdapat fungsi void setup() yang dieksekusi satu kali pada saat program pertama kali dijalankan. Pada fungsi ini terdapat dir1, dir2, dir3, dan dir4 yang diatur sebagai pin \emph{output}. ledcSetup merupakan fungsi dari \emph{library} ledc yang digunakan untuk mengonfigurasi saluran PWM. Fungsi ini memerlukan 3 variabel, yaitu pwmChannel, freq, dan res. Selanjutnya terdapat fungsi ledcAttachPin yang merupakan fungsi dari \emph{library} ledc yang digunakan untuk menghubungkan suatu pin dengan saluran PWM tertentu. Fungsi ini memerlukan 2 variabel, yaitu pin PWM dan juga PWM Channel. Secara keseluruhan, blok kode ini digunakan untuk melakukan konfigurasi pin-pin pada mikrokontroler ESP32 sehingga motor dapat dikendalikan. Pin-pin yang diatur sebagai \emph{output} akan digunakan untuk mengatur arah putar motor. Sedangkan saluran PWM akan digunakan untuk mengatur kecepatan motor.
+
 \begin{figure} [ht] \centering
   % Nama dari file gambar yang diinputkan
   \includegraphics[scale=0.7]{gambar/program/6. Uji Kontrol.png}
@@ -245,8 +232,6 @@ Program ini dirancang untuk menguji rangkaian kontrol ESP32. Kedua motor akan di
   % Label referensi dari gambar yang diinputkan
   \label{fig:Flowchart 6 Uji Kontrol}
 \end{figure}
-
-Terdapat fungsi void setup() yang dieksekusi satu kali pada saat program pertama kali dijalankan. Pada fungsi ini terdapat dir1, dir2, dir3, dan dir4 yang diatur sebagai pin \emph{output}. ledcSetup merupakan fungsi dari \emph{library} ledc yang digunakan untuk mengonfigurasi saluran PWM. Fungsi ini memerlukan 3 variabel, yaitu pwmChannel, freq, dan res. Selanjutnya terdapat fungsi ledcAttachPin yang merupakan fungsi dari \emph{library} ledc yang digunakan untuk menghubungkan suatu pin dengan saluran PWM tertentu. Fungsi ini memerlukan 2 variabel, yaitu pin PWM dan juga PWM Channel. Secara keseluruhan, blok kode ini digunakan untuk melakukan konfigurasi pin-pin pada mikrokontroler ESP32 sehingga motor dapat dikendalikan. Pin-pin yang diatur sebagai \emph{output} akan digunakan untuk mengatur arah putar motor. Sedangkan saluran PWM akan digunakan untuk mengatur kecepatan motor.
 
 Pada fungsi void loop() terdapat serangkaian perintah yang mengatur gerakan kursi roda dengan menggunakan motor DC. Gerakan ini akan diulang secara terus-menerus. Hal ini berguna untuk menguji rangkaian kontrol pada ESP32. Setiap gerakan diawali dengan \emph{softstart} dan diakhiri dengan \emph{softstop}. Pada gerakan maju, kedua motor akan bergerak maju. Selama nilai PWM1\_DutyCycle kurang dari maxspeed, maka nilai PWM1\_DutyCycle akan ditambahkan secara bertahap hingga mencapai nilai maxspeed yang telah ditentukan. Selama itu juga kecepatan putar motor akan bertambah secara bertahap. Penambahan nilai PWM1\_DutyCycle akan ditunda selama 10 milidetik. Setelah PWM1\_DutyCycle mencapai nilai maxspeed maka kode selanjutnya akan ditunda selama 5 detik yang mengakibatkan motor akan berputar maju dengan kecepatan maksimum selama 5 detik. Setelah 5 detik, apabila nilai dari PWM1\_DutyCycle lebih dari 0 maka akan dilakukan \emph{softstop}. Arah putar kedua motor tetap diatur maju. Nilai PWM1\_DutyCycle akan diturunkan secara bertahap. Pengurangan nilai PWM1\_DutyCycle akan ditunda selama 10 milidetik. Apabila nilai PWM1\_DutyCycle sudah mencapai nilai 0 maka kode selanjutnya akan ditunda selama 1 detik. Langkah yang serupa akan dilakukan untuk setiap gerakan. Setiap gerakan memiliki fase \emph{softstart} dan \emph{softstop} yang bertujuan untuk memberikan perubahan kecepatan yang halus dan menghindari perubahan secara tiba-tiba. Penggunaan variabel PWM1\_DutyCycle digunakan untuk mengatur siklus kerja PWM untuk sebagai kontrol kecepatan yang fleksibel. fungsi \emph{delay} digunakan untuk memberikan jeda waktu antara setiap gerakan untuk mengatur durasi gerakan dan memberikan waktu bagi motor kursi roda untuk menyelesaikan setiap gerakan sebelum beralih ke gerakan berikutnya. Pada fungsi mundur, kedua roda akan berputar mundur. Pada fungsi belok kanan, roda kiri akan berputar maju sedangkan roda kanan tidak berputar sehingga kursi roda dapat berbelok ke arah kanan. Pada fungsi belok kiri, motor kiri tidak berputar namun roda kanan akan berputar maju sehingga kursi roda dapat berbelok ke arah kiri. Pada fungsi stop, kedua roda tidak akan berputar. Proses ini terus berulang didalam \emph{loop}, sehingga kursi roda akan melakukan gerakan berulang sesuai dengan logika yang telah diatur.
 

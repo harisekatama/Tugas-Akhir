@@ -19,31 +19,24 @@ Pelaksanaan metodologi serta skenario pengujian yang akan dipaparkan dalam bab i
 \section{Pengujian Waktu \emph{Delay} Pengiriman Data String Melalui Bluetooth}
 \label{sec:delayBluetooth}
 
-Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimkan data berupa string dari laptop menuju ESP32 melalui Bluetooth. Data yang dikirimkan adalah data arah dan kecepatan yang dipisahkan dengan koma seperti yang dapat dilihat pada Persamaan \ref{eq:string-2data}.
-
-\begin{equation}
-  \label{eq:string-2data}
-    Arah,Kecepatan
-\end{equation}
-
-\begin{description}[nolistsep]
-  \item[Keterangan]
-  \item[Arah] : Variabel dengan tipe data \emph{char} yang digunakan untuk mengatur arah gerak motor kursi roda
-  \item[Kecepatan] : Variabel dengan tipe data \emph{char} yang digunakan untuk mengatur kecepatan putar motor kursi roda 
-\end{description}
+Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimkan data berupa string dari laptop menuju ESP32 melalui Bluetooth. Data yang dikirimkan adalah data arah dan kecepatan yang dipisahkan dengan koma seperti struktur data berikut ini \("Arah,Kecepatan"\).
 
 Variabel arah memiliki tipe data \emph{char} yang digunakan untuk menentukan arah gerak dari motor kursi roda serta variabel kecepatan memiliki tipe data \emph{char} yang akan menentukan kecepatan maksimal dari rotasi motor kursi roda. Hasil dari pengujian waktu \emph{delay} pengiriman data string melalui bluetooth dapat dilihat pada Tabel \ref{tbl:delayBluetooth} dan Tabel \ref{tbl:delayBluetooth1}.
 
+Tabel \ref{tbl:delayBluetooth} menampilkan pengiriman data string yang terdiri dari 2 nilai dan dipisahkan dengan simbol koma (","). Dalam pengujian kali ini, data dikirimkan sebanyak 30 kali secara berturut-turut. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan dan memasukkan kedua nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth adalah sebesar 1,037115767 detik.
+
+Tabel \ref{tbl:delayBluetooth1} menampilkan pengiriman data string yang terdiri dari 1 nilai, yaitu arah. Dalam pengujian kali ini, data dikirimkan sebanyak 30 kali secara berturut-turut tanpa penambahan waktu \emph{delay} setiap kali mengirimkan data. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan dan memasukkan kedua nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth adalah sebesar 1,035209933 detik.
+
+Ditemukan perbedaan waktu \emph{delay} yang tidak terlalu signifikan antara proses pengiriman string yang mengandung 2 nilai dibandingkan dengan string yang hanya berisi 1 nilai. Saat mengirimkan string yang memuat 2 data, pengujian menunjukkan adanya waktu \emph{delay} sekitar 1,037115767 detik. Dalam perbandingan dengan pengujian yang melibatkan string 1 nilai, waktu \emph{delay} yang tercatat hanya sekitar 1,035209933 detik. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data secara optimal. Oleh karena itu, dapat disimpulkan bahwa dalam konteks pengiriman data melalui Bluetooth, pengguna dapat mengirim data string baik yang berisi 1 nilai maupun data string yang berisi 2 nilai, karena perbedaan waktu delay yang tidak terlalu berbeda.
+
 % Tabel 4.1
-\begin{longtable}{|ccc|c|}
-  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data String Berisi 2 Nilai Melalui Bluetooth}
-  \label{tbl:delayBluetooth}\\
+\begin{table}[htpb]
+  \centering
+  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data \emph{String} Berisi 2 Nilai Melalui Bluetooth}
+  \label{tbl:delayBluetooth}
+  \begin{tabular}{|ccc|c|}
   \hline
   \multicolumn{1}{|c|}{Data} & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
-  \endfirsthead
-  %
-  \endhead
-  %
   \multicolumn{1}{|c|}{A,S}  & \multicolumn{1}{c|}{22:35:51.523626} & 22:35:52.588       & 1,064374    \\ \hline
   \multicolumn{1}{|c|}{E,T}  & \multicolumn{1}{c|}{22:35:52.552591} & 22:35:53.591       & 1,038409    \\ \hline
   \multicolumn{1}{|c|}{E,P}  & \multicolumn{1}{c|}{22:35:53.565132} & 22:35:54.610       & 1,044868    \\ \hline
@@ -75,20 +68,17 @@ Variabel arah memiliki tipe data \emph{char} yang digunakan untuk menentukan ara
   \multicolumn{1}{|c|}{C,V}  & \multicolumn{1}{c|}{22:44:38.377450} & 22:44:39.438       & 1,06055     \\ \hline
   \multicolumn{1}{|c|}{B,P}  & \multicolumn{1}{c|}{22:44:39.427390} & 22:44:40.461       & 1,03361     \\ \hline
   \multicolumn{3}{|c|}{Average Delay Time}                                               & 1,037115767 \\ \hline
-  \end{longtable}
-
-Tabel \ref{tbl:delayBluetooth} menampilkan pengiriman data string yang terdiri dari 2 nilai dan dipisahkan dengan simbol koma (","). Dalam pengujian kali ini, data dikirimkan sebanyak 30 kali secara berturut-turut. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan dan memasukkan kedua nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth adalah sebesar 1,037115767 detik.
+  \end{tabular}
+  \end{table}
 
 % Tabel 4.2
-\begin{longtable}{|ccc|c|}
-  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data String Berisi 1 Nilai Melalui Bluetooth}
-  \label{tbl:delayBluetooth1}\\
+\begin{table}[htpb]
+  \centering
+  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data \emph{String} Berisi 1 Nilai Melalui Bluetooth}
+  \label{tbl:delayBluetooth1}
+  \begin{tabular}{|ccc|c|}
   \hline
   \multicolumn{1}{|c|}{Data} & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
-  \endfirsthead
-  %
-  \endhead
-  %
   \multicolumn{1}{|c|}{B}    & \multicolumn{1}{c|}{22:17:58.360200} & 22:17:59.417       & 1,0568      \\ \hline
   \multicolumn{1}{|c|}{B}    & \multicolumn{1}{c|}{22:17:59.396644} & 22:18:00.426       & 1,029356    \\ \hline
   \multicolumn{1}{|c|}{B}    & \multicolumn{1}{c|}{22:18:00.411642} & 22:18:01.449       & 1,037358    \\ \hline
@@ -120,56 +110,32 @@ Tabel \ref{tbl:delayBluetooth} menampilkan pengiriman data string yang terdiri d
   \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{22:20:30.945381} & 22:20:31.991       & 1,045619    \\ \hline
   \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{22:20:31.972686} & 22:20:32.994       & 1,021314    \\ \hline
   \multicolumn{3}{|c|}{Average Delay Time}                                               & 1,035209933 \\ \hline
-  \end{longtable}
-
-Tabel \ref{tbl:delayBluetooth1} menampilkan pengiriman data string yang terdiri dari 1 nilai, yaitu arah. Dalam pengujian kali ini, data dikirimkan sebanyak 30 kali secara berturut-turut tanpa penambahan waktu \emph{delay} setiap kali mengirimkan data. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan dan memasukkan kedua nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth adalah sebesar 1,035209933 detik.
-
-Ditemukan perbedaan waktu \emph{delay} yang tidak terlalu signifikan antara proses pengiriman string yang mengandung 2 nilai dibandingkan dengan string yang hanya berisi 1 nilai. Saat mengirimkan string yang memuat 2 data, pengujian menunjukkan adanya waktu \emph{delay} sekitar 1,037115767 detik. Dalam perbandingan dengan pengujian yang melibatkan string 1 nilai, waktu \emph{delay} yang tercatat hanya sekitar 1,035209933 detik. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data secara optimal. Oleh karena itu, dapat disimpulkan bahwa dalam konteks pengiriman data melalui Bluetooth, pengguna dapat mengirim data string baik yang berisi 1 nilai maupun data string yang berisi 2 nilai, karena perbedaan waktu delay yang tidak terlalu berbeda.
+  \end{tabular}
+  \end{table}
 
 \newpage
 
 \section{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Melalui Bluetooth}
 \label{sec:delayBluetoothJSON}
 
-Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimkan data berupa JSON dari laptop menuju ESP32 melalui Bluetooth. Data yang dikirimkan adalah data arah dan kecepatan yang dirangkum menjadi JSON seperti yang dapat dilihat pada Persamaan \ref{eq:json-2data} dan juga JSON yang hanya berisikan data arah seperti pada Persamaan \ref{eq:json-1data}
-
-\begin{equation}
-  \label{eq:json-2data}
-    \{'arah': kode-arah, 'kecepatan': level-kecepatan\}
-\end{equation}
-
-\begin{description}[nolistsep]
-  \item[Keterangan]
-  \item[arah] : Key yang digunakan untuk menyimpan nilai kode-arah
-  \item[kecepatan] : Key yang digunakan untuk menyimpan nilai level-kecepatan
-  \item[kode-arah] : Value dengan tipe data \emph{char} yang digunakan untuk mengatur arah gerak motor kursi roda
-  \item[level-kecepatan] : Value dengan tipe data \emph{char} yang digunakan untuk mengatur kecepatan putar motor kursi roda 
-\end{description}
-
-
-\begin{equation}
-  \label{eq:json-1data}
-    \{'arah': kode-arah\}
-\end{equation}
-
-\begin{description}[nolistsep]
-  \item[Keterangan]
-  \item[arah] : Key yang digunakan untuk menyimpan nilai kode-arah
-  \item[kode-arah] : Value dengan tipe data \emph{char} yang digunakan untuk mengatur arah gerak motor kursi roda
-\end{description}
+Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimkan data berupa JSON dari laptop menuju ESP32 melalui Bluetooth. Data yang dikirimkan adalah data arah dan kecepatan yang dirangkum menjadi JSON seperti struktur berikut \(\{'arah': kode-arah, 'kecepatan': level-kecepatan\}\) 
 
 Data JSON terdiri dari 2 bagian, yaitu \emph{key} dan \emph{value}. Terdapat 2 \emph{key}, yaitu arah dan kecepatan. \emph{Key} arah berisi \emph{value} dengan tipe data char yang digunakan untuk menentukan arah gerak dari motor kursi roda dan \emph{key} kecepatan berisi \emph{value} dengan tipe data \emph{char} yang digunakan untuk menentukan kecepatan maksimal dari rotasi motor kursi roda. Hasil dari pengujian waktu \emph{delay} pengiriman data JSON dapat dilihat pada Tabel \ref{tbl:delayBluetoothJSON2} dan Tabel \ref{tbl:delayBluetoothJSON1}.
 
+Tabel \ref{tbl:delayBluetoothJSON2} menampilkan pengiriman JSON yang terdiri dari 2 \emph{key}-\emph{value}, yaitu arah dan kecepatan. Dalam pengujian kali ini, data dikirimkan sebanyak 29 kali secara berturut-turut. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan (\emph{deserialize}) serta memasukkan kedua nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth adalah sebesar 1,038895345 detik.
+
+Tabel \ref{tbl:delayBluetoothJSON1} menampilkan pengiriman JSON yang terdiri dari 1 \emph{key}-\emph{value}, yaitu arah. Dalam pengujian kali ini, data dikirimkan sebanyak 44 kali secara berturut-turut. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan (\emph{deserialize}) serta memasukkan nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth sebesar 1,033746386 detik.
+
+Dari kedua cara pengujian tersebut, didapatkan bahwa waktu \emph{delay} antara proses pengiriman JSON yang mengandung 2 \emph{key}-\emph{value} dibandingkan dengan JSON yang hanya berisikan 1 \emph{key}-\emph{value} tidak terlalu signifikan. Saat mengirimkan JSON yang berisikan 2 \emph{key}-\emph{value}, pengujian menunjukkan adanya \emph{delay} sebesar 1,038895345 detik. Jika dibandingkan dengan pengujian yang mengirimkan JSON dengan 1 \emph{key}-\emph{value}, waktu \emph{delay} yang tercatat adalah sebesar 1,033746386 detik. Dapat disimpulkan bahwa dalam konteks pengiriman data melalui Bluetooth, maka pengguna dapat mengirimkan data JSON baik yang berisi 1 \emph{key}-\emph{value} maupun yang berisi 2 \emph{key}-\emph{value}, karena perbedaan \emph{delay} kedua teknik tersebut tidak terlalu signifikan.
+
 % Tabel 4.3
-\begin{longtable}{|ccc|c|}
+\begin{table}[htpb]
+  \centering
   \caption{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Berisi 2 Nilai Melalui Bluetooth}
-  \label{tbl:delayBluetoothJSON2}\\
+  \label{tbl:delayBluetoothJSON2}
+  \begin{tabular}{|ccc|c|}
   \hline
   \multicolumn{1}{|c|}{Data}                              & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
-  \endfirsthead
-  %
-  \endhead
-  %
   \multicolumn{1}{|c|}{\{'arah': 'A', 'kecepatan': 'W'\}} & \multicolumn{1}{c|}{00:15:50.714083} & 00:15:51.776       & 1,061917    \\ \hline
   \multicolumn{1}{|c|}{\{"arah": "D", "kecepatan": "T"\}} & \multicolumn{1}{c|}{00:15:51.747698} & 00:15:52.796       & 1,048302    \\ \hline
   \multicolumn{1}{|c|}{\{"arah": "E", "kecepatan": "S"\}} & \multicolumn{1}{c|}{00:15:52.756331} & 00:15:53.766       & 1,009669    \\ \hline
@@ -200,20 +166,17 @@ Data JSON terdiri dari 2 bagian, yaitu \emph{key} dan \emph{value}. Terdapat 2 \
   \multicolumn{1}{|c|}{\{"arah": "A", "kecepatan": "O"\}} & \multicolumn{1}{c|}{02:33:40.394353} & 02:33:41.424       & 1,029647    \\ \hline
   \multicolumn{1}{|c|}{\{"arah": "B", "kecepatan": "T"\}} & \multicolumn{1}{c|}{02:33:41.411566} & 02:33:42.433       & 1,021434    \\ \hline
   \multicolumn{3}{|c|}{Average Delay Time}                                                                            & 1,038895345 \\ \hline
-  \end{longtable}
-
-Tabel \ref{tbl:delayBluetoothJSON2} menampilkan pengiriman JSON yang terdiri dari 2 \emph{key}-\emph{value}, yaitu arah dan kecepatan. Dalam pengujian kali ini, data dikirimkan sebanyak 29 kali secara berturut-turut. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan (\emph{deserialize}) serta memasukkan kedua nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth adalah sebesar 1,038895345 detik.
+  \end{tabular}
+  \end{table}
 
 % Tabel 4.4
-\begin{longtable}{|ccc|c|}
+\begin{table}[htpb]
+  \centering
   \caption{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Berisi 1 Nilai Melalui Bluetooth}
-  \label{tbl:delayBluetoothJSON1}\\
+  \label{tbl:delayBluetoothJSON1}
+  \begin{tabular}{|ccc|c|}
   \hline
   \multicolumn{1}{|c|}{Data}            & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
-  \endfirsthead
-  %
-  \endhead
-  %
   \multicolumn{1}{|c|}{\{'arah': 'D'\}} & \multicolumn{1}{c|}{23:51:13.043594} & 23:51:14.086       & 1,042406    \\ \hline
   \multicolumn{1}{|c|}{\{"arah": "A"\}} & \multicolumn{1}{c|}{23:51:14.076700} & 23:51:15.105       & 1,0283      \\ \hline
   \multicolumn{1}{|c|}{\{"arah": "D"\}} & \multicolumn{1}{c|}{23:51:15.086795} & 23:51:16.117       & 1,030205    \\ \hline
@@ -259,40 +222,32 @@ Tabel \ref{tbl:delayBluetoothJSON2} menampilkan pengiriman JSON yang terdiri dar
   \multicolumn{1}{|c|}{\{"arah": "B"\}} & \multicolumn{1}{c|}{23:51:55.539415} & 23:51:56.571       & 1,031585    \\ \hline
   \multicolumn{1}{|c|}{\{"arah": "E"\}} & \multicolumn{1}{c|}{23:51:56.552679} & 23:51:57.576       & 1,023321    \\ \hline
   \multicolumn{3}{|c|}{Average Delay Time}                                                          & 1,033746386 \\ \hline
-  \end{longtable}
+  \end{tabular}
+\end{table}
 
-Tabel \ref{tbl:delayBluetoothJSON1} menampilkan pengiriman JSON yang terdiri dari 1 \emph{key}-\emph{value}, yaitu arah. Dalam pengujian kali ini, data dikirimkan sebanyak 44 kali secara berturut-turut. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan (\emph{deserialize}) serta memasukkan nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth sebesar 1,033746386 detik.
-
-Dari kedua cara pengujian tersebut, didapatkan bahwa waktu \emph{delay} antara proses pengiriman JSON yang mengandung 2 \emph{key}-\emph{value} dibandingkan dengan JSON yang hanya berisikan 1 \emph{key}-\emph{value} tidak terlalu signifikan. Saat mengirimkan JSON yang berisikan 2 \emph{key}-\emph{value}, pengujian menunjukkan adanya \emph{delay} sebesar 1,038895345 detik. Jika dibandingkan dengan pengujian yang mengirimkan JSON dengan 1 \emph{key}-\emph{value}, waktu \emph{delay} yang tercatat adalah sebesar 1,033746386 detik. Dapat disimpulkan bahwa dalam konteks pengiriman data melalui Bluetooth, maka pengguna dapat mengirimkan data JSON baik yang berisi 1 \emph{key}-\emph{value} maupun yang berisi 2 \emph{key}-\emph{value}, karena perbedaan \emph{delay} kedua teknik tersebut tidak terlalu signifikan.
+\newpage
 
 \section{Pengujian Waktu \emph{Delay} Pengiriman Data String Melalui \emph{Access Point} WiFi}
 \label{sec:delayWiFi}
 
-Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimkan data berupa String dari laptop menuji ESP32 melalui WiFi. ESP32 diatur sebagai \emph{Access Point}. Data yang dikirimkan adalah data arah dan kecepatan yang dipisahkan dengan simbol koma seperti yang dapat dilihat pada Persamaan \ref{eq:string-2Data}
+Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimkan data berupa String dari laptop menuji ESP32 melalui WiFi. ESP32 diatur sebagai \emph{Access Point}. Data yang dikirimkan adalah data arah dan kecepatan yang dipisahkan dengan simbol koma seperti struktur data berikut ini \("Arah, Kecepatan"\).
 
-\begin{equation}
-  \label{eq:string-2Data}
-    Arah,Kecepatan
-\end{equation}
+Variabel arah memiliki tipe data \emph{char} yang digunakan untuk menentukan arah gerak dari motor kursi roda serta variabel kecepatan yang memiliki tipe data \emph{char} yang akan menentukan kecepatan maksimal dari rotasi motor kursi roda. Hasil dari pengujian waktu \emph{delay} pengiriman data String melalui WiFi dapat dilihat pada Tabel \ref{tbl:delayWiFi2} dan Tabel \ref{tbl:delayWiFi1}
 
-\begin{description}[nolistsep]
-  \item[Keterangan]
-  \item[Arah] : Variabel dengan tipe data \emph{char} yang digunakan untuk mengatur arah gerak motor kursi roda
-  \item[Kecepatan] : Variabel dengan tipe data \emph{char} yang digunakan untuk mengatur kecepatan putar motor kursi roda 
-\end{description}
+Tabel \ref{tbl:delayWiFi2} menampilkan pengiriman data string yang terdiri dari 2 nilai dan dipisahkan dengan simbol koma (","). Dalam pengujian kali ini, data dikirimkan sebanyak 33 kali secara berturut-turut. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan dan memasukkan kedua nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui WiFi adalah sebesar 1,035478061 detik.
 
-Variabel arah memiliki tipe data char yang digunakan untuk menentukan arah gerak dari motor kursi roda serta variabel kecepatan yang memiliki tipe data \emph{char} yang akan menentukan kecepatan maksimal dari rotasi motor kursi roda. Hasil dari pengujian waktu \emph{delay} pengiriman data String melalui WiFi dapat dilihat pada Tabel \ref{tbl:delayWiFi2} dan Tabel \ref{tbl:delayWiFi1}
+Tabel \ref{tbl:delayWiFi1} menampilkan pengiriman data string yang terdiri dari 1 nilai, yaitu arah. Dalam pengujian kali ini, data dikirimkan sebanyak 32 kali secara berturut-turut. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui WiFi adalah sebesar 1,03470275 detik.
+
+Ditemukan perbedaan waktu \emph{delay} yang tidak terlalu signifikan antara proses pengiriman string yang mengandung 2 nilai dibandingkan dengan string yang hanya berisikan 1 nilai. Saat mengirimkan string yang memuat 2 data, pengujian menunjukkan adanya waktu \emph{delay} sekitar 1,035478061 detik. Dalam perbandingan dengan pengujian yang melibatkan string dengan 1 nilai, waktu \emph{delay} yang tercatat sebesar 1,03470275 detik. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data secara optimal. Oleh karena itu, dapat disimpulkan bahwa dalam konteks pengiriman data melalui WiFi, pengguna dapat mengirimkan data string baik yang berisi 1 nilai maupun data string dengan 2 nilai, karena perbedaan waktu \emph{delay} yang tidak terlalu signifikan.
 
 % Tabel 4.5
-\begin{longtable}{|ccc|c|}
-  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data String Berisi 2 Nilai Melalui \emph{Access Point} WiFi}
-  \label{tbl:delayWiFi2}\\
+\begin{table}[htpb]
+  \centering
+  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data \emph{String} Berisi 2 Nilai Melalui \emph{Access Point} WiFi}
+  \label{tbl:delayWiFi2}
+  \begin{tabular}{|ccc|c|}
   \hline
   \multicolumn{1}{|c|}{Data} & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
-  \endfirsthead
-  %
-  \endhead
-  %
   \multicolumn{1}{|c|}{A,Q}  & \multicolumn{1}{c|}{03:49:59.217022} & 03:50:00.256       & 1,038978    \\ \hline
   \multicolumn{1}{|c|}{D,S}  & \multicolumn{1}{c|}{03:50:00.232977} & 03:50:01.260       & 1,027023    \\ \hline
   \multicolumn{1}{|c|}{A,O}  & \multicolumn{1}{c|}{03:50:01.256289} & 03:50:02.301       & 1,044711    \\ \hline
@@ -327,20 +282,17 @@ Variabel arah memiliki tipe data char yang digunakan untuk menentukan arah gerak
   \multicolumn{1}{|c|}{B,U}  & \multicolumn{1}{c|}{03:50:30.725229} & 03:50:31.760       & 1,034771    \\ \hline
   \multicolumn{1}{|c|}{B,R}  & \multicolumn{1}{c|}{03:50:31.731151} & 03:50:32.778       & 1,046849    \\ \hline
   \multicolumn{3}{|c|}{Average Delay Time}                                               & 1,035478061 \\ \hline
-  \end{longtable}
-
-Tabel \ref{tbl:delayWiFi2} menampilkan pengiriman data string yang terdiri dari 2 nilai dan dipisahkan dengan simbol koma (","). Dalam pengujian kali ini, data dikirimkan sebanyak 33 kali secara berturut-turut. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan dan memasukkan kedua nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui WiFi adalah sebesar 1,035478061 detik.
+  \end{tabular}
+\end{table}
 
 % Tabel 4.6
-\begin{longtable}{|ccc|c|}
-  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data String Berisi 1 Nilai Melalui \emph{Access Point} WiFi}
-  \label{tbl:delayWiFi1}\\
+\begin{table}[htpb]
+\centering
+  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data \emph{String} Berisi 1 Nilai Melalui \emph{Access Point} WiFi}
+  \label{tbl:delayWiFi1}
+  \begin{tabular}{|ccc|c|}
   \hline
   \multicolumn{1}{|c|}{Data} & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time \\ \hline
-  \endfirsthead
-  %
-  \endhead
-  %
   \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{03:40:01.384466} & 03:40:02.417       & 1,032534   \\ \hline
   \multicolumn{1}{|c|}{B}    & \multicolumn{1}{c|}{03:40:02.390604} & 03:40:03.432       & 1,041396   \\ \hline
   \multicolumn{1}{|c|}{E}    & \multicolumn{1}{c|}{03:40:03.395418} & 03:40:04.429       & 1,033582   \\ \hline
@@ -374,54 +326,32 @@ Tabel \ref{tbl:delayWiFi2} menampilkan pengiriman data string yang terdiri dari 
   \multicolumn{1}{|c|}{A}    & \multicolumn{1}{c|}{03:40:31.576199} & 03:40:32.612       & 1,035801   \\ \hline
   \multicolumn{1}{|c|}{C}    & \multicolumn{1}{c|}{03:40:32.579504} & 03:40:33.619       & 1,039496   \\ \hline
   \multicolumn{3}{|c|}{Average Delay Time}                                               & 1,03470275 \\ \hline
-  \end{longtable}
+  \end{tabular}
+\end{table}
 
-Tabel \ref{tbl:delayWiFi1} menampilkan pengiriman data string yang terdiri dari 1 nilai, yaitu arah. Dalam pengujian kali ini, data dikirimkan sebanyak 32 kali secara berturut-turut. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui WiFi adalah sebesar 1,03470275 detik.
-
-Ditemukan perbedaan waktu \emph{delay} yang tidak terlalu signifikan antara proses pengiriman string yang mengandung 2 nilai dibandingkan dengan string yang hanya berisikan 1 nilai. Saat mengirimkan string yang memuat 2 data, pengujian menunjukkan adanya waktu \emph{delay} sekitar 1,035478061 detik. Dalam perbandingan dengan pengujian yang melibatkan string dengan 1 nilai, waktu \emph{delay} yang tercatat sebesar 1,03470275 detik. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data secara optimal. Oleh karena itu, dapat disimpulkan bahwa dalam konteks pengiriman data melalui WiFi, pengguna dapat mengirimkan data string baik yang berisi 1 nilai maupun data string dengan 2 nilai, karena perbedaan waktu \emph{delay} yang tidak terlalu signifikan.
+\newpage
 
 \section{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Melalui \emph{Access Point} WiFi}
 \label{sec:delayWiFiJSON}
 
-Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimkan data berupa JSON dari laptop menuju ESP32 melalui WiFi. Data yang dikirimkan adalah data arah dan kecepatan yang dirangkum menjadi JSON seperti yang dapat dilihat pada Persamaan \ref{eq:json-2Data} dan Persamaan \ref{eq:json-1Data}. 
-
-
-\begin{equation}
-  \label{eq:json-2Data}
-    \{'arah': kode-arah, 'kecepatan': level-kecepatan\}
-\end{equation}
-
-\begin{description}[nolistsep]
-  \item[Keterangan]
-  \item[arah] : Key yang digunakan untuk menyimpan nilai kode-arah
-  \item[kecepatan] : Key yang digunakan untuk menyimpan nilai level-kecepatan
-  \item[kode-arah] : Value dengan tipe data \emph{char} yang digunakan untuk mengatur arah gerak motor kursi roda
-  \item[level-kecepatan] : Value dengan tipe data \emph{char} yang digunakan untuk mengatur kecepatan putar motor kursi roda 
-\end{description}
-
-\begin{equation}
-  \label{eq:json-1Data}
-    \{'arah': kode-arah\}
-\end{equation}
-
-\begin{description}[nolistsep]
-  \item[Keterangan]
-  \item[arah] : Key yang digunakan untuk menyimpan nilai kode-arah
-  \item[kode-arah] : Value dengan tipe data \emph{char} yang digunakan untuk mengatur arah gerak motor kursi roda 
-\end{description}
+Pengujian waktu \emph{delay} pengiriman data ini dilakukan dengan cara mengirimkan data berupa JSON dari laptop menuju ESP32 melalui WiFi. Data yang dikirimkan adalah data arah dan kecepatan yang dirangkum menjadi JSON seperti struktur berikut \(\{'arah': kode-arah, \\'kecepatan': level-kecepatan\}\). 
 
 Data JSON terdiri dari 2 bagian, yaitu \emph{key} dan \emph{value}. Terdapat 2 \emph{key}, yaitu arah dan kecepatan. \emph{Key} arah berisi \emph{value} dengan tipe data char yang digunakan untuk menentukan arah gerak dari motor kursi roda dan \emph{key} kecepatan berisi \emph{value} dengan tipe data \emph{char} yang digunakan untuk menentukan kecepatan maksimal dari rotasi motor kursi roda. Hasil dari pengujian waktu \emph{delay} pengiriman data JSON dapat dilihat pada Tabel \ref{tbl:delayWiFiJSON} dan Tabel \ref{tbl:delayWiFiJSON1}.
 
+Tabel \ref{tbl:delayWiFiJSON} menampilkan pengiriman JSON yang terdiri dari 2 \emph{key}-\emph{value}, yaitu arah dan kecepatan. Dalam pengujian kali ini, data dikirimkan sebanyak 32 kali. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima dan berhasil memisahkan (\emph{deserialize}) serta memasukkan kedua nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui WiFi adalah sebesar 1,032904312 detik.
+
+Tabel \ref{tbl:delayWiFiJSON1} menampilkan pengiriman JSON yang terdiri dari 1 \emph{key}-\emph{value}, yaitu arah. Dalam pengujian kali ini, data dikirimkan sebanyak 28 kali secara berturut-turut. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan (\emph{deserialize}) serta memasukkan nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth sebesar 1,032374783 detik.
+
+Dari kedua cara pengujian tersebut, didapatkan bahwa waktu \emph{delay} antara proses pengiriman JSON yang mengandung 2 \emph{key}-\emph{value} dibandingkan dengan JSON yang hanya berisikan 1 \emph{key}-\emph{value} tidak terlalu signifikan. Saat mengirimkan JSON yang berisikan 2 \emph{key}-\emph{value}, pengujian menunjukkan adanya \emph{delay} sebesar 1,032904312 detik. Jika dibandingkan dengan pengujian yang mengirimkan JSON dengan 1 \emph{key}-\emph{value}, waktu \emph{delay} yang tercatat adalah sebesar 1,032374783 detik. Dapat disimpulkan bahwa dalam konteks pengiriman data melalui WiFi, pengguna dapat mengirimkan data JSON baik yang berisi 2 nilai maupun yang berisi 1 nilai, karena perbedaan waktu pengiriman yang tidak terlalu signifikan.
+
 % Tabel 4.7
-\begin{longtable}{|ccc|c|}
-  \caption{Pengujian Waktu Delay Pengiriman Data JSON Berisi 2 Nilai Melalui Access Point WiFi}
-  \label{tbl:delayWiFiJSON}\\
+\begin{table}[htpb]
+  \centering
+  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Berisi 2 Nilai Melalui \emph{Access Point} WiFi}
+  \label{tbl:delayWiFiJSON}
+  \begin{tabular}{|ccc|c|}
   \hline
   \multicolumn{1}{|c|}{Data}                              & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
-  \endfirsthead
-  %
-  \endhead
-  %
   \multicolumn{1}{|c|}{\{"arah": "E", "kecepatan": "U"\}} & \multicolumn{1}{c|}{04:35:28.923105} & 04:35:29.964       & 1,040895    \\ \hline
   \multicolumn{1}{|c|}{\{"arah": "D", "kecepatan": "R"\}} & \multicolumn{1}{c|}{04:35:29.947395} & 04:35:30.963       & 1,015605    \\ \hline
   \multicolumn{1}{|c|}{\{"arah": "E", "kecepatan": "T"\}} & \multicolumn{1}{c|}{04:35:30.969913} & 04:35:31.997       & 1,027087    \\ \hline
@@ -455,21 +385,17 @@ Data JSON terdiri dari 2 bagian, yaitu \emph{key} dan \emph{value}. Terdapat 2 \
   \multicolumn{1}{|c|}{\{"arah": "B", "kecepatan": "P"\}} & \multicolumn{1}{c|}{04:36:00.833860} & 04:36:01.876       & 1,04214     \\ \hline
   \multicolumn{1}{|c|}{\{"arah": "C", "kecepatan": "O"\}} & \multicolumn{1}{c|}{04:36:01.844947} & 04:36:02.881       & 1,036053    \\ \hline
   \multicolumn{3}{|c|}{Average Delay Time}                                                                            & 1,032904312 \\ \hline
-  \end{longtable}
-
-Tabel \ref{tbl:delayWiFiJSON} menampilkan pengiriman JSON yang terdiri dari 2 \emph{key}-\emph{value}, yaitu arah dan kecepatan. Dalam pengujian kali ini, data dikirimkan sebanyak 32 kali. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima dan berhasil memisahkan (\emph{deserialize}) serta memasukkan kedua nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan bahwa waktu pengiriman rata-rata dari laptop menuju ESP32 melalui WiFi adalah sebesar 1,032904312 detik.
-
+  \end{tabular}
+\end{table}
 
 % Tabel 4.8
-\begin{longtable}{|ccc|c|}
-  \caption{Pengujian Waktu Delay Pengiriman Data JSON Berisi 1 Nilai Melalui Access Point WiFi}
-  \label{tbl:delayWiFiJSON1}\\
+\begin{table}[htpb]
+  \centering
+  \caption{Pengujian Waktu \emph{Delay} Pengiriman Data JSON Berisi 1 Nilai Melalui \emph{Access Point} WiFi}
+  \label{tbl:delayWiFiJSON1}
+  \begin{tabular}{|ccc|c|}
   \hline
   \multicolumn{1}{|c|}{Data}            & \multicolumn{1}{c|}{Timestamp Sent}  & Timestamp Received & Delay Time  \\ \hline
-  \endfirsthead
-  %
-  \endhead
-  %
   \multicolumn{1}{|c|}{\{"arah": "E"\}} & \multicolumn{1}{c|}{04:45:27.023013} & 04:45:28.047       & 1,023987    \\ \hline
   \multicolumn{1}{|c|}{\{"arah": "E"\}} & \multicolumn{1}{c|}{04:45:28.041188} & 04:45:29.061       & 1,019812    \\ \hline
   \multicolumn{1}{|c|}{\{"arah": "B"\}} & \multicolumn{1}{c|}{04:45:29.059797} & 04:45:30.107       & 1,047203    \\ \hline
@@ -499,13 +425,12 @@ Tabel \ref{tbl:delayWiFiJSON} menampilkan pengiriman JSON yang terdiri dari 2 \e
   \multicolumn{1}{|c|}{\{"arah": "D"\}} & \multicolumn{1}{c|}{04:46:00.804109} & 04:46:01.841       & 1,036891    \\ \hline
   \multicolumn{1}{|c|}{\{"arah": "D"\}} & \multicolumn{1}{c|}{04:46:01.829633} & 04:46:02.859       & 1,029367    \\ \hline
   \multicolumn{3}{|c|}{Average Delay Time}                                                          & 1,032374783 \\ \hline
-  \end{longtable}
+  \end{tabular}
+  \end{table}
 
-Tabel \ref{tbl:delayWiFiJSON1} menampilkan pengiriman JSON yang terdiri dari 1 \emph{key}-\emph{value}, yaitu arah. Dalam pengujian kali ini, data dikirimkan sebanyak 28 kali secara berturut-turut. Setelah ESP32 menerima dan mengolah data maka Flag akan dikirimkan ke Laptop. Hal ini dilakukan agar ESP32 dapat menerima data dengan baik dan berhasil memisahkan (\emph{deserialize}) serta memasukkan nilai tersebut sesuai dengan variabel yang telah ditentukan. Hasil dari pengujian ini menunjukkan waktu pengiriman rata-rata dari laptop menuju ESP32 melalui Bluetooth sebesar 1,032374783 detik.
+  \newpage
 
-Dari kedua cara pengujian tersebut, didapatkan bahwa waktu \emph{delay} antara proses pengiriman JSON yang mengandung 2 \emph{key}-\emph{value} dibandingkan dengan JSON yang hanya berisikan 1 \emph{key}-\emph{value} tidak terlalu signifikan. Saat mengirimkan JSON yang berisikan 2 \emph{key}-\emph{value}, pengujian menunjukkan adanya \emph{delay} sebesar 1,032904312 detik. Jika dibandingkan dengan pengujian yang mengirimkan JSON dengan 1 \emph{key}-\emph{value}, waktu \emph{delay} yang tercatat adalah sebesar 1,032374783 detik. Dapat disimpulkan bahwa dalam konteks pengiriman data melalui WiFi, pengguna dapat mengirimkan data JSON baik yang berisi 2 nilai maupun yang berisi 1 nilai, karena perbedaan waktu pengiriman yang tidak terlalu signifikan.
-
-\subsection{Pengujian Kestabilan Motor Kursi Roda}
+\section{Pengujian Kestabilan Motor Kursi Roda}
 
 Pengujian kestabilan motor dilakukan untuk mendeteksi derajat penyimpangan dari setiap motor. Pada pengujian ini akan dilakukan dengan cara menggerakkan kursi roda kearah depan (maju) dan juga kearah belakang (mundur). Perbedaan antara posisi akhir roda dengan titik pusat akan diukur untuk menentukan sudut penyimpangan seperti pada Gambar \ref{fig:PengujianKestabilanMotor}. Sudut Penyimpangan dapat dihitung menggunakan Persamaan \ref{eq:sudut-error}. Hasil dari pengujian ini dapat dilihat pada Tabel \ref{tbl:kestabilanmaju} dan Tabel \ref{tbl:kestabilanmundur}.
 

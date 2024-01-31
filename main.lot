@@ -1,19 +1,18 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{Tabel Perbandingan Bluetooth Low Energy dengan Bluetooth Classic}}{6}{table.2.1}%
-\contentsline {table}{\numberline {2.2}{Standar Nasional GB 12996-2012}}{11}{table.2.2}%
+\contentsline {table}{\numberline {2.1}{Standar Nasional GB 12996-2012}}{10}{table.2.1}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{Kode instruksi dari hasil klasifikasi}}{14}{table.3.1}%
-\contentsline {table}{\numberline {3.2}{Kode instruksi untuk mengatur tingkat PWM}}{14}{table.3.2}%
+\contentsline {table}{\numberline {3.1}{Kode instruksi dari hasil klasifikasi}}{12}{table.3.1}%
+\contentsline {table}{\numberline {3.2}{Kode instruksi untuk mengatur tingkat PWM}}{12}{table.3.2}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{Pengujian Waktu \emph {Delay} Pengiriman Data String Berisi 2 Nilai Melalui Bluetooth}}{33}{table.4.1}%
-\contentsline {table}{\numberline {4.2}{Pengujian Waktu \emph {Delay} Pengiriman Data String Berisi 1 Nilai Melalui Bluetooth}}{34}{table.4.2}%
-\contentsline {table}{\numberline {4.3}{Pengujian Waktu \emph {Delay} Pengiriman Data JSON Berisi 2 Nilai Melalui Bluetooth}}{36}{table.4.3}%
-\contentsline {table}{\numberline {4.4}{Pengujian Waktu \emph {Delay} Pengiriman Data JSON Berisi 1 Nilai Melalui Bluetooth}}{37}{table.4.4}%
-\contentsline {table}{\numberline {4.5}{Pengujian Waktu \emph {Delay} Pengiriman Data String Berisi 2 Nilai Melalui \emph {Access Point} WiFi}}{39}{table.4.5}%
-\contentsline {table}{\numberline {4.6}{Pengujian Waktu \emph {Delay} Pengiriman Data String Berisi 1 Nilai Melalui \emph {Access Point} WiFi}}{40}{table.4.6}%
-\contentsline {table}{\numberline {4.7}{Pengujian Waktu Delay Pengiriman Data JSON Berisi 2 Nilai Melalui Access Point WiFi}}{42}{table.4.7}%
-\contentsline {table}{\numberline {4.8}{Pengujian Waktu Delay Pengiriman Data JSON Berisi 1 Nilai Melalui Access Point WiFi}}{43}{table.4.8}%
-\contentsline {table}{\numberline {4.9}{Pengujian Kestabilan Motor Kursi Roda Dengan Gerak Maju}}{45}{table.4.9}%
-\contentsline {table}{\numberline {4.10}{Pengujian Kestabilan Motor Kursi Roda Dengan Gerak Mundur}}{45}{table.4.10}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Pengujian Waktu \emph {Delay} Pengiriman Data \emph {String} Berisi 2 Nilai Melalui Bluetooth}}{32}{table.4.1}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Pengujian Waktu \emph {Delay} Pengiriman Data \emph {String} Berisi 1 Nilai Melalui Bluetooth}}{33}{table.4.2}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Pengujian Waktu \emph {Delay} Pengiriman Data JSON Berisi 2 Nilai Melalui Bluetooth}}{35}{table.4.3}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Pengujian Waktu \emph {Delay} Pengiriman Data JSON Berisi 1 Nilai Melalui Bluetooth}}{36}{table.4.4}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Pengujian Waktu \emph {Delay} Pengiriman Data \emph {String} Berisi 2 Nilai Melalui \emph {Access Point} WiFi}}{38}{table.4.5}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Pengujian Waktu \emph {Delay} Pengiriman Data \emph {String} Berisi 1 Nilai Melalui \emph {Access Point} WiFi}}{39}{table.4.6}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Pengujian Waktu \emph {Delay} Pengiriman Data JSON Berisi 2 Nilai Melalui \emph {Access Point} WiFi}}{41}{table.4.7}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Pengujian Waktu \emph {Delay} Pengiriman Data JSON Berisi 1 Nilai Melalui \emph {Access Point} WiFi}}{42}{table.4.8}%
+\contentsline {table}{\numberline {4.9}{Pengujian Kestabilan Motor Kursi Roda Dengan Gerak Maju}}{43}{table.4.9}%
+\contentsline {table}{\numberline {4.10}{Pengujian Kestabilan Motor Kursi Roda Dengan Gerak Mundur}}{44}{table.4.10}%
 \addvspace {10\p@ }
